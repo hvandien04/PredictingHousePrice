@@ -1,35 +1,60 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import '../styles/Home.css';
 import banner from '../assets/banner.jpg';
+import featuresCenter from '../assets/features-center.png';
+import { FaCalculator, FaHistory, FaRobot, FaBalanceScale } from 'react-icons/fa';
 
 const Home = () => {
-  // Dữ liệu mẫu cho các tính năng chính
-  const features = [
+  const testimonials = [
     {
-      icon: 'fa-solid fa-calculator',
-      title: 'Dự đoán giá nhà',
-      description: 'Sử dụng AI để dự đoán chính xác giá nhà dựa trên các thông số quan trọng'
+      name: "TRẦN LAM",
+      content: "Chúng tôi rất hài lòng về sản phẩm của công ty. Cảm ơn bạn đã mang đến sản phẩm tuyệt vời như vậy. Chúng tôi sẽ tiếp tục"
     },
     {
-      icon: 'fa-solid fa-clock-rotate-left',
-      title: 'Lịch sử tra cứu',
-      description: 'Lưu trữ và quản lý lịch sử các lần dự đoán của bạn'
+      name: "HUỲNH ĐÔNG",
+      content: "Chúng tôi rất hài lòng về sản phẩm của công ty. Cảm ơn bạn đã mang đến sản phẩm tuyệt vời như vậy. Chúng tôi sẽ tiếp tục"
     },
     {
-      icon: 'fa-solid fa-robot',
-      title: 'AI Thông minh',
-      description: 'Công nghệ AI tiên tiến, học máy chính xác cao'
+      name: "NGỌC DƯƠNG",
+      content: "Chúng tôi rất hài lòng về sản phẩm của công ty. Cảm ơn bạn đã mang đến sản phẩm tuyệt vời như vậy. Chúng tôi sẽ tiếp tục"
+    },
+    {
+      name: "HUỲNH AN",
+      content: "Chúng tôi rất hài lòng về sản phẩm của công ty. Cảm ơn bạn đã mang đến sản phẩm tuyệt vời như vậy. Chúng tôi sẽ tiếp tục"
+    },
+    {
+      name: "NGỌC ĐƯƠNG",
+      content: "Chúng tôi rất hài lòng về sản phẩm của công ty. Cảm ơn bạn đã mang đến sản phẩm tuyệt vời như vậy. Chúng tôi sẽ tiếp tục"
     }
   ];
 
-  // Dữ liệu mẫu cho các dự đoán gần đây
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: false,
+    className: "testimonials-slider"
+  };
+
   const recentPredictions = [
     {
       location: 'Quận 1, TP.HCM',
       price: '2.5 tỷ',
       date: '15/03/2024',
       area: '100m²'
+    },
+    {
+      location: 'Quận 7, TP.HCM',
+      price: '1.8 tỷ',
+      date: '14/03/2024',
+      area: '80m²'
     },
     {
       location: 'Quận 7, TP.HCM',
@@ -47,7 +72,6 @@ const Home = () => {
 
   return (
     <div className="home">
-      {/* Banner Section */}
       <div className="home-content">
         <h1 className="home-title">HousePredict</h1>
         <p className="home-slogan">Dự đoán giá nhà với AI</p>
@@ -59,21 +83,55 @@ const Home = () => {
         <img src={banner} alt="Statistics Banner" />
       </div>
 
-      {/* Features Section */}
       <section className="features">
         <h2>Tính năng chính</h2>
-        <div className="features-grid">
-          {features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <i className={feature.icon}></i>
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
+        <div className="floating-circle"></div>
+        <div className="floating-circle"></div>
+        <div className="floating-circle"></div>
+        <div className="floating-circle"></div>
+        <div className="features-layout">
+          <div className="features-left">
+            <div className="feature-card">
+              <div className="feature-icon">
+                <FaCalculator size={40} color="#007bff" />
+              </div>
+              <h3>Dự đoán giá nhà</h3>
+              <p>Sử dụng AI để dự đoán chính xác giá nhà dựa trên các thông số quan trọng</p>
             </div>
-          ))}
+            <div className="feature-card">
+              <div className="feature-icon">
+                <FaHistory size={40} color="#007bff" />
+              </div>
+              <h3>Lịch sử tra cứu</h3>
+              <p>Lưu trữ và quản lý lịch sử các lần dự đoán của bạn</p>
+            </div>
+          </div>
+
+          <div className="features-center">
+            <div className="center-logo">
+              <img src={featuresCenter} alt="Features" />
+            </div>
+          </div>
+
+          <div className="features-right">
+            <div className="feature-card">
+              <div className="feature-icon">
+                <FaRobot size={40} color="#007bff" />
+              </div>
+              <h3>AI Thông minh</h3>
+              <p>Công nghệ AI tiên tiến, học máy chính xác cao</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">
+                <FaBalanceScale size={40} color="#007bff" />
+              </div>
+              <h3>So sánh giá nhà</h3>
+              <p>So sánh giá nhà giữa các khu vực và thời điểm khác nhau</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Recent Predictions Section */}
       <section className="recent-predictions">
         <h2>Dự đoán gần đây</h2>
         <div className="predictions-grid">
@@ -92,6 +150,48 @@ const Home = () => {
           ))}
         </div>
       </section>
+
+      <section className="testimonials">
+        <h2>Nhận Xét Của Khách Hàng</h2>
+        <div className="testimonials-container">
+          <Slider {...settings}>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="testimonial-slide">
+                <div className="testimonial-circle">
+                  <div className="testimonial-content">
+                    <h3>{testimonial.name}</h3>
+                    <p>{testimonial.content}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </section>
+
+      <section className="feedback-section">
+        <h2>Gửi Phản Hồi</h2>
+        <div className="feedback-container">
+          <div className="feedback-form">
+            <div className="form-group">
+              <input type="text" id="name" placeholder=" " required />
+              <label htmlFor="name">Họ và tên</label>
+            </div>
+            <div className="form-group">
+              <input type="email" id="email" placeholder=" " required />
+              <label htmlFor="email">Email</label>
+            </div>
+            <div className="form-group">
+              <textarea id="feedback" rows="4" placeholder=" " required></textarea>
+              {/* <label htmlFor="feedback">Nội dung phản hồi</label> */}
+            </div>
+            <button type="submit" className="submit-button">
+              Gửi phản hồi
+            </button>
+          </div>
+        </div>
+      </section>
+      
     </div>
   );
 };
