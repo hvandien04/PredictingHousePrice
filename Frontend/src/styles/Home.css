@@ -851,7 +851,7 @@
 }
 
 .form-group input ~ label,
-.form-group textarea ~  {
+.form-group textarea {
   top: -25px;
 }
 
