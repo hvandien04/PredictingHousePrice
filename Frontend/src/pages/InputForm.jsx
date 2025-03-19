@@ -4,6 +4,7 @@ import '../styles/animations.css';
 
 const InputForm = () => {
   const [formData, setFormData] = useState({
+    houseType: '',
     district: '',
     area: '',
     rooms: '',
@@ -24,74 +25,117 @@ const InputForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Xử lý dữ liệu form và gửi lên server
-    console.log('Form data:', formData);
+
+    const requestData = {
+      loai_nha: formData.houseType,  // Loại nhà do người dùng chọn
+      vi_tri: formData.district,
+      dien_tich: parseFloat(formData.area),
+      so_phong: parseInt(formData.rooms),
+      so_tang: parseInt(formData.floors)
+    };
+
+    try {
+      const response = await fetch("http://127.0.0.1:5000/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(requestData)
+      });
+
+      const data = await response.json();
+      if (data.gia_du_doan) {
+        alert(`Giá nhà dự đoán: ${data.gia_du_doan}`);
+      } else {
+        alert("Lỗi dự đoán: " + data.error);
+      }
+    } catch (error) {
+      console.error("Lỗi khi gửi dữ liệu:", error);
+    }
   };
 
   return (
-    <div className="input-form-page">
-      <div className="input-form-wrapper">
-        <h1 className="fade-in-up">Dự đoán giá nhà</h1>
-        <form onSubmit={handleSubmit} className="input-form-grid">
-          <div className="input-field-group fade-in-up delay-1">
-            <label htmlFor="district">Quận/Huyện</label>
-            <select
-              id="district"
-              name="district"
-              value={formData.district}
-              onChange={handleChange}
-              required
-            >
-              <option value="">Chọn quận/huyện</option>
-              <option value="quan1">Quận 1</option>
-              <option value="quan2">Quận 2</option>
-              <option value="quan3">Quận 3</option>
-              {/* Thêm các quận khác */}
-            </select>
-          </div>
+      <div className="input-form-page">
+        <div className="input-form-wrapper">
+          <h1 className="fade-in-up">Dự đoán giá nhà</h1>
+          <form onSubmit={handleSubmit} className="input-form-grid">
 
-          <div className="input-field-group fade-in-up delay-2">
-            <label htmlFor="area">Diện tích (m²)</label>
-            <input
-              type="number"
-              id="area"
-              name="area"
-              value={formData.area}
-              onChange={handleChange}
-              placeholder=" "
-              required
-            />
-          </div>
+            {/* 🔹 Lựa chọn Loại nhà */}
+            <div className="input-field-group fade-in-up delay-1">
+              <label htmlFor="houseType">Loại nhà</label>
+              <select
+                  id="houseType"
+                  name="houseType"
+                  value={formData.houseType}
+                  onChange={handleChange}
+                  required
+              >
+                <option value="">Chọn loại nhà</option>
+                <option value="nha_hem">Nhà hẻm</option>
+                <option value="nha_mat_tien">Nhà mặt tiền</option>
+                <option value="can_ho">Căn hộ</option>
+              </select>
+            </div>
 
-          <div className="input-field-group fade-in-up delay-2">
-            <label htmlFor="rooms">Số phòng ngủ</label>
-            <input
-              type="number"
-              id="rooms"
-              name="rooms"
-              value={formData.rooms}
-              onChange={handleChange}
-              placeholder=" "
-              required
-            />
-          </div>
+            {/* 🔹 Lựa chọn Quận/Huyện */}
+            <div className="input-field-group fade-in-up delay-1">
+              <label htmlFor="district">Quận/Huyện</label>
+              <select
+                  id="district"
+                  name="district"
+                  value={formData.district}
+                  onChange={handleChange}
+                  required
+              >
+                <option value="">Chọn quận/huyện</option>
+                <option value="quan_1">Quận 1</option>
+                <option value="quan_2">Quận 2</option>
+                <option value="quan_3">Quận 3</option>
+                <option value="quan_12">Quận 12</option>
+                {/* Thêm các quận khác */}
+              </select>
+            </div>
 
-          <div className="input-field-group fade-in-up delay-2">
-            <label htmlFor="floors">Số tầng</label>
-            <input
-              type="number"
-              id="floors"
-              name="floors"
-              value={formData.floors}
-              onChange={handleChange}
-              placeholder=" "
-              required
-            />
-          </div>
+            <div className="input-field-group fade-in-up delay-2">
+              <label htmlFor="area">Diện tích (m²)</label>
+              <input
+                  type="number"
+                  id="area"
+                  name="area"
+                  value={formData.area}
+                  onChange={handleChange}
+                  placeholder=" "
+                  required
+              />
+            </div>
 
-          <div className="input-field-group fade-in-up delay-2">
+            <div className="input-field-group fade-in-up delay-2">
+              <label htmlFor="rooms">Số phòng ngủ</label>
+              <input
+                  type="number"
+                  id="rooms"
+                  name="rooms"
+                  value={formData.rooms}
+                  onChange={handleChange}
+                  placeholder=" "
+                  required
+              />
+            </div>
+
+            <div className="input-field-group fade-in-up delay-2">
+              <label htmlFor="floors">Số tầng</label>
+              <input
+                  type="number"
+                  id="floors"
+                  name="floors"
+                  value={formData.floors}
+                  onChange={handleChange}
+                  placeholder=" "
+                  required
+              />
+            </div>
+
+            {/*<div className="input-field-group fade-in-up delay-2">
             <label htmlFor="yearBuilt">Năm xây dựng</label>
             <input
               type="number"
@@ -104,7 +148,7 @@ const InputForm = () => {
             />
           </div>
 
-          {/* <div className="input-field-group fade-in-up delay-2">
+           <div className="input-field-group fade-in-up delay-2">
             <label htmlFor="direction">Hướng nhà</label>
             <select
               id="direction"
@@ -123,7 +167,7 @@ const InputForm = () => {
               <option value="tay-bac">Tây Bắc</option>
               <option value="tay-nam">Tây Nam</option>
             </select>
-          </div> */}
+          </div>
 
           <div className="input-field-group fade-in-up delay-2">
             <label htmlFor="streetWidth">Độ rộng đường (m)</label>
@@ -136,9 +180,9 @@ const InputForm = () => {
               placeholder=" "
               required
             />
-          </div>
+          </div>*/}
 
-          <div className="input-field-group input-checkbox-group fade-in-up delay-3">
+            {/*<div className="input-field-group input-checkbox-group fade-in-up delay-3">
             <label>
               <input
                 type="checkbox"
@@ -166,15 +210,15 @@ const InputForm = () => {
               />
               Có bảo vệ
             </label>
-          </div>
+          </div>*/}
 
-          <button type="submit" className="input-submit-btn fade-in-up delay-3">
-            Dự Đoán Giá
-          </button>
-        </form>
+            <button type="submit" className="input-submit-btn fade-in-up delay-3">
+              Dự Đoán Giá
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
   );
 };
 
-export default InputForm; 
+export default InputForm;
