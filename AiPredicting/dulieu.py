@@ -29,7 +29,7 @@ gia_co_ban = 6 * 1e6  # 6 triệu/m2
 gia = gia_co_ban * dien_tich
 
 # Điều chỉnh giá theo khu vực
-gia *= np.where(np.isin(vi_tri, quan_trung_tam), 1.6, 1)  # Trung tâm cao hơn vùng rìa 30%
+gia *= np.where(np.isin(vi_tri, quan_trung_tam), 1.7, 1)  # Trung tâm cao hơn vùng rìa 30%
 gia *= np.where(np.isin(vi_tri, quan_can_trung_tam), 1.3, 1)  # Cận trung tâm cao hơn vùng rìa 20%
 
 # Điều chỉnh giá theo loại nhà

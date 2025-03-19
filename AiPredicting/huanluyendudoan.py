@@ -22,6 +22,14 @@ def chuan_hoa_ten(text):
     text = ''.join(c for c in text if unicodedata.category(c) != 'Mn')  # Loại bỏ dấu
     return text.lower().replace(" ", "_")  # Chuyển về chữ thường và thay khoảng trắng thành "_"
 
+df["Loại nhà gốc"] = df["Loại nhà"]  # Lưu dữ liệu gốc
+df["Vị trí gốc"] = df["Vị trí"]
+label_encoder_loai_goc = LabelEncoder()
+label_encoder_vi_tri_goc = LabelEncoder()
+
+df["Loại nhà gốc"] = label_encoder_loai_goc.fit_transform(df["Loại nhà gốc"])
+df["Vị trí gốc"] = label_encoder_vi_tri_goc.fit_transform(df["Vị trí gốc"])
+
 df["Loại nhà"] = df["Loại nhà"].apply(chuan_hoa_ten)
 df["Vị trí"] = df["Vị trí"].apply(chuan_hoa_ten)
 label_encoder_loai = LabelEncoder()
@@ -137,6 +145,11 @@ print(f"Scaler đã được lưu vào {scaler_filename}!")
 joblib.dump(label_encoder_loai, "label_encoder_loai.pkl")
 joblib.dump(label_encoder_vi_tri, "label_encoder_vi_tri.pkl")
 
+# Lưu LabelEncoder
+joblib.dump(label_encoder_loai_goc, "label_encoder_loai_goc.pkl")
+joblib.dump(label_encoder_vi_tri_goc, "label_encoder_vi_tri_goc.pkl")
+
 print("Đã lưu LabelEncoder!")
 
 print("Các nhãn đã được mã hóa trước đó:", label_encoder_loai.classes_)
+print("Các nhãn đã được mã hóa trước đó:", label_encoder_loai_goc.classes_)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/InputForm.css';
 import '../styles/animations.css';
 
@@ -8,28 +8,32 @@ const InputForm = () => {
     district: '',
     area: '',
     rooms: '',
-    floors: '',
-    yearBuilt: '',
-    direction: '',
-    streetWidth: '',
-    hasElevator: false,
-    hasParking: false,
-    hasSecurity: false
+    floors: ''
   });
 
+  const [houseTypes, setHouseTypes] = useState([]);
+  const [districts, setDistricts] = useState([]);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:5000/house-types") // Đúng endpoint
+        .then(res => res.json())
+        .then(data => setHouseTypes(data))
+        .catch(err => console.error("Lỗi lấy loại nhà:", err));
+
+    fetch("http://127.0.0.1:5000/districts") // Đúng endpoint
+        .then(res => res.json())
+        .then(data => setDistricts(data))
+        .catch(err => console.error("Lỗi lấy quận/huyện:", err));
+  }, []);
+
   const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const requestData = {
-      loai_nha: formData.houseType,  // Loại nhà do người dùng chọn
+      loai_nha: formData.houseType,
       vi_tri: formData.district,
       dien_tich: parseFloat(formData.area),
       so_phong: parseInt(formData.rooms),
@@ -44,11 +48,7 @@ const InputForm = () => {
       });
 
       const data = await response.json();
-      if (data.gia_du_doan) {
-        alert(`Giá nhà dự đoán: ${data.gia_du_doan}`);
-      } else {
-        alert("Lỗi dự đoán: " + data.error);
-      }
+      alert(data.gia_du_doan ? `Giá nhà dự đoán: ${data.gia_du_doan}` : `Lỗi: ${data.error}`);
     } catch (error) {
       console.error("Lỗi khi gửi dữ liệu:", error);
     }
@@ -57,82 +57,45 @@ const InputForm = () => {
   return (
       <div className="input-form-page">
         <div className="input-form-wrapper">
-          <h1 className="fade-in-up">Dự đoán giá nhà</h1>
+          <h1>Dự đoán giá nhà</h1>
           <form onSubmit={handleSubmit} className="input-form-grid">
 
-            {/* 🔹 Lựa chọn Loại nhà */}
-            <div className="input-field-group fade-in-up delay-1">
+            {/* Lựa chọn Loại nhà */}
+            <div className="input-field-group">
               <label htmlFor="houseType">Loại nhà</label>
-              <select
-                  id="houseType"
-                  name="houseType"
-                  value={formData.houseType}
-                  onChange={handleChange}
-                  required
-              >
+              <select id="houseType" name="houseType" value={formData.houseType} onChange={handleChange} required>
                 <option value="">Chọn loại nhà</option>
-                <option value="nha_hem">Nhà hẻm</option>
-                <option value="nha_mat_tien">Nhà mặt tiền</option>
-                <option value="can_ho">Căn hộ</option>
+                {houseTypes.map((type) => (
+                    <option key={type.id} value={type.value}>{type.label}</option>
+                ))}
               </select>
             </div>
 
-            {/* 🔹 Lựa chọn Quận/Huyện */}
-            <div className="input-field-group fade-in-up delay-1">
+            {/* Lựa chọn Quận/Huyện */}
+            <div className="input-field-group">
               <label htmlFor="district">Quận/Huyện</label>
-              <select
-                  id="district"
-                  name="district"
-                  value={formData.district}
-                  onChange={handleChange}
-                  required
-              >
+              <select id="district" name="district" value={formData.district} onChange={handleChange} required>
                 <option value="">Chọn quận/huyện</option>
-                <option value="quan_1">Quận 1</option>
-                <option value="quan_2">Quận 2</option>
-                <option value="quan_3">Quận 3</option>
-                <option value="quan_12">Quận 12</option>
-                {/* Thêm các quận khác */}
+                {districts.map((district) => (
+                    <option key={district.id} value={district.value}>{district.label}</option>
+                ))}
               </select>
             </div>
 
-            <div className="input-field-group fade-in-up delay-2">
+            {/* Nhập diện tích, số phòng, số tầng */}
+            <div className="input-field-group">
               <label htmlFor="area">Diện tích (m²)</label>
-              <input
-                  type="number"
-                  id="area"
-                  name="area"
-                  value={formData.area}
-                  onChange={handleChange}
-                  placeholder=" "
-                  required
-              />
+              <input type="number" id="area" name="area" value={formData.area} onChange={handleChange} required />
             </div>
 
-            <div className="input-field-group fade-in-up delay-2">
+            <div className="input-field-group">
               <label htmlFor="rooms">Số phòng ngủ</label>
-              <input
-                  type="number"
-                  id="rooms"
-                  name="rooms"
-                  value={formData.rooms}
-                  onChange={handleChange}
-                  placeholder=" "
-                  required
-              />
+              <input type="number" id="rooms" name="rooms" value={formData.rooms} onChange={handleChange} required />
             </div>
 
-            <div className="input-field-group fade-in-up delay-2">
+            <div className="input-field-group">
               <label htmlFor="floors">Số tầng</label>
-              <input
-                  type="number"
-                  id="floors"
-                  name="floors"
-                  value={formData.floors}
-                  onChange={handleChange}
-                  placeholder=" "
-                  required
-              />
+              <input type="number" id="floors" name="floors" value={formData.floors} onChange={handleChange} required />
             </div>
 
             {/*<div className="input-field-group fade-in-up delay-2">
@@ -212,9 +175,7 @@ const InputForm = () => {
             </label>
           </div>*/}
 
-            <button type="submit" className="input-submit-btn fade-in-up delay-3">
-              Dự Đoán Giá
-            </button>
+            <button type="submit" className="input-submit-btn">Dự Đoán Giá</button>
           </form>
         </div>
       </div>
@@ -222,3 +183,4 @@ const InputForm = () => {
 };
 
 export default InputForm;
+
