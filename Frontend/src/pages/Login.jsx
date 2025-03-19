@@ -33,7 +33,7 @@ const Login = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder=" "
+              placeholder=""
               required
             />
             <label htmlFor="email">Email</label>
@@ -45,7 +45,7 @@ const Login = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
-              placeholder=" "
+              placeholder=""
               required
             />
             <label htmlFor="password">Mật khẩu</label>
@@ -54,9 +54,14 @@ const Login = () => {
             Đăng nhập
           </button>
         </form>
-        <p className="register-link">
-          Chưa có tài khoản? <Link to="/register">Đăng ký ngay</Link>
-        </p>
+        <div className="login-footer">
+          <Link to="/forgot-password" className="forgot-password">
+            Quên mật khẩu?
+          </Link>
+          <p className="register-link">
+            Chưa có tài khoản? <Link to="/register">Đăng ký ngay</Link>
+          </p>
+        </div>
       </div>
     </div>
   );
