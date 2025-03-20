@@ -58,7 +58,7 @@ const InputForm = () => {
 
   return (
       <div className="input-form-page">
-        <div className={`input-form-wrapper ${isSubmitted ? 'slide-left' : ''}`}>
+        <div className="input-form-wrapper">
           {!isSubmitted ? (
               <>
                 <h1>Dự đoán giá nhà</h1>
