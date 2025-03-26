@@ -95,7 +95,7 @@
   gap: 30px;
 }
 
-.house-card {
+.sell-house-card {
   background: white;
   border-radius: 16px;
   overflow: hidden;
@@ -106,35 +106,35 @@
   position: relative;
 }
 
-.house-card:hover {
+.sell-house-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-.house-image {
+.sell-house-image {
   width: 100%;
   height: 280px;
   overflow: hidden;
   position: relative;
 }
 
-.house-image img {
+.sell-house-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.house-card:hover .house-image img {
+.sell-house-card:hover .sell-house-image img {
   transform: scale(1.08);
 }
 
-.house-content {
+.sell-house-content {
   padding: 30px;
   background: linear-gradient(to bottom, white, #f8f9fa);
 }
 
-.house-content h3 {
+.sell-house-content h3 {
   margin: 0 0 15px;
   font-size: 1.4rem;
   line-height: 1.4;
@@ -142,17 +142,23 @@
   font-weight: 600;
 }
 
-.house-price {
+.sell-house-price {
   color: #e74c3c;
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0 0 20px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
+  text-align: center;
+  padding: 10px;
+  background: rgba(231, 76, 60, 0.05);
+  border-radius: 8px;
 }
 
-.house-details {
+
+.sell-house-details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
@@ -163,7 +169,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.house-details span {
+.sell-house-details span {
   color: #636e72;
   font-size: 0.95rem;
   display: flex;
@@ -171,7 +177,7 @@
   gap: 8px;
 }
 
-.house-details span::before {
+.sell-house-details span::before {
   content: '';
   display: inline-block;
   width: 6px;
@@ -180,7 +186,7 @@
   border-radius: 50%;
 }
 
-.house-description {
+.sell-house-description {
   color: #636e72;
   font-size: 0.95rem;
   line-height: 1.6;
@@ -195,7 +201,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
-.house-card::after {
+.sell-house-card::after {
   content: '';
   position: absolute;
   top: 0;
@@ -208,7 +214,7 @@
   transition: all 0.4s ease;
 }
 
-.house-card:hover::after {
+.sell-house-card:hover::after {
   border-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -363,7 +369,7 @@
     grid-template-columns: 1fr;
   }
 
-  .house-image {
+  .sell-house-image {
     height: 220px;
   }
 

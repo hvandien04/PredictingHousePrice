@@ -136,20 +136,20 @@ const SellHouse = () => {
 
         <div className="houses-grid">
           {houses.map((house) => (
-            <div key={house.id} className="house-card">
-              <div className="house-image">
+            <div key={house.id} className="sell-house-card">
+              <div className="sell-house-image">
                 <img src={house.image} alt={house.title} />
               </div>
-              <div className="house-content">
+              <div className="sell-house-content">
                 <h3>{house.title}</h3>
-                <p className="house-price">{house.price}</p>
-                <div className="house-details">
+                <p className="sell-house-price">{house.price}</p>
+                <div className="sell-house-details">
                   <span>{house.location}</span>
                   <span>{house.area}</span>
                   <span>{house.bedrooms} PN</span>
                   <span>{house.bathrooms} WC</span>
                 </div>
-                <p className="house-description">{house.description}</p>
+                <p className="sell-house-description">{house.description}</p>
               </div>
             </div>
           ))}
