@@ -115,6 +115,24 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Remove outline on button and anchor click */
+button:focus,
+a:focus {
+  outline: none !important;
+}
+
+button:active,
+a:active {
+  outline: none !important;
+}
+
+/* For accessibility, add a different visual indicator for focus */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

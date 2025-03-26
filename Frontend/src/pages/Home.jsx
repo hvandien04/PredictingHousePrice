@@ -7,6 +7,7 @@ import '../styles/Home.css';
 import banner from '../assets/banner.jpg';
 import featuresCenter from '../assets/features-center.png';
 import { FaCalculator, FaHistory, FaRobot, FaBalanceScale } from 'react-icons/fa';
+import NewsList from '../components/NewsList';
 
 const Home = () => {
   const testimonials = [
@@ -151,6 +152,9 @@ const Home = () => {
         </div>
       </section>
 
+      <NewsList />
+
+
       <section className="testimonials">
         <h2>Nhận Xét Của Khách Hàng</h2>
         <div className="testimonials-container">
@@ -166,29 +170,6 @@ const Home = () => {
               </div>
             ))}
           </Slider>
-        </div>
-      </section>
-
-      <section className="feedback-section">
-        <h2>Gửi Phản Hồi</h2>
-        <div className="feedback-container">
-          <div className="feedback-form">
-            <div className="form-group">
-              <input type="text" id="name" placeholder=" " required />
-              <label htmlFor="name">Họ và tên</label>
-            </div>
-            <div className="form-group">
-              <input type="email" id="email" placeholder=" " required />
-              <label htmlFor="email">Email</label>
-            </div>
-            <div className="form-group">
-              <textarea id="feedback" rows="4" placeholder=" " required></textarea>
-              {/* <label htmlFor="feedback">Nội dung phản hồi</label> */}
-            </div>
-            <button type="submit" className="submit-button">
-              Gửi phản hồi
-            </button>
-          </div>
         </div>
       </section>
       
