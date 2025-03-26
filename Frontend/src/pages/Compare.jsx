@@ -7,8 +7,6 @@ const Compare = () => {
       id: 1,
       image: '/img/house1.jpg',
       price: '2.390.000.000đ',
-      originalPrice: '2.900.000.000đ',
-      discount: '-20%',
       features: [
         'Diện tích: 100m²',
         'Số phòng ngủ: 3',
@@ -24,8 +22,6 @@ const Compare = () => {
       id: 2,
       image: '/img/house2.jpg',
       price: '3.100.000.000đ',
-      originalPrice: '3.500.000.000đ',
-      discount: '-15%',
       features: [
         'Diện tích: 120m²',
         'Số phòng ngủ: 4',
@@ -65,8 +61,6 @@ const Compare = () => {
               </div>
               <div className="house-price">
                 <span className="current-price">{house.price}</span>
-                <span className="original-price">{house.originalPrice}</span>
-                <span className="discount">{house.discount}</span>
               </div>
               <div className="house-features">
                 {house.features.map((feature, index) => (
