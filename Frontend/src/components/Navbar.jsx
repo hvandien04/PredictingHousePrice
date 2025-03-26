@@ -47,6 +47,14 @@ const Navbar = () => {
               Đăng Bán
             </Link>
           </li>
+          <li>
+            <Link 
+              to="/about" 
+              className={`nav-item ${location.pathname === '/about' ? 'active' : ''}`}
+            >
+              Về Chúng Tôi
+            </Link>
+          </li>
           {!user ? (
             <>
               <li>
@@ -55,14 +63,6 @@ const Navbar = () => {
                   className={`nav-item ${location.pathname === '/login' ? 'active' : ''}`}
                 >
                   Đăng Nhập
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/register" 
-                  className={`nav-item ${location.pathname === '/register' ? 'active' : ''}`}
-                >
-                  Đăng Ký
                 </Link>
               </li>
             </>

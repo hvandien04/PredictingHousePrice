@@ -91,7 +91,6 @@ const Compare = () => {
               </div>
               <div className="action-buttons">
                 <button className="btn-buy">LIÊN HỆ NGAY</button>
-                <button className="btn-installment">MUA NGAY</button>
               </div>
             </div>
           ))}
