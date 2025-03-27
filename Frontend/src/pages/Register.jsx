@@ -12,6 +12,8 @@ const Register = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [touched, setTouched] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const validatePassword = (password) => {
     const minLength = 8;
@@ -51,8 +53,25 @@ const Register = () => {
     }
   };
 
+  const handleFocus = (e) => {
+    const { name } = e.target;
+    setTouched(prev => ({
+      ...prev,
+      [name]: true
+    }));
+  };
+
+  const handleBlur = (e) => {
+    const { name } = e.target;
+    setTouched(prev => ({
+      ...prev,
+      [name]: false
+    }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitted(true);
     
     // Validate all fields
     const newErrors = {};
@@ -68,10 +87,14 @@ const Register = () => {
     setErrors(newErrors);
 
     // If there are no errors, proceed with registration
-    if (Object.keys(newErrors).length === 0) {
+    if (!newErrors.password && !newErrors.confirmPassword) {
       // TODO: Xử lý đăng ký
       console.log('Register data:', formData);
     }
+  };
+
+  const shouldShowError = (fieldName) => {
+    return (touched[fieldName] || isSubmitted) && errors[fieldName];
   };
 
   return (
@@ -122,11 +145,13 @@ const Register = () => {
               name="password"
               value={formData.password}
               onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
               placeholder=" "
               required
             />
             <label htmlFor="password">Mật khẩu</label>
-            {errors.password && <span className="error-message">{errors.password}</span>}
+            {shouldShowError('password') && <span className="error-message">{errors.password}</span>}
           </div>
           <div className="form-group">
             <input
@@ -135,11 +160,13 @@ const Register = () => {
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
               placeholder=" "
               required
             />
             <label htmlFor="confirmPassword">Xác nhận mật khẩu</label>
-            {errors.confirmPassword && <span className="error-message">{errors.confirmPassword}</span>}
+            {shouldShowError('confirmPassword') && <span className="error-message">{errors.confirmPassword}</span>}
           </div>
           <button type="submit" className="btn-login">
             Đăng ký
