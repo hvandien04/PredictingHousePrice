@@ -11,18 +11,67 @@ const Register = () => {
     phone: ''
   });
 
+  const [errors, setErrors] = useState({});
+
+  const validatePassword = (password) => {
+    const minLength = 8;
+    const hasLetter = /[a-zA-Z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    
+    if (password.length < minLength) {
+      return 'Mật khẩu phải có ít nhất 8 ký tự';
+    }
+    if (!hasLetter || !hasNumber) {
+      return 'Mật khẩu phải chứa cả chữ và số';
+    }
+    return '';
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+
+    // Validate password when it changes
+    if (name === 'password') {
+      setErrors(prev => ({
+        ...prev,
+        password: validatePassword(value)
+      }));
+    }
+
+    // Validate confirm password when it changes
+    if (name === 'confirmPassword') {
+      setErrors(prev => ({
+        ...prev,
+        confirmPassword: value !== formData.password ? 'Mật khẩu xác nhận không khớp' : ''
+      }));
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Xử lý đăng ký
-    console.log('Register data:', formData);
+    
+    // Validate all fields
+    const newErrors = {};
+    
+    // Validate password
+    newErrors.password = validatePassword(formData.password);
+    
+    // Validate confirm password
+    if (formData.password !== formData.confirmPassword) {
+      newErrors.confirmPassword = 'Mật khẩu xác nhận không khớp';
+    }
+
+    setErrors(newErrors);
+
+    // If there are no errors, proceed with registration
+    if (Object.keys(newErrors).length === 0) {
+      // TODO: Xử lý đăng ký
+      console.log('Register data:', formData);
+    }
   };
 
   return (
@@ -77,6 +126,7 @@ const Register = () => {
               required
             />
             <label htmlFor="password">Mật khẩu</label>
+            {errors.password && <span className="error-message">{errors.password}</span>}
           </div>
           <div className="form-group">
             <input
@@ -89,6 +139,7 @@ const Register = () => {
               required
             />
             <label htmlFor="confirmPassword">Xác nhận mật khẩu</label>
+            {errors.confirmPassword && <span className="error-message">{errors.confirmPassword}</span>}
           </div>
           <button type="submit" className="btn-login">
             Đăng ký
