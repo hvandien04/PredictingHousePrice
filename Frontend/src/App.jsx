@@ -11,6 +11,7 @@ import About from './pages/About';
 import Compare from './pages/Compare';
 import History from './pages/History';
 import SellHouse from './pages/SellHouse';
+import SellHistory from './pages/SellHistory';
 import { AuthProvider } from './context/AuthContext';
 import './App.css';
 
@@ -30,6 +31,7 @@ function App() {
               <Route path="/compare" element={<Compare />} />
               <Route path="/history" element={<History />} />
               <Route path="/sell-house" element={<SellHouse />} />
+              <Route path="/sell-history" element={<SellHistory />} />
             </Routes>
           </main>
           <Footer />

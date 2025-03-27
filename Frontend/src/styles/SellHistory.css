@@ -1,0 +1,172 @@
+.sell-history-container {
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+}
+
+.sell-history-header {
+  margin-bottom: 40px;
+}
+
+.sell-history-header h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sell-history-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sell-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sell-history-item {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.sell-history-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sell-history-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.sell-history-info {
+  flex: 1;
+}
+
+.sell-history-info h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.sell-history-price {
+  color: #e74c3c;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.sell-history-details {
+  display: flex;
+  gap: 20px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.sell-history-status {
+  text-align: right;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.status-badge.active {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+
+.status-badge.sold {
+  background: rgba(108, 117, 125, 0.1);
+  color: #6c757d;
+}
+
+.posted-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.sell-history-metrics {
+  display: flex;
+  gap: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.metric {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.metric i {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .sell-history-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .sell-history-main {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .sell-history-status {
+    text-align: left;
+  }
+
+  .sell-history-details {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sell-history-metrics {
+    flex-direction: column;
+    gap: 15px;
+  }
+} 

@@ -3,18 +3,18 @@ import '../styles/Feedback.css';
 
 const Feedback = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [rating, setRating] = useState(0);
+  const [title, setTitle] = useState('');
   const [comment, setComment] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: Implement API call to send feedback
-    console.log('Feedback submitted:', { rating, comment });
+    console.log('Feedback submitted:', { title, comment });
     setIsSubmitted(true);
     setTimeout(() => {
       setIsOpen(false);
-      setRating(0);
+      setTitle('');
       setComment('');
       setIsSubmitted(false);
     }, 2000);
@@ -42,31 +42,29 @@ const Feedback = () => {
             {!isSubmitted ? (
               <form onSubmit={handleSubmit}>
                 <h2>Your Feedback</h2>
-                <div className="rating-container">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <span
-                      key={star}
-                      className={`star ${star <= rating ? 'active' : ''}`}
-                      onClick={() => setRating(star)}
-                    >
-                      ★
-                    </span>
-                  ))}
+                <div className="feedback-form-group">
+                  <input
+                    type="text"
+                    placeholder="Tiêu đề phản hồi"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    required
+                  />
                 </div>
                 <textarea
-                  placeholder="Tell us what you think..."
+                  placeholder="Nội dung phản hồi..."
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
                   required
                 />
                 <button type="submit" className="submit-button">
-                  Submit Feedback
+                  Gửi phản hồi
                 </button>
               </form>
             ) : (
               <div className="success-message">
-                <h2>Thank You!</h2>
-                <p>Your feedback has been submitted successfully.</p>
+                <h2>Cảm ơn bạn!</h2>
+                <p>Phản hồi của bạn đã được gửi thành công.</p>
               </div>
             )}
           </div>

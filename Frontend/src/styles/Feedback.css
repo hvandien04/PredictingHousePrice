@@ -56,48 +56,60 @@
   color: #333;
 }
 
-.rating-container {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
+.feedback-form-group {
+  margin-bottom: 20px;
 }
 
-.star {
-  font-size: 30px;
-  cursor: pointer;
-  color: #ddd;
-  transition: color 0.2s ease;
+.feedback-form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
 }
 
-.star.active {
-  color: #ffd700;
+.feedback-form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
 textarea {
   width: 100%;
-  min-height: 100px;
-  padding: 10px;
+  min-height: 120px;
+  padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
   resize: vertical;
+  transition: all 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
 .submit-button {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 8px;
   cursor: pointer;
   width: 100%;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 .submit-button:hover {
   background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 .success-message {
@@ -112,4 +124,15 @@ textarea {
 
 .success-message p {
   color: #666;
+}
+
+@media (max-width: 768px) {
+  .feedback-modal {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .rating-container .fa-star {
+    font-size: 20px;
+  }
 } 
