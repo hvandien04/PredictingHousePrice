@@ -32,6 +32,7 @@ const SellHouse = () => {
       area: '120m²',
       bedrooms: 4,
       bathrooms: 3,
+      legalstatus: 'Chính chủ',
       description: 'Nhà phố cao cấp, full nội thất, vị trí đẹp...',
       image: 'https://file4.batdongsan.com.vn/crop/393x222/2024/02/27/20240227160332-a465_wm.jpg'
     },
@@ -43,7 +44,8 @@ const SellHouse = () => {
       type: 'Chung cư',
       area: '85m²',
       bedrooms: 3,
-      bathrooms: 2,
+      bathrooms: 2,      
+      legalstatus: 'Chính chủ',
       description: 'Căn hộ view sông thoáng mát...',
       image: 'https://file4.batdongsan.com.vn/crop/393x222/2024/02/27/20240227160440-3724_wm.jpg'
     },
@@ -148,6 +150,7 @@ const SellHouse = () => {
                   <span>{house.area}</span>
                   <span>{house.bedrooms} PN</span>
                   <span>{house.bathrooms} WC</span>
+                  <span>{house.legalstatus}</span>
                 </div>
                 <p className="sell-house-description">{house.description}</p>
               </div>
@@ -242,6 +245,15 @@ const SellHouse = () => {
                   />
                 </div>
 
+                <div className="sell-form-group">
+                  <label>Tình trạng pháp lý</label>
+                  <select name="legalstatus" value={formData.legalstatus} onChange={handleFormChange} required>
+                    <option value="">Chọn tình trạng pháp lý</option>
+                    <option value="yes">Có</option>
+                    <option value="no">CKhông</option>
+                  </select>
+                </div>
+
                 <div className="sell-form-group sell-full-width">
                   <label>Mô tả</label>
                   <textarea
@@ -252,6 +264,8 @@ const SellHouse = () => {
                     required
                   ></textarea>
                 </div>
+
+                
 
                 <div className="sell-form-group sell-full-width">
                   <label>Hình ảnh</label>

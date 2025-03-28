@@ -11,7 +11,6 @@ const Compare = () => {
         'Diện tích: 100m²',
         'Số phòng ngủ: 3',
         'Số phòng tắm: 2',
-        'Hướng: Đông Nam',
         'Kết nối giao thông'
       ],
       location: 'Quận 7, TP.HCM',
@@ -26,7 +25,6 @@ const Compare = () => {
         'Diện tích: 120m²',
         'Số phòng ngủ: 4',
         'Số phòng tắm: 3',
-        'Hướng: Đông',
         'Gần trung tâm'
       ],
       location: 'Quận 2, TP.HCM',
