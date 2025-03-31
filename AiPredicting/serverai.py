@@ -21,11 +21,9 @@ def recreate_label_encoder(file_path):
         data = pickle.load(file)
 
     if isinstance(data, (list, tuple)) or hasattr(data, "__array__"):
-        # Tạo LabelEncoder mới
         label_encoder = LabelEncoder()
         label_encoder.fit(data)
 
-        # Ghi đè file cũ
         with open(file_path, "wb") as file:
             pickle.dump(label_encoder, file)
 
@@ -33,7 +31,6 @@ def recreate_label_encoder(file_path):
     else:
         print(f"⚠️ Dữ liệu trong {file_path} không hợp lệ!")
 
-# Tạo lại cả hai label_encoder
 recreate_label_encoder("label_encoder_vi_tri_goc.pkl")
 recreate_label_encoder("label_encoder_loai_goc.pkl")
 
@@ -46,10 +43,10 @@ def load_labels(filename):
     else:
         raise ValueError(f"File {filename} không phải là một LabelEncoder hợp lệ.")
 
-# API dự đoán giá nhà
+# API dự đoán giá nhà với khoảng tin cậy
 @app.route("/predict", methods=["POST"])
 def predict():
-    data = request.json  # Nhận dữ liệu JSON từ React
+    data = request.json  
     try:
         # Mã hóa dữ liệu đầu vào
         loai_nha_encoded = label_encoder_loai_goc.transform([data["loai_nha"]])[0]
@@ -62,7 +59,18 @@ def predict():
         # Dự đoán giá
         gia_du_doan = model.predict(input_scaled)[0]
 
-        return jsonify({"gia_du_doan": f"{gia_du_doan:.2f} VND"})
+        # Tính khoảng tin cậy 95% bằng phương sai giữa các cây trong Random Forest
+        y_preds_all = np.array([tree.predict(input_scaled)[0] for tree in model.estimators_])
+        std_dev = np.std(y_preds_all)
+        confidence_95 = 1.96 * std_dev
+
+        lower_bound = max(0, gia_du_doan - confidence_95)
+        upper_bound = gia_du_doan + confidence_95
+
+        return jsonify({
+            "gia_du_doan": round(gia_du_doan, 2),
+            "confidence_interval": [round(lower_bound, 2), round(upper_bound, 2)]
+        })
 
     except Exception as e:
         return jsonify({"error": str(e)})

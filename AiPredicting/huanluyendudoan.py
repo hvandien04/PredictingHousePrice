@@ -8,7 +8,7 @@ import joblib
 import unicodedata
 
 # 1. Đọc dữ liệu
-file_path = "gia_nha_tphcm.csv"
+file_path = "finaldata.csv"
 df = pd.read_csv(file_path, encoding="utf-8")
 
 print("Dữ liệu đã được đọc thành công!")
@@ -73,7 +73,7 @@ for i in range(1, 101, 10):  # Huấn luyện từng bước (tăng số cây m�
     mae_partial = mean_absolute_error(y_test, y_pred_partial)  # Tính MAE
     mae_history.append((i, mae_partial))  # Lưu lịch sử lỗi MAE
 
-    print(f"Số cây: {i} | MAE: {mae_partial:.2f} VND")
+    print(f"Số cây: {i} | MAE: {mae_partial:.2f} tỷ")
 
 print("Huấn luyện hoàn tất!")
 
@@ -88,7 +88,7 @@ y_pred = model.predict(X_test)
 mae = mean_absolute_error(y_test, y_pred)
 
 print(f"\nĐánh giá mô hình:")
-print(f"- Mean Absolute Error (MAE): {mae:.2f} VND")
+print(f"- Mean Absolute Error (MAE): {mae:.2f} tỷ")
 
 # 7. Hàm dự đoán giá nhà mới với quá trình hiển thị chi tiết
 def du_doan_gia(loai_nha, vi_tri, dien_tich, so_phong, so_tang):
@@ -125,12 +125,12 @@ def du_doan_gia(loai_nha, vi_tri, dien_tich, so_phong, so_tang):
     
     # Bước 4: Dự đoán giá
     gia_du_doan = model.predict(input_scaled)[0]
-    print(f"\nGiá nhà dự đoán: {gia_du_doan:.2f} VND")
+    print(f"\nGiá nhà dự đoán: {gia_du_doan:.2f} tỷ")
     
-    return f"{gia_du_doan:.2f} VND"
+    return f"{gia_du_doan:.2f} tỷ"
 
 # Ví dụ dự đoán với hiển thị chi tiết
-du_doan_gia("Nhà hẻm", "Quận 12", 70, 1, 4)
+du_doan_gia("Nhà hẻm", "Quận 12", 60, 4, 4)
 
 model_filename = "house_price_model.pkl"
 scaler_filename = "scaler.pkl"

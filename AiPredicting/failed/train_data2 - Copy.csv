@@ -1,0 +1,750 @@
+﻿Loại nhà,Vị trí,Diện tích,Số phòng ngủ,Số tầng,Giá,,,,Số phòng tắm,Trình trạng pháp lý,Nội thất,,Address,Mặt tiền,Đường vào,Hướng nhà,Hướng ban công
+Nhà mặt tiền,Quận Bình Tân,64,4,5,6.7,,,,5,Have certificate,Basic,,"Đường Trương Phước Phan, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",4,6,Tây,Tây
+Nhà hẻm,Quận Bình Tân,60,4,4,6.5,,,,5,Have certificate,Full,,"Đường Lê Trọng Tấn, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,5,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Bình Tân,75.6,5,4,7.5,,,,6,Have certificate,Full,,"Hẻm 36/, Đường Bùi Tư Toàn, Phường An Lạc, Quận Bình Tân, Hồ Chí Minh",5,10,Nam,Nam
+Biệt thự,Quận 9 (TP. Thủ Đức),117.1,7,1,8.45,,,,7,Have certificate,Basic,,"Đường Trương Văn Thành, Phường Hiệp Phú, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6,8,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,60,4,4,4.3,,,,4,Have certificate,Basic,,"Đường Quốc lộ 1A, Phường An Phú Đông, Quận 12, Hồ Chí Minh",4,6,Tây - Bắc,Tây
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),78,3,2,4,,,,2,Have certificate,Basic,,"Đường Kha Vạn Cân, Phường Linh Tây, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.5,3.5,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Bình Tân,60,5,5,6.3,,,,6,Have certificate,Full,,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,8,Đông,Đông
+Nhà mặt tiền,Huyện Nhà Bè,68.8,4,4,7.8,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4.3,10,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,40.1,2,1,3.6,,,,1,Have certificate,Basic,,"Khu phố 2, Đường Lê Văn Quới, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",4,8,Tây,Tây
+Chung cư,Quận 3,30.71,2,2,4.2,,,,2,Have certificate,Full,,"62/12, Đường Nguyễn Thông, Phường 9, Quận 3, Hồ Chí Minh",4.03,20,Đông,Đông - Nam
+Nhà hẻm,Huyện Nhà Bè,50,3,3,5.1,,,,4,Have certificate,Full,,"Đường Đào Tông Nguyên, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",5,10,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận 7,96,4,2,9.35,,,,3,Have certificate,Basic,,"Đường Lê Văn Lương, Phường Tân Kiểng, Quận 7, Hồ Chí Minh",5,6,Bắc,Bắc
+Biệt thự,Quận Bình Tân,142,3,2,7.9,,,,2,Have certificate,Basic,,"Đường Cầu Kinh, Phường Tân Tạo A, Quận Bình Tân, Hồ Chí Minh",5,10,Nam,Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,4,3,9.8,,,,4,Have certificate,Full,,"Dự án River Park, Đường Võ Chí Công, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh.",5,10,Tây,Tây
+Chung cư,Quận Gò Vấp,37.5,3,4,5.99,,,,3,Have certificate,Full,,"Đường Lê Đức Thọ, Phường 6, Quận Gò Vấp, Hồ Chí Minh",8.3,5,Tây,Tây
+Nhà mặt tiền,Quận 7,98.7,7,2,5.2,,,,4,Have certificate,Basic,,"Hẻm 1234, Đường Huỳnh Tấn Phát, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",6,3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,60,3,3,5.3,,,,3,Have certificate,Basic,,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4.2,5,Tây,Tây
+Nhà hẻm,Quận Gò Vấp,59,4,4,6.7,,,,4,Have certificate,Basic,,"Đường Huỳnh Văn Nghệ, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4.2,4,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Bình Tân,72,5,5,8.3,,,,6,Have certificate,Full,,"Hẻm 427, Đường Lê Văn Quới, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,8,Tây,Tây
+Chung cư,Quận Phú Nhuận,33.1,2,2,5.2,,,,1,Have certificate,Basic,,"Đường Huỳnh Văn Bánh, Phường 12, Quận Phú Nhuận, Hồ Chí Minh",3.1,4,Đông,Đông
+Nhà hẻm,Quận Bình Tân,40,5,4,4.8,,,,6,Have certificate,Full,,"Đường Nguyễn Quý Yêm, Phường An Lạc, Quận Bình Tân, Hồ Chí Minh",4,5,Nam,Nam
+Chung cư,Quận Bình Thạnh,26,3,3,4.05,,,,3,Have certificate,Full,,"Đường Nguyễn Cửu Vân, Phường 17, Quận Bình Thạnh, Hồ Chí Minh",3.5,3.5,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Huyện Nhà Bè,80,3,3,7.39,,,,4,Have certificate,Full,,"Dự án Green Riverside, Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",5.6,6,Đông - Bắc,Tây - Nam
+Nhà mặt tiền,Quận Gò Vấp,80,4,4,7.45,,,,5,Have certificate,Full,,"Đường Lê Văn Thọ, Phường 8, Quận Gò Vấp, Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Tân Phú,66,4,4,10,,,,4,Have certificate,Full,,"Phường Sơn Kỳ, Quận Tân Phú, Hồ Chí Minh",6,6,Đông - Bắc,Đông - Nam
+Nhà mặt tiền,Quận 12,88,4,3,7.6,,,,5,Have certificate,Full,,"Đường Tân Thới Nhất 12, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",8,8,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Tân Phú,65,4,1,6.2,,,,3,Have certificate,Basic,,"Hẻm 115 Đường Lê Trọng Tấn, Phường Sơn Kỳ, Quận Tân Phú, Hồ Chí Minh",4,6,Đông,Đông
+Chung cư,Quận Bình Tân,25,2,2,2.4,,,,2,Have certificate,Full,,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",3,5,Bắc,Bắc
+Nhà hẻm,Quận Gò Vấp,63,4,3,6.85,,,,5,Have certificate,Basic,,"Đường Số 3, Phường 9, Quận Gò Vấp, Hồ Chí Minh",4.2,4,Nam,Nam
+Nhà hẻm,Quận Bình Tân,50,3,2,5.8,,,,2,Have certificate,Full,,"Đường Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,8,Đông,Đông
+Nhà mặt tiền,Quận Bình Tân,84,2,2,9.5,,,,2,Have certificate,Full,,"Đường Số 1A, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",4,12,Nam,Nam
+Nhà mặt tiền,Quận Bình Tân,84,3,3,9.3,,,,4,Have certificate,Full,,"Đường Số 25A, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",4,12,Bắc,Đông - Bắc
+Nhà mặt tiền,Quận 7,72,3,2,6.8,,,,3,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Bình Thuận, Quận 7, Hồ Chí Minh",4,8,Tây,Tây
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),53.8,3,4,4.8,,,,3,Have certificate,Full,,"Đường 12, Phường Trường Thạnh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.5,8,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Bình Thạnh,50,3,4,9.6,,,,4,Have certificate,Full,,"Đường Hoàng Hoa Thám, Phường 6, Quận Bình Thạnh, Hồ Chí Minh",5,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Gò Vấp,46,2,2,4.6,,,,2,Have certificate,Full,,"Đường Thống Nhất, Phường 16, Quận Gò Vấp, Hồ Chí Minh",3.5,5.5,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận 7,60,4,4,5,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",8,8,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Gò Vấp,80,3,2,7.5,,,,3,Have certificate,Basic,,"Đường Quang Trung, Phường 11, Quận Gò Vấp, Hồ Chí Minh",6,6,Tây - Nam,Tây - Nam
+Chung cư,Quận Phú Nhuận,29,3,4,7.15,,,,4,Have certificate,Full,,"Đường Huỳnh Văn Bánh, Phường 12, Quận Phú Nhuận, Hồ Chí Minh",3.5,5,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Bình Thạnh,62,5,4,7,,,,4,Have certificate,Basic,,"Đường Bùi Đình Túy, Phường 12, Quận Bình Thạnh, Hồ Chí Minh",3,8,Bắc,Bắc
+Nhà hẻm,Quận 8,43.1,3,2,4.2,,,,3,Have certificate,Full,,"Hẻm 2889A, Đường Phạm Thế Hiển, Phường 7, Quận 8, Hồ Chí Minh",2.99,4.5,Tây - Nam,Tây
+Nhà hẻm,Quận Gò Vấp,60,9,4,7.3,,,,9,Have certificate,Basic,,"1180/, Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",5,5,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),88,4,3,6.9,,,,4,Have certificate,Full,,"Đường Số 4, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.3,4,Nam,Nam
+Chung cư,Quận Bình Thạnh,25,3,4,3.9,,,,4,Have certificate,Full,,"Đường Lê Quang Định, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",3.5,4,Nam,Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),48,3,2,3.25,,,,2,Have certificate,Basic,,"Đường Ụ Ghe, Phường Tam Phú, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,2.5,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Tân Phú,68,4,4,9.7,,,,4,Have certificate,Full,,"Hẻm 370 Đường Tân Sơn Nhì, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",4,12,Đông,Đông
+Nhà hẻm,Quận 7,60,3,3,5.47,,,,3,Have certificate,Full,,"1135, Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",4,3.5,Bắc,Bắc
+Nhà hẻm,Quận Bình Tân,52,5,5,5.95,,,,4,Have certificate,Basic,,"Đường Lô Tư, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Biệt thự,Quận Thủ Đức (TP. Thủ Đức),100,3,3,7.7,,,,4,Have certificate,Full,,"Đường Số 11, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,5,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),42.4,1,1,4.9,,,,1,Have certificate,Full,,"Đường Đặng Văn Bi, Phường Bình Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.8,6,Nam,Nam
+Chung cư,Quận Phú Nhuận,18,3,3,3.3,,,,3,Have certificate,Full,,"Đường Phan Xích Long, Phường 2, Quận Phú Nhuận, Hồ Chí Minh",6,5,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Bình Tân,94,4,3,8.7,,,,4,Have certificate,Full,,"Đường Bùi Hữu Diện, Phường An Lạc A, Quận Bình Tân, Hồ Chí Minh",4.5,8,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 12,64,4,4,6.6,,,,5,Have certificate,Basic,,"Dự án Song Minh Residence, Đường Thới An 22, Phường Thới An, Quận 12, Hồ Chí Minh",4,8,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Tân Bình,53,4,3,8.9,,,,3,Have certificate,Basic,,"Hẻm 83, Đường Phạm Văn Bạch, Phường 15, Quận Tân Bình, Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Chung cư,Quận 10,30,2,3,8.8,,,,2,Have certificate,Full,,"Đường Hồ Bá Kiện, Phường 15, Quận 10, Hồ Chí Minh",3.5,20,Tây - Nam,Nam
+Nhà hẻm,Quận Tân Bình,52,7,5,7.5,,,,6,Have certificate,Full,,"148/9, Đường Trần Văn Quang, Phường 10, Quận Tân Bình, Hồ Chí Minh",4,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Thạnh,48,6,5,7.25,,,,4,Have certificate,Full,,"Đường Nguyên Hồng, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",4,16,Nam,Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,3,3,7.2,,,,3,Have certificate,Basic,,"Dự án Mega Village, Đường Vành Đai 2, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Tân Phú,64,2,2,9,,,,3,Have certificate,Full,,"Đường Dương Văn Dương, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",4,16,Tây,Tây
+Chung cư,Quận Bình Tân,35,2,1,1.93,,,,2,Have certificate,Basic,,"Đường Tỉnh Lộ 10, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",4,6,Tây,Tây
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),52,4,4,7.2,,,,3,Have certificate,Basic,,"Đường 7, Phường Linh Trung, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.5,8,Bắc,Bắc
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),55,4,5,9.3,,,,4,Have certificate,Full,,"Đường 17, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,5,Bắc,Bắc
+Nhà hẻm,Quận 7,60,4,4,8.6,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Bình Thuận, Quận 7, Hồ Chí Minh",4,8,Đông - Bắc,Đông - Bắc
+Biệt thự,Quận 8,110,4,3,7.7,,,,5,Have certificate,Basic,,"Đường Bùi Minh Trực, Phường 5, Quận 8, Hồ Chí Minh",4.2,3,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Gò Vấp,64,3,3,7.8,,,,4,Have certificate,Full,,"Đường Thống Nhất, Phường 16, Quận Gò Vấp, Hồ Chí Minh",5,5,Đông - Nam,Đông - Nam
+Biệt thự,Huyện Hóc Môn,176,3,1,7,,,,2,Have certificate,Basic,,"Đường Nguyễn Thị Thử, Xã Xuân Thới Sơn, Huyện Hóc Môn, Hồ Chí Minh",5,13,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,50.1,4,3,4.45,,,,5,Have certificate,Full,,"Đường Thạnh Xuân 22, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4.1,6,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 7,56.4,5,4,9.3,,,,4,Have certificate,Full,,"Đường Hoàng Quốc Việt, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",5.18,6,Nam,Nam
+Nhà mặt tiền,Huyện Nhà Bè,80,4,4,7.5,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",5,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,4,3,9.8,,,,4,Have certificate,Full,,"Dự án River Park, Đường Võ Chí Công, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,10,Tây,Tây
+Nhà mặt tiền,Quận Bình Tân,80,5,3,6.8,,,,5,Have certificate,Full,,"Đường Chiến Lược, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",4,6,Bắc,Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),99.4,2,1,4.7,,,,2,Have certificate,Basic,,"Đường Tam Châu, Phường Tam Bình, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",30,5,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Huyện Nhà Bè,86,4,4,8.3,,,,5,Have certificate,Full,,"Hẻm 1368, Đường Lê Văn Lương, Xã Phước Kiển, Huyện Nhà Bè, Hồ Chí Minh",6.4,7,Bắc,Bắc
+Nhà hẻm,Quận Gò Vấp,60,4,4,5.98,,,,5,Have certificate,Full,,"237/, Đường Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Hồ Chí Minh",8,8,Nam,Bắc
+Nhà hẻm,Quận Tân Phú,56,3,3,5.3,,,,2,Have certificate,Full,,"Đường Trường Chinh, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",4,3,Tây - Nam,Nam
+Nhà mặt tiền,Quận 7,74,4,4,8.5,,,,6,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Tân Thuận Tây, Quận 7, Hồ Chí Minh",4.3,6,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Tân Phú,68,2,1,5.9,,,,2,Have certificate,Basic,,"Đường Trần Văn Ơn, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",4,6,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Huyện Nhà Bè,69,5,4,6.2,,,,5,Have certificate,Full,,"Đường Đào Tông Nguyên, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4,6,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 12,46,4,3,4.45,,,,3,Have certificate,Full,,"Đường Nguyễn Thị Đặng, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",4.5,5,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Bình Thạnh,50,5,4,9.3,,,,6,Have certificate,Full,,"Đường Nguyễn Thượng Hiền, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),67.3,5,4,8.3,,,,6,Have certificate,Basic,,"Đường Dương Đình Hội, Phường Phước Long B, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,8,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Tân Phú,32,2,3,4.65,,,,2,Have certificate,Full,,"Hẻm 30 Phố Đỗ Nhuận, Phường Sơn Kỳ, Quận Tân Phú, Hồ Chí Minh",4,10,Nam,Nam
+Nhà mặt tiền,Quận 8,68,2,2,5,,,,3,Have certificate,Full,,"Đường Phạm Thế Hiển, Phường 6, Quận 8, Hồ Chí Minh",5.5,3,Tây,Tây
+Nhà hẻm,Quận 7,40,6,5,8.2,,,,7,Have certificate,Full,,"Đường Số 5, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",4,8,Nam,Nam
+Nhà mặt tiền,Quận 7,64.6,2,2,6.5,,,,2,Have certificate,Full,,"Đường Số 10, Phường Tân Quy, Quận 7, Hồ Chí Minh",4,4,Bắc,Bắc
+Nhà mặt tiền,Quận Gò Vấp,71,4,5,7.35,,,,5,Have certificate,Full,,"Đường Lê Đức Thọ, Phường 13, Quận Gò Vấp, Hồ Chí Minh",5.5,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 6,54,2,2,5,,,,2,Have certificate,Basic,,"Đường Nguyễn Văn Luông, Phường 12, Quận 6, Hồ Chí Minh",4,4,Bắc,Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,4,3,6.75,,,,4,Have certificate,Full,,"Dự án Mega Village, Đường Vành Đai 2, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",12,20,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Huyện Nhà Bè,70,4,4,8.6,,,,5,Have certificate,Full,,"90, Đường Dương Cát Lợi, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",8,8,Bắc,Bắc
+Biệt thự,Quận Bình Thạnh,126.6,8,2,7.7,,,,8,Have certificate,Basic,,"434/8A4, Đường Bình Quới, Phường 28, Quận Bình Thạnh, Hồ Chí Minh",7,1.3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,52.7,3,2,3.45,,,,2,Have certificate,Basic,,"Đường Tân Thới Hiệp 20, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",3.6,5,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 12,54,4,3,4.55,,,,4,Have certificate,Full,,"1/ 113, Đường Lâm Thị Hố, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh",4,4,Đông,Đông
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),75,2,2,3.7,,,,1,Have certificate,Basic,,"Đường 12, Phường Linh Tây, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,2.5,Tây,Tây
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),93.7,3,3,7.7,,,,3,Have certificate,Full,,"Đường 11, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,6,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Gò Vấp,72,4,3,6.6,,,,3,Have certificate,Full,,"Đường Quang Trung, Phường 14, Quận Gò Vấp, Hồ Chí Minh",4,12,Đông - Nam,Đông - Nam
+Chung cư,Quận 8,29.7,4,2,4.5,,,,3,Have certificate,Basic,,"Đường Ưu Long, Phường 11, Quận 8, Hồ Chí Minh",50,2,Bắc,Bắc
+Nhà mặt tiền,Quận 12,66,2,2,3.3,,,,2,Have certificate,Full,,"Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",5,5,Đông,Đông
+Nhà mặt tiền,Quận Tân Phú,73,4,3,8.95,,,,3,Have certificate,Full,,"Đường Bác Ái, Phường Tân Thành, Quận Tân Phú, Hồ Chí Minh",4.1,12,Bắc,Bắc
+Nhà mặt tiền,Quận Gò Vấp,70,4,3,6.3,,,,4,Have certificate,Basic,,"Đường Quang Trung, Phường 14, Quận Gò Vấp, Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,44,2,2,2.35,,,,2,Have certificate,Basic,,"Đường Lê Đình Cẩn, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",5,5,Tây,Tây
+Nhà mặt tiền,Quận Bình Tân,64,4,5,6.45,,,,5,Have certificate,Full,,"Đường Lê Văn Quới, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",4,6,Nam,Nam
+Nhà mặt tiền,Quận 12,68,4,3,5.85,,,,3,Have certificate,Full,,"Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",5,5,Nam,Nam
+Nhà mặt tiền,Quận Phú Nhuận,79,4,2,9.5,,,,2,Have certificate,Basic,,"125, Đường Nguyễn Công Hoan, Phường 7, Quận Phú Nhuận, Hồ Chí Minh",3.5,2.5,Tây,Tây
+Nhà hẻm,Quận Tân Phú,56,3,2,7.6,,,,3,Have certificate,Full,,"229, Đường Tây Thạnh, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",5,14,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 7,52,5,3,4.9,,,,5,Have certificate,Basic,,"Đường Huỳnh Tấn Phát, Phường Tân Thuận Tây, Quận 7, Hồ Chí Minh",4.3,3,Bắc,Bắc
+Chung cư,Quận 10,30,3,3,5,,,,2,Have certificate,Basic,,"312/3, Đường Ngô Gia Tự, Phường 4, Quận 10, Hồ Chí Minh",6,6,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Tân Phú,60,2,2,2.75,,,,2,Have certificate,Basic,,"Đường Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",5,5,Nam,Nam
+Chung cư,Quận Gò Vấp,39,4,4,6.9,,,,4,Have certificate,Full,,"Đường Nguyễn Văn Lượng, Phường 16, Quận Gò Vấp, Hồ Chí Minh",4.3,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,47,2,2,4.15,,,,2,Have certificate,Basic,,"650/1A Đường Tên Lửa, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",4.2,4,Đông,Đông
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),82,4,3,6.5,,,,6,Have certificate,Basic,,"Đường Quốc Lộ 13, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6,6,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Tân Phú,58,2,3,3.7,,,,2,Have certificate,Full,,"Đường Bình Long, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",8,4,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Huyện Nhà Bè,83.6,4,3,8.29,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",5,7,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 7,68,4,2,5.3,,,,2,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",4,4,Bắc,Bắc
+Nhà mặt tiền,Quận 12,72,4,3,4.4,,,,4,Have certificate,Basic,,"Đường 10, Phường Tân Hưng Thuận, Quận 12, Hồ Chí Minh",4,6,Bắc,Bắc
+Nhà mặt tiền,Quận Bình Tân,76,6,4,8.6,,,,6,Have certificate,Full,,"473, Đường Lê Văn Quới, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,8,Tây,Tây
+Nhà hẻm,Quận Bình Tân,44,2,2,2.35,,,,2,Have certificate,Basic,,"Đường Nguyễn Triệu Luật, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",5,5,Tây,Tây
+Chung cư,Quận Tân Bình,23,1,2,3.68,,,,2,Have certificate,Full,,"Đường Bùi Thị Xuân, Phường 3, Quận Tân Bình, Hồ Chí Minh",4.9,3,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),62,4,3,7.8,,,,3,Have certificate,Full,,"41/1D, Đường 30, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,14,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 12,37.4,2,2,1.65,,,,2,Have certificate,Full,,"Đường Nguyễn Ảnh Thủ, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",5,5,Đông,Đông
+Chung cư,Quận Gò Vấp,20,1,1,2.05,,,,2,Have certificate,Full,,"Đường Số 27, Phường 6, Quận Gò Vấp, Hồ Chí Minh",5,3,Đông - Bắc,Đông - Bắc
+Biệt thự,Quận Thủ Đức (TP. Thủ Đức),128,7,1,8.1,,,,7,Have certificate,Basic,,"Đường Số 7, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,4,Tây - Nam,Tây - Nam
+Chung cư,Quận 12,28,3,3,1.72,,,,3,Have certificate,Full,,"Đường Nguyễn Thị Căn, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",4,4,Đông,Đông
+Nhà mặt tiền,Huyện Nhà Bè,64,4,4,7.5,,,,5,Have certificate,Full,,"Đường Đào Tông Nguyên, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",10,10,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Tân Phú,58,3,2,4.5,,,,2,Have certificate,Full,,"Hẻm 74, Đường Tân Kỳ Tân Quý, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",42,3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,51.3,3,3,3.68,,,,3,Have certificate,Full,,"Đường Quốc lộ 1A, Phường Đông Hưng Thuận, Quận 12, Hồ Chí Minh",4,60,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 7,64.8,3,3,6.2,,,,3,Have certificate,Basic,,"Đường Số 77, Phường Tân Quy, Quận 7, Hồ Chí Minh",3.6,2.5,Nam,Nam
+Nhà hẻm,Quận Tân Bình,59,6,5,9.2,,,,6,Have certificate,Full,,"Hẻm 730, Đường Lạc Long Quân, Phường 9, Quận Tân Bình, Hồ Chí Minh",8,8,Tây,Tây
+Chung cư,Quận 12,21.7,2,2,1.78,,,,2,Have certificate,Basic,,"Đường An Phú Đông 25, Phường An Phú Đông, Quận 12, Hồ Chí Minh",3.1,4,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),86.4,1,1,7.4,,,,1,Have certificate,Basic,,"Đường 10, Phường Phước Bình, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4,14,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Bình Thạnh,60,4,3,9.9,,,,4,Have certificate,Basic,,"138, Phố Nguyễn Xí, Phường 26, Quận Bình Thạnh, Hồ Chí Minh",8,10,Đông,Đông
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),65,2,2,3.99,,,,2,Have certificate,Full,,"Đường Quang Trung, Phường Tăng Nhơn Phú B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4.5,2.5,Tây - Nam,Tây - Nam
+Chung cư,Quận 10,31,4,3,6.8,,,,3,Have certificate,Full,,"Đường Tô Hiến Thành, Phường 14, Quận 10, Hồ Chí Minh",6.2,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 12,78,2,2,5,,,,3,Have certificate,Full,,"Đường Thạnh Lộc 29, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",5,6,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),61,4,4,6.1,,,,4,Have certificate,Full,,"Đường Số 10, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.2,6,Tây - Nam,Tây - Nam
+Chung cư,Quận 12,35,3,3,2.48,,,,3,Have certificate,Basic,,"Đường Hiệp Thành 26, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",3.5,4,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 12,67,1,1,3.75,,,,1,Have certificate,Basic,,"Đường Trường Chinh, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",4,5,Bắc,Bắc
+Nhà hẻm,Quận Bình Thạnh,60,4,5,9.1,,,,4,Have certificate,Full,,"Đường Nguyễn Thượng Hiền, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",7,5,Đông,Đông
+Nhà mặt tiền,Quận 12,66,2,2,4.15,,,,2,Have certificate,Basic,,"Đường Thạnh Xuân 21, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,6,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 12,60,2,2,3.85,,,,2,Have certificate,Full,,"Đường Thạnh Lộc 37, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",5,5,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Gò Vấp,54,3,4,6.35,,,,4,Have certificate,Full,,"Đường Đỗ Thúc Tịnh, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4,3,Tây - Nam,Tây - Nam
+Chung cư,Quận 3,14,3,3,4.6,,,,3,Have certificate,Full,,"Đường Nguyễn Phúc Nguyên, Phường 10, Quận 3, Hồ Chí Minh",3.5,15,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Gò Vấp,32,3,3,5.75,,,,3,Have certificate,Full,,"Đường Nguyễn Văn Khối, Phường 11, Quận Gò Vấp, Hồ Chí Minh",4,3,Nam,Nam
+Biệt thự,Huyện Hóc Môn,113,4,2,5.9,,,,2,Have certificate,Full,,"Đường Nguyễn Ảnh Thủ, Xã Bà Điểm, Huyện Hóc Môn, Hồ Chí Minh",5,6,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),99.8,4,3,7.8,,,,4,Have certificate,Full,,"Đường Linh Đông, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,7,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Tân Bình,63,5,4,8.2,,,,7,Have certificate,Full,,"Đường Trần Thánh Tông, Phường 15, Quận Tân Bình, Hồ Chí Minh",4.2,5,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Huyện Hóc Môn,74,3,3,4.8,,,,3,Have certificate,Full,,"Đường 8, Xã Tân Thới Nhì, Huyện Hóc Môn, Hồ Chí Minh",8,6,Đông - Bắc,Đông - Bắc
+Biệt thự,Huyện Bình Chánh,189,3,2,10,,,,2,Have certificate,Basic,,"Dự án Vĩnh Lộc A, Đường Hương lộ  80, Xã Vĩnh Lộc A, Huyện Bình Chánh, Hồ Chí Minh",9,14,Đông,Đông
+Biệt thự,Quận 8,151,2,2,5.2,,,,3,Have certificate,Basic,,"Green River quận 8, 2225, Đường Phạm Thế Hiển, Phường 6, Quận 8, Hồ Chí Minh",7.5,12,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Phú Nhuận,85.4,6,3,9.4,,,,7,Have certificate,Basic,,"Đường Huỳnh Văn Bánh, Phường 12, Quận Phú Nhuận, Hồ Chí Minh",4.9,5,Đông - Nam,Đông - Nam
+Chung cư,Quận Gò Vấp,36,4,4,5.85,,,,3,Have certificate,Full,,"Đường Số 14, Phường 8, Quận Gò Vấp, Hồ Chí Minh",6,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Huyện Nhà Bè,52,4,4,6.5,,,,3,Have certificate,Full,,"Hẻm 2177, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",5,7,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Bình Tân,40,2,2,3.6,,,,2,Have certificate,Full,,"6/27, Đường 14A, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,5,Bắc,Bắc
+Nhà hẻm,Quận Gò Vấp,55,4,4,6.3,,,,4,Have certificate,Basic,,"Đường Quang Trung, Phường 14, Quận Gò Vấp, Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,50.1,4,4,7,,,,5,Have certificate,Basic,,"Đường Song Hành, Phường Tân Hưng Thuận, Quận 12, Hồ Chí Minh",4.02,20,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 12,51,3,3,5.2,,,,4,Have certificate,Full,,"Đường Tô Ngọc Vân, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",5.2,6,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Bình Thạnh,47.1,3,2,5.4,,,,2,Have certificate,Basic,,"Hẻm 602/97, Đường Điện Biên Phủ, Phường 22, Quận Bình Thạnh, Hồ Chí Minh",4.3,2,Tây,Đông
+Nhà hẻm,Quận 7,47.95,5,5,7.7,,,,5,Have certificate,Full,,"791, Phố Trần Xuân Soạn, Phường Tân Hưng, Quận 7, Hồ Chí Minh",4,4,Nam,Nam
+Nhà hẻm,Quận 12,60,1,1,2.85,,,,1,Have certificate,Full,,"Đường Thạnh Xuân 43, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,3,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận 12,57,2,2,3.8,,,,2,Have certificate,Basic,,"Đường Hà Huy Giáp, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",5,7,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,56,2,2,4.2,,,,2,Have certificate,Full,,"Đường Phan Văn Hớn, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",4,3,Đông,Tây
+Nhà hẻm,Quận Bình Thạnh,52,3,2,7.9,,,,3,Have certificate,Full,,"31/35/15, Đường Ung Văn Khiêm, Phường 25, Quận Bình Thạnh, Hồ Chí Minh",5,12,Đông - Nam,Đông - Nam
+Biệt thự,Quận 7,102,2,1,6.8,,,,2,Have certificate,Basic,,"Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",6,5,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận 12,64,3,2,3.86,,,,2,Have certificate,Full,,"Đường Tô Ngọc Vân, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,4,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 12,48,2,2,3.3,,,,2,Have certificate,Full,,"Đường Tân Thới Nhất 6, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",3,3,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),60,2,2,3.6,,,,2,Have certificate,Basic,,"Đường Số 10, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6,2,Nam,Nam
+Chung cư,Quận 6,32,2,2,8.6,,,,2,Have certificate,Basic,,"Đường Lê Quang Sung, Phường 2, Quận 6, Hồ Chí Minh",3.2,12,Bắc,Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,4,3,8,,,,4,Have certificate,Full,,"Dự án River Park, Đường Liên Phường, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Bình Tân,63,3,2,2.9,,,,2,Have certificate,Full,,"Đường Tân Kỳ Tân Quý, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",5.2,6,Đông,Đông
+Nhà mặt tiền,Quận 12,67,4,2,4,,,,2,Have certificate,Basic,,"Đường Trần Thị Cờ, Phường Thới An, Quận 12, Hồ Chí Minh",5,3.5,Tây,Tây
+Nhà mặt tiền,Quận 12,74,4,3,6.05,,,,4,Have certificate,Full,,"Đường Thạnh Xuân 25, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,10,Bắc,Tây - Bắc
+Biệt thự,Huyện Bình Chánh,100,4,4,10,,,,5,Have certificate,Full,,"Dự án 6B Intresco, Đường Phạm Hùng, Xã Bình Hưng, Huyện Bình Chánh, Hồ Chí Minh",5,12,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Huyện Nhà Bè,60,4,4,6.4,,,,5,Have certificate,Full,,"Đường Đào Tông Nguyên, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",5,5,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),83,3,3,4.3,,,,3,Have certificate,Basic,,"Đường Ngô Chí Quốc, Phường Bình Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,6,Tây - Nam,Tây - Nam
+Chung cư,Quận 3,30,1,2,5.6,,,,2,Have certificate,Full,,"11A, Đường Nguyễn Hiền, Phường 4, Quận 3, Hồ Chí Minh",3.7,6,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Bình Tân,74,3,3,6.3,,,,4,Have certificate,Full,,"Đường Lê Đình Cẩn, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",8,8,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Gò Vấp,68,3,3,7.6,,,,3,Have certificate,Basic,,"Đường Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Hồ Chí Minh",5.3,8,Đông - Nam,Đông - Nam
+Chung cư,Quận Bình Tân,35,2,1,2,,,,2,Have certificate,Full,,"Đường Lê Đình Cẩn, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",4,4,Đông,Đông
+Nhà mặt tiền,Quận Bình Tân,80,5,5,8.7,,,,7,Have certificate,Full,,"Số 1E, Đường Miếu Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,12,Bắc,Bắc
+Biệt thự,Quận 12,141,4,1,6.3,,,,3,Have certificate,Basic,,"Đường Vườn Lài, Phường An Phú Đông, Quận 12, Hồ Chí Minh",9,3.5,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Bình Thạnh,18.3,1,2,2.89,,,,2,Have certificate,Basic,,"Đường Tăng Bạt Hổ, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",4.9,3,Nam,Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),82.7,4,3,8.6,,,,5,Have certificate,Basic,,"Dự án Park Riverside Tân Cảng, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Huyện Bình Chánh,75,3,2,2.25,,,,2,Have certificate,Full,,"Đường 1, Xã Huyện Bình Chánh, Huyện Bình Chánh, Hồ Chí Minh",5,8,Đông - Nam,Đông - Nam
+Chung cư,Quận 1,28,2,3,6.5,,,,3,Have certificate,Basic,,"Hẻm 124, Đường Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",4.6,2,Tây - Nam,Tây - Bắc
+Nhà hẻm,Quận 12,40,2,2,2.45,,,,1,Have certificate,Full,,"Đường Nguyễn Ảnh Thủ, Phường Trung Mỹ Tây, Quận 12, Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Chung cư,Quận 6,30.4,5,3,6.2,,,,3,Have certificate,Full,,"Đường Lý Chiêu Hoàng, Phường 10, Quận 6, Hồ Chí Minh",3.5,12,Nam,Nam
+Nhà mặt tiền,Quận 7,77,3,3,10,,,,4,Have certificate,Full,,"Đường Lâm Văn Bền, Phường Tân Kiểng, Quận 7, Hồ Chí Minh.",4.06,6,Đông,Đông
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,4,2,8.3,,,,4,Have certificate,Basic,,"Dự án Park Riverside Tân Cảng, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,20,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 7,90,4,4,8.29,,,,5,Have certificate,Full,,"Đường Phạm Hữu Lầu, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",5,6,Đông - Bắc,Tây - Nam
+Biệt thự,Quận Tân Phú,124.5,4,2,7.5,,,,3,Have certificate,Basic,,"Dự án Carillon 7, Quận Tân Phú, Hồ Chí Minh",9,30,Nam,Nam
+Biệt thự,Quận 9 (TP. Thủ Đức),108,5,3,9.6,,,,4,Have certificate,Full,,"Dự án Melosa Garden, Đường Vành Đai Trong, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6,12,Bắc,Bắc
+Nhà hẻm,Quận 8,48,4,2,4.8,,,,3,Have certificate,Full,,"Đường Phạm Thế Hiển, Phường 7, Quận 8, Hồ Chí Minh",3.5,5,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Huyện Nhà Bè,83.6,4,4,8.6,,,,5,Have certificate,Full,,"2581, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",5,6,Tây - Nam,Tây - Nam
+Chung cư,Quận Bình Thạnh,28,4,4,4.25,,,,3,Have certificate,Full,,"Đường Trần Bình Trọng, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",3.8,3,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Gò Vấp,66,2,2,6.15,,,,2,Have certificate,Full,,"Đường Quang Trung, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4,4,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 2 (TP. Thủ Đức),71,4,5,6.3,,,,4,Have certificate,Basic,,"Đường Số 15, Phường Bình Trưng Đông, Quận 2 (TP. Thủ Đức), Hồ Chí Minh",45,6,Nam,Nam
+Chung cư,Quận Bình Tân,36,3,3,2.35,,,,3,Have certificate,Basic,,"Đường Lê Đình Cẩn, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",5,5,Tây,Tây
+Nhà mặt tiền,Quận Tân Phú,70,3,3,7.35,,,,3,Have certificate,Basic,,"Đường Nguyễn Cửu Đàm, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",4.2,6,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Huyện Nhà Bè,80,4,4,6.5,,,,5,Have certificate,Full,,"Đường Nguyễn Bình, Xã Nhơn Đức, Huyện Nhà Bè, Hồ Chí Minh",7,7,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Gò Vấp,48,5,4,5.5,,,,4,Have certificate,Basic,,"405/, Đường Thống Nhất, Phường 11, Quận Gò Vấp, Hồ Chí Minh",5,5,Tây,Tây
+Chung cư,Quận Bình Tân,35,2,2,2,,,,2,Have certificate,Full,,"Đường Nguyễn Văn Cự, Phường Tân Tạo A, Quận Bình Tân, Hồ Chí Minh",4,4,Tây,Tây
+Chung cư,Quận Gò Vấp,36,3,3,5.99,,,,3,Have certificate,Full,,"Đường Lê Đức Thọ, Phường 6, Quận Gò Vấp, Hồ Chí Minh",8.3,5,Tây,Tây
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),50,4,3,3.16,,,,3,Have certificate,Basic,,"78C/16, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",3.47,5,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Gò Vấp,56,4,4,8.95,,,,5,Have certificate,Full,,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",6,7,Tây,Bắc
+Biệt thự,Quận 7,108,2,1,5.5,,,,2,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",7,3,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 7,50,4,5,6.6,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",4.1,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,40,2,2,3.68,,,,2,Have certificate,Full,,"Đường Thới An 09, Phường Thới An, Quận 12, Hồ Chí Minh",4,7,Tây - Bắc,Tây - Bắc
+Chung cư,Quận Bình Thạnh,26.4,2,3,4.3,,,,2,Have certificate,Full,,"Hẻm 148, Nguyễn Lâm, Phường 3, Quận Bình Thạnh, Hồ Chí Minh",3.3,4,Đông,Đông
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),91.3,2,2,9,,,,2,Have certificate,Full,,"Đường 17, Phường Linh Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6,6,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Huyện Nhà Bè,52.8,3,2,3.79,,,,3,Have certificate,Full,,"1716, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",3.5,3.5,Đông,Đông
+Nhà mặt tiền,Quận 7,75.5,5,5,8.8,,,,7,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",3.6,5,Nam,Nam
+Nhà hẻm,Quận Gò Vấp,60,4,3,7.2,,,,4,Have certificate,Basic,,"Đường Thống Nhất, Phường 16, Quận Gò Vấp, Hồ Chí Minh",4,5.5,Đông,Đông
+Nhà hẻm,Quận Tân Phú,42.9,2,2,3.65,,,,2,Have certificate,Full,,"Đường Gò Dầu, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",3.3,5,Nam,Nam
+Nhà mặt tiền,Quận 8,95,4,3,8.25,,,,5,Have certificate,Basic,,"Đường Phạm Thế Hiển, Phường 7, Quận 8, Hồ Chí Minh",10,10,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Huyện Nhà Bè,70,3,2,4.45,,,,3,Have certificate,Basic,,"Hẻm 2506, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",5,3,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 8,60.75,2,2,2.55,,,,1,Sale contract,Full,,"Dream Home Palace, 1436, Đường Trịnh Quang Nghị, Phường 7, Quận 8, Hồ Chí Minh",3.7,20,Tây - Bắc,Tây - Bắc
+Chung cư,Quận 10,20.8,2,3,3.3,,,,3,Have certificate,Full,,"Hẻm 160/, Đường Nguyễn Chí Thanh, Phường 3, Quận 10, Hồ Chí Minh",2.6,3,Nam,Nam
+Biệt thự,Quận Tân Phú,102,4,3,9.3,,,,4,Have certificate,Basic,,"Đường D10, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",4.2,12,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Gò Vấp,58,4,4,7.49,,,,6,Have certificate,Full,,"Đường Bùi Quang Là, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Huyện Bình Chánh,75,2,1,1.41,,,,1,Sale contract,Basic,,"Đường Ngô Miễn Thiệu, Xã Vĩnh Lộc B, Huyện Bình Chánh, Hồ Chí Minh",5,4,Bắc,Bắc
+Nhà hẻm,Quận Bình Thạnh,49,2,2,5,,,,3,Have certificate,Full,,"Đường Xô Viết Nghệ Tĩnh, Phường 21, Quận Bình Thạnh, Hồ Chí Minh",3.3,3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,60,5,5,6.1,,,,6,Have certificate,Full,,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,8,Tây,Tây
+Nhà hẻm,Quận Tân Phú,54,2,2,5.65,,,,2,Have certificate,Full,,"76/10/24 Đường Nguyễn Sơn, Phường Phú Thọ Hòa, Quận Tân Phú, Hồ Chí Minh",3.8,4,Tây,Tây
+Chung cư,Quận Gò Vấp,23,2,2,2.3,,,,1,Have certificate,Full,,"Đường Dương Quảng Hàm, Phường 5, Quận Gò Vấp, Hồ Chí Minh",3.74,4,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),90,4,3,8.5,,,,3,Have certificate,Full,,"Dự án Mega Village, Đường Vành Đai 2, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",7.5,20,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 11,21,2,2,3.8,,,,2,Have certificate,Basic,,"Đường Lê Đại Hành, Phường 11, Quận 11, Hồ Chí Minh",5,8,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Bình Tân,80,3,2,4.58,,,,2,Have certificate,Full,,"Đường Tân Hòa Đông, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",51,3,Tây,Tây
+Chung cư,Quận 10,29,5,5,6.2,,,,4,Have certificate,Full,,"Đường Lý Thái Tổ, Phường 10, Quận 10, Hồ Chí Minh",3,4,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 6,64.4,3,2,8.6,,,,2,Have certificate,Basic,,"Đường Mai Xuân Thưởng, Phường 6, Quận 6, Hồ Chí Minh",3.5,5,Bắc,Bắc
+Nhà mặt tiền,Quận 7,64,4,3,7.5,,,,5,Have certificate,Full,,"44/41, Đường Bùi Văn Ba, Phường Tân Thuận Đông, Quận 7, Hồ Chí Minh",5,6,Tây - Bắc,Tây
+Chung cư,Quận 1,22,2,2,4.5,,,,3,Have certificate,Basic,,"Đường Hồ Hảo Hớn, Phường Cô Giang, Quận 1, Hồ Chí Minh",3,3,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Bình Thạnh,32,2,2,3.8,,,,2,Have certificate,Basic,,"Đường Phan Văn Trị, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",3.11,5,Tây - Nam,Tây - Nam
+Chung cư,Quận 10,32,3,2,5.18,,,,3,Have certificate,Full,,"Đường Lý Thái Tổ, Phường 10, Quận 10, Hồ Chí Minh",5,4,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Bình Tân,60,5,5,6,,,,6,Have certificate,Full,,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,8,Tây,Tây
+Nhà hẻm,Quận 7,41.2,3,2,6.35,,,,2,Have certificate,Full,,"Đường Phạm Hữu Lầu, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",6,3,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận 12,53.4,4,4,4.69,,,,4,Have certificate,Full,,"Đường Thạnh Xuân 25, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",6,7,Nam,Nam
+Nhà hẻm,Huyện Nhà Bè,50,4,3,5.5,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4,6,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Tân Phú,37,2,2,3.6,,,,2,Have certificate,Full,,"Đường Phú Thọ Hòa, Phường Phú Thạnh, Quận Tân Phú, Hồ Chí Minh",4.1,2,Nam,Nam
+Nhà mặt tiền,Quận 11,83.2,9,5,9.9,,,,9,Have certificate,Full,,"Đường Lê Đại Hành, Phường 13, Quận 11, Hồ Chí Minh",4.4,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Gò Vấp,78.2,2,2,5.65,,,,2,Have certificate,Full,,"Đường Quang Trung, Phường 11, Quận Gò Vấp, Hồ Chí Minh",4.6,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),63,2,3,6.2,,,,2,Have certificate,Full,,"Đường 3, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,5,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 8,40.4,2,3,6.2,,,,3,Have certificate,Full,,"Đường  Tạ Quang Bửu, Phường 5, Quận 8, Hồ Chí Minh",4,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Huyện Hóc Môn,48,2,2,3.95,,,,2,Have certificate,Full,,"Đường Nguyễn Thị Ngâu, Xã Thới Tam Thôn, Huyện Hóc Môn, Hồ Chí Minh",4,10,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),64,4,3,7.6,,,,4,Have certificate,Full,,"Đường 8, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,6,Tây - Nam,Tây - Nam
+Biệt thự,Quận 12,110,4,1,5.45,,,,4,Have certificate,Full,,"Đường Phan Văn Hớn, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",7,7,Nam,Nam
+Nhà hẻm,Quận 12,47.6,4,3,4.49,,,,4,Have certificate,Full,,"2/, Đường Tân Thới Hiệp 21, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",4,7,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Tân Phú,56,5,4,6.5,,,,4,Have certificate,Full,,"Đường Tân Sơn Nhì, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",4,5,Tây,Tây
+Chung cư,Quận Tân Phú,16,2,2,2.4,,,,2,Have certificate,Full,,"Đường Độc Lập, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",4,2.2,Đông,Đông
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),51,4,4,6.7,,,,5,Have certificate,Basic,,"Đường Đinh Thị Thi, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.6,7,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 8,64,4,3,10,,,,4,Have certificate,Full,,"783A, Đường Cao Lỗ, Phường 14, Quận 8, Hồ Chí Minh",4,16,Tây - Bắc,Tây - Bắc
+Biệt thự,Quận 9 (TP. Thủ Đức),100,4,3,6.5,,,,5,Have certificate,Basic,,"Dự án Đông Tăng Long, Đường Nguyễn Duy Trinh, Phường Trường Thạnh, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",20,12,Bắc,Bắc
+Chung cư,Quận 1,30,4,4,6.1,,,,4,Have certificate,Full,,"Đường Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",5,3,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 12,80,3,3,8.8,,,,4,Have certificate,Full,,"Đường Tân Thới Nhất 17, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",5,8,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,58,5,5,6.8,,,,6,Have certificate,Full,,"Đường Lê Văn Quới, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,7,Nam,Nam
+Nhà hẻm,Quận Gò Vấp,59,5,3,7.3,,,,5,Have certificate,Basic,,"148//, Đường Số 59, Phường 14, Quận Gò Vấp, Hồ Chí Minh",4,6,Tây,Tây
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),40.2,3,3,4.5,,,,2,Have certificate,Full,,"Đường Số 5, Phường Linh Trung, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,4,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Huyện Nhà Bè,76,4,4,7.5,,,,5,Have certificate,Full,,"Dự án Sài Gòn Mới, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4,10,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 2 (TP. Thủ Đức),83,5,2,6.9,,,,5,Have certificate,Basic,,"Thạnh Mỹ Lợi, Số 68, Đường Thạnh Mỹ Lợi, Phường  Thạnh Mỹ Lợi, Quận 2 (TP. Thủ Đức), Hồ Chí Minh",5,3,Nam,Nam
+Nhà hẻm,Quận Bình Thạnh,50,5,4,9.3,,,,6,Have certificate,Full,,"Đường Nguyễn Thượng Hiền, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",4,5,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Huyện Hóc Môn,52,2,2,1.68,,,,2,Have certificate,Basic,,"Đường Song Hành, Xã Tân Hiệp, Huyện Hóc Môn, Hồ Chí Minh",4,5,Nam,Nam
+Chung cư,Quận 3,29,2,1,3.5,,,,2,Have certificate,Basic,,"Đường Cách Mạng Tháng Tám, Phường 10, Quận 3, Hồ Chí Minh",4.6,4,Tây,Tây
+Nhà mặt tiền,Quận Gò Vấp,75,3,2,6.5,,,,3,Have certificate,Full,,"Đường Lê Văn Thọ, Phường 16, Quận Gò Vấp, Hồ Chí Minh",4,6,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Tân Bình,59,5,4,10,,,,6,Have certificate,Full,,"254, Đường Âu Cơ, Phường 9, Quận Tân Bình, Hồ Chí Minh",4.6,8,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Gò Vấp,72.5,4,4,7.4,,,,5,Have certificate,Basic,,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",4,6,Nam,Nam
+Biệt thự,Quận 7,102.6,2,1,5.6,,,,2,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",7,3,Đông,Đông
+Nhà hẻm,Quận Gò Vấp,42,3,3,5.6,,,,4,Have certificate,Full,,"Đường Lê Đức Thọ, Phường 13, Quận Gò Vấp, Hồ Chí Minh",4.8,4,Đông,Đông
+Biệt thự,Quận Thủ Đức (TP. Thủ Đức),100,7,4,9.5,,,,7,Have certificate,Basic,,"Đường 8, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 11,44,6,5,8,,,,4,Have certificate,Full,,"Đường Lạc Long Quân, Phường 3, Quận 11, Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Phú Nhuận,43,3,4,8.6,,,,4,Have certificate,Full,,"Đường Phan Xích Long, Phường 3, Quận Phú Nhuận, Hồ Chí Minh",4.3,5,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 12,80,4,3,5,,,,4,Have certificate,Full,,"Đường Thạnh Lộc 44, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4,12,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Tân Phú,81.6,2,2,8.5,,,,2,Have certificate,Basic,,"Phường Hiệp Tân, Quận Tân Phú, Hồ Chí Minh",4.1,12,Bắc,Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),64,2,2,5.2,,,,2,Have certificate,Full,,"Đường Hồ Bá Phấn, Phường Phước Long A, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,6,Bắc,Bắc
+Nhà mặt tiền,Quận 7,82.4,4,2,6.35,,,,4,Have certificate,Full,,"Đường Phạm Hữu Lầu, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",6,4,Tây,Tây
+Nhà mặt tiền,Huyện Nhà Bè,84.5,4,4,9.4,,,,5,Have certificate,Full,,"Dự án Green Riverside, Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",5,7,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),93,4,2,3.9,,,,3,Have certificate,Full,,"Hẻm số 5, Đường Lò Lu, Phường Trường Thạnh, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",7.8,5,Nam,Nam
+Nhà hẻm,Quận Gò Vấp,57.7,4,3,7.49,,,,5,Have certificate,Basic,,"Đường Bùi Quang Là, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Biệt thự,Quận 9 (TP. Thủ Đức),100,2,1,4.6,,,,2,Sale contract,Full,,"Dự án The Beverly Solari  - Vinhomes Grand Park, Phường Long Thạnh Mỹ, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",15,30,Nam,Nam
+Nhà mặt tiền,Quận Bình Thạnh,64.6,5,4,7,,,,4,Have certificate,Basic,,"Đường Bùi Đình Túy, Phường 12, Quận Bình Thạnh, Hồ Chí Minh",3,10,Bắc,Bắc
+Nhà mặt tiền,Huyện Nhà Bè,80,4,4,8.3,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",5.3,6,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),80,3,3,5.3,,,,2,Sale contract,Basic,,"Dự án Sim City, Đường Lò Lu, Phường Trường Thạnh, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6,6,Đông - Bắc,Đông - Nam
+Nhà hẻm,Quận Bình Thạnh,40,2,2,4.35,,,,2,Have certificate,Full,,"Đường D5, Phường 25, Quận Bình Thạnh, Hồ Chí Minh",4,2,Nam,Nam
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),70,4,4,6.8,,,,4,Have certificate,Full,,"Đường Số 48, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,6,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),52,4,1,2.6,,,,4,Have certificate,Basic,,"Phường Linh Xuân, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",3.8,4,Đông - Nam,Đông - Nam
+Chung cư,Quận Bình Tân,37,5,3,2.78,,,,3,Have certificate,Full,,"Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",3.7,7,Bắc,Bắc
+Nhà hẻm,Quận 7,51,3,2,6.35,,,,2,Have certificate,Full,,"Đường Phạm Hữu Lầu, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",4,4,Tây - Nam,Tây - Nam
+Nhà hẻm,Huyện Hóc Môn,48,2,1,2.05,,,,1,Have certificate,Full,,"Đường Đặng Thúc Vịnh, Xã  Đông Thạnh, Huyện Hóc Môn, Hồ Chí Minh",8,2.5,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),85.7,3,1,8.5,,,,3,Have certificate,Full,,"Đường 11, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.4,7,Tây,Tây
+Nhà hẻm,Huyện Nhà Bè,55.9,4,4,6.5,,,,5,Have certificate,Full,,"1979, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4.3,6,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),56,4,4,7.3,,,,5,Have certificate,Basic,,"Đường 10, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 7,56,2,2,5.2,,,,3,Have certificate,Full,,"Đường Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, Hồ Chí Minh",4,50,Đông,Đông
+Chung cư,Quận 12,25,2,3,2.65,,,,2,Have certificate,Basic,,"Hẻm 103//, Đường Tân Thới Nhất 2, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",3.5,3,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 12,46,4,3,4.45,,,,3,Have certificate,Full,,"Đường Nguyễn Thị Đặng, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",20,5,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Tân Phú,60,4,4,6.3,,,,4,Have certificate,Full,,"Đường Tân Hương, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",5,5,Đông,Đông
+Chung cư,Quận Tân Phú,24,2,2,3,,,,2,Have certificate,Basic,,"101/26/, Đường Gò Dầu, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",3,4,Nam,Nam
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),89,4,4,8.6,,,,5,Have certificate,Full,,"Đường 8, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.1,10,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Tân Phú,90,3,1,7.5,,,,2,Have certificate,Basic,,"Đường Gò Dầu, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",5,6,Tây,Tây
+Biệt thự,Quận 12,282.7,4,1,9.5,,,,2,Have certificate,Basic,,"Đường Quốc lộ 1A, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",11,50,Bắc,Bắc
+Nhà hẻm,Quận Phú Nhuận,44,4,5,10,,,,3,Have certificate,Full,,"Đường Huỳnh Văn Bánh, Phường 11, Quận Phú Nhuận, Hồ Chí Minh",6,4.5,Bắc,Bắc
+Nhà hẻm,Quận 12,49.5,4,3,4.65,,,,3,Have certificate,Basic,,"Đường Thạnh Xuân 52, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4.5,12,Tây - Bắc,Tây - Bắc
+Chung cư,Quận Phú Nhuận,22,2,3,3.5,,,,3,Have certificate,Basic,,"Đường Cô Giang, Phường 2, Quận Phú Nhuận, Hồ Chí Minh",2.8,3,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Bình Tân,97,4,4,6.7,,,,5,Have certificate,Full,,"Đường Tân Hòa Đông, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",5.2,8,Bắc,Bắc
+Nhà hẻm,Quận 12,41.6,2,2,3.38,,,,2,Have certificate,Full,,"Đường Hiệp Thành 17, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",4,4,Bắc,Bắc
+Nhà hẻm,Quận Bình Tân,40,3,2,2.48,,,,3,Have certificate,Full,,"Đường Liên Khu 5-6, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",7,7,Đông,Đông
+Chung cư,Quận 3,36,5,6,10,,,,4,Have certificate,Full,,"Đường Lý Chính Thắng, Phường Võ Thị Sáu, Quận 3, Hồ Chí Minh",3.6,6,Tây - Nam,Tây - Nam
+Chung cư,Quận Phú Nhuận,37,3,4,6.85,,,,3,Have certificate,Full,,"Đường Trần Huy Liệu, Phường 8, Quận Phú Nhuận, Hồ Chí Minh",9,5,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Tân Bình,40,2,2,3.6,,,,2,Have certificate,Full,,"Đường Hoàng Bật Đạt, Phường 15, Quận Tân Bình, Hồ Chí Minh",8,3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),54.1,4,3,7.2,,,,3,Have certificate,Full,,"Đường Võ Văn Ngân, Phường Bình Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.25,7,Đông,Đông
+Nhà hẻm,Quận Bình Tân,54,4,3,8.3,,,,5,Have certificate,Full,,"Đường 8A, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",4.5,8,Đông,Đông
+Nhà hẻm,Quận 12,57,3,3,4.5,,,,3,Have certificate,Basic,,"Đường Huỳnh Thị Hai, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh",4.2,6,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 12,31,2,2,2.95,,,,2,Have certificate,Full,,"Đường Lê Văn Khương, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",3.2,8,Nam,Nam
+Chung cư,Huyện Nhà Bè,32,4,3,3.6,,,,3,Have certificate,Full,,"2174, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,53.4,2,2,3.89,,,,2,Have certificate,Basic,,"Đường Thạnh Xuân 25, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,5,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 12,56,4,4,5.85,,,,5,Have certificate,Full,,"Đường Thạnh Lộc 44, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4,10,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Bình Tân,40,5,3,2.68,,,,3,Have certificate,Full,,"Đường Nguyễn Thị Tú, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh.",4,7,Tây,Tây
+Nhà hẻm,Quận Gò Vấp,46,4,4,7.99,,,,5,Have certificate,Full,,"Đường Quang Trung, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4.6,6,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Tân Phú,52,2,2,5.6,,,,2,Have certificate,Full,,"Đường Phú Thọ Hòa, Phường Phú Thọ Hòa, Quận Tân Phú, Hồ Chí Minh",4,5,Đông,Đông
+Nhà mặt tiền,Quận 12,67,4,3,5.85,,,,3,Have certificate,Full,,"Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",4,4,Nam,Nam
+Chung cư,Quận 9 (TP. Thủ Đức),36,2,2,2.65,,,,2,Have certificate,Full,,"Đường Đỗ Xuân Hợp, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",3,3,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Tân Phú,58,2,2,7.8,,,,2,Have certificate,Full,,"Đường Tân Sơn Nhì, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",4.8,8,Đông - Nam,Đông - Nam
+Chung cư,Quận Bình Thạnh,25,2,4,2.8,,,,2,Have certificate,Full,,"Đường Đinh Tiên Hoàng, Phường 1, Quận Bình Thạnh, Hồ Chí Minh",1.5,2,Bắc,Bắc
+Nhà mặt tiền,Quận 6,71,4,4,6.5,,,,3,Have certificate,Basic,,"Đường Tân Hóa, Phường 14, Quận 6, Hồ Chí Minh",4.7,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),60,4,4,7.45,,,,6,Have certificate,Full,,"Đường 606, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Biệt thự,Huyện Củ Chi,157,2,2,4.2,,,,1,Have certificate,Basic,,"Đường Bình Mỹ, Xã Bình Mỹ, Huyện Củ Chi, Hồ Chí Minh",6,20,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Bình Tân,56,5,5,5.2,,,,4,Have certificate,Full,,"Đường Quốc lộ 1A, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",4,6,Bắc,Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,4,3,9,,,,4,Have certificate,Full,,"Dự án Rio Vista, Đường Dương Đình Hội, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,16,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận 12,54,6,4,6.1,,,,5,Have certificate,Basic,,"Đường Thạnh Lộc 19, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4,8,Tây - Nam,Tây - Nam
+Chung cư,Quận Gò Vấp,32,2,2,3.38,,,,2,Have certificate,Full,,"Đường Số 59, Phường 14, Quận Gò Vấp, Hồ Chí Minh",3.2,10,Nam,Nam
+Chung cư,Quận 12,32,3,3,2.55,,,,3,Have certificate,Full,,"Đường Huỳnh Thị Hai, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh",5,6,Đông,Đông
+Nhà mặt tiền,Huyện Nhà Bè,68,3,3,5.5,,,,3,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4,4,Bắc,Đông - Bắc
+Biệt thự,Quận Tân Phú,116,6,2,9,,,,2,Have certificate,Basic,,"Đường Tân Kỳ Tân Quý, Phường Sơn Kỳ, Quận Tân Phú, Hồ Chí Minh",6.3,6,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Bình Thạnh,45.9,4,3,8.7,,,,4,Have certificate,Full,,"Đường  Nguyễn Xí, Phường 26, Quận Bình Thạnh, Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),66,2,1,3.95,,,,2,Have certificate,Full,,"Đường 606, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,5,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,3,3,8.49,,,,3,Have certificate,Full,,"Dự án Park Riverside Tân Cảng, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Đông - Bắc,Tây - Nam
+Nhà mặt tiền,Quận Gò Vấp,78,4,3,8.95,,,,5,Have certificate,Full,,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",6,7,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận 12,45,4,3,3.65,,,,2,Have certificate,Basic,,"Đường Tân Thới Hiệp 20, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",4.5,4,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 7,51.6,2,2,5.2,,,,3,Have certificate,Full,,"Đường Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, Hồ Chí Minh",4,6,Tây,Tây
+Nhà hẻm,Quận Bình Thạnh,42.4,3,4,6.25,,,,3,Have certificate,Full,,"Đường Tăng Bạt Hổ, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",8,6,Tây,Tây
+Chung cư,Quận Tân Phú,26,2,2,3.3,,,,2,Have certificate,Full,,"Đường Nguyễn Súy, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",3.2,3.5,Đông,Đông
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),52,2,2,4.9,,,,2,Have certificate,Full,,"Đường Số 32, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.2,5,Đông,Đông
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),50.8,2,1,3.95,,,,2,Have certificate,Basic,,"Đường Bình Chiểu, Phường Bình Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",30,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,55,2,2,3.85,,,,2,Have certificate,Full,,"Đường Thạnh Lộc 41, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",5,6,Tây - Nam,Tây - Nam
+Chung cư,Quận Phú Nhuận,38,5,4,7.8,,,,6,Have certificate,Full,,"Đường Thích Quảng Đức, Phường 3, Quận Phú Nhuận, Hồ Chí Minh",4,5,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Huyện Nhà Bè,50,4,4,6.2,,,,4,Have certificate,Full,,"Dự án The Sun Residence, Đường Đào Tông Nguyên, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Tân Phú,44,2,3,4.65,,,,2,Have certificate,Full,,"Đường Lê Liễu, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",4,5,Tây - Bắc,Bắc
+Nhà mặt tiền,Quận Bình Tân,75,2,2,5.8,,,,2,Have certificate,Full,,"Đường Bùi Dương Lịch, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",5,8,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Bình Tân,55.5,2,2,4.5,,,,2,Have certificate,Basic,,"Đường Tên Lửa, Phường An Lạc A, Quận Bình Tân, Hồ Chí Minh",3.7,5,Đông,Đông
+Nhà hẻm,Quận Tân Bình,45,2,2,7.2,,,,2,Have certificate,Full,,"876/35/60 Đường Cách Mạng Tháng Tám, Phường 5, Quận Tân Bình, Hồ Chí Minh",3.6,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 12,64,3,3,4.85,,,,3,Have certificate,Full,,"Đường Vườn Lài, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4,7,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 3,35,2,4,7.5,,,,3,Have certificate,Full,,"Đường Pasteur, Phường 6, Quận 3, Hồ Chí Minh",4,4,Đông,Đông
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),57,2,1,2.69,,,,2,Have certificate,Full,,"Dự án Sài Gòn Metro Park, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",20,20,Tây - Bắc,Tây - Bắc
+Chung cư,Quận 4,32.1,2,4,3.95,,,,3,Have certificate,Basic,,"Đường Tôn Đản, Phường 8, Quận 4, Hồ Chí Minh",5,4,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Tân Phú,65,3,2,9.3,,,,2,Have certificate,Full,,"Đường Lê Đình Thám, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",4.2,12,Nam,Nam
+Nhà hẻm,Quận 1,48,5,4,8.6,,,,5,Have certificate,Full,,"Đường Phan Tôn, Phường Đa Kao, Quận 1, Hồ Chí Minh",3,3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,48,2,2,3.67,,,,2,Have certificate,Full,,"Đường Nguyễn Thị Kiểu, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",4,3,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 7,40,4,3,5.9,,,,3,Have certificate,Basic,,"134 Đường Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, Hồ Chí Minh",4,6,Tây,Tây
+Biệt thự,Quận 7,132,2,1,7.5,,,,1,Have certificate,Basic,,"Đường Bùi Văn Ba, Phường Tân Thuận Đông, Quận 7, Hồ Chí Minh",4,6,Đông,Đông
+Nhà mặt tiền,Quận 12,75,3,3,5.05,,,,3,Have certificate,Full,,"Đường Tân Thới Nhất 2, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",6,6,Nam,Nam
+Biệt thự,Huyện Bình Chánh,100,4,3,8.8,,,,4,Have certificate,Basic,,"Dự án Đại Phúc Green Villas, Đường Phạm Hùng, Xã Bình Hưng, Huyện Bình Chánh, Hồ Chí Minh",12,12,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận 7,50.8,2,2,5.6,,,,2,Have certificate,Basic,,"Hẻm 861, Phố Trần Xuân Soạn, Phường Tân Hưng, Quận 7, Hồ Chí Minh",4,3,Đông,Đông
+Nhà hẻm,Quận Bình Tân,53.9,8,5,7.5,,,,8,Have certificate,Basic,,"Đường 8, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",9,6,Bắc,Bắc
+Nhà mặt tiền,Quận Bình Thạnh,69.1,3,3,10,,,,4,Have certificate,Full,,"Đường Nguyễn Trung Trực, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",4,4,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),68,4,3,7.9,,,,5,Have certificate,Full,,"Đường 30, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,7,Nam,Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,3,1,6.5,,,,1,Have certificate,Full,,"Đường Số 8, Phường Tăng Nhơn Phú A, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4.5,8,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Gò Vấp,65,3,3,6.5,,,,3,Have certificate,Basic,,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",4,4,Đông - Nam,Đông - Nam
+Chung cư,Quận Gò Vấp,24.9,2,2,2.75,,,,3,Have certificate,Basic,,"488/, Đường Phạm Văn Chiêu, Phường 16, Quận Gò Vấp, Hồ Chí Minh",3,3,Bắc,Bắc
+Chung cư,Quận Bình Tân,30,3,2,1.88,,,,3,Have certificate,Full,,"Đường Nguyễn Thị Tú, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh.",5,4,Đông,Đông
+Nhà mặt tiền,Quận Bình Tân,68,4,3,9.5,,,,4,Have certificate,Basic,,"Đường Số 36, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",4,16,Tây,Tây
+Nhà hẻm,Quận 12,56,4,5,5.5,,,,5,Have certificate,Basic,,"Đường Hà Huy Giáp, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,8,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Gò Vấp,53.4,3,1,4.55,,,,2,Have certificate,Basic,,"Đường Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Hồ Chí Minh",4,4,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 12,30,3,3,1.75,,,,3,Have certificate,Basic,,"Hẻm 470, Đường Lê Thị Riêng, Phường Thới An, Quận 12, Hồ Chí Minh",3.2,3,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Bình Tân,72,4,3,5.99,,,,3,Have certificate,Basic,,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,8,Tây,Tây
+Nhà hẻm,Quận Bình Tân,50,3,3,4.5,,,,2,Have certificate,Full,,"Đường Đất Mới, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",10,5,Đông,Đông
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),53.8,3,4,4.7,,,,3,Have certificate,Full,,"Đường 12, Phường Trường Thạnh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.5,8,Đông - Bắc,Đông
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),68,4,3,6.5,,,,5,Have certificate,Full,,"Đường 35, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,40,2,2,2.35,,,,2,Have certificate,Full,,"Đường Hồ Văn Long, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",4,5,Tây,Tây
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),91,5,3,4.8,,,,4,Have certificate,Basic,,"Đường 13, Phường Bình Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6,2,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Bình Tân,64,4,3,6.48,,,,4,Have certificate,Full,,"Đường Số 8, Phường An Lạc, Quận Bình Tân, Hồ Chí Minh",4,6,Bắc,Bắc
+Nhà mặt tiền,Huyện Bình Chánh,90,4,3,6.9,,,,4,Sale contract,Basic,,"Dự án The Meadow Huyện Bình Chánh, Đường Trần Văn Giàu, Xã Vĩnh Lộc B, Huyện Bình Chánh, Hồ Chí Minh",6,8,Tây - Bắc,Đông - Nam
+Biệt thự,Huyện Hóc Môn,250,4,2,8.2,,,,4,Have certificate,Full,,"Đường Huỳnh Thị Na, Xã  Đông Thạnh, Huyện Hóc Môn, Hồ Chí Minh",8.2,12,Tây,Tây
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,4,3,8.7,,,,4,Have certificate,Full,,"Dự án Rio Vista, Đường Dương Đình Hội, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh.",5,20,Đông - Nam,Đông - Nam
+Chung cư,Quận 12,35,2,2,2.78,,,,2,Have certificate,Full,,"Đường Tân Thới Hiệp 21, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",3,3,Tây,Tây
+Nhà mặt tiền,Huyện Nhà Bè,80,4,4,8.3,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",5.85,6,Bắc,Bắc
+Nhà hẻm,Quận Bình Thạnh,40,2,2,4.79,,,,2,Have certificate,Basic,,"Đường Nơ Trang Long, Phường 7, Quận Bình Thạnh, Hồ Chí Minh",5,4,Nam,Nam
+Nhà hẻm,Quận 7,60,3,2,4.87,,,,4,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",4,3,Bắc,Bắc
+Chung cư,Quận Thủ Đức (TP. Thủ Đức),34.2,2,2,3.8,,,,1,Have certificate,Basic,,"Đường Số 50, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,5,Tây,Tây
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),91.3,2,1,9,,,,2,Have certificate,Basic,,"Đường 17, Phường Linh Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6,6,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Huyện Nhà Bè,52.2,4,2,4.19,,,,3,Have certificate,Full,,"1942, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4,4,Bắc,Bắc
+Nhà hẻm,Quận 8,48.7,3,2,3.89,,,,2,Have certificate,Full,,"Đường Phạm Thế Hiển, Phường 6, Quận 8, Hồ Chí Minh",5.2,3,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Tân Bình,59,2,2,6.8,,,,2,Have certificate,Full,,"Đường Lạc Long Quân, Phường 8, Quận Tân Bình, Hồ Chí Minh",4.8,6,Nam,Nam
+Chung cư,Huyện Nhà Bè,32.7,2,2,8.15,,,,3,Have certificate,Basic,,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",3.27,15,Tây,Tây
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,3,3,8.2,,,,3,Have certificate,Full,,"Dự án Park Riverside Tân Cảng, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Gò Vấp,75,6,4,7.5,,,,7,Have certificate,Full,,"Đường Lê Quang Định, Phường 1, Quận Gò Vấp, Hồ Chí Minh",4,4,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 12,70.2,4,4,7.9,,,,3,Have certificate,Full,,"Đường Tân Thới Nhất 25, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",4,10,Đông - Nam,Đông - Nam
+Chung cư,Quận Bình Tân,39,2,2,3.95,,,,2,Have certificate,Full,,"Đường 26/3, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh.",4,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,3,2,7.2,,,,3,Have certificate,Basic,,"Dự án Mega Village, Đường Vành Đai 2, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),82.5,3,3,9.3,,,,3,Have certificate,Full,,"Dự án Mega Ruby, Đường D3, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Tây,Tây
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),80,4,3,9.1,,,,3,Have certificate,Full,,"Dự án Mega Ruby, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Nam,Nam
+Biệt thự,Quận Gò Vấp,100,6,2,7.5,,,,4,Have certificate,Full,,"Đường Thống Nhất, Phường 15, Quận Gò Vấp, Hồ Chí Minh",6,6,Tây,Tây
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),60,3,2,5.2,,,,4,Have certificate,Basic,,"Đường Số 12, Phường Tam Bình, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,5,Đông - Nam,Đông - Nam
+Biệt thự,Quận 9 (TP. Thủ Đức),100,4,3,6.5,,,,5,Have certificate,Basic,,"Dự án Đông Tăng Long, Đường Nguyễn Duy Trinh, Phường Trường Thạnh, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Bắc,Bắc
+Biệt thự,Quận 9 (TP. Thủ Đức),108,4,3,9.5,,,,5,Have certificate,Full,,"Dự án Melosa Garden, Đường Vành Đai Trong, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6,20,Nam,Nam
+Chung cư,Quận 12,25,2,2,2.58,,,,2,Have certificate,Full,,"Đường Trường Chinh, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",3,3,Tây,Tây
+Nhà hẻm,Quận Bình Tân,54,2,2,2.73,,,,2,Have certificate,Full,,"Đường Bình Thành, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",4.5,5,Nam,Nam
+Biệt thự,Quận Thủ Đức (TP. Thủ Đức),120,3,2,7.5,,,,2,Have certificate,Basic,,"Đường Số 31, Phường Bình Trưng Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",7,5,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Gò Vấp,72,4,4,9.85,,,,5,Have certificate,Full,,"Đường Số 5, Phường 17, Quận Gò Vấp, Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Chung cư,Quận 12,22,2,2,2.35,,,,2,Have certificate,Full,,"Đường Hiệp Thành 13, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",2.5,5,Tây,Tây
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),60,4,4,8.1,,,,5,Have certificate,Basic,,"Đường Số 9, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,8,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Tân Phú,73,4,3,8.8,,,,2,Have certificate,Full,,"Đường Bác Ái, Phường Tân Thành, Quận Tân Phú, Hồ Chí Minh",4.2,12,Đông,Đông
+Nhà hẻm,Huyện Nhà Bè,58.7,4,3,5.49,,,,5,Have certificate,Full,,"1979, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4.2,6,Tây,Tây
+Nhà hẻm,Quận 11,40.3,2,2,4.35,,,,2,Have certificate,Basic,,"129/1M14, Đường Lạc Long Quân, Phường 1, Quận 11, Hồ Chí Minh",4.5,4,Nam,Nam
+Nhà mặt tiền,Quận 2 (TP. Thủ Đức),81.9,3,2,7.7,,,,3,Have certificate,Full,,"Đường Nguyễn Duy Trinh, Phường Bình Trưng Tây, Quận 2 (TP. Thủ Đức), Hồ Chí Minh",5.5,30,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Gò Vấp,75,3,2,5.6,,,,3,Have certificate,Full,,"Đường Số 10, Phường 8, Quận Gò Vấp, Hồ Chí Minh",5,4,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),85,5,1,5,,,,5,Have certificate,Full,,"Đường Man Thiện, Phường Tăng Nhơn Phú A, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.5,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,40,3,3,4.5,,,,3,Have certificate,Basic,,"Đường Miếu Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,5,Nam,Nam
+Nhà hẻm,Quận 12,45,3,2,2.2,,,,2,Have certificate,Basic,,"Đường Thạnh Lộc 47, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",3,3,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Tân Phú,91,2,1,8.3,,,,2,Have certificate,Basic,,"Đường Nguyễn Hữu Tiến, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",7,12,Nam,Nam
+Nhà hẻm,Quận 11,50,2,2,6.8,,,,2,Have certificate,Full,,"Đường Hồng Bàng, Phường 1, Quận 11, Hồ Chí Minh",5,10,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 12,58,3,3,3.95,,,,3,Have certificate,Full,,"Đường Thạnh Lộc 24, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,60,5,5,6.5,,,,6,Have certificate,Full,,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",5,7,Bắc,Bắc
+Nhà mặt tiền,Quận 12,65,1,1,5.25,,,,1,Have certificate,Basic,,"Đường Liên Khu 2-5, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",4.3,8,Nam,Nam
+Biệt thự,Quận Bình Tân,162,7,4,8.4,,,,7,Have certificate,Full,,"Đường Kinh dương Vương, Phường An Lạc, Quận Bình Tân, Hồ Chí Minh",8,20,Nam,Nam
+Nhà mặt tiền,Quận 6,84,7,2,6.8,,,,7,Have certificate,Full,,"Đường Cư Xá Phú Lâm B, Phường 13, Quận 6, Hồ Chí Minh",4.2,8,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận 12,75,3,3,4.95,,,,2,Have certificate,Full,,"Đường Nguyễn Ảnh Thủ, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",6,7,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Gò Vấp,68,4,5,8.1,,,,6,Have certificate,Full,,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",4,12,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Huyện Bình Chánh,75,4,3,8.95,,,,4,Have certificate,Full,,"Dự án Lovera Premier, Đường Trịnh Quang Nghị, Xã Phong Phú, Huyện Bình Chánh, Hồ Chí Minh.",12,52,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Gò Vấp,55,6,5,6.35,,,,6,Have certificate,Basic,,"Đường Phạm Văn Chiêu, Phường 13, Quận Gò Vấp, Hồ Chí Minh",4,4,Đông - Bắc,Đông - Bắc
+Biệt thự,Quận Thủ Đức (TP. Thủ Đức),104.3,4,2,9.9,,,,2,Have certificate,Basic,,"Đường Lê Thị Hoa, Phường Bình Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,12,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Gò Vấp,49,4,4,5.68,,,,3,Have certificate,Basic,,"Đường Quang Trung, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4,3.5,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 6,12,2,3,2.38,,,,2,Have certificate,Full,,"Đường Bà Hom, Phường 13, Quận 6, Hồ Chí Minh",2.5,3,Bắc,Bắc
+Nhà hẻm,Quận 12,52.1,3,2,3.45,,,,2,Have certificate,Full,,"Đường Hiệp Thành 13, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",12,3,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),70,1,1,7.5,,,,1,Have certificate,Full,,"Đường Gò Dưa, Phường Tam Bình, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,20,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),48,4,3,2.6,,,,3,Sale contract,Full,,"Đường Số 38, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,57,4,3,4.7,,,,3,Have certificate,Full,,"934/11, Đường Tỉnh Lộ 10, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",4.2,3,Bắc,Bắc
+Nhà hẻm,Quận Tân Bình,60,4,4,7.45,,,,5,Have certificate,Full,,"Đường Trần Thị Trọng, Phường 15, Quận Tân Bình, Hồ Chí Minh",4,8,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),71,4,3,5.3,,,,4,Have certificate,Basic,,"Đường 185, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",3.5,5,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 9 (TP. Thủ Đức),52,4,3,5.5,,,,3,Have certificate,Full,,"Đường 175, Phường Tăng Nhơn Phú B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,5,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Tân Phú,72,2,2,5,,,,2,Have certificate,Full,,"Đường Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",4.5,5,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Gò Vấp,80,5,3,7,,,,5,Have certificate,Full,,"Đường Thống Nhất, Phường 16, Quận Gò Vấp, Hồ Chí Minh",6,3,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,4,3,9.5,,,,3,Have certificate,Full,,"Dự án Rio Vista, Đường Dương Đình Hội, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",12,12,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),60,4,4,7.55,,,,6,Have certificate,Full,,"Đường Quốc Lộ 13, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Biệt thự,Quận Tân Bình,100,6,1,9,,,,6,Have certificate,Full,,"Đường Trường Chinh, Phường 15, Quận Tân Bình, Hồ Chí Minh",10.2,4,Đông,Tây
+Biệt thự,Huyện Bình Chánh,100,4,3,8,,,,5,Have certificate,Full,,"Dự án 13E Phong Phú, Xã Phong Phú, Huyện Bình Chánh, Hồ Chí Minh",5,20,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,60.8,3,3,5.2,,,,4,Have certificate,Full,,"Đường Số 11, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",4.5,4.5,Tây,Tây
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),45,2,2,2.4,,,,1,Have certificate,Basic,,"Đường Số 5, Phường Linh Xuân, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.5,3,Nam,Nam
+Nhà mặt tiền,Quận Tân Phú,76.4,2,1,7.6,,,,1,Have certificate,Full,,"Đường Trần Tấn, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",10.2,6,Đông,Đông
+Nhà mặt tiền,Quận Bình Tân,70,3,1,6.2,,,,2,Sale contract,Basic,,"Dự án The Privia, Đường An Dương Vương, Phường An Lạc, Quận Bình Tân, Hồ Chí Minh",6,20,Tây,Tây
+Nhà hẻm,Quận 7,63.9,2,2,4.99,,,,3,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",4.5,3.5,Nam,Nam
+Nhà mặt tiền,Huyện Nhà Bè,80,4,3,7.5,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",6,6,Tây,Đông
+Nhà mặt tiền,Huyện Bình Chánh,85,3,2,3.7,,,,2,Have certificate,Basic,,"Dự án The Meadow Huyện Bình Chánh, Đường Trần Văn Giàu, Xã Vĩnh Lộc B, Huyện Bình Chánh, Hồ Chí Minh.",15,6,Đông,Đông
+Chung cư,Quận 10,31,2,3,6.8,,,,3,Have certificate,Full,,"Đường Tô Hiến Thành, Phường 14, Quận 10, Hồ Chí Minh",6.2,6,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),51,3,2,6,,,,4,Have certificate,Basic,,"Đường Lê Văn Chí, Phường Linh Trung, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.2,12,Tây - Nam,Tây - Nam
+Biệt thự,Quận 9 (TP. Thủ Đức),100,4,3,8.49,,,,4,Have certificate,Full,,"Dự án Melosa Garden, Đường Vành Đai Trong, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,20,Nam,Tây - Bắc
+Nhà hẻm,Huyện Nhà Bè,49.5,3,2,3.6,,,,2,Have certificate,Basic,,"1942 Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4.5,4,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Huyện Hóc Môn,80,6,3,6,,,,5,Have certificate,Full,,"Đường Tô Ký 6, Xã Thới Tam Thôn, Huyện Hóc Môn, Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Chung cư,Quận Gò Vấp,30.6,2,2,3.88,,,,2,Have certificate,Full,,"Đường Số 4, Phường 16, Quận Gò Vấp, Hồ Chí Minh",3,3,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Bình Thạnh,57,6,5,9.5,,,,6,Have certificate,Full,,"Đường Nơ Trang Long, Phường 13, Quận Bình Thạnh, Hồ Chí Minh",5.4,5,Nam,Nam
+Nhà mặt tiền,Quận Gò Vấp,72,4,4,8.8,,,,5,Have certificate,Full,,"Đường Phan Huy Ích, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4,7,Nam,Nam
+Chung cư,Quận 4,18,1,2,1.8,,,,2,Have certificate,Basic,,"Hẻm 756 Đường Đoàn Văn Bơ, Phường 16, Quận 4, Hồ Chí Minh",4,3,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Phú Nhuận,40,3,2,5,,,,3,Have certificate,Full,,"Đường Huỳnh Văn Bánh, Phường 15, Quận Phú Nhuận, Hồ Chí Minh",4,8,Đông,Đông
+Nhà hẻm,Quận 11,48,3,3,7.6,,,,3,Have certificate,Full,,"Đường Trịnh Đình Trọng, Phường 5, Quận 11, Hồ Chí Minh",4,20,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 10,37,3,3,9,,,,1,Have certificate,Basic,,"Đường Nguyễn Lâm, Phường 6, Quận 10, Hồ Chí Minh",3.6,5,Bắc,Bắc
+Biệt thự,Quận 9 (TP. Thủ Đức),100,4,3,8.9,,,,4,Have certificate,Basic,,"Dự án Centana City Điền Phúc Thành, Phường Long Trường, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,16,Bắc,Bắc
+Nhà mặt tiền,Huyện Nhà Bè,91.2,4,4,9.5,,,,6,Have certificate,Full,,"Dự án Green Riverside, Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",6.5,8,Tây - Nam,Tây - Nam
+Chung cư,Quận Gò Vấp,37,4,4,4.65,,,,3,Have certificate,Full,,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",5,5,Bắc,Bắc
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),56,4,5,8.2,,,,4,Have certificate,Full,,"Đường Quốc Lộ 13, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,8,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),88,2,2,8.2,,,,2,Sale contract,Basic,,"Đường Số 4, Phường Phước Bình, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4,10,Bắc,Bắc
+Nhà mặt tiền,Huyện Bình Chánh,74.1,3,2,7.9,,,,3,Have certificate,Basic,,"Dự án Camellia Garden, Đường Số 1, Xã Bình Hưng, Huyện Bình Chánh, Hồ Chí Minh",12,25,Tây,Tây
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,4,3,7.1,,,,3,Have certificate,Full,,"Dự án Mega Village, Đường Võ Chí Công, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,20,Tây - Nam,Tây - Nam
+Chung cư,Quận 12,38.8,2,2,3.59,,,,2,Have certificate,Full,,"Đường Hiệp Thành 42, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",4,6,Đông - Bắc,Đông - Bắc
+Biệt thự,Quận 9 (TP. Thủ Đức),104,2,2,8.1,,,,2,Have certificate,Full,,"Đường Số 11, Phường Phước Bình, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4,12,Đông - Nam,Đông - Nam
+Chung cư,Quận 10,26.9,3,4,8.3,,,,4,Have certificate,Basic,,"Hẻm 606, Đường 3/2, Phường 14, Quận 10, Hồ Chí Minh.",4.7,10,Tây,Tây
+Nhà mặt tiền,Quận 12,82.5,5,5,7,,,,6,Have certificate,Basic,,"Đường Hương Lộ 80B, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",5,10,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),90,3,3,8.5,,,,3,Have certificate,Full,,"Dự án Mega Village, Đường Võ Chí Công, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",7.5,20,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),82.6,4,3,9.3,,,,3,Have certificate,Full,,"Dự án Mega Ruby, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,20,Tây,Tây
+Nhà mặt tiền,Quận Gò Vấp,67,3,3,7.6,,,,3,Have certificate,Basic,,"Đường Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Hồ Chí Minh",5,8,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),82.5,2,2,8,,,,2,Have certificate,Full,,"22, Đường Số 22, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6,5,Tây,Tây
+Nhà mặt tiền,Quận Bình Tân,64,3,3,6.3,,,,4,Have certificate,Basic,,"Đường Lê Văn Quới, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,6,Đông,Đông
+Biệt thự,Quận Thủ Đức (TP. Thủ Đức),109,3,2,9.3,,,,2,Have certificate,Full,,"Đường Số 14, Phường Linh Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.6,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 7,60.7,4,4,6.5,,,,5,Have certificate,Full,,"502/, Đường Huỳnh Tấn Phát, Phường Bình Thuận, Quận 7, Hồ Chí Minh",4,8,Tây - Nam,Đông - Bắc
+Nhà hẻm,Quận Gò Vấp,56,4,4,6.5,,,,3,Have certificate,Full,,"Hẻm 256, Đường Phan Huy Ích, Phường 12, Quận Gò Vấp, Hồ Chí Minh",8,3,Bắc,Bắc
+Nhà mặt tiền,Quận Tân Phú,64,4,3,5.4,,,,2,Have certificate,Full,,"Đường Lý Tuệ, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",4,3,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 11,32,5,4,5.7,,,,3,Have certificate,Basic,,"Đường Hàn Hải Nguyên, Phường 9, Quận 11, Hồ Chí Minh",3.5,5,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 7,70,6,5,8.88,,,,8,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",3.6,6,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 12,52.5,4,3,5.2,,,,3,Have certificate,Basic,,"Đường An Phú Đông 1, Phường An Phú Đông, Quận 12, Hồ Chí Minh",4,5,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Huyện Nhà Bè,56,4,4,6.6,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4.6,6,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Bình Thạnh,52,4,2,7.2,,,,4,Have certificate,Basic,,"Đường Xô Viết Nghệ Tĩnh, Phường 21, Quận Bình Thạnh, Hồ Chí Minh",6,6,Bắc,Bắc
+Nhà hẻm,Quận 12,50,4,4,4.55,,,,5,Have certificate,Full,,"Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",11,11,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Tân Bình,70,2,2,8.3,,,,2,Have certificate,Basic,,"Đường Bình Giã, Phường 13, Quận Tân Bình, Hồ Chí Minh",3.6,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Huyện Nhà Bè,55.3,4,4,6.5,,,,3,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",4.6,6,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Huyện Nhà Bè,80.3,4,4,6.5,,,,5,Have certificate,Full,,"Đường Nguyễn Bình, Xã Nhơn Đức, Huyện Nhà Bè, Hồ Chí Minh",7.3,7,Tây - Nam,Tây - Nam
+Biệt thự,Quận Thủ Đức (TP. Thủ Đức),168,1,1,9.5,,,,1,Have certificate,Full,,"Đường 26, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.27,7,Tây - Bắc,Tây - Bắc
+Chung cư,Quận Bình Thạnh,32,2,2,4.45,,,,2,Have certificate,Full,,"Đường  Vạn Kiếp, Phường 3, Quận Bình Thạnh, Hồ Chí Minh",2.9,2.5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 7,53.2,2,2,4.8,,,,3,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",4,4,Đông - Nam,Đông - Nam
+Biệt thự,Huyện Hóc Môn,150,2,1,7.5,,,,1,Have certificate,Full,,"Đường Phạm Thị Giây, Xã Thới Tam Thôn, Huyện Hóc Môn, Hồ Chí Minh",5,20,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Thạnh,53,4,4,9.4,,,,4,Have certificate,Basic,,"Đường Chu Văn An, Phường 12, Quận Bình Thạnh, Hồ Chí Minh",4.7,6,Đông,Đông
+Nhà hẻm,Quận Gò Vấp,51,4,6,6.5,,,,5,Have certificate,Full,,"Đường Lê Đức Thọ, Phường 13, Quận Gò Vấp, Hồ Chí Minh",4.6,6,Nam,Nam
+Nhà hẻm,Quận Bình Tân,40,2,2,4.1,,,,2,Have certificate,Full,,"Đường Miếu Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,8,Tây - Bắc,Tây - Bắc
+Chung cư,Quận Bình Tân,35,3,3,2.58,,,,3,Have certificate,Full,,"Hẻm 229, Đường Liên khu 4-5, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",5,4,Tây,Tây
+Nhà hẻm,Quận Gò Vấp,56,5,4,6.6,,,,3,Have certificate,Basic,,"Đường Số 20, Phường 9, Quận Gò Vấp, Hồ Chí Minh",4,5,Tây,Tây
+Biệt thự,Huyện Nhà Bè,161.8,3,2,6.5,,,,2,Have certificate,Full,,"Đường Nguyễn Văn Ràng, Xã Phước Lộc, Huyện Nhà Bè, Hồ Chí Minh",6,6,Đông,Đông
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),80,4,4,8.6,,,,5,Have certificate,Full,,"Đường 5, Phường Linh Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,5,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận 7,50,2,2,5.6,,,,2,Have certificate,Full,,"Đường  Trần Xuân Soạn, Phường Tân Kiểng, Quận 7, Hồ Chí Minh",4,5,Đông,Đông - Nam
+Nhà hẻm,Quận Tân Bình,43.1,2,2,8.6,,,,2,Have certificate,Full,,"Đường Nhất Chi Mai, Phường 13, Quận Tân Bình, Hồ Chí Minh",4,16,Tây,Tây
+Nhà mặt tiền,Quận Tân Phú,65,2,2,5.2,,,,2,Have certificate,Full,,"Đường Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",4.5,5,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 12,67.2,1,1,3.79,,,,1,Have certificate,Basic,,"Đường Thạnh Xuân 13, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4.2,6,Nam,Nam
+Nhà hẻm,Quận Gò Vấp,50,4,3,6.8,,,,5,Have certificate,Basic,,"Đường Thống Nhất, Phường 10, Quận Gò Vấp, Hồ Chí Minh",5,5,Tây - Nam,Tây - Nam
+Chung cư,Quận Bình Tân,30,3,3,1.88,,,,3,Have certificate,Full,,"Đường Bình Thành, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",5,4,Nam,Nam
+Nhà mặt tiền,Quận Tân Phú,70,4,2,5.2,,,,2,Have certificate,Basic,,"Đường Lương Đắc Bằng, Phường Hòa Thạnh, Quận Tân Phú, Hồ Chí Minh",4,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Thạnh,63,7,3,7.9,,,,8,Have certificate,Full,,"Đường Nguyễn Cửu Vân, Phường 17, Quận Bình Thạnh, Hồ Chí Minh",3.8,2,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 3,36,5,5,9,,,,5,Have certificate,Full,,"Đường Võ Văn Tần, Phường 5, Quận 3, Hồ Chí Minh",3.4,5,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Gò Vấp,63.6,3,2,6.9,,,,2,Have certificate,Basic,,"Đường Lê Lai, Phường 3, Quận Gò Vấp, Hồ Chí Minh",3,3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Gò Vấp,55,4,3,6.1,,,,3,Have certificate,Basic,,"Đường Lê Đức Thọ, Phường 16, Quận Gò Vấp, Hồ Chí Minh",4,3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,50,2,2,3.99,,,,2,Have certificate,Full,,"Đường Bình Trị Đông, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",4.1,5,Bắc,Bắc
+Chung cư,Quận Tân Bình,33,3,5,8.7,,,,3,Have certificate,Basic,,"Đường Nguyễn Hồng Đào, Phường 14, Quận Tân Bình, Hồ Chí Minh",4.2,8,Bắc,Bắc
+Nhà hẻm,Quận Phú Nhuận,40.4,5,6,8.6,,,,5,Have certificate,Full,,"Đường Thích Quảng Đức, Phường 4, Quận Phú Nhuận, Hồ Chí Minh",6,4,Tây - Bắc,Tây - Bắc
+Chung cư,Quận 8,31.4,2,3,4.3,,,,3,Have certificate,Basic,,"Đường Rạch Cát, Phường 15, Quận 8, Hồ Chí Minh",3.7,10,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 12,84,4,4,10,,,,5,Have certificate,Full,,"Đường Dương Thị Giang, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",4.2,12,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 6,72,4,3,9,,,,3,Have certificate,Basic,,"Đường Cư Xá Phú Lâm D, Phường 11, Quận 6, Hồ Chí Minh",4,8,Bắc,Bắc
+Nhà mặt tiền,Quận Phú Nhuận,73,4,4,8.9,,,,4,Have certificate,Full,,"241a/, Đường Huỳnh Văn Bánh, Phường 12, Quận Phú Nhuận, Hồ Chí Minh",5.4,3,Tây,Tây - Bắc
+Nhà hẻm,Quận 9 (TP. Thủ Đức),50,3,3,3.85,,,,3,Have certificate,Full,,"Dự án Samsung Village, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4,8,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Bình Tân,30,3,2,1.88,,,,3,Have certificate,Full,,"Đường Liên khu 4-5, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",4,5,Nam,Nam
+Biệt thự,Quận 8,151,2,1,5.7,,,,3,Have certificate,Basic,,"Green River quận 8, số 2225, Đường Phạm Thế Hiển, Phường 6, Quận 8, Hồ Chí Minh",15,15,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 11,70,7,3,8.3,,,,7,Have certificate,Full,,"Đường Lê Thị Bạch Cát, Phường 11, Quận 11, Hồ Chí Minh",4,4,Bắc,Bắc
+Nhà hẻm,Quận Tân Bình,58.8,5,4,7.45,,,,4,Have certificate,Full,,"Đường Hoàng Bật Đạt, Phường 15, Quận Tân Bình, Hồ Chí Minh",4.2,8,Tây - Bắc,Tây - Bắc
+Chung cư,Quận Phú Nhuận,39,3,4,7.5,,,,2,Have certificate,Full,,"Đường Nguyễn Đình Chính, Phường 11, Quận Phú Nhuận, Hồ Chí Minh",5.2,5,Đông - Nam,Đông - Nam
+Chung cư,Quận 12,35,2,2,1.95,,,,2,Have certificate,Full,,"Đường Tân Thới Hiệp 21, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",7,2.5,Tây,Tây
+Nhà hẻm,Quận Bình Tân,51,4,4,5.2,,,,3,Have certificate,Full,,"Đường Lô Tư, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",8,6,Đông,Đông
+Biệt thự,Huyện Nhà Bè,100,4,4,8.6,,,,5,Have certificate,Full,,"Số 2534, Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",5,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Bình Tân,69,3,3,6,,,,3,Have certificate,Basic,,"Đường Tỉnh Lộ 10, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",5.3,4,Đông,Đông
+Chung cư,Quận 12,30,4,3,2.48,,,,3,Have certificate,Basic,,"Đường Thạnh Lộc 13, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",3,4.5,Đông - Bắc,Đông - Nam
+Biệt thự,Quận Tân Phú,100,4,3,10,,,,5,Have certificate,Basic,,"Đường T8, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",4,12,Đông - Nam,Đông - Nam
+Biệt thự,Quận 7,121,2,1,8.8,,,,2,Have certificate,Basic,,"Đường Tân Mỹ, Phường Tân Thuận Tây, Quận 7, Hồ Chí Minh",7,3.5,Bắc,Bắc
+Nhà hẻm,Quận 12,51,4,4,4.7,,,,4,Have certificate,Basic,,"Đường Lê Văn Khương, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",4,4,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Bình Thạnh,80,3,3,9.9,,,,3,Have certificate,Basic,,"Đường Nguyễn Văn Đậu, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",4.1,6,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),62.7,3,2,8,,,,2,Have certificate,Basic,,"Đường Số 6, Phường Linh Tây, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.6,8,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,55,4,4,6.77,,,,5,Have certificate,Basic,,"Đường Hà Huy Giáp, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",5,10,Nam,Nam
+Nhà hẻm,Quận 12,56,4,3,5.3,,,,5,Have certificate,Basic,,"Đường Thạnh Xuân 22, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,7,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),87.8,2,1,4.5,,,,2,Have certificate,Basic,,"27/2/3C, Đường Số 2, Phường Tam Phú, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,5,Tây,Tây
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),73,2,1,4.08,,,,1,Have certificate,Full,,"Đường Tây Hòa, Phường Phước Long A, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4.2,3,Bắc,Bắc
+Nhà hẻm,Quận 4,61.6,3,2,7.9,,,,3,Have certificate,Full,,"Đường Xóm Chiếu, Phường 16, Quận 4, Hồ Chí Minh",3.2,3.3,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Phú Nhuận,43,3,4,8.6,,,,4,Have certificate,Full,,"Đường Phan Xích Long, Phường 3, Quận Phú Nhuận, Hồ Chí Minh",4.3,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,50,4,3,4.45,,,,5,Have certificate,Basic,,"Đường Thạnh Xuân 22, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4.1,10,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 7,70,4,3,9.5,,,,4,Have certificate,Full,,"Đường Lý Phục Man, Phường Phú Thuận, Quận 7, Hồ Chí Minh",4,5,Đông,Đông
+Chung cư,Huyện Hóc Môn,30,2,1,1.05,,,,2,Have certificate,Full,,"Đường Phan Văn Hớn, Xã Bà Điểm, Huyện Hóc Môn, Hồ Chí Minh",3.5,5,Tây,Tây
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,3,3,8.3,,,,4,Have certificate,Full,,"Dự án Park Riverside Tân Cảng, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Gò Vấp,16,3,4,2.68,,,,2,Have certificate,Basic,,"345/34/40, Đường Nguyễn Văn Công, Phường 3, Quận Gò Vấp, Hồ Chí Minh",3.2,2,Tây - Bắc,Tây - Bắc
+Chung cư,Quận Gò Vấp,20,2,1,3.29,,,,2,Have certificate,Full,,"Đường Cây Trâm, Phường 9, Quận Gò Vấp, Hồ Chí Minh",6,4,Đông - Nam,Đông
+Nhà hẻm,Quận Tân Phú,61.9,4,4,8.5,,,,4,Have certificate,Full,,"Đường Tô Hiệu, Phường Hiệp Tân, Quận Tân Phú, Hồ Chí Minh",7,12,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Bình Tân,64,3,2,4.4,,,,2,Have certificate,Basic,,"Đường Lê Đình Cẩn, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",6,6,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 10,60,4,3,9.2,,,,4,Have certificate,Basic,,"Đường Cách Mạng Tháng Tám, Phường 13, Quận 10, Hồ Chí Minh",5,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,51,4,3,4.6,,,,5,Have certificate,Basic,,"Đường Lê Thị Riêng, Phường Thới An, Quận 12, Hồ Chí Minh",5.6,7,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Bình Tân,68,4,4,6.5,,,,5,Have certificate,Full,,"Đường Lê Văn Quới, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,6,Bắc,Bắc
+Nhà hẻm,Quận 9 (TP. Thủ Đức),52,4,3,5.5,,,,3,Have certificate,Basic,,"Đường 175, Phường Tăng Nhơn Phú B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,5,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),72.5,2,3,5.7,,,,3,Have certificate,Full,,"Đường 20, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.2,5,Đông - Bắc,Đông - Bắc
+Biệt thự,Quận 12,115,5,3,8.5,,,,5,Have certificate,Full,,"Đường Hiệp Thành 5, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",4.7,12,Đông - Bắc,Đông - Bắc
+Biệt thự,Huyện Nhà Bè,320,6,2,9.9,,,,6,Have certificate,Basic,,"Đường Nguyễn Bình, Xã Nhơn Đức, Huyện Nhà Bè, Hồ Chí Minh",23,8,Nam,Nam
+Nhà mặt tiền,Quận Phú Nhuận,67,3,3,6.9,,,,3,Have certificate,Full,,"Đường Huỳnh Văn Bánh, Phường 17, Quận Phú Nhuận, Hồ Chí Minh",5,3,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 12,58,2,2,3.83,,,,2,Have certificate,Full,,"Đường Thạnh Lộc 41, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",5,8,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,50.1,4,4,4.45,,,,5,Have certificate,Basic,,"Đường Thạnh Lộc 15, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4,7,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),90,3,2,7.6,,,,3,Have certificate,Basic,,"Đường Số 2, Phường Tăng Nhơn Phú B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),50,4,3,6.8,,,,3,Have certificate,Full,,"Đường Đặng Văn Bi, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.55,5,Tây - Nam,Tây - Nam
+Chung cư,Quận Bình Tân,24,2,2,1.68,,,,3,Sale contract,Basic,,"Đường Bình Thành, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",4,4,Đông,Đông
+Chung cư,Quận Phú Nhuận,18.9,1,1,3.8,,,,1,Have certificate,Basic,,"19/25, Đường Lam Sơn, Phường 5, Quận Phú Nhuận, Hồ Chí Minh",3.1,8,Đông,Đông
+Chung cư,Quận Phú Nhuận,39,4,4,7.75,,,,4,Have certificate,Full,,"Đường Nhiêu Tứ, Phường 7, Quận Phú Nhuận, Hồ Chí Minh",6,5,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 12,56,4,3,7.8,,,,5,Have certificate,Basic,,"Đường Nguyễn Thị Nhuần, Phường An Phú Đông, Quận 12, Hồ Chí Minh",4,20,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 7,60,4,3,9.5,,,,4,Have certificate,Basic,,"Đường 5, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",4,8,Nam,Nam
+Nhà hẻm,Quận 12,56,4,4,5.7,,,,5,Have certificate,Full,,"Đường Thạnh Lộc 43, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",9,9,Tây,Tây
+Nhà hẻm,Quận 10,54,2,2,8.8,,,,2,Have certificate,Basic,,"163, Đường Tô Hiến Thành, Phường 13, Quận 10, Hồ Chí Minh",3,12,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Tân Bình,54,4,1,7.8,,,,3,Have certificate,Basic,,"Hẻm 104, Đường Phạm Văn Bạch, Phường 15, Quận Tân Bình, Hồ Chí Minh",8,6,Tây - Bắc,Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),92.5,4,3,9.25,,,,3,Have certificate,Full,,"Dự án Mega Ruby, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,20,Nam,Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),56.7,3,2,6.5,,,,3,Have certificate,Full,,"Đường 8, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.12,8,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Gò Vấp,45,4,4,5.48,,,,5,Have certificate,Basic,,"247/9, Đường Lê Đức Thọ, Phường 17, Quận Gò Vấp, Hồ Chí Minh",5.6,4,Bắc,Bắc
+Chung cư,Quận Thủ Đức (TP. Thủ Đức),35.7,2,2,2.85,,,,2,Have certificate,Basic,,"Đường 4, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.2,2.5,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),71.4,3,3,9.5,,,,2,Have certificate,Full,,"Đường 359, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,7,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Bình Tân,56.25,5,4,6.85,,,,6,Have certificate,Basic,,"Đường Mã Lò, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4.5,7,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Tân Phú,64,4,3,5.68,,,,3,Have certificate,Basic,,"Đường Dương Văn Dương, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",4.1,6,Tây,Tây
+Nhà hẻm,Quận Tân Phú,41.1,4,5,7.5,,,,3,Have certificate,Basic,,"Đường Nguyễn Trường Tộ, Phường Tân Thành, Quận Tân Phú, Hồ Chí Minh",5,12,Bắc,Bắc
+Biệt thự,Quận Bình Tân,108,5,3,8.3,,,,4,Have certificate,Full,,"Đường Lê Văn Quới, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",8,8,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Bình Tân,66,5,5,5.6,,,,6,Have certificate,Full,,"Đường Hương lộ 2, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",4.1,8,Đông,Đông
+Nhà hẻm,Quận Bình Thạnh,60,6,4,6.5,,,,4,Have certificate,Full,,"Đường Bình Quới, Phường 27, Quận Bình Thạnh, Hồ Chí Minh",3.8,2,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Bình Tân,52,3,2,4.1,,,,2,Have certificate,Full,,"Đường Lê Văn Quới, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4.2,4,Tây,Tây
+Nhà mặt tiền,Quận 7,70,2,2,6.2,,,,2,Have certificate,Basic,,"Hẻm 308, Đường Huỳnh Tấn Phát, Phường Tân Thuận Tây, Quận 7, Hồ Chí Minh",4,4,Nam,Nam
+Biệt thự,Quận Gò Vấp,100,5,5,10,,,,6,Have certificate,Full,,"Đường Bùi Quang Là, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4.2,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Bình Tân,64,3,3,5.65,,,,3,Have certificate,Full,,"Đường Số 55A, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",4,10,Bắc,Bắc
+Chung cư,Quận 1,29,3,4,5.5,,,,3,Have certificate,Basic,,"Đường Nguyễn Phi Khanh, Phường Tân Định, Quận 1, Hồ Chí Minh",2.55,4,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Bình Tân,98.8,4,4,6.7,,,,5,Have certificate,Full,,"Đường Tân Hòa Đông, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",5.2,6,Bắc,Bắc
+Nhà hẻm,Quận Gò Vấp,55,2,2,5.2,,,,2,Have certificate,Basic,,"Đường Nguyễn Văn Lượng, Phường 16, Quận Gò Vấp, Hồ Chí Minh",4,4,Nam,Nam
+Nhà hẻm,Quận 12,50,4,4,5.7,,,,4,Have certificate,Full,,"Đường Thạnh Lộc 26, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4,12,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Tân Bình,60,4,3,9.5,,,,4,Have certificate,Full,,"80, Đường Ba Vân, Phường 14, Quận Tân Bình, Hồ Chí Minh",4.5,12,Đông,Đông
+Nhà hẻm,Quận Bình Thạnh,63,4,3,6.95,,,,4,Have certificate,Full,,"Đường Lê Quang Định, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",4.05,2.5,Nam,Nam
+Nhà mặt tiền,Quận Gò Vấp,64,4,3,6.85,,,,4,Have certificate,Full,,"Đường Số 3, Phường 9, Quận Gò Vấp, Hồ Chí Minh",4.2,4,Tây - Nam,Tây - Nam
+Biệt thự,Quận 12,217,3,2,9.5,,,,2,Have certificate,Basic,,"48/4, Đường Đông Hưng Thuận 40, Phường Đông Hưng Thuận, Quận 12, Hồ Chí Minh",9,3,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),74,3,3,5.8,,,,4,Have certificate,Full,,"Đường Số 2, Phường Long Trường, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Chung cư,Quận Phú Nhuận,38,3,4,6.78,,,,4,Have certificate,Full,,"Đường Nguyễn Đình Chính, Phường 11, Quận Phú Nhuận, Hồ Chí Minh",4.2,6,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Gò Vấp,45,3,4,6,,,,3,Have certificate,Basic,,"Đường Lê Đức Thọ, Phường 13, Quận Gò Vấp, Hồ Chí Minh",4,5,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 9 (TP. Thủ Đức),30,2,2,2.95,,,,1,Have certificate,Basic,,"Đường 339, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6,3,Tây - Bắc,Tây - Bắc
+Chung cư,Quận 4,25,2,2,2.5,,,,2,Have certificate,Full,,"Đường Đoàn Văn Bơ, Phường 16, Quận 4, Hồ Chí Minh",3,3.5,Đông,Đông
+Nhà mặt tiền,Quận Bình Tân,88,6,3,8,,,,6,Have certificate,Full,,"Đường Trần Thanh Mại, Phường Tân Tạo A, Quận Bình Tân, Hồ Chí Minh",4,15,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Bình Tân,48,2,2,3,,,,2,Have certificate,Full,,"Đường Nguyễn Thị Tú, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",4,4,Nam,Nam
+Nhà mặt tiền,Quận Bình Tân,68,5,5,6.95,,,,6,Have certificate,Full,,"Đường Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,8,Bắc,Bắc
+Chung cư,Quận Tân Bình,35,2,2,3.58,,,,2,Have certificate,Basic,,"Đường Lạc Long Quân, Phường 8, Quận Tân Bình, Hồ Chí Minh",3,3,Tây,Tây
+Nhà mặt tiền,Quận 7,87.1,4,2,6,,,,4,Have certificate,Basic,,"Hẻm 1205, Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",6.7,4,Đông,Đông
+Nhà hẻm,Quận 8,42,3,4,6.4,,,,3,Have certificate,Full,,"Đường Âu Dương Lân, Phường 3, Quận 8, Hồ Chí Minh",5,4,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Bình Tân,60,5,5,5.1,,,,5,Have certificate,Full,,"Hẻm 125, Đường Tây Lân, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,6,Đông,Đông
+Chung cư,Quận Bình Tân,35,2,2,2,,,,2,Have certificate,Full,,"Đường Tỉnh Lộ 10, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",4,4,Đông,Đông
+Nhà mặt tiền,Quận 6,68,4,3,9.8,,,,5,Have certificate,Full,,"Đường Số 21, Phường 10, Quận 6, Hồ Chí Minh",4,8,Tây,Tây
+Chung cư,Quận 4,21,3,4,7,,,,4,Have certificate,Basic,,"Số 36, Đường Số 25, Phường 4, Quận 4, Hồ Chí Minh",6,6,Tây,Tây
+Chung cư,Quận Bình Tân,24,2,1,2.75,,,,2,Have certificate,Basic,,"1/, Đường Số 13A, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",3,3,Đông,Đông
+Nhà hẻm,Quận 12,58,3,3,3.95,,,,3,Have certificate,Full,,"Đường Thạnh Xuân 24, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,5,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Bình Tân,73,3,2,4.5,,,,1,Have certificate,Basic,,"Đường Chiến Lược, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,8,Bắc,Bắc
+Nhà mặt tiền,Quận 12,71.7,4,5,8.3,,,,5,Have certificate,Basic,,"Đường Thạnh Lộc 29, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4,8,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 12,76,4,4,6.3,,,,5,Have certificate,Full,,"Đường Thạnh Xuân 22, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),60,4,3,6.8,,,,3,Have certificate,Basic,,"Đường 389, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.5,8,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 12,78.8,4,3,5.57,,,,4,Have certificate,Full,,"Đường Tân Thới Nhất 1, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",4.5,10,Nam,Nam
+Nhà mặt tiền,Huyện Bình Chánh,90,4,3,7,,,,4,Sale contract,Basic,,"Dự án The Meadow Huyện Bình Chánh, Đường Trần Văn Giàu, Xã Vĩnh Lộc B, Huyện Bình Chánh, Hồ Chí Minh",5,20,Tây - Bắc,Đông - Nam
+Chung cư,Quận Tân Phú,32.3,2,2,4.5,,,,2,Have certificate,Basic,,"30/24 Đỗ Nhuận, Phường Sơn Kỳ, Quận Tân Phú, Hồ Chí Minh",4,10,Nam,Nam
+Nhà hẻm,Quận 12,50,4,2,4.75,,,,3,Have certificate,Basic,,"Hẻm 154, Đường Vườn Lài, Phường An Phú Đông, Quận 12, Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Chung cư,Quận Bình Tân,39.9,1,1,4.1,,,,1,Have certificate,Full,,"Đường Số 10, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",4,6,Đông,Đông
+Nhà hẻm,Quận 12,50,4,3,6.29,,,,6,Have certificate,Full,,"Đường Thạnh Lộc 16, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4.5,12,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 8,32,4,3,6,,,,3,Have certificate,Basic,,"10/44, Đường Âu Dương Lân, Phường 3, Quận 8, Hồ Chí Minh",3.2,4,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),69,2,2,8.7,,,,2,Have certificate,Full,,"Đường 27, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.6,12,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Tân Bình,52,4,3,7.9,,,,4,Have certificate,Full,,"156B, Đường Đông Hồ, Phường 8, Quận Tân Bình, Hồ Chí Minh",4,16,Đông,Đông
+Nhà mặt tiền,Huyện Hóc Môn,79.8,1,3,2.85,,,,1,Have certificate,Basic,,"Đường Ấp 3, Xã  Đông Thạnh, Huyện Hóc Môn, Hồ Chí Minh",4.2,5,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 10,33,2,2,4.35,,,,2,Have certificate,Full,,"Đường Bà Hạt, Phường 4, Quận 10, Hồ Chí Minh",3.1,5,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Bình Tân,80,6,5,8.8,,,,7,Have certificate,Full,,"Đường Miếu Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,16,Bắc,Bắc
+Chung cư,Quận Bình Tân,30,4,3,2.48,,,,3,Have certificate,Full,,"Đường Nguyễn Thị Tú, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",5,4,Tây,Tây
+Biệt thự,Quận 12,128,3,1,9.9,,,,2,Have certificate,Full,,"Đường Đông Hưng Thuận 11, Phường Đông Hưng Thuận, Quận 12, Hồ Chí Minh",5,12,Bắc,Bắc
+Nhà mặt tiền,Quận 12,68,4,4,6.65,,,,6,Have certificate,Full,,"Đường Tô Ngọc Vân, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận 10,71.2,4,3,10,,,,5,Have certificate,Full,,"Đường Cách Mạng Tháng Tám, Phường 13, Quận 10, Hồ Chí Minh",5.8,6,Đông - Nam,Đông - Nam
+Chung cư,Quận 4,26,3,5,6.6,,,,3,Have certificate,Basic,,"Số 4A Đường 50, Phường 2, Quận 4, Hồ Chí Minh",9,9,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Tân Phú,64,4,3,8.2,,,,3,Have certificate,Full,,"Hẻm 89, Đường Trịnh Đình Trọng, Phường Phú Trung, Quận Tân Phú, Hồ Chí Minh",4,7,Tây,Tây
+Chung cư,Quận 10,28.1,3,3,9.5,,,,3,Have certificate,Basic,,"Đường Trần Nhân Tôn, Phường 2, Quận 10, Hồ Chí Minh",29,15,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Bình Thạnh,85,2,2,7.8,,,,2,Have certificate,Basic,,"Đường Nơ Trang Long, Phường 12, Quận Bình Thạnh, Hồ Chí Minh",3.8,3,Bắc,Bắc
+Biệt thự,Quận Bình Thạnh,157,7,4,10,,,,7,Have certificate,Basic,,"Đường Thanh Đa, Phường 27, Quận Bình Thạnh, Hồ Chí Minh",10,3,Đông - Nam,Tây - Nam
+Nhà hẻm,Quận 7,50.02,4,3,6.2,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",4.1,5,Đông - Nam,Đông - Nam
+Chung cư,Quận Tân Bình,27,2,2,4.15,,,,2,Have certificate,Full,,"Đường Bành Văn Trân, Phường 7, Quận Tân Bình, Hồ Chí Minh",3,3,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Bình Tân,92,5,4,8.1,,,,3,Have certificate,Full,,"Đường 38, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",4,8,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Tân Bình,50,4,3,8.5,,,,4,Have certificate,Full,,"156A, Đường Duy Tân, Phường 8, Quận Tân Bình, Hồ Chí Minh",5,16,Đông,Đông
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),60,4,4,7.45,,,,6,Have certificate,Full,,"Đường Quốc Lộ 13, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Bình Tân,72,4,3,5.95,,,,4,Have certificate,Full,,"Hẻm 822, Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,8,Tây,Tây
+Nhà hẻm,Quận Bình Tân,56,5,5,6.2,,,,5,Have certificate,Full,,"Đường 7, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",4,6,Tây - Nam,Tây - Nam
+Chung cư,Quận 12,35,2,2,1.88,,,,2,Have certificate,Basic,,"Đường Hiệp Thành 13, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",5,5,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Phú Nhuận,22,2,2,3.8,,,,2,Have certificate,Basic,,"Đường Trần Khắc Chân, Phường 9, Quận Phú Nhuận, Hồ Chí Minh",2.89,2.5,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 12,44,1,1,3.4,,,,1,Have certificate,Full,,"Đường Tân Thới Nhất 8, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",4,3,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận Bình Tân,40,2,1,1.93,,,,2,Have certificate,Full,,"Đường Hồ Văn Long, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",4,5,Tây,Tây
+Nhà hẻm,Quận 7,53.4,2,2,4.95,,,,2,Have certificate,Basic,,"Hẻm 102, Đường Huỳnh Tấn Phát, Phường Tân Thuận Tây, Quận 7, Hồ Chí Minh",4.45,4,Tây,Tây
+Chung cư,Quận Tân Bình,33,3,4,4.99,,,,3,Have certificate,Full,,"Đường Trần Văn Quang, Phường 10, Quận Tân Bình, Hồ Chí Minh",3,4,Đông,Đông
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),90,4,1,5.9,,,,4,Have certificate,Full,,"Đường 7, Phường Linh Trung, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.8,5,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),92,4,3,7.5,,,,4,Have certificate,Full,,"Đường Số 48, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,5,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Gò Vấp,24,3,3,3.78,,,,3,Have certificate,Full,,"Đường Dương Quảng Hàm, Phường 5, Quận Gò Vấp, Hồ Chí Minh",3.5,3,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Bình Tân,60,5,5,8.5,,,,5,Have certificate,Full,,"Đường Tây Lân, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4.3,30,Bắc,Bắc
+Nhà hẻm,Quận Bình Thạnh,58,3,3,6.75,,,,5,Have certificate,Full,,"Đường Hoàng Hoa Thám, Phường 6, Quận Bình Thạnh, Hồ Chí Minh",5.1,5,Bắc,Bắc
+Nhà hẻm,Quận Bình Tân,55,4,4,5.8,,,,4,Have certificate,Full,,"Hẻm 616, Đường Lê Trọng Tấn, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",4.5,7,Đông,Đông
+Nhà hẻm,Quận 7,43.4,4,3,5.6,,,,3,Have certificate,Full,,"Đường Hoàng Quốc Việt, Phường Phú Thuận, Quận 7, Hồ Chí Minh",3,3,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),60,2,2,3.75,,,,2,Have certificate,Full,,"Đường Tô Ngọc Vân, Phường Tam Bình, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 8,60,3,3,3.9,,,,3,Have certificate,Full,,"Đường Mễ Cốc, Phường 15, Quận 8, Hồ Chí Minh",4,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận 12,51,4,5,6.1,,,,6,Have certificate,Basic,,"Đường Thạnh Lộc 15, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4.6,11,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 12,50,4,5,5.9,,,,6,Have certificate,Full,,"Đường Thạnh Lộc 15, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4.6,12,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 12,52,4,3,6.77,,,,5,Have certificate,Full,,"Đường Nguyễn Oanh, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4.8,10,Nam,Nam
+Chung cư,Quận Gò Vấp,39,4,4,7.5,,,,4,Have certificate,Full,,"Đường Nguyễn Văn Lượng, Phường 16, Quận Gò Vấp, Hồ Chí Minh",4.3,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Thạnh,44,4,4,6.7,,,,5,Have certificate,Full,,"Đường  Vạn Kiếp, Phường 3, Quận Bình Thạnh, Hồ Chí Minh",5.2,3,Tây,Tây
+Chung cư,Quận Thủ Đức (TP. Thủ Đức),25.2,2,3,6.5,,,,1,Have certificate,Full,,"Đường 2, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.5,15,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 12,98.5,4,3,7.4,,,,3,Have certificate,Basic,,"Đường Thạnh Lộc 31, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4,8,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận 12,69.3,3,1,3.85,,,,3,Have certificate,Basic,,"Đường Thạnh Xuân 43, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",5.5,4,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Tân Bình,51,4,3,5.7,,,,3,Have certificate,Full,,"Đường Cống Lở, Phường 15, Quận Tân Bình, Hồ Chí Minh",5.1,5,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Tân Bình,56,4,3,8.9,,,,5,Have certificate,Basic,,"Đường Thái Thị Nhạn, Phường 10, Quận Tân Bình, Hồ Chí Minh",4,6,Đông - Nam,Đông - Nam
+Chung cư,Quận Bình Thạnh,36,2,2,3.75,,,,2,Have certificate,Basic,,"Đường Nguyễn Văn Đậu, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",3,3,Tây - Nam,Tây - Nam
+Chung cư,Quận Bình Thạnh,33,1,1,4.5,,,,2,Have certificate,Basic,,"Đường Điện Biên Phủ, Phường 25, Quận Bình Thạnh, Hồ Chí Minh",4.2,3,Tây,Tây
+Nhà hẻm,Quận Bình Thạnh,60,6,2,5.6,,,,5,Have certificate,Full,,"Đường Ngô Tất Tố, Phường 22, Quận Bình Thạnh, Hồ Chí Minh",3.5,5,Đông - Nam,Đông
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),94.1,2,2,6,,,,2,Have certificate,Full,,"Đường 22, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,5,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Bình Thạnh,37.9,4,4,7.1,,,,4,Have certificate,Full,,"Đường Nguyễn Văn Đậu, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",4.7,6,Nam,Nam
+Nhà mặt tiền,Quận Tân Bình,69,4,3,7.45,,,,5,Have certificate,Full,,"118/, Đường Phan Huy Ích, Phường 15, Quận Tân Bình, Hồ Chí Minh",4,8,Tây - Bắc,Tây - Bắc
+Chung cư,Huyện Nhà Bè,30,2,2,1.4,,,,2,Sale contract,Full,,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",3,6,Đông,Đông
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),75,3,3,8.2,,,,3,Have certificate,Full,,"Dự án Mega Ruby, Đường Võ Chí Công, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Bắc,Bắc
+Nhà hẻm,Quận 7,63,7,4,8.9,,,,8,Have certificate,Basic,,"Đường Số 53, Phường Tân Quy, Quận 7, Hồ Chí Minh",3.5,14,Nam,Nam
+Nhà mặt tiền,Quận 8,84,4,3,6.5,,,,4,Have certificate,Full,,"Dự án Phú Lợi, Đường Phạm Thế Hiển, Phường 7, Quận 8, Hồ Chí Minh",4,20,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận 6,44,5,5,9,,,,5,Have certificate,Full,,"Hẻm 633, Đường Hồng Bàng, Phường 6, Quận 6, Hồ Chí Minh",4,8,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 7,80.5,3,2,9.7,,,,4,Have certificate,Full,,"Đường  Trần Xuân Soạn, Phường Tân Hưng, Quận 7, Hồ Chí Minh",5,6,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Gò Vấp,66,4,4,7.2,,,,5,Have certificate,Full,,"Đường Đỗ Thúc Tịnh, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4,4,Đông - Bắc,Bắc
+Biệt thự,Quận 12,103,4,3,5.55,,,,4,Have certificate,Basic,,"Đường Thạnh Lộc 15, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4.1,5,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 12,58,3,2,3.49,,,,2,Have certificate,Full,,"Đường 35, Phường Tân Hưng Thuận, Quận 12, Hồ Chí Minh",4,2,Đông - Nam,Đông - Nam
+Chung cư,Quận Bình Thạnh,37,2,3,3.9,,,,3,Have certificate,Basic,,"Đường Đinh Tiên Hoàng, Phường 1, Quận Bình Thạnh, Hồ Chí Minh",3.7,3,Tây,Tây
+Chung cư,Quận 12,33,2,3,1.98,,,,3,Have certificate,Basic,,"Đường Thạnh Xuân 43, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",3,8,Bắc,Bắc
+Chung cư,Quận Gò Vấp,27,2,2,3.2,,,,2,Have certificate,Full,,"Đường Số 3, Phường 9, Quận Gò Vấp, Hồ Chí Minh",4,4,Đông - Nam,Đông - Nam
+Nhà hẻm,Huyện Hóc Môn,58.3,1,1,3.39,,,,1,Have certificate,Basic,,"Đường Đông Thạnh 4-2, Xã  Đông Thạnh, Huyện Hóc Môn, Hồ Chí Minh",5,8,Đông,Đông
+Nhà hẻm,Quận Bình Tân,60,5,3,7.6,,,,5,Have certificate,Basic,,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4,9,Đông,Đông
+Nhà hẻm,Quận 11,40,6,4,7.8,,,,5,Have certificate,Full,,"Đường Lạc Long Quân, Phường 3, Quận 11, Hồ Chí Minh",8,6,Đông - Bắc,Đông - Bắc
+Biệt thự,Quận 2 (TP. Thủ Đức),174,4,4,5.8,,,,4,Have certificate,Full,,"Đường Thạnh Mỹ Lợi, Phường  Thạnh Mỹ Lợi, Quận 2 (TP. Thủ Đức), Hồ Chí Minh",4.6,5,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận 2 (TP. Thủ Đức),83,5,2,6.8,,,,5,Have certificate,Basic,,"Đường Nguyễn Thị Định, Phường Thạnh Mỹ Lợi, Quận 2 (TP. Thủ Đức), Hồ Chí Minh",5,4,Nam,Nam
+Chung cư,Quận 7,35.7,2,2,3.45,,,,2,Have certificate,Basic,,"Hẻm 1041, Phố Trần Xuân Soạn, Phường Tân Hưng, Quận 7, Hồ Chí Minh",3.85,3,Nam,Nam
+Nhà mặt tiền,Quận 7,90,4,4,7.7,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",5,5,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),81,4,3,5.3,,,,4,Have certificate,Full,,"Đường 185, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",3.5,4,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Bình Tân,30,2,2,2.2,,,,2,Have certificate,Basic,,"Đường Bình Trị Đông, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",4,6,Tây,Tây
+Nhà mặt tiền,Quận Tân Phú,76,4,3,8.2,,,,4,Have certificate,Full,,"Hẻm 249, Đường Vườn Lài, Phường Phú Thọ Hòa, Quận Tân Phú, Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Huyện Hóc Môn,40,2,1,1.58,,,,2,Have certificate,Full,,"Đường Phan Văn Hớn, Xã Xuân Thới Thượng, Huyện Hóc Môn, Hồ Chí Minh",5,5,Bắc,Bắc
+Nhà hẻm,Quận Gò Vấp,46.3,4,4,5.7,,,,5,Have certificate,Basic,,"Đường Nguyễn Duy Cung, Phường 12, Quận Gò Vấp, Hồ Chí Minh",4,5,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận Thủ Đức (TP. Thủ Đức),50,2,2,3.8,,,,2,Have certificate,Full,,"Đường Số 9, Phường Linh Xuân, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5,5,Tây - Bắc,Tây - Bắc
+Nhà hẻm,Quận 12,60,4,5,6.3,,,,5,Have certificate,Basic,,"Đường Thới An 22, Phường Thới An, Quận 12, Hồ Chí Minh",4,12,Đông - Bắc,Đông - Bắc
+Biệt thự,Quận 9 (TP. Thủ Đức),119,4,3,5.75,,,,3,Have certificate,Basic,,"Dự án Rosita Garden Khang Điền, Đường 990, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,12,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 10,32,5,5,7.2,,,,3,Have certificate,Basic,,"Đường Thành Thái, Phường 14, Quận 10, Hồ Chí Minh",4.7,5,Tây - Nam,Tây - Nam
+Chung cư,Quận Phú Nhuận,36,5,4,6.25,,,,4,Have certificate,Full,,"Đường Hoàng Hoa Thám, Phường 5, Quận Phú Nhuận, Hồ Chí Minh",8.5,3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Bình Tân,56,4,2,4.2,,,,2,Have certificate,Full,,"Đường Hương lộ 2, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",4,6,Tây,Tây
+Nhà mặt tiền,Quận Gò Vấp,70,4,4,7.2,,,,6,Have certificate,Basic,,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",5.5,5,Tây - Bắc,Tây - Bắc
+Nhà mặt tiền,Quận Tân Phú,65,3,4,7.1,,,,3,Have certificate,Basic,,"Đường Nguyễn Quý Anh, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",4.4,6,Đông,Đông
+Chung cư,Quận 12,33.6,2,2,2.88,,,,2,Have certificate,Full,,"Đường Trương Thị Hoa, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",3.5,2,Đông - Bắc,Đông - Bắc
+Nhà hẻm,Quận 10,55.3,8,5,10,,,,5,Have certificate,Full,,"Đường Sư Vạn Hạnh, Phường 12, Quận 10, Hồ Chí Minh",5,7,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 9 (TP. Thủ Đức),96,3,1,4.6,,,,2,Have certificate,Full,,"1/, Đường Nguyễn Xiển, Phường Long Thạnh Mỹ, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6,5,Bắc,Bắc
+Nhà mặt tiền,Quận 12,76.5,4,3,7.9,,,,3,Have certificate,Basic,,"Đường Thạnh Xuân 21, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,8,Đông - Nam,Tây - Nam
+Chung cư,Quận 12,38,2,2,3.25,,,,2,Have certificate,Basic,,"Đường Thới An 11, Phường Thới An, Quận 12, Hồ Chí Minh",3.65,2.5,Tây,Tây
+Biệt thự,Quận 9 (TP. Thủ Đức),100,4,3,9.45,,,,4,Have certificate,Full,,"Dự án Mega Ruby, Đường Võ Chí Công, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5,20,Đông,Đông
+Chung cư,Quận Bình Tân,32,2,1,3.48,,,,2,Have certificate,Basic,,"Đường Số 14, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",4,4,Bắc,Bắc
+Nhà hẻm,Quận 12,50,4,5,5.9,,,,6,Have certificate,Full,,"Đường Thạnh Lộc 15, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",4.65,12,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Bình Thạnh,50,2,1,6.4,,,,1,Have certificate,Full,,"Đường Bùi Đình Túy, Phường 24, Quận Bình Thạnh, Hồ Chí Minh",4,4,Nam,Nam
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),70,4,4,6.9,,,,4,Have certificate,Full,,"Đường 48, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.5,12,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Huyện Hóc Môn,88.4,4,2,4.85,,,,2,Have certificate,Full,,"Đường Lê Thị Lơ, Xã Tân Hiệp, Huyện Hóc Môn, Hồ Chí Minh",4,8,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận Tân Phú,56,2,2,4.8,,,,2,Have certificate,Basic,,"13/14/ Đường Lương Thế Vinh, Phường Tân Thới Hòa, Quận Tân Phú, Hồ Chí Minh",4,4,Nam,Nam
+Nhà mặt tiền,Quận 8,65,4,6,6.8,,,,4,Have certificate,Basic,,"156, Đường An Dương Vương, Phường 16, Quận 8, Hồ Chí Minh",5,12,Đông,Đông
+Chung cư,Quận Bình Tân,21,2,2,1.66,,,,2,Have certificate,Full,,"Đường Đình Nghi Xuân, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",6,4,Bắc,Bắc
+Nhà hẻm,Quận 8,44.5,3,2,3.35,,,,2,Have certificate,Full,,"528A/15A Đường Hưng Phú, Phường 9, Quận 8, Hồ Chí Minh.",4.29,2,Đông - Nam,Đông - Nam
+Chung cư,Quận 11,38.1,4,3,6.2,,,,3,Have certificate,Basic,,"Đường Bình Thới, Phường 11, Quận 11, Hồ Chí Minh",3.1,5,Tây - Nam,Tây - Nam
+Chung cư,Quận 12,38,3,3,2.55,,,,3,Have certificate,Full,,"Phường Đông Hưng Thuận, Quận 12, Hồ Chí Minh",4,6,Đông,Đông
+Nhà hẻm,Quận 12,40,2,2,2.89,,,,2,Have certificate,Full,,"1/, Đường Tân Thới Hiệp 13, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",4,3,Đông - Nam,Đông - Nam
+Nhà hẻm,Quận Tân Bình,60,5,4,7.5,,,,5,Have certificate,Full,,"Đường  Lý Thường Kiệt, Phường 7, Quận Tân Bình, Hồ Chí Minh",5,10,Đông,Đông
+Nhà hẻm,Quận Gò Vấp,47.8,4,4,5.5,,,,4,Have certificate,Basic,,"Đường Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Hồ Chí Minh",4,4,Đông - Bắc,Đông - Bắc
+Chung cư,Quận 6,32,2,2,8.6,,,,2,Have certificate,Full,,"Đường Lê Quang Sung, Phường 2, Quận 6, Hồ Chí Minh",3.3,16,Bắc,Bắc
+Nhà hẻm,Quận 1,46,4,2,6,,,,2,Have certificate,Basic,,"Đường Trần Hưng Đạo, Phường Cầu Kho, Quận 1, Hồ Chí Minh",46,3,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Huyện Nhà Bè,97.8,4,4,8.6,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",4.5,9,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Quận Thủ Đức (TP. Thủ Đức),94,3,3,7.7,,,,4,Have certificate,Basic,,"Đường 11, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,6,Tây - Bắc,Tây - Bắc
+Chung cư,Quận Gò Vấp,31,3,2,3.79,,,,3,Have certificate,Full,,"Đường Quang Trung, Phường 10, Quận Gò Vấp, Hồ Chí Minh",3,3,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 12,64,4,5,6.5,,,,6,Have certificate,Full,,"Dự án Nhà phố One Palace, Đường Hà Huy Giáp, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",32,32,Đông,Đông
+Nhà hẻm,Quận 8,56,3,3,7.3,,,,3,Have certificate,Basic,,"266, Đường Bùi Minh Trực, Phường 6, Quận 8, Hồ Chí Minh",4,8,Nam,Nam
+Chung cư,Quận 11,21.3,2,2,3.8,,,,2,Have certificate,Full,,"Đường Lê Thị Bạch Cát, Phường 11, Quận 11, Hồ Chí Minh",5.3,6,Đông - Nam,Đông - Nam
+Nhà mặt tiền,Huyện Nhà Bè,80.3,4,4,6.5,,,,5,Have certificate,Full,,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",7.3,6,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Bình Tân,80,3,3,9,,,,3,Have certificate,Full,,"Đường 32B, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",4,8,Đông,Đông
+Chung cư,Quận Bình Tân,19,2,2,1.83,,,,1,Have certificate,Full,,"Đường Phan Anh, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",4.17,2,Đông,Đông
+Nhà hẻm,Quận Bình Tân,62.5,2,1,5.2,,,,2,Have certificate,Basic,,"Đường Số 5, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",5,6,Đông,Đông
+Nhà hẻm,Quận Bình Tân,44,4,3,4.4,,,,3,Have certificate,Basic,,"239, Đường Lê Văn Quới, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",4,6,Bắc,Bắc
+Nhà hẻm,Quận 11,44,3,2,5.2,,,,2,Have certificate,Full,,"152/Đường Lạc Long Quân, Phường 3, Quận 11, Hồ Chí Minh",4.15,3,Đông - Nam,Đông - Bắc
+Nhà hẻm,Quận Tân Phú,59,4,3,10,,,,3,Have certificate,Basic,,"Đường Độc Lập, Phường Tân Thành, Quận Tân Phú, Hồ Chí Minh",5,12,Tây,Tây
+Nhà mặt tiền,Quận 8,79.2,1,2,4.4,,,,1,Sale contract,Basic,,"Dự án Dream Home Palace, Đường Trịnh Quang Nghị, Phường 7, Quận 8, Hồ Chí Minh",10,10,Đông - Bắc,Đông - Bắc
+Nhà mặt tiền,Quận Tân Phú,82,2,1,7.8,,,,1,Have certificate,Basic,,"Đường Lũy Bán Bích, Phường Tân Thới Hòa, Quận Tân Phú, Hồ Chí Minh",4.5,4.5,Nam,Bắc
+Biệt thự,Quận Thủ Đức (TP. Thủ Đức),100,3,3,7.7,,,,4,Have certificate,Full,,"Đường 11, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4,8,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận 12,72,3,3,4.6,,,,3,Have certificate,Basic,,"Đường Thạnh Xuân 21, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4,6,Tây - Nam,Tây - Nam
+Nhà mặt tiền,Quận Bình Tân,88,3,2,7.5,,,,3,Have certificate,Full,,"193 Đường Trần Thanh Mại, Phường Tân Tạo A, Quận Bình Tân, Hồ Chí Minh",4,20,Tây - Nam,Tây - Nam
+Nhà hẻm,Quận 12,57,4,4,5.5,,,,4,Have certificate,Full,,"Đường Vườn Lài, Phường An Phú Đông, Quận 12, Hồ Chí Minh",5.5,6,Tây,Tây
+Nhà mặt tiền,Quận 6,68,2,2,8.7,,,,3,Have certificate,Full,,"Đường Cư Xá Phú Lâm B, Phường 13, Quận 6, Hồ Chí Minh",4,8,Đông - Nam,Đông - Nam
+Chung cư,Quận 12,34,2,2,3.35,,,,2,Have certificate,Full,,"Đường Hiệp Thành 26, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",4.25,3,Đông - Bắc,Đông - Bắc
+Chung cư,Quận Bình Tân,27,2,2,2.25,,,,2,Have certificate,Full,,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4.5,2.5,Đông,Đông
+Nhà mặt tiền,Quận Gò Vấp,64,4,6,8.9,,,,4,Have certificate,Full,,"Đường Nguyễn Văn Khối, Phường 9, Quận Gò Vấp, Hồ Chí Minh",5.8,5,Đông - Nam,Đông - Nam
+Chung cư,Quận Phú Nhuận,22,2,4,4.2,,,,3,Have certificate,Full,,"Đường Nguyễn Đình Chiểu, Phường 4, Quận Phú Nhuận, Hồ Chí Minh",3.5,4,Đông - Bắc,Đông - Bắc

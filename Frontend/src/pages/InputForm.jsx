@@ -14,6 +14,7 @@ const InputForm = () => {
   const [houseTypes, setHouseTypes] = useState([]);
   const [districts, setDistricts] = useState([]);
   const [predictedPrice, setPredictedPrice] = useState(null);
+  const [confidenceInterval, setConfidenceInterval] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
@@ -49,7 +50,10 @@ const InputForm = () => {
         body: JSON.stringify(requestData)
       });
       const data = await response.json();
+      console.log("Kết quả API:", data);
+
       setPredictedPrice(data.gia_du_doan || `Lỗi: ${data.error}`);
+      setConfidenceInterval(data.confidence_interval || null);
       setIsSubmitted(true);
     } catch (error) {
       console.error("Lỗi khi gửi dữ liệu:", error);
@@ -140,7 +144,7 @@ const InputForm = () => {
                     />
                   </div>*/}
 
-                          {/*<div className="input-field-group input-checkbox-group fade-in-up delay-3">
+                  {/*<div className="input-field-group input-checkbox-group fade-in-up delay-3">
                     <label>
                       <input
                         type="checkbox"
@@ -175,8 +179,11 @@ const InputForm = () => {
           ) : (
               <div className="prediction-result fade-in">
                 <h2>Kết quả dự đoán</h2>
-                <p>{predictedPrice}</p>
-                <button type="submit" className="input-submit-btn" onClick={() => setIsSubmitted(false)}>Thử lại</button>
+                <p>Giá dự đoán: {predictedPrice} tỷ</p>
+                {confidenceInterval && (
+                    <p>Khoảng tin cậy 95%: {confidenceInterval[0]} - {confidenceInterval[1]} tỷ</p>
+                )}
+                <button type="button" className="input-submit-btn" onClick={() => setIsSubmitted(false)}>Thử lại</button>
               </div>
           )}
         </div>

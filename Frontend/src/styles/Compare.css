@@ -15,6 +15,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  width: 100%;
 }
 
 .compare-header {
@@ -43,9 +44,11 @@
 
 .compare-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
+  min-height: 500px;
+  width: 100%;
 }
 
 .house-column {
@@ -55,7 +58,8 @@
   padding: 15px;
   border: 1px solid #dee2e6;
   border-radius: 8px;
-  min-width: 280px;
+  min-width: 300px;
+  height: 100%;
 }
 
 .house-image {
@@ -172,10 +176,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 300px;
+  min-height: 500px;
   border: 2px dashed #dee2e6;
   border-radius: 8px;
-  padding: 20px;
+  min-width: 300px;
+  height: 100%;
 }
 
 .add-house-btn {
