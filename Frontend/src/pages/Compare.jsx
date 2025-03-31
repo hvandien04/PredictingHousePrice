@@ -33,11 +33,55 @@ const Compare = () => {
     }
   ]);
 
-  const [showAddForm, setShowAddForm] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedHouse, setSelectedHouse] = useState(null);
 
   const handleAddHouse = () => {
-    setShowAddForm(true);
+    setOpenModal(true);
   };
+
+  const handleCloseModal = () => {
+    setOpenModal(false);
+    setSelectedHouse(null);
+  };
+
+  const handleAddSelectedHouse = () => {
+    if (selectedHouse) {
+      setHouses([...houses, selectedHouse]);
+      handleCloseModal();
+    }
+  };
+
+  const availableHouses = [
+    {
+      id: 3,
+      image: '/img/house3.jpg',
+      price: '2.800.000.000đ',
+      features: [
+        'Diện tích: 110m²',
+        'Số phòng ngủ: 3',
+        'Số phòng tắm: 2',
+        'Có gara'
+      ],
+      location: 'Quận 3, TP.HCM',
+      type: 'Nhà phố',
+      area: '110 m²'
+    },
+    {
+      id: 4,
+      image: '/img/house4.jpg',
+      price: '3.500.000.000đ',
+      features: [
+        'Diện tích: 150m²',
+        'Số phòng ngủ: 5',
+        'Số phòng tắm: 4',
+        'Có hồ bơi'
+      ],
+      location: 'Quận 9, TP.HCM',
+      type: 'Biệt thự',
+      area: '150 m²'
+    }
+  ];
 
   return (
     <div className="compare-container">
@@ -96,9 +140,79 @@ const Compare = () => {
         </div>
       </div>
 
-      {showAddForm && (
-        <div className="add-house-modal">
-          {/* Add house form will go here */}
+      {openModal && (
+        <div className="modal-overlay" onClick={handleCloseModal}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <div className="modal-header">
+              <h2>Chọn nhà để so sánh</h2>
+            </div>
+            <div className="modal-body">
+              <select 
+                className="modal-select"
+                value={selectedHouse?.id || ''}
+                onChange={(e) => {
+                  const house = availableHouses.find(h => h.id === Number(e.target.value));
+                  setSelectedHouse(house);
+                }}
+              >
+                <option value="">Chọn nhà</option>
+                {availableHouses.map(house => (
+                  <option key={house.id} value={house.id}>
+                    {house.type} - {house.location} - {house.price}
+                  </option>
+                ))}
+              </select>
+
+              {selectedHouse && (
+                <div className="house-details-modal">
+                  <div className="house-image">
+                    <img src={selectedHouse.image} alt="Selected House" />
+                  </div>
+                  <div className="house-details">
+                    <div className="detail-row">
+                      <span className="detail-label">Giá:</span>
+                      <span className="detail-value">{selectedHouse.price}</span>
+                    </div>
+                    <div className="detail-row">
+                      <span className="detail-label">Diện tích:</span>
+                      <span className="detail-value">{selectedHouse.area}</span>
+                    </div>
+                    <div className="detail-row">
+                      <span className="detail-label">Vị trí:</span>
+                      <span className="detail-value">{selectedHouse.location}</span>
+                    </div>
+                    <div className="detail-row">
+                      <span className="detail-label">Loại nhà:</span>
+                      <span className="detail-value">{selectedHouse.type}</span>
+                    </div>
+                  </div>
+                  <div className="house-features">
+                    <h3>Tiện nghi:</h3>
+                    <ul>
+                      {selectedHouse.features.map((feature, index) => (
+                        <li key={index}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="modal-footer">
+              <button 
+                className="modal-button modal-button-cancel"
+                onClick={handleCloseModal}
+              >
+                Hủy
+              </button>
+              <button 
+                className="modal-button modal-button-add"
+                onClick={handleAddSelectedHouse}
+                disabled={!selectedHouse}
+              >
+                Thêm vào so sánh
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>

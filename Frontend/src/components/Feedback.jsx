@@ -41,7 +41,7 @@ const Feedback = () => {
             
             {!isSubmitted ? (
               <form onSubmit={handleSubmit}>
-                <h2>Your Feedback</h2>
+                <h2>Phản hồi</h2>
                 <div className="feedback-form-group">
                   <input
                     type="text"
