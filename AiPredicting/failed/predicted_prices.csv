@@ -1,0 +1,750 @@
+﻿Loại nhà,Vị trí,Diện tích,Mặt tiền,Đường vào,Hướng nhà,Hướng ban công,Số tầng,Số phòng ngủ,Số phòng tắm,Trình trạng pháp lý,Nội thất,Giá,Address,Giá dự đoán
+3,17,64.0,4.0,6.0,Tây,Tây,5,4,5,Have certificate,Basic,6.7,"Đường Trương Phước Phan, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",6.390549450549456
+2,17,60.0,4.0,5.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Full,6.5,"Đường Lê Trọng Tấn, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",2.168791208791209
+3,17,75.6,5.0,10.0,Nam,Nam,4,5,6,Have certificate,Full,7.5,"Hẻm 36/, Đường Bùi Tư Toàn, Phường An Lạc, Quận Bình Tân, Hồ Chí Minh",6.321868131868135
+0,16,117.1,6.0,8.0,Đông - Nam,Đông - Nam,1,7,7,Have certificate,Basic,8.45,"Đường Trương Văn Thành, Phường Hiệp Phú, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",12.416739926739933
+2,8,60.0,4.0,6.0,Tây - Bắc,Tây,4,4,4,Have certificate,Basic,4.3,"Đường Quốc lộ 1A, Phường An Phú Đông, Quận 12, Hồ Chí Minh",2.497527472527471
+3,23,78.0,5.5,3.5,Đông - Bắc,Đông - Bắc,2,3,2,Have certificate,Basic,4.0,"Đường Kha Vạn Cân, Phường Linh Tây, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.420989010989011
+2,17,60.0,4.0,8.0,Đông,Đông,5,5,6,Have certificate,Full,6.3,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",2.34945054945055
+3,4,68.8,4.3,10.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,7.8,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",3.3503296703296694
+2,17,40.1,4.0,8.0,Tây,Tây,1,2,1,Have certificate,Basic,3.6,"Khu phố 2, Đường Lê Văn Quới, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",0.7782417582417585
+1,10,30.71,4.03,20.0,Đông,Đông - Nam,2,2,2,Have certificate,Full,4.2,"62/12, Đường Nguyễn Thông, Phường 9, Quận 3, Hồ Chí Minh",1.1529670329670338
+2,4,50.0,5.0,10.0,Đông - Bắc,Đông - Bắc,3,3,4,Have certificate,Full,5.1,"Đường Đào Tông Nguyên, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",0.8729120879120877
+3,14,96.0,5.0,6.0,Bắc,Bắc,2,4,3,Have certificate,Basic,9.35,"Đường Lê Văn Lương, Phường Tân Kiểng, Quận 7, Hồ Chí Minh",5.813296703296705
+0,17,142.0,5.0,10.0,Nam,Nam,2,3,2,Have certificate,Basic,7.9,"Đường Cầu Kinh, Phường Tân Tạo A, Quận Bình Tân, Hồ Chí Minh",15.373296703296699
+3,16,75.0,5.0,10.0,Tây,Tây,3,4,4,Have certificate,Full,9.8,"Dự án River Park, Đường Võ Chí Công, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh.",5.896153846153852
+1,19,37.5,8.3,5.0,Tây,Tây,4,3,3,Have certificate,Full,5.99,"Đường Lê Đức Thọ, Phường 6, Quận Gò Vấp, Hồ Chí Minh",1.3387912087912088
+3,14,98.7,6.0,3.0,Đông - Nam,Đông - Nam,2,7,4,Have certificate,Basic,5.2,"Hẻm 1234, Đường Huỳnh Tấn Phát, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",6.538791208791206
+2,17,60.0,4.2,5.0,Tây,Tây,3,3,3,Have certificate,Basic,5.3,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",1.6996703296703302
+2,19,59.0,4.2,4.0,Tây - Bắc,Tây - Bắc,4,4,4,Have certificate,Basic,6.7,"Đường Huỳnh Văn Nghệ, Phường 12, Quận Gò Vấp, Hồ Chí Minh",2.8873626373626373
+3,17,72.0,4.0,8.0,Tây,Tây,5,5,6,Have certificate,Full,8.3,"Hẻm 427, Đường Lê Văn Quới, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",6.177582417582424
+1,20,33.1,3.1,4.0,Đông,Đông,2,2,1,Have certificate,Basic,5.2,"Đường Huỳnh Văn Bánh, Phường 12, Quận Phú Nhuận, Hồ Chí Minh",1.0808791208791213
+2,17,40.0,4.0,5.0,Nam,Nam,4,5,6,Have certificate,Full,4.8,"Đường Nguyễn Quý Yêm, Phường An Lạc, Quận Bình Tân, Hồ Chí Minh",1.4232967032967037
+1,18,26.0,3.5,3.5,Tây - Nam,Tây - Nam,3,3,3,Have certificate,Full,4.05,"Đường Nguyễn Cửu Vân, Phường 17, Quận Bình Thạnh, Hồ Chí Minh",0.7459340659340659
+3,4,80.0,5.6,6.0,Đông - Bắc,Tây - Nam,3,3,4,Have certificate,Full,7.39,"Dự án Green Riverside, Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",3.3951648351648336
+3,19,80.0,4.0,6.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,7.45,"Đường Lê Văn Thọ, Phường 8, Quận Gò Vấp, Hồ Chí Minh",9.16549450549451
+3,22,66.0,6.0,6.0,Đông - Bắc,Đông - Nam,4,4,4,Have certificate,Full,10.0,"Phường Sơn Kỳ, Quận Tân Phú, Hồ Chí Minh",7.2882417582417585
+3,8,88.0,8.0,8.0,Tây - Nam,Tây - Nam,3,4,5,Have certificate,Full,7.6,"Đường Tân Thới Nhất 12, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",8.623186813186809
+3,22,65.0,4.0,6.0,Đông,Đông,1,4,3,Have certificate,Basic,6.2,"Hẻm 115 Đường Lê Trọng Tấn, Phường Sơn Kỳ, Quận Tân Phú, Hồ Chí Minh",4.237582417582418
+1,17,25.0,3.0,5.0,Bắc,Bắc,2,2,2,Have certificate,Full,2.4,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",0.6031868131868132
+2,19,63.0,4.2,4.0,Nam,Nam,3,4,5,Have certificate,Basic,6.85,"Đường Số 3, Phường 9, Quận Gò Vấp, Hồ Chí Minh",2.8339560439560443
+2,17,50.0,4.0,8.0,Đông,Đông,2,3,2,Have certificate,Full,5.8,"Đường Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",1.19043956043956
+3,17,84.0,4.0,12.0,Nam,Nam,2,2,2,Have certificate,Full,9.5,"Đường Số 1A, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",4.436043956043956
+3,17,84.0,4.0,12.0,Bắc,Đông - Bắc,3,3,4,Have certificate,Full,9.3,"Đường Số 25A, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",6.20439560439561
+3,14,72.0,4.0,8.0,Tây,Tây,2,3,3,Have certificate,Full,6.8,"Đường Huỳnh Tấn Phát, Phường Bình Thuận, Quận 7, Hồ Chí Minh",4.248351648351646
+2,23,53.8,4.5,8.0,Đông - Bắc,Đông - Bắc,4,3,3,Have certificate,Full,4.8,"Đường 12, Phường Trường Thạnh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.015384615384616
+2,18,50.0,5.0,5.0,Đông - Nam,Đông - Nam,4,3,4,Have certificate,Full,9.6,"Đường Hoàng Hoa Thám, Phường 6, Quận Bình Thạnh, Hồ Chí Minh",2.282637362637363
+2,19,46.0,3.5,5.5,Tây - Bắc,Tây - Bắc,2,2,2,Have certificate,Full,4.6,"Đường Thống Nhất, Phường 16, Quận Gò Vấp, Hồ Chí Minh",1.4162637362637356
+2,14,60.0,8.0,8.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Full,5.0,"Đường Huỳnh Tấn Phát, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",2.314285714285714
+3,19,80.0,6.0,6.0,Tây - Nam,Tây - Nam,2,3,3,Have certificate,Basic,7.5,"Đường Quang Trung, Phường 11, Quận Gò Vấp, Hồ Chí Minh",5.512197802197802
+1,20,29.0,3.5,5.0,Tây - Bắc,Tây - Bắc,4,3,4,Have certificate,Full,7.15,"Đường Huỳnh Văn Bánh, Phường 12, Quận Phú Nhuận, Hồ Chí Minh",0.9800000000000002
+2,18,62.0,3.0,8.0,Bắc,Bắc,4,5,4,Have certificate,Basic,7.0,"Đường Bùi Đình Túy, Phường 12, Quận Bình Thạnh, Hồ Chí Minh",3.237912087912087
+2,15,43.1,2.99,4.5,Tây - Nam,Tây,2,3,3,Have certificate,Full,4.2,"Hẻm 2889A, Đường Phạm Thế Hiển, Phường 7, Quận 8, Hồ Chí Minh",1.0612087912087904
+2,19,60.0,5.0,5.0,Tây - Bắc,Tây - Bắc,4,9,9,Have certificate,Basic,7.3,"1180/, Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",3.1136263736263734
+3,23,88.0,4.3,4.0,Nam,Nam,3,4,4,Have certificate,Full,6.9,"Đường Số 4, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.042747252747251
+1,18,25.0,3.5,4.0,Nam,Nam,4,3,4,Have certificate,Full,3.9,"Đường Lê Quang Định, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",0.7715384615384616
+2,23,48.0,4.0,2.5,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Basic,3.25,"Đường Ụ Ghe, Phường Tam Phú, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.4251648351648345
+3,22,68.0,4.0,12.0,Đông,Đông,4,4,4,Have certificate,Full,9.7,"Hẻm 370 Đường Tân Sơn Nhì, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",7.263406593406595
+2,14,60.0,4.0,3.5,Bắc,Bắc,3,3,3,Have certificate,Full,5.47,"1135, Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",1.8221978021978016
+2,17,52.0,4.0,6.0,Đông - Nam,Đông - Nam,5,5,4,Have certificate,Basic,5.95,"Đường Lô Tư, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",2.02879120879121
+0,23,100.0,5.0,5.0,Tây - Nam,Tây - Nam,3,3,4,Have certificate,Full,7.7,"Đường Số 11, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",15.290659340659346
+2,23,42.4,4.8,6.0,Nam,Nam,1,1,1,Have certificate,Full,4.9,"Đường Đặng Văn Bi, Phường Bình Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",0.8641758241758248
+1,20,18.0,6.0,5.0,Đông - Nam,Đông - Nam,3,3,3,Have certificate,Full,3.3,"Đường Phan Xích Long, Phường 2, Quận Phú Nhuận, Hồ Chí Minh",0.5085714285714287
+3,17,94.0,4.5,8.0,Đông - Nam,Đông - Nam,3,4,4,Have certificate,Full,8.7,"Đường Bùi Hữu Diện, Phường An Lạc A, Quận Bình Tân, Hồ Chí Minh",6.088571428571429
+3,8,64.0,4.0,8.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Basic,6.6,"Dự án Song Minh Residence, Đường Thới An 22, Phường Thới An, Quận 12, Hồ Chí Minh",7.063406593406592
+2,21,53.0,4.0,6.0,Đông - Nam,Đông - Nam,3,4,3,Have certificate,Basic,8.9,"Hẻm 83, Đường Phạm Văn Bạch, Phường 15, Quận Tân Bình, Hồ Chí Minh",2.1439560439560457
+1,6,30.0,3.5,20.0,Tây - Nam,Nam,3,2,2,Have certificate,Full,8.8,"Đường Hồ Bá Kiện, Phường 15, Quận 10, Hồ Chí Minh",1.5510989010989016
+2,21,52.0,4.0,5.0,Đông - Nam,Đông - Nam,5,7,6,Have certificate,Full,7.5,"148/9, Đường Trần Văn Quang, Phường 10, Quận Tân Bình, Hồ Chí Minh",2.910439560439561
+2,18,48.0,4.0,16.0,Nam,Nam,5,6,4,Have certificate,Full,7.25,"Đường Nguyên Hồng, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",3.124505494505496
+3,16,75.0,5.0,12.0,Đông - Nam,Đông - Nam,3,3,3,Have certificate,Basic,7.2,"Dự án Mega Village, Đường Vành Đai 2, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.8796703296703345
+3,22,64.0,4.0,16.0,Tây,Tây,2,2,3,Have certificate,Full,9.0,"Đường Dương Văn Dương, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",4.542307692307694
+1,17,35.0,4.0,6.0,Tây,Tây,1,2,2,Have certificate,Basic,1.93,"Đường Tỉnh Lộ 10, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",0.7606593406593404
+2,23,52.0,4.5,8.0,Bắc,Bắc,4,4,3,Have certificate,Basic,7.2,"Đường 7, Phường Linh Trung, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.1798901098901102
+2,23,55.0,4.0,5.0,Bắc,Bắc,5,4,4,Have certificate,Full,9.3,"Đường 17, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.3123076923076926
+2,14,60.0,4.0,8.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Full,8.6,"Đường Huỳnh Tấn Phát, Phường Bình Thuận, Quận 7, Hồ Chí Minh",2.314285714285714
+0,15,110.0,4.2,3.0,Tây - Bắc,Tây - Bắc,3,4,5,Have certificate,Basic,7.7,"Đường Bùi Minh Trực, Phường 5, Quận 8, Hồ Chí Minh",13.043736263736262
+3,19,64.0,5.0,5.0,Đông - Nam,Đông - Nam,3,3,4,Have certificate,Full,7.8,"Đường Thống Nhất, Phường 16, Quận Gò Vấp, Hồ Chí Minh",6.630879120879123
+0,3,176.0,5.0,13.0,Đông - Nam,Đông - Nam,1,3,2,Have certificate,Basic,7.0,"Đường Nguyễn Thị Thử, Xã Xuân Thới Sơn, Huyện Hóc Môn, Hồ Chí Minh",4.981318681318678
+2,8,50.1,4.1,6.0,Đông - Nam,Đông - Nam,3,4,5,Have certificate,Full,4.45,"Đường Thạnh Xuân 22, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",1.9405714285714275
+2,14,56.4,5.18,6.0,Nam,Nam,4,5,4,Have certificate,Full,9.3,"Đường Hoàng Quốc Việt, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",2.1048351648351664
+3,4,80.0,5.0,6.0,Tây - Bắc,Tây - Bắc,4,4,5,Have certificate,Full,7.5,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",3.4806593406593396
+3,16,75.0,5.0,10.0,Tây,Tây,3,4,4,Have certificate,Full,9.8,"Dự án River Park, Đường Võ Chí Công, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.896153846153852
+3,17,80.0,4.0,6.0,Bắc,Bắc,3,5,5,Have certificate,Full,6.8,"Đường Chiến Lược, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",6.864395604395606
+3,23,99.4,30.0,5.0,Đông - Nam,Đông - Nam,1,2,2,Have certificate,Basic,4.7,"Đường Tam Châu, Phường Tam Bình, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.366593406593404
+3,4,86.0,6.4,7.0,Bắc,Bắc,4,4,5,Have certificate,Full,8.3,"Hẻm 1368, Đường Lê Văn Lương, Xã Phước Kiển, Huyện Nhà Bè, Hồ Chí Minh",4.085274725274724
+2,19,60.0,8.0,8.0,Nam,Bắc,4,4,5,Have certificate,Full,5.98,"237/, Đường Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Hồ Chí Minh",2.890879120879121
+2,22,56.0,4.0,3.0,Tây - Nam,Nam,3,3,2,Have certificate,Full,5.3,"Đường Trường Chinh, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",2.0283516483516486
+3,14,74.0,4.3,6.0,Đông - Bắc,Đông - Bắc,4,4,6,Have certificate,Full,8.5,"Đường Huỳnh Tấn Phát, Phường Tân Thuận Tây, Quận 7, Hồ Chí Minh",6.2983516483516535
+3,22,68.0,4.0,6.0,Đông - Bắc,Đông - Bắc,1,2,2,Have certificate,Basic,5.9,"Đường Trần Văn Ơn, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",4.427582417582415
+3,4,69.0,4.0,6.0,Đông - Bắc,Đông - Bắc,4,5,5,Have certificate,Full,6.2,"Đường Đào Tông Nguyên, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",3.398351648351647
+2,8,46.0,4.5,5.0,Tây - Bắc,Tây - Bắc,3,4,3,Have certificate,Full,4.45,"Đường Nguyễn Thị Đặng, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",1.8166703296703297
+2,18,50.0,4.0,6.0,Tây - Bắc,Tây - Bắc,4,5,6,Have certificate,Full,9.3,"Đường Nguyễn Thượng Hiền, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",2.7394505494505514
+3,23,67.3,4.0,8.0,Đông - Bắc,Đông - Bắc,4,5,6,Have certificate,Basic,8.3,"Đường Dương Đình Hội, Phường Phước Long B, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.5150549450549455
+1,22,32.0,4.0,10.0,Nam,Nam,3,2,2,Have certificate,Full,4.65,"Hẻm 30 Phố Đỗ Nhuận, Phường Sơn Kỳ, Quận Tân Phú, Hồ Chí Minh",0.9835164835164832
+3,15,68.0,5.5,3.0,Tây,Tây,2,2,3,Have certificate,Full,5.0,"Đường Phạm Thế Hiển, Phường 6, Quận 8, Hồ Chí Minh",3.788131868131867
+2,14,40.0,4.0,8.0,Nam,Nam,5,6,7,Have certificate,Full,8.2,"Đường Số 5, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",1.6272527472527467
+3,14,64.6,4.0,4.0,Bắc,Bắc,2,2,2,Have certificate,Full,6.5,"Đường Số 10, Phường Tân Quy, Quận 7, Hồ Chí Minh",3.367692307692306
+3,19,71.0,5.5,5.0,Đông - Nam,Đông - Nam,5,4,5,Have certificate,Full,7.35,"Đường Lê Đức Thọ, Phường 13, Quận Gò Vấp, Hồ Chí Minh",7.625384615384619
+2,13,54.0,4.0,4.0,Bắc,Bắc,2,2,2,Have certificate,Basic,5.0,"Đường Nguyễn Văn Luông, Phường 12, Quận 6, Hồ Chí Minh",1.295494505494505
+3,16,75.0,12.0,20.0,Đông - Nam,Đông - Nam,3,4,4,Have certificate,Full,6.75,"Dự án Mega Village, Đường Vành Đai 2, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.896153846153852
+3,4,70.0,8.0,8.0,Bắc,Bắc,4,4,5,Have certificate,Full,8.6,"90, Đường Dương Cát Lợi, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",3.1825274725274704
+0,18,126.6,7.0,1.3,Đông - Nam,Đông - Nam,2,8,8,Have certificate,Basic,7.7,"434/8A4, Đường Bình Quới, Phường 28, Quận Bình Thạnh, Hồ Chí Minh",19.240183150183135
+2,8,52.7,3.6,5.0,Đông - Bắc,Đông - Bắc,2,3,2,Have certificate,Basic,3.45,"Đường Tân Thới Hiệp 20, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",2.0307142857142857
+2,8,54.0,4.0,4.0,Đông,Đông,3,4,4,Have certificate,Full,4.55,"1/ 113, Đường Lâm Thị Hố, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh",1.9256263736263717
+3,23,75.0,5.0,2.5,Tây,Tây,2,2,1,Have certificate,Basic,3.7,"Đường 12, Phường Linh Tây, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.087582417582415
+3,23,93.7,4.0,6.0,Tây - Nam,Tây - Nam,3,3,3,Have certificate,Full,7.7,"Đường 11, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.1807692307692275
+3,19,72.0,4.0,12.0,Đông - Nam,Đông - Nam,3,4,3,Have certificate,Full,6.6,"Đường Quang Trung, Phường 14, Quận Gò Vấp, Hồ Chí Minh",7.418131868131869
+1,15,29.7,50.0,2.0,Bắc,Bắc,2,4,3,Have certificate,Basic,4.5,"Đường Ưu Long, Phường 11, Quận 8, Hồ Chí Minh",0.8854945054945051
+3,8,66.0,5.0,5.0,Đông,Đông,2,2,2,Have certificate,Full,3.3,"Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",4.922307692307692
+3,22,73.0,4.1,12.0,Bắc,Bắc,3,4,3,Have certificate,Full,8.95,"Đường Bác Ái, Phường Tân Thành, Quận Tân Phú, Hồ Chí Minh",6.39241758241758
+3,19,70.0,4.0,6.0,Đông - Nam,Đông - Nam,3,4,4,Have certificate,Basic,6.3,"Đường Quang Trung, Phường 14, Quận Gò Vấp, Hồ Chí Minh",7.358351648351652
+2,17,44.0,5.0,5.0,Tây,Tây,2,2,2,Have certificate,Basic,2.35,"Đường Lê Đình Cẩn, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",1.0249450549450547
+3,17,64.0,4.0,6.0,Nam,Nam,5,4,5,Have certificate,Full,6.45,"Đường Lê Văn Quới, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",6.390549450549456
+3,8,68.0,5.0,5.0,Nam,Nam,3,4,3,Have certificate,Full,5.85,"Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",7.396923076923073
+3,20,79.0,3.5,2.5,Tây,Tây,2,4,2,Have certificate,Basic,9.5,"125, Đường Nguyễn Công Hoan, Phường 7, Quận Phú Nhuận, Hồ Chí Minh",6.40945054945055
+2,22,56.0,5.0,14.0,Tây - Nam,Tây - Nam,2,3,3,Have certificate,Full,7.6,"229, Đường Tây Thạnh, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",1.6885714285714282
+2,14,52.0,4.3,3.0,Bắc,Bắc,3,5,5,Have certificate,Basic,4.9,"Đường Huỳnh Tấn Phát, Phường Tân Thuận Tây, Quận 7, Hồ Chí Minh",1.7352747252747256
+1,6,30.0,6.0,6.0,Đông - Bắc,Đông - Bắc,3,3,2,Have certificate,Basic,5.0,"312/3, Đường Ngô Gia Tự, Phường 4, Quận 10, Hồ Chí Minh",1.7719780219780226
+2,22,60.0,5.0,5.0,Nam,Nam,2,2,2,Have certificate,Basic,2.75,"Đường Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",1.61054945054945
+1,19,39.0,4.3,5.0,Đông - Nam,Đông - Nam,4,4,4,Have certificate,Full,6.9,"Đường Nguyễn Văn Lượng, Phường 16, Quận Gò Vấp, Hồ Chí Minh",1.39989010989011
+2,17,47.0,4.2,4.0,Đông,Đông,2,2,2,Have certificate,Basic,4.15,"650/1A Đường Tên Lửa, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",1.12032967032967
+3,23,82.0,6.0,6.0,Đông - Bắc,Đông - Bắc,3,4,6,Have certificate,Basic,6.5,"Đường Quốc Lộ 13, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.9714285714285715
+2,22,58.0,8.0,4.0,Đông - Nam,Đông - Nam,3,2,2,Have certificate,Full,3.7,"Đường Bình Long, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",1.9167032967032966
+3,4,83.6,5.0,7.0,Tây - Nam,Tây - Nam,3,4,5,Have certificate,Full,8.29,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",3.9090109890109876
+3,14,68.0,4.0,4.0,Bắc,Bắc,2,4,2,Have certificate,Full,5.3,"Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",3.937472527472527
+3,8,72.0,4.0,6.0,Bắc,Bắc,3,4,4,Have certificate,Basic,4.4,"Đường 10, Phường Tân Hưng Thuận, Quận 12, Hồ Chí Minh",7.2850549450549416
+3,17,76.0,4.0,8.0,Tây,Tây,4,6,6,Have certificate,Full,8.6,"473, Đường Lê Văn Quới, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",6.43802197802198
+2,17,44.0,5.0,5.0,Tây,Tây,2,2,2,Have certificate,Basic,2.35,"Đường Nguyễn Triệu Luật, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",1.0249450549450547
+1,21,23.0,4.9,3.0,Tây - Bắc,Tây - Bắc,2,1,2,Have certificate,Full,3.68,"Đường Bùi Thị Xuân, Phường 3, Quận Tân Bình, Hồ Chí Minh",0.6799999999999999
+2,23,62.0,5.0,14.0,Đông - Bắc,Đông - Bắc,3,4,3,Have certificate,Full,7.8,"41/1D, Đường 30, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.242197802197801
+1,8,37.4,5.0,5.0,Đông,Đông,2,2,2,Have certificate,Full,1.65,"Đường Nguyễn Ảnh Thủ, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",0.6549450549450553
+1,19,20.0,5.0,3.0,Đông - Bắc,Đông - Bắc,1,1,2,Have certificate,Full,2.05,"Đường Số 27, Phường 6, Quận Gò Vấp, Hồ Chí Minh",0.37054945054945054
+0,23,128.0,5.0,4.0,Tây - Nam,Tây - Nam,1,7,7,Have certificate,Basic,8.1,"Đường Số 7, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",15.11750915750915
+1,8,28.0,4.0,4.0,Đông,Đông,3,3,3,Have certificate,Full,1.72,"Đường Nguyễn Thị Căn, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",0.7376923076923078
+3,4,64.0,10.0,10.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,7.5,"Đường Đào Tông Nguyên, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",2.727252747252746
+2,22,58.0,42.0,3.0,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Full,4.5,"Hẻm 74, Đường Tân Kỳ Tân Quý, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",1.7682417582417582
+2,8,51.3,4.0,60.0,Tây - Bắc,Tây - Bắc,3,3,3,Have certificate,Full,3.68,"Đường Quốc lộ 1A, Phường Đông Hưng Thuận, Quận 12, Hồ Chí Minh",1.9413736263736256
+3,14,64.8,3.6,2.5,Nam,Nam,3,3,3,Have certificate,Basic,6.2,"Đường Số 77, Phường Tân Quy, Quận 7, Hồ Chí Minh",5.8606593406593435
+2,21,59.0,8.0,8.0,Tây,Tây,5,6,6,Have certificate,Full,9.2,"Hẻm 730, Đường Lạc Long Quân, Phường 9, Quận Tân Bình, Hồ Chí Minh",3.3795604395604375
+1,8,21.7,3.1,4.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Basic,1.78,"Đường An Phú Đông 25, Phường An Phú Đông, Quận 12, Hồ Chí Minh",0.888901098901099
+3,16,86.4,4.0,14.0,Đông - Bắc,Đông - Bắc,1,1,1,Have certificate,Basic,7.4,"Đường 10, Phường Phước Bình, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",2.84
+2,18,60.0,8.0,10.0,Đông,Đông,3,4,4,Have certificate,Basic,9.9,"138, Phố Nguyễn Xí, Phường 26, Quận Bình Thạnh, Hồ Chí Minh",2.5754945054945058
+3,16,65.0,4.5,2.5,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,3.99,"Đường Quang Trung, Phường Tăng Nhơn Phú B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",3.258351648351647
+1,6,31.0,6.2,6.0,Tây - Bắc,Tây - Bắc,3,4,3,Have certificate,Full,6.8,"Đường Tô Hiến Thành, Phường 14, Quận 10, Hồ Chí Minh",1.7727472527472532
+3,8,78.0,5.0,6.0,Tây - Bắc,Tây - Bắc,2,2,3,Have certificate,Full,5.0,"Đường Thạnh Lộc 29, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",5.587142857142859
+2,23,61.0,4.2,6.0,Tây - Nam,Tây - Nam,4,4,4,Have certificate,Full,6.1,"Đường Số 10, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.366483516483515
+1,8,35.0,3.5,4.0,Tây - Nam,Tây - Nam,3,3,3,Have certificate,Basic,2.48,"Đường Hiệp Thành 26, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",0.8163736263736261
+3,8,67.0,4.0,5.0,Bắc,Bắc,1,1,1,Have certificate,Basic,3.75,"Đường Trường Chinh, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",4.35
+2,18,60.0,7.0,5.0,Đông,Đông,5,4,4,Have certificate,Full,9.1,"Đường Nguyễn Thượng Hiền, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",3.283516483516481
+3,8,66.0,4.0,6.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Basic,4.15,"Đường Thạnh Xuân 21, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4.922307692307692
+2,8,60.0,5.0,5.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,3.85,"Đường Thạnh Lộc 37, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.067307692307692
+2,19,54.0,4.0,3.0,Tây - Nam,Tây - Nam,4,3,4,Have certificate,Full,6.35,"Đường Đỗ Thúc Tịnh, Phường 12, Quận Gò Vấp, Hồ Chí Minh",2.343516483516485
+1,10,14.0,3.5,15.0,Đông - Bắc,Đông - Bắc,3,3,3,Have certificate,Full,4.6,"Đường Nguyễn Phúc Nguyên, Phường 10, Quận 3, Hồ Chí Minh",0.7431868131868133
+1,19,32.0,4.0,3.0,Nam,Nam,3,3,3,Have certificate,Full,5.75,"Đường Nguyễn Văn Khối, Phường 11, Quận Gò Vấp, Hồ Chí Minh",1.135274725274725
+0,3,113.0,5.0,6.0,Đông - Bắc,Đông - Bắc,2,4,2,Have certificate,Full,5.9,"Đường Nguyễn Ảnh Thủ, Xã Bà Điểm, Huyện Hóc Môn, Hồ Chí Minh",4.683406593406596
+3,23,99.8,5.0,7.0,Tây - Bắc,Tây - Bắc,3,4,4,Have certificate,Full,7.8,"Đường Linh Đông, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",7.105714285714278
+2,21,63.0,4.2,5.0,Đông - Nam,Đông - Nam,4,5,7,Have certificate,Full,8.2,"Đường Trần Thánh Tông, Phường 15, Quận Tân Bình, Hồ Chí Minh",3.4414285714285735
+3,3,74.0,8.0,6.0,Đông - Bắc,Đông - Bắc,3,3,3,Have certificate,Full,4.8,"Đường 8, Xã Tân Thới Nhì, Huyện Hóc Môn, Hồ Chí Minh",1.1926373626373614
+0,0,189.0,9.0,14.0,Đông,Đông,2,3,2,Have certificate,Basic,10.0,"Dự án Vĩnh Lộc A, Đường Hương lộ  80, Xã Vĩnh Lộc A, Huyện Bình Chánh, Hồ Chí Minh",4.148351648351646
+0,15,151.0,7.5,12.0,Đông - Nam,Đông - Nam,2,2,3,Have certificate,Basic,5.2,"Green River quận 8, 2225, Đường Phạm Thế Hiển, Phường 6, Quận 8, Hồ Chí Minh",12.767802197802192
+3,20,85.4,4.9,5.0,Đông - Nam,Đông - Nam,3,6,7,Have certificate,Basic,9.4,"Đường Huỳnh Văn Bánh, Phường 12, Quận Phú Nhuận, Hồ Chí Minh",9.888241758241762
+1,19,36.0,6.0,5.0,Đông - Nam,Đông - Nam,4,4,3,Have certificate,Full,5.85,"Đường Số 14, Phường 8, Quận Gò Vấp, Hồ Chí Minh",1.4176923076923083
+2,4,52.0,5.0,7.0,Tây - Bắc,Tây - Bắc,4,4,3,Have certificate,Full,6.5,"Hẻm 2177, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",1.1017692307692302
+2,17,40.0,4.0,5.0,Bắc,Bắc,2,2,2,Have certificate,Full,3.6,"6/27, Đường 14A, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",1.04978021978022
+2,19,55.0,4.0,6.0,Đông - Nam,Đông - Nam,4,4,4,Have certificate,Basic,6.3,"Đường Quang Trung, Phường 14, Quận Gò Vấp, Hồ Chí Minh",2.6680219780219794
+2,8,50.1,4.02,20.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Basic,7.0,"Đường Song Hành, Phường Tân Hưng Thuận, Quận 12, Hồ Chí Minh",2.2831868131868127
+2,8,51.0,5.2,6.0,Đông - Bắc,Đông - Bắc,3,3,4,Have certificate,Full,5.2,"Đường Tô Ngọc Vân, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",1.9413736263736256
+2,18,47.1,4.3,2.0,Tây,Đông,2,3,2,Have certificate,Basic,5.4,"Hẻm 602/97, Đường Điện Biên Phủ, Phường 22, Quận Bình Thạnh, Hồ Chí Minh",1.4329670329670323
+2,14,47.95,4.0,4.0,Nam,Nam,5,5,5,Have certificate,Full,7.7,"791, Phố Trần Xuân Soạn, Phường Tân Hưng, Quận 7, Hồ Chí Minh",2.067692307692307
+2,8,60.0,4.0,3.0,Tây - Bắc,Tây - Bắc,1,1,1,Have certificate,Full,2.85,"Đường Thạnh Xuân 43, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",1.6620329670329677
+2,8,57.0,5.0,7.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Basic,3.8,"Đường Hà Huy Giáp, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",2.0156593406593406
+2,8,56.0,4.0,3.0,Đông,Tây,2,2,2,Have certificate,Full,4.2,"Đường Phan Văn Hớn, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",2.055879120879121
+2,18,52.0,5.0,12.0,Đông - Nam,Đông - Nam,2,3,3,Have certificate,Full,7.9,"31/35/15, Đường Ung Văn Khiêm, Phường 25, Quận Bình Thạnh, Hồ Chí Minh",1.5702197802197797
+0,14,102.0,6.0,5.0,Đông - Bắc,Đông - Bắc,1,2,2,Have certificate,Basic,6.8,"Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",7.3260439560439545
+3,8,64.0,4.0,4.0,Tây - Nam,Tây - Nam,2,3,2,Have certificate,Full,3.86,"Đường Tô Ngọc Vân, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4.9326373626373625
+2,8,48.0,3.0,3.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,3.3,"Đường Tân Thới Nhất 6, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",1.510219780219781
+2,23,60.0,6.0,2.0,Nam,Nam,2,2,2,Have certificate,Basic,3.6,"Đường Số 10, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.554065934065934
+1,13,32.0,3.2,12.0,Bắc,Bắc,2,2,2,Have certificate,Basic,8.6,"Đường Lê Quang Sung, Phường 2, Quận 6, Hồ Chí Minh",0.858241758241758
+3,16,75.0,5.0,12.0,Tây - Bắc,Tây - Bắc,3,4,4,Have certificate,Full,8.0,"Dự án River Park, Đường Liên Phường, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.896153846153852
+2,17,63.0,5.2,6.0,Đông,Đông,2,3,2,Have certificate,Full,2.9,"Đường Tân Kỳ Tân Quý, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",1.6960439560439562
+3,8,67.0,5.0,3.5,Tây,Tây,2,4,2,Have certificate,Basic,4.0,"Đường Trần Thị Cờ, Phường Thới An, Quận 12, Hồ Chí Minh",5.136813186813188
+3,8,74.0,4.0,10.0,Bắc,Tây - Bắc,3,4,4,Have certificate,Full,6.05,"Đường Thạnh Xuân 25, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",7.763626373626371
+0,0,100.0,5.0,12.0,Tây - Bắc,Tây - Bắc,4,4,5,Have certificate,Full,10.0,"Dự án 6B Intresco, Đường Phạm Hùng, Xã Bình Hưng, Huyện Bình Chánh, Hồ Chí Minh",3.1929670329670325
+2,4,60.0,5.0,5.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Full,6.4,"Đường Đào Tông Nguyên, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",1.1428131868131863
+3,23,83.0,4.0,6.0,Tây - Nam,Tây - Nam,3,3,3,Have certificate,Basic,4.3,"Đường Ngô Chí Quốc, Phường Bình Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.792527472527475
+1,10,30.0,3.7,6.0,Tây - Nam,Tây - Nam,2,1,2,Have certificate,Full,5.6,"11A, Đường Nguyễn Hiền, Phường 4, Quận 3, Hồ Chí Minh",1.0517582417582423
+3,17,74.0,8.0,8.0,Đông - Bắc,Đông - Bắc,3,3,4,Have certificate,Full,6.3,"Đường Lê Đình Cẩn, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",5.942307692307699
+3,19,68.0,5.3,8.0,Đông - Nam,Đông - Nam,3,3,3,Have certificate,Basic,7.6,"Đường Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Hồ Chí Minh",7.547692307692313
+1,17,35.0,4.0,4.0,Đông,Đông,1,2,2,Have certificate,Full,2.0,"Đường Lê Đình Cẩn, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",0.7606593406593404
+3,17,80.0,4.0,12.0,Bắc,Bắc,5,5,7,Have certificate,Full,8.7,"Số 1E, Đường Miếu Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",6.912087912087916
+0,8,141.0,9.0,3.5,Đông - Bắc,Đông - Bắc,1,4,3,Have certificate,Basic,6.3,"Đường Vườn Lài, Phường An Phú Đông, Quận 12, Hồ Chí Minh",12.552417582417585
+1,18,18.3,4.9,3.0,Nam,Nam,2,1,2,Have certificate,Basic,2.89,"Đường Tăng Bạt Hổ, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",0.45274725274725286
+3,16,82.7,5.0,12.0,Đông - Bắc,Đông - Bắc,3,4,5,Have certificate,Basic,8.6,"Dự án Park Riverside Tân Cảng, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6.05934065934066
+3,0,75.0,5.0,8.0,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Full,2.25,"Đường 1, Xã Huyện Bình Chánh, Huyện Bình Chánh, Hồ Chí Minh",0.9107692307692309
+1,5,28.0,4.6,2.0,Tây - Nam,Tây - Bắc,3,2,3,Have certificate,Basic,6.5,"Hẻm 124, Đường Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",2.282967032967034
+2,8,40.0,4.0,6.0,Đông - Nam,Đông - Nam,2,2,1,Have certificate,Full,2.45,"Đường Nguyễn Ảnh Thủ, Phường Trung Mỹ Tây, Quận 12, Hồ Chí Minh",0.8965934065934074
+1,13,30.4,3.5,12.0,Nam,Nam,3,5,3,Have certificate,Full,6.2,"Đường Lý Chiêu Hoàng, Phường 10, Quận 6, Hồ Chí Minh",0.9896703296703296
+3,14,77.0,4.06,6.0,Đông,Đông,3,3,4,Have certificate,Full,10.0,"Đường Lâm Văn Bền, Phường Tân Kiểng, Quận 7, Hồ Chí Minh.",7.128681318681321
+3,16,75.0,5.0,20.0,Tây - Bắc,Tây - Bắc,2,4,4,Have certificate,Basic,8.3,"Dự án Park Riverside Tân Cảng, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4.179890109890106
+3,14,90.0,5.0,6.0,Đông - Bắc,Tây - Nam,4,4,5,Have certificate,Full,8.29,"Đường Phạm Hữu Lầu, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",7.063626373626374
+0,22,124.5,9.0,30.0,Nam,Nam,2,4,3,Have certificate,Basic,7.5,"Dự án Carillon 7, Quận Tân Phú, Hồ Chí Minh",17.806923076923066
+0,16,108.0,6.0,12.0,Bắc,Bắc,3,5,4,Have certificate,Full,9.6,"Dự án Melosa Garden, Đường Vành Đai Trong, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",13.189340659340656
+2,15,48.0,3.5,5.0,Đông - Bắc,Đông - Bắc,2,4,3,Have certificate,Full,4.8,"Đường Phạm Thế Hiển, Phường 7, Quận 8, Hồ Chí Minh",1.0729670329670329
+3,4,83.6,5.0,6.0,Tây - Nam,Tây - Nam,4,4,5,Have certificate,Full,8.6,"2581, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",3.913406593406592
+1,18,28.0,3.8,3.0,Tây - Nam,Tây - Nam,4,4,3,Have certificate,Full,4.25,"Đường Trần Bình Trọng, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",0.9414285714285713
+3,19,66.0,4.0,4.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,6.15,"Đường Quang Trung, Phường 12, Quận Gò Vấp, Hồ Chí Minh",3.927142857142856
+3,9,71.0,45.0,6.0,Nam,Nam,5,4,4,Have certificate,Basic,6.3,"Đường Số 15, Phường Bình Trưng Đông, Quận 2 (TP. Thủ Đức), Hồ Chí Minh",8.511538461538457
+1,17,36.0,5.0,5.0,Tây,Tây,3,3,3,Have certificate,Basic,2.35,"Đường Lê Đình Cẩn, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",1.0343956043956042
+3,22,70.0,4.2,6.0,Đông - Bắc,Đông - Bắc,3,3,3,Have certificate,Basic,7.35,"Đường Nguyễn Cửu Đàm, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",6.623076923076924
+3,4,80.0,7.0,7.0,Tây - Nam,Tây - Nam,4,4,5,Have certificate,Full,6.5,"Đường Nguyễn Bình, Xã Nhơn Đức, Huyện Nhà Bè, Hồ Chí Minh",3.4806593406593396
+2,19,48.0,5.0,5.0,Tây,Tây,4,5,4,Have certificate,Basic,5.5,"405/, Đường Thống Nhất, Phường 11, Quận Gò Vấp, Hồ Chí Minh",2.647142857142859
+1,17,35.0,4.0,4.0,Tây,Tây,2,2,2,Have certificate,Full,2.0,"Đường Nguyễn Văn Cự, Phường Tân Tạo A, Quận Bình Tân, Hồ Chí Minh",0.879120879120879
+1,19,36.0,8.3,5.0,Tây,Tây,3,3,3,Have certificate,Full,5.99,"Đường Lê Đức Thọ, Phường 6, Quận Gò Vấp, Hồ Chí Minh",1.3193406593406585
+2,23,50.0,3.47,5.0,Đông - Bắc,Đông - Bắc,3,4,3,Have certificate,Basic,3.16,"78C/16, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.9020879120879128
+2,19,56.0,6.0,7.0,Tây,Bắc,4,4,5,Have certificate,Full,8.95,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",2.732307692307694
+0,14,108.0,7.0,3.0,Đông - Bắc,Đông - Bắc,1,2,2,Have certificate,Full,5.5,"Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",8.698021978021975
+2,14,50.0,4.1,5.0,Đông - Nam,Đông - Nam,5,4,5,Have certificate,Full,6.6,"Đường Huỳnh Tấn Phát, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",1.9545054945054943
+2,8,40.0,4.0,7.0,Tây - Bắc,Tây - Bắc,2,2,2,Have certificate,Full,3.68,"Đường Thới An 09, Phường Thới An, Quận 12, Hồ Chí Minh",0.8965934065934074
+1,18,26.4,3.3,4.0,Đông,Đông,3,2,2,Have certificate,Full,4.3,"Hẻm 148, Nguyễn Lâm, Phường 3, Quận Bình Thạnh, Hồ Chí Minh",0.7436263736263735
+3,23,91.3,6.0,6.0,Đông - Bắc,Đông - Bắc,2,2,2,Have certificate,Full,9.0,"Đường 17, Phường Linh Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.2140659340659345
+2,4,52.8,3.5,3.5,Đông,Đông,2,3,3,Have certificate,Full,3.79,"1716, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",0.7966483516483513
+3,14,75.5,3.6,5.0,Nam,Nam,5,5,7,Have certificate,Full,8.8,"Đường Huỳnh Tấn Phát, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",6.976593406593408
+2,19,60.0,4.0,5.5,Đông,Đông,3,4,4,Have certificate,Basic,7.2,"Đường Thống Nhất, Phường 16, Quận Gò Vấp, Hồ Chí Minh",2.478351648351649
+2,22,42.9,3.3,5.0,Nam,Nam,2,2,2,Have certificate,Full,3.65,"Đường Gò Dầu, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",1.2296703296703293
+3,15,95.0,10.0,10.0,Đông - Bắc,Đông - Bắc,3,4,5,Have certificate,Basic,8.25,"Đường Phạm Thế Hiển, Phường 7, Quận 8, Hồ Chí Minh",5.92197802197802
+3,4,70.0,5.0,3.0,Đông - Bắc,Đông - Bắc,2,3,3,Have certificate,Basic,4.45,"Hẻm 2506, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",2.576703296703295
+2,15,60.75,3.7,20.0,Tây - Bắc,Tây - Bắc,2,2,1,Sale contract,Full,2.55,"Dream Home Palace, 1436, Đường Trịnh Quang Nghị, Phường 7, Quận 8, Hồ Chí Minh",1.3020879120879112
+1,6,20.8,2.6,3.0,Nam,Nam,3,2,3,Have certificate,Full,3.3,"Hẻm 160/, Đường Nguyễn Chí Thanh, Phường 3, Quận 10, Hồ Chí Minh",1.261648351648352
+0,22,102.0,4.2,12.0,Tây - Bắc,Tây - Bắc,3,4,4,Have certificate,Basic,9.3,"Đường D10, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",16.083516483516487
+2,19,58.0,4.0,6.0,Tây - Bắc,Tây - Bắc,4,4,6,Have certificate,Full,7.49,"Đường Bùi Quang Là, Phường 12, Quận Gò Vấp, Hồ Chí Minh",2.7551648351648357
+3,0,75.0,5.0,4.0,Bắc,Bắc,1,2,1,Sale contract,Basic,1.41,"Đường Ngô Miễn Thiệu, Xã Vĩnh Lộc B, Huyện Bình Chánh, Hồ Chí Minh",0.8758241758241762
+2,18,49.0,3.3,3.0,Đông - Nam,Đông - Nam,2,2,3,Have certificate,Full,5.0,"Đường Xô Viết Nghệ Tĩnh, Phường 21, Quận Bình Thạnh, Hồ Chí Minh",1.278461538461538
+2,17,60.0,4.0,8.0,Tây,Tây,5,5,6,Have certificate,Full,6.1,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",2.34945054945055
+2,22,54.0,3.8,4.0,Tây,Tây,2,2,2,Have certificate,Full,5.65,"76/10/24 Đường Nguyễn Sơn, Phường Phú Thọ Hòa, Quận Tân Phú, Hồ Chí Minh",1.4575824175824166
+1,19,23.0,3.74,4.0,Tây - Bắc,Tây - Bắc,2,2,1,Have certificate,Full,2.3,"Đường Dương Quảng Hàm, Phường 5, Quận Gò Vấp, Hồ Chí Minh",0.7246153846153844
+3,16,90.0,7.5,20.0,Đông - Bắc,Đông - Bắc,3,4,3,Have certificate,Full,8.5,"Dự án Mega Village, Đường Vành Đai 2, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.886373626373625
+1,7,21.0,5.0,8.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Basic,3.8,"Đường Lê Đại Hành, Phường 11, Quận 11, Hồ Chí Minh",0.8386813186813192
+3,17,80.0,51.0,3.0,Tây,Tây,2,3,2,Have certificate,Full,4.58,"Đường Tân Hòa Đông, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",5.147142857142857
+1,6,29.0,3.0,4.0,Đông - Nam,Đông - Nam,5,5,4,Have certificate,Full,6.2,"Đường Lý Thái Tổ, Phường 10, Quận 10, Hồ Chí Minh",2.48120879120879
+3,13,64.4,3.5,5.0,Bắc,Bắc,2,3,2,Have certificate,Basic,8.6,"Đường Mai Xuân Thưởng, Phường 6, Quận 6, Hồ Chí Minh",3.5476923076923073
+3,14,64.0,5.0,6.0,Tây - Bắc,Tây,3,4,5,Have certificate,Full,7.5,"44/41, Đường Bùi Văn Ba, Phường Tân Thuận Đông, Quận 7, Hồ Chí Minh",5.530109890109891
+1,5,22.0,3.0,3.0,Đông - Bắc,Đông - Bắc,2,2,3,Have certificate,Basic,4.5,"Đường Hồ Hảo Hớn, Phường Cô Giang, Quận 1, Hồ Chí Minh",1.8427472527472524
+1,18,32.0,3.11,5.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Basic,3.8,"Đường Phan Văn Trị, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",0.9761538461538461
+1,6,32.0,5.0,4.0,Tây - Nam,Tây - Nam,2,3,3,Have certificate,Full,5.18,"Đường Lý Thái Tổ, Phường 10, Quận 10, Hồ Chí Minh",1.6739560439560448
+2,17,60.0,4.0,8.0,Tây,Tây,5,5,6,Have certificate,Full,6.0,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",2.34945054945055
+2,14,41.2,6.0,3.0,Tây - Bắc,Tây - Bắc,2,3,2,Have certificate,Full,6.35,"Đường Phạm Hữu Lầu, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",1.1198901098901097
+2,8,53.4,6.0,7.0,Nam,Nam,4,4,4,Have certificate,Full,4.69,"Đường Thạnh Xuân 25, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",2.2012087912087908
+2,4,50.0,4.0,6.0,Đông - Bắc,Đông - Bắc,3,4,5,Have certificate,Full,5.5,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",0.8829120879120876
+1,22,37.0,4.1,2.0,Nam,Nam,2,2,2,Have certificate,Full,3.6,"Đường Phú Thọ Hòa, Phường Phú Thạnh, Quận Tân Phú, Hồ Chí Minh",1.0291208791208792
+3,7,83.2,4.4,6.0,Tây - Bắc,Tây - Bắc,5,9,9,Have certificate,Full,9.9,"Đường Lê Đại Hành, Phường 13, Quận 11, Hồ Chí Minh",11.251648351648347
+3,19,78.2,4.6,4.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,5.65,"Đường Quang Trung, Phường 11, Quận Gò Vấp, Hồ Chí Minh",4.966043956043957
+2,23,63.0,4.0,5.0,Đông - Bắc,Đông - Bắc,3,2,2,Have certificate,Full,6.2,"Đường 3, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.024505494505494
+2,15,40.4,4.0,4.0,Đông - Nam,Đông - Nam,3,2,3,Have certificate,Full,6.2,"Đường  Tạ Quang Bửu, Phường 5, Quận 8, Hồ Chí Minh",1.016043956043956
+2,3,48.0,4.0,10.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,3.95,"Đường Nguyễn Thị Ngâu, Xã Thới Tam Thôn, Huyện Hóc Môn, Hồ Chí Minh",0.29164835164835173
+3,23,64.0,4.0,6.0,Tây - Nam,Tây - Nam,3,4,4,Have certificate,Full,7.6,"Đường 8, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.203956043956042
+0,8,110.0,7.0,7.0,Nam,Nam,1,4,4,Have certificate,Full,5.45,"Đường Phan Văn Hớn, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",12.343296703296703
+2,8,47.6,4.0,7.0,Tây - Nam,Tây - Nam,3,4,4,Have certificate,Full,4.49,"2/, Đường Tân Thới Hiệp 21, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",1.8349120879120877
+2,22,56.0,4.0,5.0,Tây,Tây,4,5,4,Have certificate,Full,6.5,"Đường Tân Sơn Nhì, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",2.4135164835164846
+1,22,16.0,4.0,2.2,Đông,Đông,2,2,2,Have certificate,Full,2.4,"Đường Độc Lập, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",0.3629670329670328
+2,23,51.0,4.6,7.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Basic,6.7,"Đường Đinh Thị Thi, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.221978021978022
+3,15,64.0,4.0,16.0,Tây - Bắc,Tây - Bắc,3,4,4,Have certificate,Full,10.0,"783A, Đường Cao Lỗ, Phường 14, Quận 8, Hồ Chí Minh",5.432967032967037
+0,16,100.0,20.0,12.0,Bắc,Bắc,3,4,5,Have certificate,Basic,6.5,"Dự án Đông Tăng Long, Đường Nguyễn Duy Trinh, Phường Trường Thạnh, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",13.6978021978022
+1,5,30.0,5.0,3.0,Tây - Nam,Tây - Nam,4,4,4,Have certificate,Full,6.1,"Đường Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Hồ Chí Minh",3.424395604395603
+3,8,80.0,5.0,8.0,Đông - Nam,Đông - Nam,3,3,4,Have certificate,Full,8.8,"Đường Tân Thới Nhất 17, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",7.644615384615383
+2,17,58.0,4.0,7.0,Nam,Nam,5,5,6,Have certificate,Full,6.8,"Đường Lê Văn Quới, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",2.2561538461538477
+2,19,59.0,4.0,6.0,Tây,Tây,3,5,5,Have certificate,Basic,7.3,"148//, Đường Số 59, Phường 14, Quận Gò Vấp, Hồ Chí Minh",2.583076923076924
+2,23,40.2,4.0,4.0,Tây - Bắc,Tây - Bắc,3,3,2,Have certificate,Full,4.5,"Đường Số 5, Phường Linh Trung, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.489010989010989
+3,4,76.0,4.0,10.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,7.5,"Dự án Sài Gòn Mới, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",3.552197802197801
+3,9,83.0,5.0,3.0,Nam,Nam,2,5,5,Have certificate,Basic,6.9,"Thạnh Mỹ Lợi, Số 68, Đường Thạnh Mỹ Lợi, Phường  Thạnh Mỹ Lợi, Quận 2 (TP. Thủ Đức), Hồ Chí Minh",6.0602197802197795
+2,18,50.0,4.0,5.0,Tây - Bắc,Tây - Bắc,4,5,6,Have certificate,Full,9.3,"Đường Nguyễn Thượng Hiền, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",2.7394505494505514
+2,3,52.0,4.0,5.0,Nam,Nam,2,2,2,Have certificate,Basic,1.68,"Đường Song Hành, Xã Tân Hiệp, Huyện Hóc Môn, Hồ Chí Minh",0.3332967032967033
+1,10,29.0,4.6,4.0,Tây,Tây,1,2,2,Have certificate,Basic,3.5,"Đường Cách Mạng Tháng Tám, Phường 10, Quận 3, Hồ Chí Minh",0.9527472527472531
+3,19,75.0,4.0,6.0,Đông - Bắc,Đông - Bắc,2,3,3,Have certificate,Full,6.5,"Đường Lê Văn Thọ, Phường 16, Quận Gò Vấp, Hồ Chí Minh",4.937252747252746
+2,21,59.0,4.6,8.0,Đông - Nam,Đông - Nam,4,5,6,Have certificate,Full,10.0,"254, Đường Âu Cơ, Phường 9, Quận Tân Bình, Hồ Chí Minh",3.023076923076922
+3,19,72.5,4.0,6.0,Nam,Nam,4,4,5,Have certificate,Basic,7.4,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",7.366153846153849
+0,14,102.6,7.0,3.0,Đông,Đông,1,2,2,Have certificate,Full,5.6,"Đường Huỳnh Tấn Phát, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",7.05384615384615
+2,19,42.0,4.8,4.0,Đông,Đông,3,3,4,Have certificate,Full,5.6,"Đường Lê Đức Thọ, Phường 13, Quận Gò Vấp, Hồ Chí Minh",1.5909890109890104
+0,23,100.0,5.0,5.0,Đông - Nam,Đông - Nam,4,7,7,Have certificate,Basic,9.5,"Đường 8, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",17.605054945054956
+2,7,44.0,4.0,6.0,Tây - Bắc,Tây - Bắc,5,6,4,Have certificate,Full,8.0,"Đường Lạc Long Quân, Phường 3, Quận 11, Hồ Chí Minh",2.3087912087912095
+2,20,43.0,4.3,5.0,Đông - Nam,Đông - Nam,4,3,4,Have certificate,Full,8.6,"Đường Phan Xích Long, Phường 3, Quận Phú Nhuận, Hồ Chí Minh",1.8229670329670324
+3,8,80.0,4.0,12.0,Tây - Nam,Tây - Nam,3,4,4,Have certificate,Full,5.0,"Đường Thạnh Lộc 44, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",8.72186813186813
+3,22,81.6,4.1,12.0,Bắc,Bắc,2,2,2,Have certificate,Basic,8.5,"Phường Hiệp Tân, Quận Tân Phú, Hồ Chí Minh",5.213736263736264
+3,23,64.0,4.0,6.0,Bắc,Bắc,2,2,2,Have certificate,Full,5.2,"Đường Hồ Bá Phấn, Phường Phước Long A, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.542307692307694
+3,14,82.4,6.0,4.0,Tây,Tây,2,4,4,Have certificate,Full,6.35,"Đường Phạm Hữu Lầu, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",4.52010989010989
+3,4,84.5,5.0,7.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Full,9.4,"Dự án Green Riverside, Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",3.913406593406592
+3,16,93.0,7.8,5.0,Nam,Nam,2,4,3,Have certificate,Full,3.9,"Hẻm số 5, Đường Lò Lu, Phường Trường Thạnh, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4.6087912087912075
+2,19,57.7,4.0,6.0,Tây - Bắc,Tây - Bắc,3,4,5,Have certificate,Basic,7.49,"Đường Bùi Quang Là, Phường 12, Quận Gò Vấp, Hồ Chí Minh",2.382747252747254
+0,16,100.0,15.0,30.0,Nam,Nam,1,2,2,Sale contract,Full,4.6,"Dự án The Beverly Solari  - Vinhomes Grand Park, Phường Long Thạnh Mỹ, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",7.01241758241758
+3,18,64.6,3.0,10.0,Bắc,Bắc,4,5,4,Have certificate,Basic,7.0,"Đường Bùi Đình Túy, Phường 12, Quận Bình Thạnh, Hồ Chí Minh",7.617252747252753
+3,4,80.0,5.3,6.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,8.3,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",3.4806593406593396
+3,16,80.0,6.0,6.0,Đông - Bắc,Đông - Nam,3,3,2,Sale contract,Basic,5.3,"Dự án Sim City, Đường Lò Lu, Phường Trường Thạnh, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6.554175824175826
+2,18,40.0,4.0,2.0,Nam,Nam,2,2,2,Have certificate,Full,4.35,"Đường D5, Phường 25, Quận Bình Thạnh, Hồ Chí Minh",1.1835164835164833
+3,23,70.0,5.0,6.0,Đông - Nam,Đông - Nam,4,4,4,Have certificate,Full,6.8,"Đường Số 48, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.104945054945055
+2,23,52.0,3.8,4.0,Đông - Nam,Đông - Nam,1,4,4,Have certificate,Basic,2.6,"Phường Linh Xuân, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.1506593406593397
+1,17,37.0,3.7,7.0,Bắc,Bắc,3,5,3,Have certificate,Full,2.78,"Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",1.065164835164835
+2,14,51.0,4.0,4.0,Tây - Nam,Tây - Nam,2,3,2,Have certificate,Full,6.35,"Đường Phạm Hữu Lầu, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",1.216923076923077
+2,3,48.0,8.0,2.5,Tây - Bắc,Tây - Bắc,1,2,1,Have certificate,Full,2.05,"Đường Đặng Thúc Vịnh, Xã  Đông Thạnh, Huyện Hóc Môn, Hồ Chí Minh",0.2532967032967033
+3,23,85.7,5.4,7.0,Tây,Tây,1,3,3,Have certificate,Full,8.5,"Đường 11, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.690329670329669
+2,4,55.9,4.3,6.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,6.5,"1979, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",1.1243516483516478
+2,23,56.0,4.0,6.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Basic,7.3,"Đường 10, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.2480219780219786
+2,14,56.0,4.0,50.0,Đông,Đông,2,2,3,Have certificate,Full,5.2,"Đường Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, Hồ Chí Minh",1.2728571428571418
+1,8,25.0,3.5,3.0,Đông - Bắc,Đông - Bắc,3,2,2,Have certificate,Basic,2.65,"Hẻm 103//, Đường Tân Thới Nhất 2, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",0.7254945054945051
+2,8,46.0,20.0,5.0,Tây - Bắc,Tây - Bắc,3,4,3,Have certificate,Full,4.45,"Đường Nguyễn Thị Đặng, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",1.8166703296703297
+2,22,60.0,5.0,5.0,Đông,Đông,4,4,4,Have certificate,Full,6.3,"Đường Tân Hương, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",2.5895604395604392
+1,22,24.0,3.0,4.0,Nam,Nam,2,2,2,Have certificate,Basic,3.0,"101/26/, Đường Gò Dầu, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",0.6656043956043954
+3,23,89.0,5.1,10.0,Tây - Nam,Tây - Nam,4,4,5,Have certificate,Full,8.6,"Đường 8, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.119230769230767
+3,22,90.0,5.0,6.0,Tây,Tây,1,3,2,Have certificate,Basic,7.5,"Đường Gò Dầu, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",5.1926373626373605
+0,8,282.7,11.0,50.0,Bắc,Bắc,1,4,2,Have certificate,Basic,9.5,"Đường Quốc lộ 1A, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",28.212857142857136
+2,20,44.0,6.0,4.5,Bắc,Bắc,5,4,3,Have certificate,Full,10.0,"Đường Huỳnh Văn Bánh, Phường 11, Quận Phú Nhuận, Hồ Chí Minh",2.1443956043956036
+2,8,49.5,4.5,12.0,Tây - Bắc,Tây - Bắc,3,4,3,Have certificate,Basic,4.65,"Đường Thạnh Xuân 52, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",1.8747472527472522
+1,20,22.0,2.8,3.0,Tây - Nam,Tây - Nam,3,2,3,Have certificate,Basic,3.5,"Đường Cô Giang, Phường 2, Quận Phú Nhuận, Hồ Chí Minh",0.7252747252747249
+3,17,97.0,5.2,8.0,Bắc,Bắc,4,4,5,Have certificate,Full,6.7,"Đường Tân Hòa Đông, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",6.233296703296704
+2,8,41.6,4.0,4.0,Bắc,Bắc,2,2,2,Have certificate,Full,3.38,"Đường Hiệp Thành 17, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",0.9946153846153856
+2,17,40.0,7.0,7.0,Đông,Đông,2,3,3,Have certificate,Full,2.48,"Đường Liên Khu 5-6, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",1.1837362637362636
+1,10,36.0,3.6,6.0,Tây - Nam,Tây - Nam,6,5,4,Have certificate,Full,10.0,"Đường Lý Chính Thắng, Phường Võ Thị Sáu, Quận 3, Hồ Chí Minh",1.8009890109890097
+1,20,37.0,9.0,5.0,Tây - Bắc,Tây - Bắc,4,3,3,Have certificate,Full,6.85,"Đường Trần Huy Liệu, Phường 8, Quận Phú Nhuận, Hồ Chí Minh",1.5150549450549444
+2,21,40.0,8.0,3.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,3.6,"Đường Hoàng Bật Đạt, Phường 15, Quận Tân Bình, Hồ Chí Minh",1.2850549450549453
+2,23,54.1,6.25,7.0,Đông,Đông,3,4,3,Have certificate,Full,7.2,"Đường Võ Văn Ngân, Phường Bình Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.9353846153846161
+2,17,54.0,4.5,8.0,Đông,Đông,3,4,5,Have certificate,Full,8.3,"Đường 8A, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",1.721978021978022
+2,8,57.0,4.2,6.0,Đông - Bắc,Đông - Bắc,3,3,3,Have certificate,Basic,4.5,"Đường Huỳnh Thị Hai, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh",1.9060989010989
+1,8,31.0,3.2,8.0,Nam,Nam,2,2,2,Have certificate,Full,2.95,"Đường Lê Văn Khương, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",0.7052747252747253
+1,4,32.0,4.0,4.0,Đông - Nam,Đông - Nam,3,4,3,Have certificate,Full,3.6,"2174, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",0.49909340659340656
+2,8,53.4,4.0,5.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Basic,3.89,"Đường Thạnh Xuân 25, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",1.9425824175824182
+2,8,56.0,4.0,10.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Full,5.85,"Đường Thạnh Lộc 44, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.435219780219779
+2,17,40.0,4.0,7.0,Tây,Tây,3,5,3,Have certificate,Full,2.68,"Đường Nguyễn Thị Tú, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh.",1.2941758241758243
+2,19,46.0,4.6,6.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,7.99,"Đường Quang Trung, Phường 12, Quận Gò Vấp, Hồ Chí Minh",2.4509890109890122
+2,22,52.0,4.0,5.0,Đông,Đông,2,2,2,Have certificate,Full,5.6,"Đường Phú Thọ Hòa, Phường Phú Thọ Hòa, Quận Tân Phú, Hồ Chí Minh",1.504725274725274
+3,8,67.0,4.0,4.0,Nam,Nam,3,4,3,Have certificate,Full,5.85,"Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",7.4185714285714255
+1,16,36.0,3.0,3.0,Tây - Bắc,Tây - Bắc,2,2,2,Have certificate,Full,2.65,"Đường Đỗ Xuân Hợp, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",0.6813186813186815
+2,22,58.0,4.8,8.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,7.8,"Đường Tân Sơn Nhì, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",1.5783516483516478
+1,18,25.0,1.5,2.0,Bắc,Bắc,4,2,2,Have certificate,Full,2.8,"Đường Đinh Tiên Hoàng, Phường 1, Quận Bình Thạnh, Hồ Chí Minh",0.747912087912088
+3,13,71.0,4.7,4.0,Đông - Nam,Đông - Nam,4,4,3,Have certificate,Basic,6.5,"Đường Tân Hóa, Phường 14, Quận 6, Hồ Chí Minh",6.489670329670333
+2,23,60.0,4.0,6.0,Tây - Bắc,Tây - Bắc,4,4,6,Have certificate,Full,7.45,"Đường 606, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.379450549450549
+0,2,157.0,6.0,20.0,Tây - Nam,Tây - Nam,2,2,1,Have certificate,Basic,4.2,"Đường Bình Mỹ, Xã Bình Mỹ, Huyện Củ Chi, Hồ Chí Minh",1.7629670329670324
+2,17,56.0,4.0,6.0,Bắc,Bắc,5,5,4,Have certificate,Full,5.2,"Đường Quốc lộ 1A, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",2.144945054945057
+3,16,75.0,5.0,16.0,Tây - Bắc,Tây - Bắc,3,4,4,Have certificate,Full,9.0,"Dự án Rio Vista, Đường Dương Đình Hội, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.896153846153852
+2,8,54.0,4.0,8.0,Tây - Nam,Tây - Nam,4,6,5,Have certificate,Basic,6.1,"Đường Thạnh Lộc 19, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.3281391941391925
+1,19,32.0,3.2,10.0,Nam,Nam,2,2,2,Have certificate,Full,3.38,"Đường Số 59, Phường 14, Quận Gò Vấp, Hồ Chí Minh",0.9826373626373627
+1,8,32.0,5.0,6.0,Đông,Đông,3,3,3,Have certificate,Full,2.55,"Đường Huỳnh Thị Hai, Phường Tân Chánh Hiệp, Quận 12, Hồ Chí Minh",0.7576923076923074
+3,4,68.0,4.0,4.0,Bắc,Đông - Bắc,3,3,3,Have certificate,Full,5.5,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",3.2473626373626354
+0,22,116.0,6.3,6.0,Tây - Nam,Tây - Nam,2,6,2,Have certificate,Basic,9.0,"Đường Tân Kỳ Tân Quý, Phường Sơn Kỳ, Quận Tân Phú, Hồ Chí Minh",18.97593406593405
+2,18,45.9,4.0,6.0,Đông - Nam,Đông - Nam,3,4,4,Have certificate,Full,8.7,"Đường  Nguyễn Xí, Phường 26, Quận Bình Thạnh, Hồ Chí Minh",1.942197802197803
+3,23,66.0,4.0,5.0,Đông - Bắc,Đông - Bắc,1,2,2,Have certificate,Full,3.95,"Đường 606, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.282527472527471
+3,16,75.0,5.0,12.0,Đông - Bắc,Tây - Nam,3,3,3,Have certificate,Full,8.49,"Dự án Park Riverside Tân Cảng, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.8796703296703345
+3,19,78.0,6.0,7.0,Tây - Bắc,Tây - Bắc,3,4,5,Have certificate,Full,8.95,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",8.165494505494506
+2,8,45.0,4.5,4.0,Tây - Nam,Tây - Nam,3,4,2,Have certificate,Basic,3.65,"Đường Tân Thới Hiệp 20, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",1.9159010989010994
+2,14,51.6,4.0,6.0,Tây,Tây,2,2,3,Have certificate,Full,5.2,"Đường Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, Hồ Chí Minh",1.2039560439560437
+2,18,42.4,8.0,6.0,Tây,Tây,4,3,3,Have certificate,Full,6.25,"Đường Tăng Bạt Hổ, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",1.6792307692307686
+1,22,26.0,3.2,3.5,Đông,Đông,2,2,2,Have certificate,Full,3.3,"Đường Nguyễn Súy, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",0.691208791208791
+2,23,52.0,4.2,5.0,Đông,Đông,2,2,2,Have certificate,Full,4.9,"Đường Số 32, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.4599999999999997
+2,23,50.8,30.0,5.0,Đông - Nam,Đông - Nam,1,2,2,Have certificate,Basic,3.95,"Đường Bình Chiểu, Phường Bình Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.044285714285714
+2,8,55.0,5.0,6.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,3.85,"Đường Thạnh Lộc 41, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.030824175824176
+1,20,38.0,4.0,5.0,Đông - Bắc,Đông - Bắc,4,5,6,Have certificate,Full,7.8,"Đường Thích Quảng Đức, Phường 3, Quận Phú Nhuận, Hồ Chí Minh",1.7859340659340648
+2,4,50.0,4.0,6.0,Tây - Bắc,Tây - Bắc,4,4,4,Have certificate,Full,6.2,"Dự án The Sun Residence, Đường Đào Tông Nguyên, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",1.0351758241758238
+2,22,44.0,4.0,5.0,Tây - Bắc,Bắc,3,2,2,Have certificate,Full,4.65,"Đường Lê Liễu, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",1.4892307692307691
+3,17,75.0,5.0,8.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,5.8,"Đường Bùi Dương Lịch, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",5.026703296703295
+2,17,55.5,3.7,5.0,Đông,Đông,2,2,2,Have certificate,Basic,4.5,"Đường Tên Lửa, Phường An Lạc A, Quận Bình Tân, Hồ Chí Minh",1.2684615384615374
+2,21,45.0,3.6,6.0,Tây - Bắc,Tây - Bắc,2,2,2,Have certificate,Full,7.2,"876/35/60 Đường Cách Mạng Tháng Tám, Phường 5, Quận Tân Bình, Hồ Chí Minh",1.4159340659340653
+3,8,64.0,4.0,7.0,Đông - Bắc,Đông - Bắc,3,3,3,Have certificate,Full,4.85,"Đường Vườn Lài, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",6.08032967032967
+1,10,35.0,4.0,4.0,Đông,Đông,4,2,3,Have certificate,Full,7.5,"Đường Pasteur, Phường 6, Quận 3, Hồ Chí Minh",1.3819780219780218
+2,23,57.0,20.0,20.0,Tây - Bắc,Tây - Bắc,1,2,2,Have certificate,Full,2.69,"Dự án Sài Gòn Metro Park, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",0.94
+1,11,32.1,5.0,4.0,Tây - Nam,Tây - Nam,4,2,3,Have certificate,Basic,3.95,"Đường Tôn Đản, Phường 8, Quận 4, Hồ Chí Minh",0.8192307692307692
+3,22,65.0,4.2,12.0,Nam,Nam,2,3,2,Have certificate,Full,9.3,"Đường Lê Đình Thám, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",4.595494505494506
+2,5,48.0,3.0,3.0,Đông - Nam,Đông - Nam,4,5,5,Have certificate,Full,8.6,"Đường Phan Tôn, Phường Đa Kao, Quận 1, Hồ Chí Minh",8.507417582417593
+2,8,48.0,4.0,3.0,Đông - Bắc,Đông - Bắc,2,2,2,Have certificate,Full,3.67,"Đường Nguyễn Thị Kiểu, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",1.510219780219781
+2,14,40.0,4.0,6.0,Tây,Tây,3,4,3,Have certificate,Basic,5.9,"134 Đường Nguyễn Thị Thập, Phường Bình Thuận, Quận 7, Hồ Chí Minh",1.0520879120879123
+0,14,132.0,4.0,6.0,Đông,Đông,1,2,1,Have certificate,Basic,7.5,"Đường Bùi Văn Ba, Phường Tân Thuận Đông, Quận 7, Hồ Chí Minh",11.61197802197803
+3,8,75.0,6.0,6.0,Nam,Nam,3,3,3,Have certificate,Full,5.05,"Đường Tân Thới Nhất 2, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",6.888241758241756
+0,0,100.0,12.0,12.0,Tây - Bắc,Tây - Bắc,3,4,4,Have certificate,Basic,8.8,"Dự án Đại Phúc Green Villas, Đường Phạm Hùng, Xã Bình Hưng, Huyện Bình Chánh, Hồ Chí Minh",3.145054945054944
+2,14,50.8,4.0,3.0,Đông,Đông,2,2,2,Have certificate,Basic,5.6,"Hẻm 861, Phố Trần Xuân Soạn, Phường Tân Hưng, Quận 7, Hồ Chí Minh",1.1224175824175822
+2,17,53.9,9.0,6.0,Bắc,Bắc,5,8,8,Have certificate,Basic,7.5,"Đường 8, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",2.254395604395607
+3,18,69.1,4.0,4.0,Đông - Bắc,Đông - Bắc,3,3,4,Have certificate,Full,10.0,"Đường Nguyễn Trung Trực, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",7.610659340659346
+3,23,68.0,4.0,7.0,Nam,Nam,3,4,5,Have certificate,Full,7.9,"Đường 30, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.470109890109889
+3,16,75.0,4.5,8.0,Tây - Nam,Tây - Nam,1,3,1,Have certificate,Full,6.5,"Đường Số 8, Phường Tăng Nhơn Phú A, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",3.47054945054945
+3,19,65.0,4.0,4.0,Đông - Nam,Đông - Nam,3,3,3,Have certificate,Basic,6.5,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",6.960769230769233
+1,19,24.9,3.0,3.0,Bắc,Bắc,2,2,3,Have certificate,Basic,2.75,"488/, Đường Phạm Văn Chiêu, Phường 16, Quận Gò Vấp, Hồ Chí Minh",0.6859340659340657
+1,17,30.0,5.0,4.0,Đông,Đông,2,3,3,Have certificate,Full,1.88,"Đường Nguyễn Thị Tú, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh.",0.9502197802197799
+3,17,68.0,4.0,16.0,Tây,Tây,3,4,4,Have certificate,Basic,9.5,"Đường Số 36, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",6.236263736263742
+2,8,56.0,4.0,8.0,Đông - Bắc,Đông - Bắc,5,4,5,Have certificate,Basic,5.5,"Đường Hà Huy Giáp, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",2.4533516483516467
+2,19,53.4,4.0,4.0,Đông - Bắc,Đông - Bắc,1,3,2,Have certificate,Basic,4.55,"Đường Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Hồ Chí Minh",1.2864835164835156
+1,8,30.0,3.2,3.0,Đông - Bắc,Đông - Bắc,3,3,3,Have certificate,Basic,1.75,"Hẻm 470, Đường Lê Thị Riêng, Phường Thới An, Quận 12, Hồ Chí Minh",0.8381318681318682
+3,17,72.0,4.0,8.0,Tây,Tây,3,4,3,Have certificate,Basic,5.99,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",6.050109890109896
+2,17,50.0,10.0,5.0,Đông,Đông,3,3,2,Have certificate,Full,4.5,"Đường Đất Mới, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",1.4643956043956043
+2,23,53.8,4.5,8.0,Đông - Bắc,Đông,4,3,3,Have certificate,Full,4.7,"Đường 12, Phường Trường Thạnh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.015384615384616
+3,23,68.0,4.0,4.0,Đông - Nam,Đông - Nam,3,4,5,Have certificate,Full,6.5,"Đường 35, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.470109890109889
+2,17,40.0,4.0,5.0,Tây,Tây,2,2,2,Have certificate,Full,2.35,"Đường Hồ Văn Long, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",1.04978021978022
+3,23,91.0,6.0,2.0,Đông - Nam,Đông - Nam,3,5,4,Have certificate,Basic,4.8,"Đường 13, Phường Bình Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.128461538461539
+3,17,64.0,4.0,6.0,Bắc,Bắc,3,4,4,Have certificate,Full,6.48,"Đường Số 8, Phường An Lạc, Quận Bình Tân, Hồ Chí Minh",5.766043956043961
+3,0,90.0,6.0,8.0,Tây - Bắc,Đông - Nam,3,4,4,Sale contract,Basic,6.9,"Dự án The Meadow Huyện Bình Chánh, Đường Trần Văn Giàu, Xã Vĩnh Lộc B, Huyện Bình Chánh, Hồ Chí Minh",1.3027472527472534
+0,3,250.0,8.2,12.0,Tây,Tây,2,4,4,Have certificate,Full,8.2,"Đường Huỳnh Thị Na, Xã  Đông Thạnh, Huyện Hóc Môn, Hồ Chí Minh",7.34604395604396
+3,16,75.0,5.0,20.0,Đông - Nam,Đông - Nam,3,4,4,Have certificate,Full,8.7,"Dự án Rio Vista, Đường Dương Đình Hội, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh.",5.896153846153852
+1,8,35.0,3.0,3.0,Tây,Tây,2,2,2,Have certificate,Full,2.78,"Đường Tân Thới Hiệp 21, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",0.6725274725274729
+3,4,80.0,5.85,6.0,Bắc,Bắc,4,4,5,Have certificate,Full,8.3,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",3.4806593406593396
+2,18,40.0,5.0,4.0,Nam,Nam,2,2,2,Have certificate,Basic,4.79,"Đường Nơ Trang Long, Phường 7, Quận Bình Thạnh, Hồ Chí Minh",1.1835164835164833
+2,14,60.0,4.0,3.0,Bắc,Bắc,2,3,4,Have certificate,Full,4.87,"Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",1.476593406593406
+1,23,34.2,5.0,5.0,Tây,Tây,2,2,1,Have certificate,Basic,3.8,"Đường Số 50, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",0.9735164835164839
+3,23,91.3,6.0,6.0,Đông - Bắc,Đông - Bắc,1,2,2,Have certificate,Basic,9.0,"Đường 17, Phường Linh Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.600989010989008
+2,4,52.2,4.0,4.0,Bắc,Bắc,2,4,3,Have certificate,Full,4.19,"1942, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",0.8058791208791208
+2,15,48.7,5.2,3.0,Tây - Nam,Tây - Nam,2,3,2,Have certificate,Full,3.89,"Đường Phạm Thế Hiển, Phường 6, Quận 8, Hồ Chí Minh",1.077582417582418
+2,21,59.0,4.8,6.0,Nam,Nam,2,2,2,Have certificate,Full,6.8,"Đường Lạc Long Quân, Phường 8, Quận Tân Bình, Hồ Chí Minh",1.6685714285714284
+1,4,32.7,3.27,15.0,Tây,Tây,2,2,3,Have certificate,Basic,8.15,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",0.4657967032967032
+3,16,75.0,5.0,12.0,Tây - Nam,Tây - Nam,3,3,3,Have certificate,Full,8.2,"Dự án Park Riverside Tân Cảng, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.8796703296703345
+3,19,75.0,4.0,4.0,Đông - Nam,Đông - Nam,4,6,7,Have certificate,Full,7.5,"Đường Lê Quang Định, Phường 1, Quận Gò Vấp, Hồ Chí Minh",8.028681318681322
+3,8,70.2,4.0,10.0,Đông - Nam,Đông - Nam,4,4,3,Have certificate,Full,7.9,"Đường Tân Thới Nhất 25, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",8.149230769230767
+1,17,39.0,4.0,6.0,Tây - Bắc,Tây - Bắc,2,2,2,Have certificate,Full,3.95,"Đường 26/3, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh.",0.9159340659340662
+3,16,75.0,5.0,12.0,Đông - Nam,Đông - Nam,2,3,3,Have certificate,Basic,7.2,"Dự án Mega Village, Đường Vành Đai 2, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4.304395604395601
+3,16,82.5,5.0,12.0,Tây,Tây,3,3,3,Have certificate,Full,9.3,"Dự án Mega Ruby, Đường D3, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6.106813186813189
+3,16,80.0,5.0,12.0,Nam,Nam,3,4,3,Have certificate,Full,9.1,"Dự án Mega Ruby, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6.529010989010993
+0,19,100.0,6.0,6.0,Tây,Tây,2,6,4,Have certificate,Full,7.5,"Đường Thống Nhất, Phường 15, Quận Gò Vấp, Hồ Chí Minh",16.281318681318684
+2,23,60.0,4.0,5.0,Đông - Nam,Đông - Nam,2,3,4,Have certificate,Basic,5.2,"Đường Số 12, Phường Tam Bình, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.708351648351648
+0,16,100.0,5.0,12.0,Bắc,Bắc,3,4,5,Have certificate,Basic,6.5,"Dự án Đông Tăng Long, Đường Nguyễn Duy Trinh, Phường Trường Thạnh, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",13.6978021978022
+0,16,108.0,6.0,20.0,Nam,Nam,3,4,5,Have certificate,Full,9.5,"Dự án Melosa Garden, Đường Vành Đai Trong, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",13.0243956043956
+1,8,25.0,3.0,3.0,Tây,Tây,2,2,2,Have certificate,Full,2.58,"Đường Trường Chinh, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",0.7021978021978019
+2,17,54.0,4.5,5.0,Nam,Nam,2,2,2,Have certificate,Full,2.73,"Đường Bình Thành, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",1.1901098901098892
+0,23,120.0,7.0,5.0,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Basic,7.5,"Đường Số 31, Phường Bình Trưng Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",15.846263736263719
+3,19,72.0,4.0,6.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,9.85,"Đường Số 5, Phường 17, Quận Gò Vấp, Hồ Chí Minh",7.399560439560442
+1,8,22.0,2.5,5.0,Tây,Tây,2,2,2,Have certificate,Full,2.35,"Đường Hiệp Thành 13, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",0.888901098901099
+2,23,60.0,4.0,8.0,Tây - Bắc,Tây - Bắc,4,4,5,Have certificate,Basic,8.1,"Đường Số 9, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.379450549450549
+3,22,73.0,4.2,12.0,Đông,Đông,3,4,2,Have certificate,Full,8.8,"Đường Bác Ái, Phường Tân Thành, Quận Tân Phú, Hồ Chí Minh",6.39241758241758
+2,4,58.7,4.2,6.0,Tây,Tây,3,4,5,Have certificate,Full,5.49,"1979, Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",0.9551648351648347
+2,7,40.3,4.5,4.0,Nam,Nam,2,2,2,Have certificate,Basic,4.35,"129/1M14, Đường Lạc Long Quân, Phường 1, Quận 11, Hồ Chí Minh",1.177274725274726
+3,9,81.9,5.5,30.0,Đông - Nam,Đông - Nam,2,3,3,Have certificate,Full,7.7,"Đường Nguyễn Duy Trinh, Phường Bình Trưng Tây, Quận 2 (TP. Thủ Đức), Hồ Chí Minh",5.495164835164832
+3,19,75.0,5.0,4.0,Tây - Bắc,Tây - Bắc,2,3,3,Have certificate,Full,5.6,"Đường Số 10, Phường 8, Quận Gò Vấp, Hồ Chí Minh",4.937252747252746
+3,16,85.0,5.5,5.0,Đông - Nam,Đông - Nam,1,5,5,Have certificate,Full,5.0,"Đường Man Thiện, Phường Tăng Nhơn Phú A, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",3.2675824175824184
+2,17,40.0,4.0,5.0,Nam,Nam,3,3,3,Have certificate,Basic,4.5,"Đường Miếu Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",1.311648351648351
+2,8,45.0,3.0,3.0,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Basic,2.2,"Đường Thạnh Lộc 47, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",1.6273626373626386
+3,22,91.0,7.0,12.0,Nam,Nam,1,2,2,Have certificate,Basic,8.3,"Đường Nguyễn Hữu Tiến, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",4.851208791208789
+2,7,50.0,5.0,10.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,6.8,"Đường Hồng Bàng, Phường 1, Quận 11, Hồ Chí Minh",2.0455714285714293
+2,8,58.0,4.0,5.0,Đông - Nam,Đông - Nam,3,3,3,Have certificate,Full,3.95,"Đường Thạnh Lộc 24, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",1.815439560439559
+2,17,60.0,5.0,7.0,Bắc,Bắc,5,5,6,Have certificate,Full,6.5,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",2.34945054945055
+3,8,65.0,4.3,8.0,Nam,Nam,1,1,1,Have certificate,Basic,5.25,"Đường Liên Khu 2-5, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",4.17054945054945
+0,17,162.0,8.0,20.0,Nam,Nam,4,7,7,Have certificate,Full,8.4,"Đường Kinh dương Vương, Phường An Lạc, Quận Bình Tân, Hồ Chí Minh",25.272857142857173
+3,13,84.0,4.2,8.0,Đông - Bắc,Đông - Bắc,2,7,7,Have certificate,Full,6.8,"Đường Cư Xá Phú Lâm B, Phường 13, Quận 6, Hồ Chí Minh",4.6824175824175835
+3,8,75.0,6.0,7.0,Tây - Bắc,Tây - Bắc,3,3,2,Have certificate,Full,4.95,"Đường Nguyễn Ảnh Thủ, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",6.888241758241756
+3,19,68.0,4.0,12.0,Đông - Nam,Đông - Nam,5,4,6,Have certificate,Full,8.1,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",8.004505494505496
+3,0,75.0,12.0,52.0,Đông - Bắc,Đông - Bắc,3,4,4,Have certificate,Full,8.95,"Dự án Lovera Premier, Đường Trịnh Quang Nghị, Xã Phong Phú, Huyện Bình Chánh, Hồ Chí Minh.",1.1141758241758242
+2,19,55.0,4.0,4.0,Đông - Bắc,Đông - Bắc,5,6,6,Have certificate,Basic,6.35,"Đường Phạm Văn Chiêu, Phường 13, Quận Gò Vấp, Hồ Chí Minh",2.962307692307693
+0,23,104.3,5.0,12.0,Đông - Bắc,Đông - Bắc,2,4,2,Have certificate,Basic,9.9,"Đường Lê Thị Hoa, Phường Bình Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",13.408131868131866
+2,19,49.0,4.0,3.5,Đông - Bắc,Đông - Bắc,4,4,3,Have certificate,Basic,5.68,"Đường Quang Trung, Phường 12, Quận Gò Vấp, Hồ Chí Minh",2.576813186813188
+1,13,12.0,2.5,3.0,Bắc,Bắc,3,2,2,Have certificate,Full,2.38,"Đường Bà Hom, Phường 13, Quận 6, Hồ Chí Minh",0.47956043956043987
+2,8,52.1,12.0,3.0,Tây - Bắc,Tây - Bắc,2,3,2,Have certificate,Full,3.45,"Đường Hiệp Thành 13, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",2.048296703296703
+3,23,70.0,4.0,20.0,Đông - Bắc,Đông - Bắc,1,1,1,Have certificate,Full,7.5,"Đường Gò Dưa, Phường Tam Bình, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.4464835164835135
+2,23,48.0,4.0,3.0,Đông - Nam,Đông - Nam,3,4,3,Sale contract,Full,2.6,"Đường Số 38, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.8868131868131877
+2,17,57.0,4.2,3.0,Bắc,Bắc,3,4,3,Have certificate,Full,4.7,"934/11, Đường Tỉnh Lộ 10, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",1.8014285714285718
+2,21,60.0,4.0,8.0,Tây - Nam,Tây - Nam,4,4,5,Have certificate,Full,7.45,"Đường Trần Thị Trọng, Phường 15, Quận Tân Bình, Hồ Chí Minh",3.0419780219780206
+3,16,71.0,3.5,5.0,Đông - Bắc,Đông - Bắc,3,4,4,Have certificate,Basic,5.3,"Đường 185, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.742527472527477
+2,16,52.0,5.0,5.0,Đông - Bắc,Đông - Bắc,3,4,3,Have certificate,Full,5.5,"Đường 175, Phường Tăng Nhơn Phú B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",1.5175824175824169
+3,22,72.0,4.5,5.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,5.0,"Đường Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",4.826813186813184
+3,19,80.0,6.0,3.0,Đông - Nam,Đông - Nam,3,5,5,Have certificate,Full,7.0,"Đường Thống Nhất, Phường 16, Quận Gò Vấp, Hồ Chí Minh",9.420000000000002
+3,16,75.0,12.0,12.0,Tây - Bắc,Tây - Bắc,3,4,3,Have certificate,Full,9.5,"Dự án Rio Vista, Đường Dương Đình Hội, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.896153846153852
+2,23,60.0,4.0,6.0,Đông - Nam,Đông - Nam,4,4,6,Have certificate,Full,7.55,"Đường Quốc Lộ 13, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.379450549450549
+0,21,100.0,10.2,4.0,Đông,Tây,1,6,6,Have certificate,Full,9.0,"Đường Trường Chinh, Phường 15, Quận Tân Bình, Hồ Chí Minh",12.956043956043954
+0,0,100.0,5.0,20.0,Đông - Nam,Đông - Nam,3,4,5,Have certificate,Full,8.0,"Dự án 13E Phong Phú, Xã Phong Phú, Huyện Bình Chánh, Hồ Chí Minh",3.145054945054944
+2,17,60.8,4.5,4.5,Tây,Tây,3,3,4,Have certificate,Full,5.2,"Đường Số 11, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",1.766813186813187
+2,23,45.0,4.5,3.0,Nam,Nam,2,2,1,Have certificate,Basic,2.4,"Đường Số 5, Phường Linh Xuân, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.3329670329670322
+3,22,76.4,10.2,6.0,Đông,Đông,1,2,1,Have certificate,Full,7.6,"Đường Trần Tấn, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",4.640329670329669
+3,17,70.0,6.0,20.0,Tây,Tây,1,3,2,Sale contract,Basic,6.2,"Dự án The Privia, Đường An Dương Vương, Phường An Lạc, Quận Bình Tân, Hồ Chí Minh",4.022197802197803
+2,14,63.9,4.5,3.5,Nam,Nam,2,2,3,Have certificate,Full,4.99,"Đường Huỳnh Tấn Phát, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",1.909120879120879
+3,4,80.0,6.0,6.0,Tây,Đông,3,4,5,Have certificate,Full,7.5,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",3.4762637362637347
+3,0,85.0,15.0,6.0,Đông,Đông,2,3,2,Have certificate,Basic,3.7,"Dự án The Meadow Huyện Bình Chánh, Đường Trần Văn Giàu, Xã Vĩnh Lộc B, Huyện Bình Chánh, Hồ Chí Minh.",0.9893406593406598
+1,6,31.0,6.2,6.0,Tây - Bắc,Tây - Bắc,3,2,3,Have certificate,Full,6.8,"Đường Tô Hiến Thành, Phường 14, Quận 10, Hồ Chí Minh",1.5724175824175834
+2,23,51.0,4.2,12.0,Tây - Nam,Tây - Nam,2,3,4,Have certificate,Basic,6.0,"Đường Lê Văn Chí, Phường Linh Trung, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.4564835164835161
+0,16,100.0,5.0,20.0,Nam,Tây - Bắc,3,4,4,Have certificate,Full,8.49,"Dự án Melosa Garden, Đường Vành Đai Trong, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",13.6978021978022
+2,4,49.5,4.5,4.0,Tây - Bắc,Tây - Bắc,2,3,2,Have certificate,Basic,3.6,"1942 Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",0.7458241758241756
+3,3,80.0,4.0,6.0,Tây - Bắc,Tây - Bắc,3,6,5,Have certificate,Full,6.0,"Đường Tô Ký 6, Xã Thới Tam Thôn, Huyện Hóc Môn, Hồ Chí Minh",1.4762637362637354
+1,19,30.6,3.0,3.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,3.88,"Đường Số 4, Phường 16, Quận Gò Vấp, Hồ Chí Minh",0.9259340659340656
+2,18,57.0,5.4,5.0,Nam,Nam,5,6,6,Have certificate,Full,9.5,"Đường Nơ Trang Long, Phường 13, Quận Bình Thạnh, Hồ Chí Minh",3.176153846153846
+3,19,72.0,4.0,7.0,Nam,Nam,4,4,5,Have certificate,Full,8.8,"Đường Phan Huy Ích, Phường 12, Quận Gò Vấp, Hồ Chí Minh",7.399560439560442
+1,11,18.0,4.0,3.0,Đông - Bắc,Đông - Bắc,2,1,2,Have certificate,Basic,1.8,"Hẻm 756 Đường Đoàn Văn Bơ, Phường 16, Quận 4, Hồ Chí Minh",0.4472527472527475
+2,20,40.0,4.0,8.0,Đông,Đông,2,3,3,Have certificate,Full,5.0,"Đường Huỳnh Văn Bánh, Phường 15, Quận Phú Nhuận, Hồ Chí Minh",1.4908791208791208
+2,7,48.0,4.0,20.0,Đông - Bắc,Đông - Bắc,3,3,3,Have certificate,Full,7.6,"Đường Trịnh Đình Trọng, Phường 5, Quận 11, Hồ Chí Minh",2.0507545787545784
+1,6,37.0,3.6,5.0,Bắc,Bắc,3,3,1,Have certificate,Basic,9.0,"Đường Nguyễn Lâm, Phường 6, Quận 10, Hồ Chí Minh",1.8469230769230753
+0,16,100.0,5.0,16.0,Bắc,Bắc,3,4,4,Have certificate,Basic,8.9,"Dự án Centana City Điền Phúc Thành, Phường Long Trường, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",13.6978021978022
+3,4,91.2,6.5,8.0,Tây - Nam,Tây - Nam,4,4,6,Have certificate,Full,9.5,"Dự án Green Riverside, Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",4.170219780219778
+1,19,37.0,5.0,5.0,Bắc,Bắc,4,4,3,Have certificate,Full,4.65,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",1.3692307692307697
+2,23,56.0,4.0,8.0,Tây - Bắc,Tây - Bắc,5,4,4,Have certificate,Full,8.2,"Đường Quốc Lộ 13, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.3440659340659344
+3,16,88.0,4.0,10.0,Bắc,Bắc,2,2,2,Sale contract,Basic,8.2,"Đường Số 4, Phường Phước Bình, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",3.7427472527472543
+3,0,74.1,12.0,25.0,Tây,Tây,2,3,3,Have certificate,Basic,7.9,"Dự án Camellia Garden, Đường Số 1, Xã Bình Hưng, Huyện Bình Chánh, Hồ Chí Minh",0.9390109890109889
+3,16,75.0,5.0,20.0,Tây - Nam,Tây - Nam,3,4,3,Have certificate,Full,7.1,"Dự án Mega Village, Đường Võ Chí Công, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.896153846153852
+1,8,38.8,4.0,6.0,Đông - Bắc,Đông - Bắc,2,2,2,Have certificate,Full,3.59,"Đường Hiệp Thành 42, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",0.6429670329670332
+0,16,104.0,4.0,12.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,8.1,"Đường Số 11, Phường Phước Bình, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",10.345824175824172
+1,6,26.9,4.7,10.0,Tây,Tây,4,3,4,Have certificate,Basic,8.3,"Hẻm 606, Đường 3/2, Phường 14, Quận 10, Hồ Chí Minh.",1.9268131868131873
+3,8,82.5,5.0,10.0,Tây - Nam,Tây - Nam,5,5,6,Have certificate,Basic,7.0,"Đường Hương Lộ 80B, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",9.848351648351642
+3,16,90.0,7.5,20.0,Tây - Nam,Tây - Nam,3,3,3,Have certificate,Full,8.5,"Dự án Mega Village, Đường Võ Chí Công, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.936483516483516
+3,16,82.6,5.0,20.0,Tây,Tây,3,4,3,Have certificate,Full,9.3,"Dự án Mega Ruby, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6.05934065934066
+3,19,67.0,5.0,8.0,Đông - Nam,Đông - Nam,3,3,3,Have certificate,Basic,7.6,"Đường Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Hồ Chí Minh",7.535384615384619
+3,23,82.5,6.0,5.0,Tây,Tây,2,2,2,Have certificate,Full,8.0,"22, Đường Số 22, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.144945054945055
+3,17,64.0,4.0,6.0,Đông,Đông,3,3,4,Have certificate,Basic,6.3,"Đường Lê Văn Quới, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",5.710769230769235
+0,23,109.0,5.6,4.0,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Full,9.3,"Đường Số 14, Phường Linh Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",13.09175824175824
+2,14,60.7,4.0,8.0,Tây - Nam,Đông - Bắc,4,4,5,Have certificate,Full,6.5,"502/, Đường Huỳnh Tấn Phát, Phường Bình Thuận, Quận 7, Hồ Chí Minh",2.2978021978021976
+2,19,56.0,8.0,3.0,Bắc,Bắc,4,4,3,Have certificate,Full,6.5,"Hẻm 256, Đường Phan Huy Ích, Phường 12, Quận Gò Vấp, Hồ Chí Minh",2.732307692307694
+3,22,64.0,4.0,3.0,Đông - Bắc,Đông - Bắc,3,4,2,Have certificate,Full,5.4,"Đường Lý Tuệ, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",6.535824175824173
+1,7,32.0,3.5,5.0,Tây - Nam,Tây - Nam,4,5,3,Have certificate,Basic,5.7,"Đường Hàn Hải Nguyên, Phường 9, Quận 11, Hồ Chí Minh",1.0502197802197806
+3,14,70.0,3.6,6.0,Tây - Nam,Tây - Nam,5,6,8,Have certificate,Full,8.88,"Đường Huỳnh Tấn Phát, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",6.283956043956044
+2,8,52.5,4.0,5.0,Tây - Bắc,Tây - Bắc,3,4,3,Have certificate,Basic,5.2,"Đường An Phú Đông 1, Phường An Phú Đông, Quận 12, Hồ Chí Minh",1.9855164835164827
+2,4,56.0,4.6,6.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Full,6.6,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",1.1243516483516478
+2,18,52.0,6.0,6.0,Bắc,Bắc,2,4,4,Have certificate,Basic,7.2,"Đường Xô Viết Nghệ Tĩnh, Phường 21, Quận Bình Thạnh, Hồ Chí Minh",1.5978021978021972
+2,8,50.0,11.0,11.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,4.55,"Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",2.2831868131868127
+3,21,70.0,3.6,5.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Basic,8.3,"Đường Bình Giã, Phường 13, Quận Tân Bình, Hồ Chí Minh",4.995494505494501
+2,4,55.3,4.6,6.0,Đông - Bắc,Đông - Bắc,4,4,3,Have certificate,Full,6.5,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",1.1320989010989004
+3,4,80.3,7.3,7.0,Tây - Nam,Tây - Nam,4,4,5,Have certificate,Full,6.5,"Đường Nguyễn Bình, Xã Nhơn Đức, Huyện Nhà Bè, Hồ Chí Minh",3.56087912087912
+0,23,168.0,5.27,7.0,Tây - Bắc,Tây - Bắc,1,1,1,Have certificate,Full,9.5,"Đường 26, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",13.592747252747253
+1,18,32.0,2.9,2.5,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,4.45,"Đường  Vạn Kiếp, Phường 3, Quận Bình Thạnh, Hồ Chí Minh",0.9761538461538461
+2,14,53.2,4.0,4.0,Đông - Nam,Đông - Nam,2,2,3,Have certificate,Full,4.8,"Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",1.1569230769230767
+0,3,150.0,5.0,20.0,Đông - Nam,Đông - Nam,1,2,1,Have certificate,Full,7.5,"Đường Phạm Thị Giây, Xã Thới Tam Thôn, Huyện Hóc Môn, Hồ Chí Minh",4.847142857142855
+2,18,53.0,4.7,6.0,Đông,Đông,4,4,4,Have certificate,Basic,9.4,"Đường Chu Văn An, Phường 12, Quận Bình Thạnh, Hồ Chí Minh",2.4854945054945072
+2,19,51.0,4.6,6.0,Nam,Nam,6,4,5,Have certificate,Full,6.5,"Đường Lê Đức Thọ, Phường 13, Quận Gò Vấp, Hồ Chí Minh",2.975604395604395
+2,17,40.0,4.0,8.0,Tây - Bắc,Tây - Bắc,2,2,2,Have certificate,Full,4.1,"Đường Miếu Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",1.04978021978022
+1,17,35.0,5.0,4.0,Tây,Tây,3,3,3,Have certificate,Full,2.58,"Hẻm 229, Đường Liên khu 4-5, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",1.0031868131868131
+2,19,56.0,4.0,5.0,Tây,Tây,4,5,3,Have certificate,Basic,6.6,"Đường Số 20, Phường 9, Quận Gò Vấp, Hồ Chí Minh",2.766483516483518
+0,4,161.8,6.0,6.0,Đông,Đông,2,3,2,Have certificate,Full,6.5,"Đường Nguyễn Văn Ràng, Xã Phước Lộc, Huyện Nhà Bè, Hồ Chí Minh",11.899560439560426
+3,23,80.0,5.0,5.0,Tây - Bắc,Tây - Bắc,4,4,5,Have certificate,Full,8.6,"Đường 5, Phường Linh Chiểu, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.535274725274722
+2,14,50.0,4.0,5.0,Đông,Đông - Nam,2,2,2,Have certificate,Full,5.6,"Đường  Trần Xuân Soạn, Phường Tân Kiểng, Quận 7, Hồ Chí Minh",1.0669230769230773
+2,21,43.1,4.0,16.0,Tây,Tây,2,2,2,Have certificate,Full,8.6,"Đường Nhất Chi Mai, Phường 13, Quận Tân Bình, Hồ Chí Minh",1.2905494505494504
+3,22,65.0,4.5,5.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,5.2,"Đường Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",4.460769230769232
+3,8,67.2,4.2,6.0,Nam,Nam,1,1,1,Have certificate,Basic,3.79,"Đường Thạnh Xuân 13, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4.35
+2,19,50.0,5.0,5.0,Tây - Nam,Tây - Nam,3,4,5,Have certificate,Basic,6.8,"Đường Thống Nhất, Phường 10, Quận Gò Vấp, Hồ Chí Minh",2.153846153846155
+1,17,30.0,5.0,4.0,Nam,Nam,3,3,3,Have certificate,Full,1.88,"Đường Bình Thành, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",0.9771428571428569
+3,22,70.0,4.0,5.0,Đông - Nam,Đông - Nam,2,4,2,Have certificate,Basic,5.2,"Đường Lương Đắc Bằng, Phường Hòa Thạnh, Quận Tân Phú, Hồ Chí Minh",4.975054945054942
+2,18,63.0,3.8,2.0,Đông - Bắc,Đông - Bắc,3,7,8,Have certificate,Full,7.9,"Đường Nguyễn Cửu Vân, Phường 17, Quận Bình Thạnh, Hồ Chí Minh",3.467362637362638
+1,10,36.0,3.4,5.0,Đông - Bắc,Đông - Bắc,5,5,5,Have certificate,Full,9.0,"Đường Võ Văn Tần, Phường 5, Quận 3, Hồ Chí Minh",1.6453846153846152
+2,19,63.6,3.0,3.0,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Basic,6.9,"Đường Lê Lai, Phường 3, Quận Gò Vấp, Hồ Chí Minh",2.292637362637362
+2,19,55.0,4.0,3.0,Đông - Nam,Đông - Nam,3,4,3,Have certificate,Basic,6.1,"Đường Lê Đức Thọ, Phường 16, Quận Gò Vấp, Hồ Chí Minh",2.2772527472527484
+2,17,50.0,4.1,5.0,Bắc,Bắc,2,2,2,Have certificate,Full,3.99,"Đường Bình Trị Đông, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",1.1095604395604388
+1,21,33.0,4.2,8.0,Bắc,Bắc,5,3,3,Have certificate,Basic,8.7,"Đường Nguyễn Hồng Đào, Phường 14, Quận Tân Bình, Hồ Chí Minh",1.2570329670329663
+2,20,40.4,6.0,4.0,Tây - Bắc,Tây - Bắc,6,5,5,Have certificate,Full,8.6,"Đường Thích Quảng Đức, Phường 4, Quận Phú Nhuận, Hồ Chí Minh",1.988131868131868
+1,15,31.4,3.7,10.0,Tây - Nam,Tây - Nam,3,2,3,Have certificate,Basic,4.3,"Đường Rạch Cát, Phường 15, Quận 8, Hồ Chí Minh",0.7418681318681319
+3,8,84.0,4.2,12.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,10.0,"Đường Dương Thị Giang, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",8.38538461538461
+3,13,72.0,4.0,8.0,Bắc,Bắc,3,4,3,Have certificate,Basic,9.0,"Đường Cư Xá Phú Lâm D, Phường 11, Quận 6, Hồ Chí Minh",6.369890109890111
+3,20,73.0,5.4,3.0,Tây,Tây - Bắc,4,4,4,Have certificate,Full,8.9,"241a/, Đường Huỳnh Văn Bánh, Phường 12, Quận Phú Nhuận, Hồ Chí Minh",8.55054945054945
+2,16,50.0,4.0,8.0,Đông - Bắc,Đông - Bắc,3,3,3,Have certificate,Full,3.85,"Dự án Samsung Village, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",1.2852747252747252
+1,17,30.0,4.0,5.0,Nam,Nam,2,3,3,Have certificate,Full,1.88,"Đường Liên khu 4-5, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",0.9502197802197799
+0,15,151.0,15.0,15.0,Đông - Nam,Đông - Nam,1,2,3,Have certificate,Basic,5.7,"Green River quận 8, số 2225, Đường Phạm Thế Hiển, Phường 6, Quận 8, Hồ Chí Minh",11.219340659340663
+3,7,70.0,4.0,4.0,Bắc,Bắc,3,7,7,Have certificate,Full,8.3,"Đường Lê Thị Bạch Cát, Phường 11, Quận 11, Hồ Chí Minh",9.987472527472532
+2,21,58.8,4.2,8.0,Tây - Bắc,Tây - Bắc,4,5,4,Have certificate,Full,7.45,"Đường Hoàng Bật Đạt, Phường 15, Quận Tân Bình, Hồ Chí Minh",3.023076923076922
+1,20,39.0,5.2,5.0,Đông - Nam,Đông - Nam,4,3,2,Have certificate,Full,7.5,"Đường Nguyễn Đình Chính, Phường 11, Quận Phú Nhuận, Hồ Chí Minh",1.5437362637362633
+1,8,35.0,7.0,2.5,Tây,Tây,2,2,2,Have certificate,Full,1.95,"Đường Tân Thới Hiệp 21, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",0.6725274725274729
+2,17,51.0,8.0,6.0,Đông,Đông,4,4,3,Have certificate,Full,5.2,"Đường Lô Tư, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",1.935934065934066
+0,4,100.0,5.0,6.0,Tây - Bắc,Tây - Bắc,4,4,5,Have certificate,Full,8.6,"Số 2534, Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",7.579780219780215
+3,17,69.0,5.3,4.0,Đông,Đông,3,3,3,Have certificate,Basic,6.0,"Đường Tỉnh Lộ 10, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",6.30549450549451
+1,8,30.0,3.0,4.5,Đông - Bắc,Đông - Nam,3,4,3,Have certificate,Basic,2.48,"Đường Thạnh Lộc 13, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",0.8041758241758241
+0,22,100.0,4.0,12.0,Đông - Nam,Đông - Nam,3,4,5,Have certificate,Basic,10.0,"Đường T8, Phường Tây Thạnh, Quận Tân Phú, Hồ Chí Minh",15.673296703296705
+0,14,121.0,7.0,3.5,Bắc,Bắc,1,2,2,Have certificate,Basic,8.8,"Đường Tân Mỹ, Phường Tân Thuận Tây, Quận 7, Hồ Chí Minh",10.817472527472525
+2,8,51.0,4.0,4.0,Tây - Nam,Tây - Nam,4,4,4,Have certificate,Basic,4.7,"Đường Lê Văn Khương, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",2.248131868131868
+3,18,80.0,4.1,6.0,Tây - Nam,Tây - Nam,3,3,3,Have certificate,Basic,9.9,"Đường Nguyễn Văn Đậu, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",9.302307692307695
+2,23,62.7,4.6,8.0,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Basic,8.0,"Đường Số 6, Phường Linh Tây, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.0178021978021974
+2,8,55.0,5.0,10.0,Nam,Nam,4,4,5,Have certificate,Basic,6.77,"Đường Hà Huy Giáp, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.3873076923076915
+2,8,56.0,4.0,7.0,Đông - Nam,Đông - Nam,3,4,5,Have certificate,Basic,5.3,"Đường Thạnh Xuân 22, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",2.0499120879120856
+3,23,87.8,5.0,5.0,Tây,Tây,1,2,2,Have certificate,Basic,4.5,"27/2/3C, Đường Số 2, Phường Tam Phú, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.604175824175822
+3,16,73.0,4.2,3.0,Bắc,Bắc,1,2,1,Have certificate,Full,4.08,"Đường Tây Hòa, Phường Phước Long A, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",3.3846153846153832
+2,11,61.6,3.2,3.3,Đông - Bắc,Đông - Bắc,2,3,3,Have certificate,Full,7.9,"Đường Xóm Chiếu, Phường 16, Quận 4, Hồ Chí Minh",1.8847252747252756
+2,20,43.0,4.3,4.0,Đông - Nam,Đông - Nam,4,3,4,Have certificate,Full,8.6,"Đường Phan Xích Long, Phường 3, Quận Phú Nhuận, Hồ Chí Minh",1.8229670329670324
+2,8,50.0,4.1,10.0,Đông - Nam,Đông - Nam,3,4,5,Have certificate,Basic,4.45,"Đường Thạnh Xuân 22, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",1.9405714285714275
+3,14,70.0,4.0,5.0,Đông,Đông,3,4,4,Have certificate,Full,9.5,"Đường Lý Phục Man, Phường Phú Thuận, Quận 7, Hồ Chí Minh",6.0110989010989035
+1,3,30.0,3.5,5.0,Tây,Tây,1,2,2,Have certificate,Full,1.05,"Đường Phan Văn Hớn, Xã Bà Điểm, Huyện Hóc Môn, Hồ Chí Minh",0.12450549450549454
+3,16,75.0,5.0,12.0,Đông - Bắc,Đông - Bắc,3,3,4,Have certificate,Full,8.3,"Dự án Park Riverside Tân Cảng, Đường Bưng Ông Thoàn, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.8796703296703345
+1,19,16.0,3.2,2.0,Tây - Bắc,Tây - Bắc,4,3,2,Have certificate,Basic,2.68,"345/34/40, Đường Nguyễn Văn Công, Phường 3, Quận Gò Vấp, Hồ Chí Minh",0.3806593406593406
+1,19,20.0,6.0,4.0,Đông - Nam,Đông,1,2,2,Have certificate,Full,3.29,"Đường Cây Trâm, Phường 9, Quận Gò Vấp, Hồ Chí Minh",0.4135164835164838
+2,22,61.9,7.0,12.0,Đông - Nam,Đông - Nam,4,4,4,Have certificate,Full,8.5,"Đường Tô Hiệu, Phường Hiệp Tân, Quận Tân Phú, Hồ Chí Minh",2.6120879120879112
+3,17,64.0,6.0,6.0,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Basic,4.4,"Đường Lê Đình Cẩn, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",3.7795604395604396
+2,6,60.0,5.0,4.0,Đông - Nam,Đông - Nam,3,4,4,Have certificate,Basic,9.2,"Đường Cách Mạng Tháng Tám, Phường 13, Quận 10, Hồ Chí Minh",4.475302197802205
+2,8,51.0,5.6,7.0,Tây - Nam,Tây - Nam,3,4,5,Have certificate,Basic,4.6,"Đường Lê Thị Riêng, Phường Thới An, Quận 12, Hồ Chí Minh",1.9793626373626365
+3,17,68.0,4.0,6.0,Bắc,Bắc,4,4,5,Have certificate,Full,6.5,"Đường Lê Văn Quới, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",6.476483516483523
+2,16,52.0,5.0,5.0,Đông - Bắc,Đông - Bắc,3,4,3,Have certificate,Basic,5.5,"Đường 175, Phường Tăng Nhơn Phú B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",1.5175824175824169
+3,23,72.5,4.2,5.0,Đông - Bắc,Đông - Bắc,3,2,3,Have certificate,Full,5.7,"Đường 20, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.643846153846158
+0,8,115.0,4.7,12.0,Đông - Bắc,Đông - Bắc,3,5,5,Have certificate,Full,8.5,"Đường Hiệp Thành 5, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",19.054615384615385
+0,4,320.0,23.0,8.0,Nam,Nam,2,6,6,Have certificate,Basic,9.9,"Đường Nguyễn Bình, Xã Nhơn Đức, Huyện Nhà Bè, Hồ Chí Minh",25.58340659340658
+3,20,67.0,5.0,3.0,Tây - Nam,Tây - Nam,3,3,3,Have certificate,Full,6.9,"Đường Huỳnh Văn Bánh, Phường 17, Quận Phú Nhuận, Hồ Chí Minh",8.562857142857148
+2,8,58.0,5.0,8.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,3.83,"Đường Thạnh Lộc 41, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.028626373626373
+2,8,50.1,4.0,7.0,Tây - Nam,Tây - Nam,4,4,5,Have certificate,Basic,4.45,"Đường Thạnh Lộc 15, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.2831868131868127
+3,16,90.0,5.0,5.0,Đông - Nam,Đông - Nam,2,3,3,Have certificate,Basic,7.6,"Đường Số 2, Phường Tăng Nhơn Phú B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4.114285714285716
+2,23,50.0,4.55,5.0,Tây - Nam,Tây - Nam,3,4,3,Have certificate,Full,6.8,"Đường Đặng Văn Bi, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.9020879120879128
+1,17,24.0,4.0,4.0,Đông,Đông,2,2,3,Sale contract,Basic,1.68,"Đường Bình Thành, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",0.5690109890109889
+1,20,18.9,3.1,8.0,Đông,Đông,1,1,1,Have certificate,Basic,3.8,"19/25, Đường Lam Sơn, Phường 5, Quận Phú Nhuận, Hồ Chí Minh",0.36626373626373615
+1,20,39.0,6.0,5.0,Tây - Nam,Tây - Nam,4,4,4,Have certificate,Full,7.75,"Đường Nhiêu Tứ, Phường 7, Quận Phú Nhuận, Hồ Chí Minh",1.5656043956043957
+2,8,56.0,4.0,20.0,Đông - Nam,Đông - Nam,3,4,5,Have certificate,Basic,7.8,"Đường Nguyễn Thị Nhuần, Phường An Phú Đông, Quận 12, Hồ Chí Minh",2.0499120879120856
+2,14,60.0,4.0,8.0,Nam,Nam,3,4,4,Have certificate,Basic,9.5,"Đường 5, Phường Quận Tân Phú, Quận 7, Hồ Chí Minh",1.9785714285714278
+2,8,56.0,9.0,9.0,Tây,Tây,4,4,5,Have certificate,Full,5.7,"Đường Thạnh Lộc 43, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.435219780219779
+2,6,54.0,3.0,12.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Basic,8.8,"163, Đường Tô Hiến Thành, Phường 13, Quận 10, Hồ Chí Minh",3.565164835164838
+2,21,54.0,8.0,6.0,Tây - Bắc,Bắc,1,4,3,Have certificate,Basic,7.8,"Hẻm 104, Đường Phạm Văn Bạch, Phường 15, Quận Tân Bình, Hồ Chí Minh",1.3142857142857138
+3,16,92.5,5.0,20.0,Nam,Nam,3,4,3,Have certificate,Full,9.25,"Dự án Mega Ruby, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.712857142857143
+2,23,56.7,5.12,8.0,Đông - Bắc,Đông - Bắc,2,3,3,Have certificate,Full,6.5,"Đường 8, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.6058241758241751
+2,19,45.0,5.6,4.0,Bắc,Bắc,4,4,5,Have certificate,Basic,5.48,"247/9, Đường Lê Đức Thọ, Phường 17, Quận Gò Vấp, Hồ Chí Minh",2.373406593406594
+1,23,35.7,4.2,2.5,Đông - Bắc,Đông - Bắc,2,2,2,Have certificate,Basic,2.85,"Đường 4, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",0.9942857142857147
+3,16,71.4,5.0,7.0,Đông - Bắc,Đông - Bắc,3,3,2,Have certificate,Full,9.5,"Đường 359, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.753296703296708
+2,17,56.25,4.5,7.0,Tây - Bắc,Tây - Bắc,4,5,6,Have certificate,Basic,6.85,"Đường Mã Lò, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",2.0372527472527504
+3,22,64.0,4.1,6.0,Tây,Tây,3,4,3,Have certificate,Basic,5.68,"Đường Dương Văn Dương, Phường Tân Quý, Quận Tân Phú, Hồ Chí Minh",6.535824175824173
+2,22,41.1,5.0,12.0,Bắc,Bắc,5,4,3,Have certificate,Basic,7.5,"Đường Nguyễn Trường Tộ, Phường Tân Thành, Quận Tân Phú, Hồ Chí Minh",1.542307692307692
+0,17,108.0,8.0,8.0,Tây - Nam,Tây - Nam,3,5,4,Have certificate,Full,8.3,"Đường Lê Văn Quới, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",14.769560439560447
+3,17,66.0,4.1,8.0,Đông,Đông,5,5,6,Have certificate,Full,5.6,"Đường Hương lộ 2, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",6.6856043956044005
+2,18,60.0,3.8,2.0,Đông - Bắc,Đông - Bắc,4,6,4,Have certificate,Full,6.5,"Đường Bình Quới, Phường 27, Quận Bình Thạnh, Hồ Chí Minh",3.243076923076922
+2,17,52.0,4.2,4.0,Tây,Tây,2,3,2,Have certificate,Full,4.1,"Đường Lê Văn Quới, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",1.3291208791208786
+3,14,70.0,4.0,4.0,Nam,Nam,2,2,2,Have certificate,Basic,6.2,"Hẻm 308, Đường Huỳnh Tấn Phát, Phường Tân Thuận Tây, Quận 7, Hồ Chí Minh",3.950439560439558
+0,19,100.0,4.2,6.0,Tây - Bắc,Tây - Bắc,5,5,6,Have certificate,Full,10.0,"Đường Bùi Quang Là, Phường 12, Quận Gò Vấp, Hồ Chí Minh",22.283076923076933
+3,17,64.0,4.0,10.0,Bắc,Bắc,3,3,3,Have certificate,Full,5.65,"Đường Số 55A, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",5.710769230769235
+1,5,29.0,2.55,4.0,Tây - Bắc,Tây - Bắc,4,3,3,Have certificate,Basic,5.5,"Đường Nguyễn Phi Khanh, Phường Tân Định, Quận 1, Hồ Chí Minh",3.481868131868131
+3,17,98.8,5.2,6.0,Bắc,Bắc,4,4,5,Have certificate,Full,6.7,"Đường Tân Hòa Đông, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",6.417582417582419
+2,19,55.0,4.0,4.0,Nam,Nam,2,2,2,Have certificate,Basic,5.2,"Đường Nguyễn Văn Lượng, Phường 16, Quận Gò Vấp, Hồ Chí Minh",1.5060439560439551
+2,8,50.0,4.0,12.0,Đông - Nam,Đông - Nam,4,4,4,Have certificate,Full,5.7,"Đường Thạnh Lộc 26, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.2831868131868127
+2,21,60.0,4.5,12.0,Đông,Đông,3,4,4,Have certificate,Full,9.5,"80, Đường Ba Vân, Phường 14, Quận Tân Bình, Hồ Chí Minh",2.6560439560439564
+2,18,63.0,4.05,2.5,Nam,Nam,3,4,4,Have certificate,Full,6.95,"Đường Lê Quang Định, Phường 5, Quận Bình Thạnh, Hồ Chí Minh",3.117802197802198
+3,19,64.0,4.2,4.0,Tây - Nam,Tây - Nam,3,4,4,Have certificate,Full,6.85,"Đường Số 3, Phường 9, Quận Gò Vấp, Hồ Chí Minh",6.69681318681319
+0,8,217.0,9.0,3.0,Tây - Bắc,Tây - Bắc,2,3,2,Have certificate,Basic,9.5,"48/4, Đường Đông Hưng Thuận 40, Phường Đông Hưng Thuận, Quận 12, Hồ Chí Minh",31.044615384615398
+3,16,74.0,4.0,6.0,Đông - Nam,Đông - Nam,3,3,4,Have certificate,Full,5.8,"Đường Số 2, Phường Long Trường, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.767142857142861
+1,20,38.0,4.2,6.0,Đông - Bắc,Đông - Bắc,4,3,4,Have certificate,Full,6.78,"Đường Nguyễn Đình Chính, Phường 11, Quận Phú Nhuận, Hồ Chí Minh",1.535934065934065
+2,19,45.0,4.0,5.0,Đông - Bắc,Đông - Bắc,4,3,3,Have certificate,Basic,6.0,"Đường Lê Đức Thọ, Phường 13, Quận Gò Vấp, Hồ Chí Minh",2.2141758241758236
+1,16,30.0,6.0,3.0,Tây - Bắc,Tây - Bắc,2,2,1,Have certificate,Basic,2.95,"Đường 339, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",0.8057142857142855
+1,11,25.0,3.0,3.5,Đông,Đông,2,2,2,Have certificate,Full,2.5,"Đường Đoàn Văn Bơ, Phường 16, Quận 4, Hồ Chí Minh",0.5957142857142858
+3,17,88.0,4.0,15.0,Tây - Nam,Tây - Nam,3,6,6,Have certificate,Full,8.0,"Đường Trần Thanh Mại, Phường Tân Tạo A, Quận Bình Tân, Hồ Chí Minh",6.173296703296703
+2,17,48.0,4.0,4.0,Nam,Nam,2,2,2,Have certificate,Full,3.0,"Đường Nguyễn Thị Tú, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",1.0374725274725274
+3,17,68.0,4.0,8.0,Bắc,Bắc,5,5,6,Have certificate,Full,6.95,"Đường Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",6.350109890109895
+1,21,35.0,3.0,3.0,Tây,Tây,2,2,2,Have certificate,Basic,3.58,"Đường Lạc Long Quân, Phường 8, Quận Tân Bình, Hồ Chí Minh",1.0698901098901106
+3,14,87.1,6.7,4.0,Đông,Đông,2,4,4,Have certificate,Basic,6.0,"Hẻm 1205, Đường Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Hồ Chí Minh",4.62769230769231
+2,15,42.0,5.0,4.0,Đông - Bắc,Đông - Bắc,4,3,3,Have certificate,Full,6.4,"Đường Âu Dương Lân, Phường 3, Quận 8, Hồ Chí Minh",1.2107692307692297
+2,17,60.0,4.0,6.0,Đông,Đông,5,5,5,Have certificate,Full,5.1,"Hẻm 125, Đường Tây Lân, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",2.34945054945055
+1,17,35.0,4.0,4.0,Đông,Đông,2,2,2,Have certificate,Full,2.0,"Đường Tỉnh Lộ 10, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",0.879120879120879
+3,13,68.0,4.0,8.0,Tây,Tây,3,4,5,Have certificate,Full,9.8,"Đường Số 21, Phường 10, Quận 6, Hồ Chí Minh",6.616263736263737
+1,11,21.0,6.0,6.0,Tây,Tây,4,3,4,Have certificate,Basic,7.0,"Số 36, Đường Số 25, Phường 4, Quận 4, Hồ Chí Minh",0.4196703296703302
+1,17,24.0,3.0,3.0,Đông,Đông,1,2,2,Have certificate,Basic,2.75,"1/, Đường Số 13A, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",0.4825274725274722
+2,8,58.0,4.0,5.0,Đông - Nam,Đông - Nam,3,3,3,Have certificate,Full,3.95,"Đường Thạnh Xuân 24, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",1.815439560439559
+3,17,73.0,4.0,8.0,Bắc,Bắc,2,3,1,Have certificate,Basic,4.5,"Đường Chiến Lược, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",4.881538461538459
+3,8,71.7,4.0,8.0,Đông - Nam,Đông - Nam,5,4,5,Have certificate,Basic,8.3,"Đường Thạnh Lộc 29, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",7.899120879120876
+3,8,76.0,4.0,6.0,Tây - Bắc,Tây - Bắc,4,4,5,Have certificate,Full,6.3,"Đường Thạnh Xuân 22, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",8.55417582417582
+2,23,60.0,4.5,8.0,Đông - Nam,Đông - Nam,3,4,3,Have certificate,Basic,6.8,"Đường 389, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.0895604395604392
+3,8,78.8,4.5,10.0,Nam,Nam,3,4,4,Have certificate,Full,5.57,"Đường Tân Thới Nhất 1, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",8.641428571428568
+3,0,90.0,5.0,20.0,Tây - Bắc,Đông - Nam,3,4,4,Sale contract,Basic,7.0,"Dự án The Meadow Huyện Bình Chánh, Đường Trần Văn Giàu, Xã Vĩnh Lộc B, Huyện Bình Chánh, Hồ Chí Minh",1.3027472527472534
+1,22,32.3,4.0,10.0,Nam,Nam,2,2,2,Have certificate,Basic,4.5,"30/24 Đỗ Nhuận, Phường Sơn Kỳ, Quận Tân Phú, Hồ Chí Minh",0.9301098901098903
+2,8,50.0,4.0,6.0,Đông - Nam,Đông - Nam,2,4,3,Have certificate,Basic,4.75,"Hẻm 154, Đường Vườn Lài, Phường An Phú Đông, Quận 12, Hồ Chí Minh",1.9077692307692304
+1,17,39.9,4.0,6.0,Đông,Đông,1,1,1,Have certificate,Full,4.1,"Đường Số 10, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",0.7495604395604398
+2,8,50.0,4.5,12.0,Đông - Bắc,Đông - Bắc,3,4,6,Have certificate,Full,6.29,"Đường Thạnh Lộc 16, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",1.9405714285714275
+1,15,32.0,3.2,4.0,Đông - Nam,Đông - Nam,3,4,3,Have certificate,Basic,6.0,"10/44, Đường Âu Dương Lân, Phường 3, Quận 8, Hồ Chí Minh",0.8349450549450546
+3,23,69.0,4.6,12.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Full,8.7,"Đường 27, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.820879120879118
+2,21,52.0,4.0,16.0,Đông,Đông,3,4,4,Have certificate,Full,7.9,"156B, Đường Đông Hồ, Phường 8, Quận Tân Bình, Hồ Chí Minh",2.1671428571428586
+3,3,79.8,4.2,5.0,Đông - Bắc,Đông - Bắc,3,1,1,Have certificate,Basic,2.85,"Đường Ấp 3, Xã  Đông Thạnh, Huyện Hóc Môn, Hồ Chí Minh",1.128461538461538
+1,6,33.0,3.1,5.0,Tây - Bắc,Tây - Bắc,2,2,2,Have certificate,Full,4.35,"Đường Bà Hạt, Phường 4, Quận 10, Hồ Chí Minh",1.5031868131868131
+3,17,80.0,4.0,16.0,Bắc,Bắc,5,6,7,Have certificate,Full,8.8,"Đường Miếu Gò Xoài, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",7.142967032967035
+1,17,30.0,5.0,4.0,Tây,Tây,3,4,3,Have certificate,Full,2.48,"Đường Nguyễn Thị Tú, Phường Bình Hưng Hòa B, Quận Bình Tân, Hồ Chí Minh",0.9572527472527469
+0,8,128.0,5.0,12.0,Bắc,Bắc,1,3,2,Have certificate,Full,9.9,"Đường Đông Hưng Thuận 11, Phường Đông Hưng Thuận, Quận 12, Hồ Chí Minh",12.088461538461546
+3,8,68.0,4.0,6.0,Tây - Bắc,Tây - Bắc,4,4,6,Have certificate,Full,6.65,"Đường Tô Ngọc Vân, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",8.229999999999999
+3,6,71.2,5.8,6.0,Đông - Nam,Đông - Nam,3,4,5,Have certificate,Full,10.0,"Đường Cách Mạng Tháng Tám, Phường 13, Quận 10, Hồ Chí Minh",12.285934065934068
+1,11,26.0,9.0,9.0,Đông - Nam,Đông - Nam,5,3,3,Have certificate,Basic,6.6,"Số 4A Đường 50, Phường 2, Quận 4, Hồ Chí Minh",0.696703296703297
+3,22,64.0,4.0,7.0,Tây,Tây,3,4,3,Have certificate,Full,8.2,"Hẻm 89, Đường Trịnh Đình Trọng, Phường Phú Trung, Quận Tân Phú, Hồ Chí Minh",6.535824175824173
+1,6,28.1,29.0,15.0,Đông - Bắc,Đông - Bắc,3,3,3,Have certificate,Basic,9.5,"Đường Trần Nhân Tôn, Phường 2, Quận 10, Hồ Chí Minh",1.7346153846153856
+3,18,85.0,3.8,3.0,Bắc,Bắc,2,2,2,Have certificate,Basic,7.8,"Đường Nơ Trang Long, Phường 12, Quận Bình Thạnh, Hồ Chí Minh",4.970769230769234
+0,18,157.0,10.0,3.0,Đông - Nam,Tây - Nam,4,7,7,Have certificate,Basic,10.0,"Đường Thanh Đa, Phường 27, Quận Bình Thạnh, Hồ Chí Minh",31.089780219780234
+2,14,50.02,4.1,5.0,Đông - Nam,Đông - Nam,3,4,5,Have certificate,Full,6.2,"Đường Huỳnh Tấn Phát, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",1.5553846153846154
+1,21,27.0,3.0,3.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,4.15,"Đường Bành Văn Trân, Phường 7, Quận Tân Bình, Hồ Chí Minh",0.8227472527472525
+3,17,92.0,4.0,8.0,Đông - Nam,Đông - Nam,4,5,3,Have certificate,Full,8.1,"Đường 38, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",6.103406593406593
+2,21,50.0,5.0,16.0,Đông,Đông,3,4,4,Have certificate,Full,8.5,"156A, Đường Duy Tân, Phường 8, Quận Tân Bình, Hồ Chí Minh",2.1351648351648365
+2,23,60.0,4.0,6.0,Tây - Bắc,Tây - Bắc,4,4,6,Have certificate,Full,7.45,"Đường Quốc Lộ 13, Phường Hiệp Bình Phước, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",2.379450549450549
+3,17,72.0,4.0,8.0,Tây,Tây,3,4,4,Have certificate,Full,5.95,"Hẻm 822, Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",6.050109890109896
+2,17,56.0,4.0,6.0,Tây - Nam,Tây - Nam,5,5,5,Have certificate,Full,6.2,"Đường 7, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",2.144945054945057
+1,8,35.0,5.0,5.0,Đông - Bắc,Đông - Bắc,2,2,2,Have certificate,Basic,1.88,"Đường Hiệp Thành 13, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",0.6725274725274729
+1,20,22.0,2.89,2.5,Đông - Bắc,Đông - Bắc,2,2,2,Have certificate,Basic,3.8,"Đường Trần Khắc Chân, Phường 9, Quận Phú Nhuận, Hồ Chí Minh",0.6899999999999996
+2,8,44.0,4.0,3.0,Tây - Bắc,Tây - Bắc,1,1,1,Have certificate,Full,3.4,"Đường Tân Thới Nhất 8, Phường Tân Thới Nhất, Quận 12, Hồ Chí Minh",0.7479120879120881
+2,17,40.0,4.0,5.0,Tây,Tây,1,2,2,Have certificate,Full,1.93,"Đường Hồ Văn Long, Phường Tân Tạo, Quận Bình Tân, Hồ Chí Minh",0.7649450549450549
+2,14,53.4,4.45,4.0,Tây,Tây,2,2,2,Have certificate,Basic,4.95,"Hẻm 102, Đường Huỳnh Tấn Phát, Phường Tân Thuận Tây, Quận 7, Hồ Chí Minh",1.1569230769230767
+1,21,33.0,3.0,4.0,Đông,Đông,4,3,3,Have certificate,Full,4.99,"Đường Trần Văn Quang, Phường 10, Quận Tân Bình, Hồ Chí Minh",1.252857142857143
+3,23,90.0,4.8,5.0,Tây - Bắc,Tây - Bắc,1,4,4,Have certificate,Full,5.9,"Đường 7, Phường Linh Trung, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",4.898351648351647
+3,23,92.0,4.0,5.0,Đông - Bắc,Đông - Bắc,3,4,4,Have certificate,Full,7.5,"Đường Số 48, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.1610989010988995
+1,19,24.0,3.5,3.0,Tây - Nam,Tây - Nam,3,3,3,Have certificate,Full,3.78,"Đường Dương Quảng Hàm, Phường 5, Quận Gò Vấp, Hồ Chí Minh",0.71043956043956
+2,17,60.0,4.3,30.0,Bắc,Bắc,5,5,5,Have certificate,Full,8.5,"Đường Tây Lân, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",2.34945054945055
+2,18,58.0,5.1,5.0,Bắc,Bắc,3,3,5,Have certificate,Full,6.75,"Đường Hoàng Hoa Thám, Phường 6, Quận Bình Thạnh, Hồ Chí Minh",2.2786813186813184
+2,17,55.0,4.5,7.0,Đông,Đông,4,4,4,Have certificate,Full,5.8,"Hẻm 616, Đường Lê Trọng Tấn, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",2.0010989010989024
+2,14,43.4,3.0,3.0,Tây - Nam,Tây - Nam,3,4,3,Have certificate,Full,5.6,"Đường Hoàng Quốc Việt, Phường Phú Thuận, Quận 7, Hồ Chí Minh",1.0794505494505489
+2,23,60.0,4.0,4.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,3.75,"Đường Tô Ngọc Vân, Phường Tam Bình, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.554065934065934
+2,15,60.0,4.0,4.0,Đông - Nam,Đông - Nam,3,3,3,Have certificate,Full,3.9,"Đường Mễ Cốc, Phường 15, Quận 8, Hồ Chí Minh",1.748571428571428
+2,8,51.0,4.6,11.0,Đông - Bắc,Đông - Bắc,5,4,6,Have certificate,Basic,6.1,"Đường Thạnh Lộc 15, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.5558791208791196
+2,8,50.0,4.6,12.0,Tây - Nam,Tây - Nam,5,4,6,Have certificate,Full,5.9,"Đường Thạnh Lộc 15, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.620274725274724
+2,8,52.0,4.8,10.0,Nam,Nam,3,4,5,Have certificate,Full,6.77,"Đường Nguyễn Oanh, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",1.9874945054945046
+1,19,39.0,4.3,5.0,Đông - Nam,Đông - Nam,4,4,4,Have certificate,Full,7.5,"Đường Nguyễn Văn Lượng, Phường 16, Quận Gò Vấp, Hồ Chí Minh",1.39989010989011
+2,18,44.0,5.2,3.0,Tây,Tây,4,4,5,Have certificate,Full,6.7,"Đường  Vạn Kiếp, Phường 3, Quận Bình Thạnh, Hồ Chí Minh",1.8231868131868127
+1,23,25.2,5.5,15.0,Tây - Nam,Tây - Nam,3,2,1,Have certificate,Full,6.5,"Đường 2, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",0.7068131868131867
+3,8,98.5,4.0,8.0,Đông - Bắc,Đông - Bắc,3,4,3,Have certificate,Basic,7.4,"Đường Thạnh Lộc 31, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",9.346923076923073
+3,8,69.3,5.5,4.0,Đông - Bắc,Đông - Bắc,1,3,3,Have certificate,Basic,3.85,"Đường Thạnh Xuân 43, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",4.994395604395604
+2,21,51.0,5.1,5.0,Đông - Nam,Đông - Nam,3,4,3,Have certificate,Full,5.7,"Đường Cống Lở, Phường 15, Quận Tân Bình, Hồ Chí Minh",2.1515384615384625
+2,21,56.0,4.0,6.0,Đông - Nam,Đông - Nam,3,4,5,Have certificate,Basic,8.9,"Đường Thái Thị Nhạn, Phường 10, Quận Tân Bình, Hồ Chí Minh",2.4491208791208803
+1,18,36.0,3.0,3.0,Tây - Nam,Tây - Nam,2,2,2,Have certificate,Basic,3.75,"Đường Nguyễn Văn Đậu, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",1.003296703296703
+1,18,33.0,4.2,3.0,Tây,Tây,1,1,2,Have certificate,Basic,4.5,"Đường Điện Biên Phủ, Phường 25, Quận Bình Thạnh, Hồ Chí Minh",0.7760439560439563
+2,18,60.0,3.5,5.0,Đông - Nam,Đông,2,6,5,Have certificate,Full,5.6,"Đường Ngô Tất Tố, Phường 22, Quận Bình Thạnh, Hồ Chí Minh",2.081868131868132
+3,23,94.1,4.0,5.0,Đông - Bắc,Đông - Bắc,2,2,2,Have certificate,Full,6.0,"Đường 22, Phường Linh Đông, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",5.61912087912088
+1,18,37.9,4.7,6.0,Nam,Nam,4,4,4,Have certificate,Full,7.1,"Đường Nguyễn Văn Đậu, Phường 11, Quận Bình Thạnh, Hồ Chí Minh",1.4359340659340665
+3,21,69.0,4.0,8.0,Tây - Bắc,Tây - Bắc,3,4,5,Have certificate,Full,7.45,"118/, Đường Phan Huy Ích, Phường 15, Quận Tân Bình, Hồ Chí Minh",8.300329670329674
+1,4,30.0,3.0,6.0,Đông,Đông,2,2,2,Sale contract,Full,1.4,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",0.4490934065934065
+3,16,75.0,5.0,12.0,Bắc,Bắc,3,3,3,Have certificate,Full,8.2,"Dự án Mega Ruby, Đường Võ Chí Công, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",5.8796703296703345
+2,14,63.0,3.5,14.0,Nam,Nam,4,7,8,Have certificate,Basic,8.9,"Đường Số 53, Phường Tân Quy, Quận 7, Hồ Chí Minh",2.610439560439561
+3,15,84.0,4.0,20.0,Tây - Bắc,Tây - Bắc,3,4,4,Have certificate,Full,6.5,"Dự án Phú Lợi, Đường Phạm Thế Hiển, Phường 7, Quận 8, Hồ Chí Minh",6.146593406593405
+2,13,44.0,4.0,8.0,Đông - Nam,Đông - Nam,5,5,5,Have certificate,Full,9.0,"Hẻm 633, Đường Hồng Bàng, Phường 6, Quận 6, Hồ Chí Minh",1.7116483516483507
+3,14,80.5,5.0,6.0,Đông - Bắc,Đông - Bắc,2,3,4,Have certificate,Full,9.7,"Đường  Trần Xuân Soạn, Phường Tân Hưng, Quận 7, Hồ Chí Minh",4.666153846153846
+3,19,66.0,4.0,4.0,Đông - Bắc,Bắc,4,4,5,Have certificate,Full,7.2,"Đường Đỗ Thúc Tịnh, Phường 12, Quận Gò Vấp, Hồ Chí Minh",7.62362637362638
+0,8,103.0,4.1,5.0,Đông - Bắc,Đông - Bắc,3,4,4,Have certificate,Basic,5.55,"Đường Thạnh Lộc 15, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",13.397252747252743
+2,8,58.0,4.0,2.0,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Full,3.49,"Đường 35, Phường Tân Hưng Thuận, Quận 12, Hồ Chí Minh",2.1133516483516477
+1,18,37.0,3.7,3.0,Tây,Tây,3,2,3,Have certificate,Basic,3.9,"Đường Đinh Tiên Hoàng, Phường 1, Quận Bình Thạnh, Hồ Chí Minh",1.1867032967032953
+1,8,33.0,3.0,8.0,Bắc,Bắc,3,2,3,Have certificate,Basic,1.98,"Đường Thạnh Xuân 43, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",0.7142857142857143
+1,19,27.0,4.0,4.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,3.2,"Đường Số 3, Phường 9, Quận Gò Vấp, Hồ Chí Minh",0.7760439560439556
+2,3,58.3,5.0,8.0,Đông,Đông,1,1,1,Have certificate,Basic,3.39,"Đường Đông Thạnh 4-2, Xã  Đông Thạnh, Huyện Hóc Môn, Hồ Chí Minh",0.30945054945054945
+2,17,60.0,4.0,9.0,Đông,Đông,3,5,5,Have certificate,Basic,7.6,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",1.9021978021978028
+2,7,40.0,8.0,6.0,Đông - Bắc,Đông - Bắc,4,6,5,Have certificate,Full,7.8,"Đường Lạc Long Quân, Phường 3, Quận 11, Hồ Chí Minh",1.3951648351648351
+0,9,174.0,4.6,5.0,Đông - Nam,Đông - Nam,4,4,4,Have certificate,Full,5.8,"Đường Thạnh Mỹ Lợi, Phường  Thạnh Mỹ Lợi, Quận 2 (TP. Thủ Đức), Hồ Chí Minh",31.720659340659335
+3,9,83.0,5.0,4.0,Nam,Nam,2,5,5,Have certificate,Basic,6.8,"Đường Nguyễn Thị Định, Phường Thạnh Mỹ Lợi, Quận 2 (TP. Thủ Đức), Hồ Chí Minh",6.0602197802197795
+1,14,35.7,3.85,3.0,Nam,Nam,2,2,2,Have certificate,Basic,3.45,"Hẻm 1041, Phố Trần Xuân Soạn, Phường Tân Hưng, Quận 7, Hồ Chí Minh",0.7727472527472526
+3,14,90.0,5.0,5.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Full,7.7,"Đường Huỳnh Tấn Phát, Phường Phú Mỹ, Quận 7, Hồ Chí Minh",7.063626373626374
+3,16,81.0,3.5,4.0,Đông - Bắc,Đông - Bắc,3,4,4,Have certificate,Full,5.3,"Đường 185, Phường Phước Long B, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",6.164065934065936
+1,17,30.0,4.0,6.0,Tây,Tây,2,2,2,Have certificate,Basic,2.2,"Đường Bình Trị Đông, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",0.898241758241758
+3,22,76.0,4.0,6.0,Tây - Bắc,Tây - Bắc,3,4,4,Have certificate,Full,8.2,"Hẻm 249, Đường Vườn Lài, Phường Phú Thọ Hòa, Quận Tân Phú, Hồ Chí Minh",6.654395604395603
+2,3,40.0,5.0,5.0,Bắc,Bắc,1,2,2,Have certificate,Full,1.58,"Đường Phan Văn Hớn, Xã Xuân Thới Thượng, Huyện Hóc Môn, Hồ Chí Minh",0.24813186813186797
+2,19,46.3,4.0,5.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Basic,5.7,"Đường Nguyễn Duy Cung, Phường 12, Quận Gò Vấp, Hồ Chí Minh",2.4509890109890122
+2,23,50.0,5.0,5.0,Tây - Bắc,Tây - Bắc,2,2,2,Have certificate,Full,3.8,"Đường Số 9, Phường Linh Xuân, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",1.3663736263736255
+2,8,60.0,4.0,12.0,Đông - Bắc,Đông - Bắc,5,4,5,Have certificate,Basic,6.3,"Đường Thới An 22, Phường Thới An, Quận 12, Hồ Chí Minh",2.4668681318681305
+0,16,119.0,5.0,12.0,Đông - Bắc,Đông - Bắc,3,4,3,Have certificate,Basic,5.75,"Dự án Rosita Garden Khang Điền, Đường 990, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",15.964505494505481
+1,6,32.0,4.7,5.0,Tây - Nam,Tây - Nam,5,5,3,Have certificate,Basic,7.2,"Đường Thành Thái, Phường 14, Quận 10, Hồ Chí Minh",2.5078021978021963
+1,20,36.0,8.5,3.0,Đông - Nam,Đông - Nam,4,5,4,Have certificate,Full,6.25,"Đường Hoàng Hoa Thám, Phường 5, Quận Phú Nhuận, Hồ Chí Minh",1.832307692307691
+2,17,56.0,4.0,6.0,Tây,Tây,2,4,2,Have certificate,Full,4.2,"Đường Hương lộ 2, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",1.488791208791208
+3,19,70.0,5.5,5.0,Tây - Bắc,Tây - Bắc,4,4,6,Have certificate,Basic,7.2,"Đường Quang Trung, Phường 8, Quận Gò Vấp, Hồ Chí Minh",7.344285714285721
+3,22,65.0,4.4,6.0,Đông,Đông,4,3,3,Have certificate,Basic,7.1,"Đường Nguyễn Quý Anh, Phường Tân Sơn Nhì, Quận Tân Phú, Hồ Chí Minh",7.054175824175829
+1,8,33.6,3.5,2.0,Đông - Bắc,Đông - Bắc,2,2,2,Have certificate,Full,2.88,"Đường Trương Thị Hoa, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",0.6595604395604399
+2,6,55.3,5.0,7.0,Tây - Nam,Tây - Nam,5,8,5,Have certificate,Full,10.0,"Đường Sư Vạn Hạnh, Phường 12, Quận 10, Hồ Chí Minh",5.75523626373627
+3,16,96.0,6.0,5.0,Bắc,Bắc,1,3,2,Have certificate,Full,4.6,"1/, Đường Nguyễn Xiển, Phường Long Thạnh Mỹ, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",4.495604395604396
+3,8,76.5,4.0,8.0,Đông - Nam,Tây - Nam,3,4,3,Have certificate,Basic,7.9,"Đường Thạnh Xuân 21, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",8.036703296703292
+1,8,38.0,3.65,2.5,Tây,Tây,2,2,2,Have certificate,Basic,3.25,"Đường Thới An 11, Phường Thới An, Quận 12, Hồ Chí Minh",0.6318681318681321
+0,16,100.0,5.0,20.0,Đông,Đông,3,4,4,Have certificate,Full,9.45,"Dự án Mega Ruby, Đường Võ Chí Công, Phường Phú Hữu, Quận 9 (TP. Thủ Đức), Hồ Chí Minh",13.6978021978022
+1,17,32.0,4.0,4.0,Bắc,Bắc,1,2,2,Have certificate,Basic,3.48,"Đường Số 14, Phường Bình Hưng Hòa A, Quận Bình Tân, Hồ Chí Minh",0.7678021978021977
+2,8,50.0,4.65,12.0,Tây - Nam,Tây - Nam,5,4,6,Have certificate,Full,5.9,"Đường Thạnh Lộc 15, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",2.620274725274724
+2,18,50.0,4.0,4.0,Nam,Nam,1,2,1,Have certificate,Full,6.4,"Đường Bùi Đình Túy, Phường 24, Quận Bình Thạnh, Hồ Chí Minh",1.0727472527472521
+3,23,70.0,4.5,12.0,Đông - Bắc,Đông - Bắc,4,4,4,Have certificate,Full,6.9,"Đường 48, Phường Hiệp Huyện Bình Chánh, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.104945054945055
+3,3,88.4,4.0,8.0,Tây - Nam,Tây - Nam,2,4,2,Have certificate,Full,4.85,"Đường Lê Thị Lơ, Xã Tân Hiệp, Huyện Hóc Môn, Hồ Chí Minh",1.399230769230769
+2,22,56.0,4.0,4.0,Nam,Nam,2,2,2,Have certificate,Basic,4.8,"13/14/ Đường Lương Thế Vinh, Phường Tân Thới Hòa, Quận Tân Phú, Hồ Chí Minh",1.513076923076922
+3,15,65.0,5.0,12.0,Đông,Đông,6,4,4,Have certificate,Basic,6.8,"156, Đường An Dương Vương, Phường 16, Quận 8, Hồ Chí Minh",6.822197802197805
+1,17,21.0,6.0,4.0,Bắc,Bắc,2,2,2,Have certificate,Full,1.66,"Đường Đình Nghi Xuân, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",0.4045054945054946
+2,15,44.5,4.29,2.0,Đông - Nam,Đông - Nam,2,3,2,Have certificate,Full,3.35,"528A/15A Đường Hưng Phú, Phường 9, Quận 8, Hồ Chí Minh.",1.0513186813186808
+1,7,38.1,3.1,5.0,Tây - Nam,Tây - Nam,3,4,3,Have certificate,Basic,6.2,"Đường Bình Thới, Phường 11, Quận 11, Hồ Chí Minh",1.0045054945054952
+1,8,38.0,4.0,6.0,Đông,Đông,3,3,3,Have certificate,Full,2.55,"Phường Đông Hưng Thuận, Quận 12, Hồ Chí Minh",0.8136263736263736
+2,8,40.0,4.0,3.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,2.89,"1/, Đường Tân Thới Hiệp 13, Phường Tân Thới Hiệp, Quận 12, Hồ Chí Minh",0.8965934065934074
+2,21,60.0,5.0,10.0,Đông,Đông,4,5,5,Have certificate,Full,7.5,"Đường  Lý Thường Kiệt, Phường 7, Quận Tân Bình, Hồ Chí Minh",3.010219780219779
+2,19,47.8,4.0,4.0,Đông - Bắc,Đông - Bắc,4,4,4,Have certificate,Basic,5.5,"Đường Phạm Văn Chiêu, Phường 14, Quận Gò Vấp, Hồ Chí Minh",2.4673626373626383
+1,13,32.0,3.3,16.0,Bắc,Bắc,2,2,2,Have certificate,Full,8.6,"Đường Lê Quang Sung, Phường 2, Quận 6, Hồ Chí Minh",0.858241758241758
+2,5,46.0,46.0,3.0,Tây - Nam,Tây - Nam,2,4,2,Have certificate,Basic,6.0,"Đường Trần Hưng Đạo, Phường Cầu Kho, Quận 1, Hồ Chí Minh",7.183516483516489
+3,4,97.8,4.5,9.0,Đông - Nam,Đông - Nam,4,4,5,Have certificate,Full,8.6,"Đường Huỳnh Tấn Phát, Xã Phú Xuân, Huyện Nhà Bè, Hồ Chí Minh",4.334065934065933
+3,23,94.0,4.0,6.0,Tây - Bắc,Tây - Bắc,3,3,4,Have certificate,Basic,7.7,"Đường 11, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",6.1807692307692275
+1,19,31.0,3.0,3.0,Tây - Nam,Tây - Nam,2,3,3,Have certificate,Full,3.79,"Đường Quang Trung, Phường 10, Quận Gò Vấp, Hồ Chí Minh",0.9980219780219779
+3,8,64.0,32.0,32.0,Đông,Đông,5,4,6,Have certificate,Full,6.5,"Dự án Nhà phố One Palace, Đường Hà Huy Giáp, Phường Thạnh Lộc, Quận 12, Hồ Chí Minh",7.239560439560437
+2,15,56.0,4.0,8.0,Nam,Nam,3,3,3,Have certificate,Basic,7.3,"266, Đường Bùi Minh Trực, Phường 6, Quận 8, Hồ Chí Minh",1.6839560439560435
+1,7,21.3,5.3,6.0,Đông - Nam,Đông - Nam,2,2,2,Have certificate,Full,3.8,"Đường Lê Thị Bạch Cát, Phường 11, Quận 11, Hồ Chí Minh",0.8386813186813192
+3,4,80.3,7.3,6.0,Đông - Bắc,Đông - Bắc,4,4,5,Have certificate,Full,6.5,"Đường Huỳnh Tấn Phát, Thị trấn Huyện Nhà Bè, Huyện Nhà Bè, Hồ Chí Minh",3.56087912087912
+3,17,80.0,4.0,8.0,Đông,Đông,3,3,3,Have certificate,Full,9.0,"Đường 32B, Phường Bình Trị Đông B, Quận Bình Tân, Hồ Chí Minh",6.701318681318685
+1,17,19.0,4.17,2.0,Đông,Đông,2,2,1,Have certificate,Full,1.83,"Đường Phan Anh, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",0.4082417582417583
+2,17,62.5,5.0,6.0,Đông,Đông,1,2,2,Have certificate,Basic,5.2,"Đường Số 5, Phường Bình Hưng Hòa, Quận Bình Tân, Hồ Chí Minh",1.1916483516483514
+2,17,44.0,4.0,6.0,Bắc,Bắc,3,4,3,Have certificate,Basic,4.4,"239, Đường Lê Văn Quới, Phường Bình Trị Đông, Quận Bình Tân, Hồ Chí Minh",1.3431868131868125
+2,7,44.0,4.15,3.0,Đông - Nam,Đông - Bắc,2,3,2,Have certificate,Full,5.2,"152/Đường Lạc Long Quân, Phường 3, Quận 11, Hồ Chí Minh",1.5077509157509157
+2,22,59.0,5.0,12.0,Tây,Tây,3,4,3,Have certificate,Basic,10.0,"Đường Độc Lập, Phường Tân Thành, Quận Tân Phú, Hồ Chí Minh",2.302197802197803
+3,15,79.2,10.0,10.0,Đông - Bắc,Đông - Bắc,2,1,1,Sale contract,Basic,4.4,"Dự án Dream Home Palace, Đường Trịnh Quang Nghị, Phường 7, Quận 8, Hồ Chí Minh",4.015604395604397
+3,22,82.0,4.5,4.5,Nam,Bắc,1,2,1,Have certificate,Basic,7.8,"Đường Lũy Bán Bích, Phường Tân Thới Hòa, Quận Tân Phú, Hồ Chí Minh",4.604615384615384
+0,23,100.0,4.0,8.0,Tây - Nam,Tây - Nam,3,3,4,Have certificate,Full,7.7,"Đường 11, Phường Trường Thọ, Quận Thủ Đức (TP. Thủ Đức), Hồ Chí Minh",15.290659340659346
+3,8,72.0,4.0,6.0,Tây - Nam,Tây - Nam,3,3,3,Have certificate,Basic,4.6,"Đường Thạnh Xuân 21, Phường Thạnh Xuân, Quận 12, Hồ Chí Minh",6.661318681318681
+3,17,88.0,4.0,20.0,Tây - Nam,Tây - Nam,2,3,3,Have certificate,Full,7.5,"193 Đường Trần Thanh Mại, Phường Tân Tạo A, Quận Bình Tân, Hồ Chí Minh",4.706043956043958
+2,8,57.0,5.5,6.0,Tây,Tây,4,4,4,Have certificate,Full,5.5,"Đường Vườn Lài, Phường An Phú Đông, Quận 12, Hồ Chí Minh",2.3598351648351636
+3,13,68.0,4.0,8.0,Đông - Nam,Đông - Nam,2,2,3,Have certificate,Full,8.7,"Đường Cư Xá Phú Lâm B, Phường 13, Quận 6, Hồ Chí Minh",3.9338461538461527
+1,8,34.0,4.25,3.0,Đông - Bắc,Đông - Bắc,2,2,2,Have certificate,Full,3.35,"Đường Hiệp Thành 26, Phường Hiệp Thành, Quận 12, Hồ Chí Minh",0.6595604395604399
+1,17,27.0,4.5,2.5,Đông,Đông,2,2,2,Have certificate,Full,2.25,"Đường Hương lộ 2, Phường Bình Trị Đông A, Quận Bình Tân, Hồ Chí Minh",0.676153846153846
+3,19,64.0,5.8,5.0,Đông - Nam,Đông - Nam,6,4,4,Have certificate,Full,8.9,"Đường Nguyễn Văn Khối, Phường 9, Quận Gò Vấp, Hồ Chí Minh",7.6035164835164855
+1,20,22.0,3.5,4.0,Đông - Bắc,Đông - Bắc,4,2,3,Have certificate,Full,4.2,"Đường Nguyễn Đình Chiểu, Phường 4, Quận Phú Nhuận, Hồ Chí Minh",0.7163736263736262
