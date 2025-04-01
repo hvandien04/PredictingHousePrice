@@ -9,11 +9,13 @@ const Compare = () => {
 
   const districtAdvantages = {
     "Quận 1": "Vị trí trung tâm, thuận tiện di chuyển, gần nhiều tiện ích như chợ Bến Thành, phố đi bộ Nguyễn Huệ, các tòa nhà văn phòng và trung tâm thương mại lớn.",
+    "Quận 2 (TP. Thủ Đức)": "Khu đô thị sáng tạo, nhiều dự án công nghệ cao, tiềm năng phát triển lớn.",
     "Quận 3": "Sôi động, hiện đại, gần trung tâm, có nhiều địa điểm du lịch và dịch vụ cao cấp, môi trường sống tiện nghi.",
     "Quận 4": "Gần trung tâm, kết nối thuận tiện qua nhiều cây cầu.",
     "Quận 5": "Giàu di sản văn hóa, gần Chợ Lớn và các công trình kiến trúc cổ, phù hợp cho những ai yêu thích sự hoài cổ và giao thoa văn hóa.",
     "Quận 7": "Hạ tầng hiện đại, khu đô thị cao cấp Phú Mỹ Hưng, không gian sống thoáng đãng, nhiều trung tâm thương mại và dịch vụ tiện ích.",
     "Quận 8": "Hệ thống kênh rạch tạo cảnh quan đẹp.",
+    "Quận 9 (TP. Thủ Đức)": "Khu đô thị sáng tạo, nhiều dự án công nghệ cao, tiềm năng phát triển lớn.",
     "Quận 10": "Khu vực nhộn nhịp, đa dạng về ẩm thực và văn hóa, gần nhiều chợ truyền thống và khu vui chơi.",
     "Quận 11": "Có công viên văn hóa Đầm Sen, nhiều tiện ích vui chơi, giải trí.",
     "Quận 12": "Đang phát triển mạnh, nhiều khu công nghiệp.",
@@ -87,7 +89,7 @@ const Compare = () => {
         'Số phòng tắm: 4',
         'Có hồ bơi'
       ],
-      location: 'Quận 9',
+      location: 'Quận 9 (TP. Thủ Đức)',
       type: 'Biệt thự',
       area: 150,
       rooms: 5,
@@ -125,6 +127,11 @@ const Compare = () => {
   }, [houses]);
 
   const compareHouses = async () => {
+    if (!houses || houses.length === 0) {
+      console.error("Danh sách nhà trống.");
+      return;
+    }
+
     const results = [];
 
     // So sánh giá từng nhà với giá dự đoán
@@ -147,7 +154,7 @@ const Compare = () => {
 
         const data = await response.json();
         const predictedPrice = data.gia_du_doan;
-        
+
         if (house.price < predictedPrice * 0.9 * 1e9) {
           results.push(`${houseLabel} (${house.location}): Có thể là một món hời, nhưng hãy kiểm tra kỹ tình trạng nhà và pháp lý.`);
         } else if (house.price > predictedPrice * 1.1 * 1e9) {
@@ -160,22 +167,57 @@ const Compare = () => {
       }
     }
 
-    // So sánh các nhà với nhau
-    if (houses.length >= 2) {
-      // Tìm nhà có diện tích lớn nhất và nhỏ nhất
-      const sortedByArea = [...houses].sort((a, b) => b.area - a.area);
-      results.push(`Nhà có diện tích lớn nhất: ${sortedByArea[0].location} (${sortedByArea[0].area}m²)`);
-      
-      // Tìm nhà có giá rẻ nhất
-      const sortedByPrice = [...houses].sort((a, b) => a.price - b.price);
-      results.push(`Nhà có giá tốt nhất: ${sortedByPrice[0].location} (${(sortedByPrice[0].price / 1e9).toFixed(2)} tỷ)`);
-      
-      // Tìm nhà có nhiều phòng nhất
-      const sortedByRooms = [...houses].sort((a, b) => b.rooms - a.rooms);
-      results.push(`Nhà có nhiều phòng nhất: ${sortedByRooms[0].location} (${sortedByRooms[0].rooms} phòng)`);
+    if (houses.length === 0) {
+      console.error("Danh sách nhà trống!");
+    } else {
+      houses.sort((a, b) => a.area - b.area);
+
+      let smallest = houses[0]; // Nhà nhỏ nhất
+      let largest = houses[houses.length - 1]; // Nhà lớn nhất
+
+      // So sánh diện tích & số phòng
+      if (largest.rooms < smallest.rooms) {
+        results.push(`Nhà ${houses.indexOf(largest) + 1} (${largest.location}) có không gian rộng nhưng ít phòng (${largest.rooms} phòng), phù hợp cho gia đình thích thiết kế mở.`);
+      }
+      if (smallest.rooms < largest.rooms) {
+        results.push(`Nhà ${houses.indexOf(smallest) + 1} (${smallest.location}) có nhiều phòng hơn (${smallest.rooms} phòng), thích hợp cho gia đình đông người.`);
+      }
+
+      // Nhà có nhiều phòng nhất
+      let maxRooms = Math.max(...houses.map(h => h.rooms));
+      let minRooms = Math.min(...houses.map(h => h.rooms));
+
+      let mostRoomsHouses = houses.filter(h => h.rooms === maxRooms);
+      let leastRoomsHouses = houses.filter(h => h.rooms === minRooms);
+
+      if (mostRoomsHouses.length > 0) {
+        let locations = mostRoomsHouses.map(h => `${houses.indexOf(h) + 1} (${h.location})`).join(", Nhà ");
+        results.push(`Nhà ${locations} có nhiều phòng (${maxRooms} phòng), thích hợp cho gia đình đông người hoặc cho thuê.`);
+      }
+
+      if (leastRoomsHouses.length > 0) {
+        let locations = leastRoomsHouses.map(h => `${houses.indexOf(h) + 1} (${h.location})`).join(", Nhà ");
+        results.push(`Nhà ${locations} ít phòng (${minRooms} phòng), phù hợp cho gia đình nhỏ hoặc đơn giản hóa không gian sống.`);
+      }
+
+      // So sánh số tầng
+      let maxFloors = Math.max(...houses.map(h => h.floors));
+      let minFloors = Math.min(...houses.map(h => h.floors));
+
+      let tallestHouses = houses.filter(h => h.floors === maxFloors);
+      let shortestHouses = houses.filter(h => h.floors === minFloors);
+
+      if (tallestHouses.length > 0) {
+        let locations = tallestHouses.map(h => `${houses.indexOf(h) + 1} (${h.location})`).join(", Nhà ");
+        results.push(`Nhà ${locations} có nhiều tầng (${maxFloors} tầng), phù hợp cho gia đình lớn hoặc có thể cho thuê.`);
+      }
+
+      if (shortestHouses.length > 0) {
+        let locations = shortestHouses.map(h => `${houses.indexOf(h) + 1} (${h.location})`).join(", Nhà ");
+        results.push(`Nhà ${locations} ít tầng (${minFloors} tầng), thuận tiện di chuyển, phù hợp cho người già hoặc trẻ nhỏ.`);
+      }
     }
 
-    // Thêm thông tin ưu điểm từng quận
     houses.forEach((house, index) => {
       results.push(`Nhà ${index + 1} (${house.location}): ${districtAdvantages[house.location] || "Không có thông tin"}`);
     });
