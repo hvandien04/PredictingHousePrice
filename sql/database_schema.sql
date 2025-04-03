@@ -1,6 +1,6 @@
 USE [master]
 GO
-/****** Object:  Database [PredictHouse]    Script Date: 4/3/2025 9:41:42 PM ******/
+/****** Object:  Database [PredictHouse]    Script Date: 4/3/2025 9:56:04 PM ******/
 CREATE DATABASE [PredictHouse]
  CONTAINMENT = NONE
  ON  PRIMARY 
@@ -82,7 +82,7 @@ ALTER DATABASE [PredictHouse] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEA
 GO
 USE [PredictHouse]
 GO
-/****** Object:  Table [dbo].[Account]    Script Date: 4/3/2025 9:41:43 PM ******/
+/****** Object:  Table [dbo].[Account]    Script Date: 4/3/2025 9:56:04 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -101,25 +101,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Admin]    Script Date: 4/3/2025 9:41:43 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Admin](
-	[UserID] [varchar](50) NOT NULL,
-	[Name] [varchar](100) NOT NULL,
-	[Email] [varchar](100) NOT NULL,
-	[Password] [varchar](100) NOT NULL,
-	[Phone] [varchar](20) NULL,
-	[Role] [varchar](50) NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[UserID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Feedback]    Script Date: 4/3/2025 9:41:43 PM ******/
+/****** Object:  Table [dbo].[Feedback]    Script Date: 4/3/2025 9:56:04 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -136,7 +118,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PredictedHouse]    Script Date: 4/3/2025 9:41:43 PM ******/
+/****** Object:  Table [dbo].[PredictedHouse]    Script Date: 4/3/2025 9:56:04 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -154,7 +136,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[Prediction]    Script Date: 4/3/2025 9:41:43 PM ******/
+/****** Object:  Table [dbo].[Prediction]    Script Date: 4/3/2025 9:56:04 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -171,7 +153,7 @@ PRIMARY KEY CLUSTERED
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[SellingHouse]    Script Date: 4/3/2025 9:41:43 PM ******/
+/****** Object:  Table [dbo].[SellingHouse]    Script Date: 4/3/2025 9:56:04 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -194,23 +176,6 @@ PRIMARY KEY CLUSTERED
 	[Title] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Users]    Script Date: 4/3/2025 9:41:43 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Users](
-	[UserID] [varchar](50) NOT NULL,
-	[Name] [varchar](100) NOT NULL,
-	[Email] [varchar](100) NOT NULL,
-	[Password] [varchar](100) NOT NULL,
-	[Role] [varchar](50) NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[UserID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[Feedback]  WITH CHECK ADD FOREIGN KEY([UserID])
 REFERENCES [dbo].[Account] ([UserID])
