@@ -16,34 +16,6 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `account`
---
-
-DROP TABLE IF EXISTS `account`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `account` (
-  `UserID` varchar(50) NOT NULL,
-  `Name` varchar(100) NOT NULL,
-  `Email` varchar(100) NOT NULL,
-  `Password` varchar(100) NOT NULL,
-  `Phone` varchar(20) DEFAULT NULL,
-  `Role` varchar(50) NOT NULL,
-  `State` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `account`
---
-
-LOCK TABLES `account` WRITE;
-/*!40000 ALTER TABLE `account` DISABLE KEYS */;
-/*!40000 ALTER TABLE `account` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `feedback`
 --
 
@@ -54,11 +26,12 @@ CREATE TABLE `feedback` (
   `FeedbackID` varchar(50) NOT NULL,
   `UserID` varchar(50) DEFAULT NULL,
   `Date` date DEFAULT NULL,
-  `Message` text,
+  `Message` varchar(200) DEFAULT NULL,
   `Title` varchar(200) DEFAULT NULL,
+  `status` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`FeedbackID`),
   KEY `UserID` (`UserID`),
-  CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `account` (`UserID`)
+  CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -116,7 +89,7 @@ CREATE TABLE `prediction` (
   `ConfidenceScore` float DEFAULT NULL,
   PRIMARY KEY (`PredictionID`),
   KEY `UserID` (`UserID`),
-  CONSTRAINT `prediction_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `account` (`UserID`)
+  CONSTRAINT `prediction_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -152,7 +125,7 @@ CREATE TABLE `sellinghouse` (
   `State` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`PHouseID`),
   KEY `UserID` (`UserID`),
-  CONSTRAINT `sellinghouse_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `account` (`UserID`)
+  CONSTRAINT `sellinghouse_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -164,6 +137,35 @@ LOCK TABLES `sellinghouse` WRITE;
 /*!40000 ALTER TABLE `sellinghouse` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sellinghouse` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `users` (
+  `UserID` varchar(50) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL,
+  `Phone` varchar(20) DEFAULT NULL,
+  `Role` varchar(50) NOT NULL,
+  `State` varchar(50) DEFAULT NULL,
+  `Status` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`UserID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -174,4 +176,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-04 19:01:14
+-- Dump completed on 2025-04-04 20:38:29
