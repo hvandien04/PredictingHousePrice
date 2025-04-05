@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: PredictingHousePrice
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/housepredict
+    username: root
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
