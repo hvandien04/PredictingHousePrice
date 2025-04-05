@@ -1,23 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { authService } from '../utils/authAPI';
 import '../styles/Login.css';
 
-// Demo accounts
-const DEMO_ACCOUNTS = {
-  user: {
-    email: 'demo@example.com',
-    password: 'demo123',
-    name: 'Demo User',
-    role: 'user'
-  },
-  admin: {
-    email: 'admin@example.com',
-    password: 'admin123',
-    name: 'Admin',
-    role: 'admin'
-  }
-};
 
 const Login = () => {
   const navigate = useNavigate();
@@ -27,25 +13,7 @@ const Login = () => {
     password: ''
   });
   const [error, setError] = useState('');
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setError('');
-
-    // Check if credentials match demo accounts
-    const adminAccount = DEMO_ACCOUNTS.admin;
-    const userAccount = DEMO_ACCOUNTS.user;
-
-    if (formData.email === adminAccount.email && formData.password === adminAccount.password) {
-      login(adminAccount);
-      navigate('/admin');
-    } else if (formData.email === userAccount.email && formData.password === userAccount.password) {
-      login(userAccount);
-      navigate('/');
-    } else {
-      setError('Email hoặc mật khẩu không chính xác');
-    }
-  };
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -53,6 +21,29 @@ const Login = () => {
       [e.target.name]: e.target.value
     });
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    setIsLoading(true);
+
+    try {
+      const success = await authService.login(formData.email, formData.password);
+      if (success) {
+        const userData = await authService.getCurrentUser();
+        login(userData);
+        navigate('/');
+      } else {
+        setError('Email hoặc mật khẩu không chính xác');
+      }
+    } catch (error) {
+      console.error('Login error:', error.response?.data || error.message);
+      setError(error.response?.data || 'Có lỗi xảy ra. Vui lòng thử lại.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
 
   return (
     <div className="login">
@@ -84,7 +75,7 @@ const Login = () => {
             />
             <label htmlFor="password">Mật khẩu</label>
           </div>
-          <button type="submit" className="btn-login">
+          <button type="submit" className="btn-login" disabled={isLoading}>
             Đăng nhập
           </button>
         </form>
@@ -95,19 +86,6 @@ const Login = () => {
           <p className="register-link">
             Chưa có tài khoản? <Link to="/register">Đăng ký ngay</Link>
           </p>
-        </div>
-        <div className="demo-account">
-          <h3>Tài khoản demo:</h3>
-          <div className="demo-account-section">
-            <h4>Người dùng:</h4>
-            <p>Email: demo@example.com</p>
-            <p>Password: demo123</p>
-          </div>
-          <div className="demo-account-section">
-            <h4>Admin:</h4>
-            <p>Email: admin@example.com</p>
-            <p>Password: admin123</p>
-          </div>
         </div>
       </div>
     </div>

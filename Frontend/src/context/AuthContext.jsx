@@ -1,30 +1,86 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
+import { authService } from '../utils/authAPI';
 
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [message] = useState(null);
 
   useEffect(() => {
-    // Check for user in localStorage on mount
-    const userData = localStorage.getItem('user');
-    if (userData) {
-      setUser(JSON.parse(userData));
-    }
+    checkAuth();
   }, []);
 
-  const login = (userData) => {
-    localStorage.setItem('user', JSON.stringify(userData));
+  const checkAuth = async () => {
+    try {
+      const isLoggedIn = await authService.checkSession();
+      if (isLoggedIn) {
+        const userData = await authService.getCurrentUser();
+        setUser(userData);
+      } else {
+        setUser(null);
+      }
+    } catch (error) {
+      console.error('Auth check failed:', error.response?.data || error.message);
+      setUser(null);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const login = async (userData) => {
     setUser(userData);
   };
 
-  const logout = () => {
-    localStorage.removeItem('user');
-    setUser(null);
+  const logout = async () => {
+    try {
+      await authService.logout();
+      setUser(null);
+    } catch (error) {
+      console.error('Logout failed:', error.response?.data || error.message);
+    }
   };
 
+  const updateProfile = async (userData) => {
+    try {
+      console.log('Sending profile update request:', userData);
+      const response = await authService.updateProfile(userData);
+      console.log('Profile update response:', response);
+      
+      if (response === 'Profile updated successfully!') {
+        setUser(userData);
+        return { success: true };
+      }
+      return { success: false, error: response };
+    } catch (error) {
+      console.error('Update profile error:', error.response || error);
+      return { success: false, error: error.response?.data || 'Có lỗi xảy ra khi cập nhật thông tin!' };
+    }
+  };
+
+  const changePassword = async (passwordData) => {
+    try {
+      console.log('Sending password change request:', passwordData);
+      const response = await authService.changePassword(passwordData);
+      console.log('Password change response:', response);
+      
+      if (response === 'Password updated successfully!') {
+        return { success: true };
+      }
+      return { success: false, error: response };
+    } catch (error) {
+      console.error('Password change error:', error.response || error);
+      return { success: false, error: error.response?.data || 'Có lỗi xảy ra khi đổi mật khẩu!' };
+    }
+  };
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, updateProfile, changePassword, message }}>
       {children}
     </AuthContext.Provider>
   );

@@ -12,6 +12,7 @@ import Compare from './pages/Compare';
 import History from './pages/History';
 import SellHouse from './pages/SellHouse';
 import SellHistory from './pages/SellHistory';
+import Profile from './pages/Profile';
 import AdminLayout from './layouts/AdminLayout';
 import Dashboard from './pages/admin/Dashboard';
 import Users from './pages/admin/Users';
@@ -20,6 +21,8 @@ import Settings from './pages/admin/Settings';
 import HousePosts from './pages/admin/HousePosts';
 import FeedbackPage from './pages/admin/Feedback';
 import { AuthProvider } from './context/AuthContext';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 function AppContent() {
@@ -30,6 +33,7 @@ function AppContent() {
     <div className="app">
       {!isAdminRoute && <Navbar />}
       <main className="main-content">
+      <ToastContainer />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/input" element={<InputForm />} />
@@ -40,6 +44,7 @@ function AppContent() {
           <Route path="/history" element={<History />} />
           <Route path="/sell-house" element={<SellHouse />} />
           <Route path="/sell-history" element={<SellHistory />} />
+          <Route path="/profile" element={<Profile />} />
           
           {/* Admin routes */}
           <Route path="/admin" element={<AdminLayout />}>

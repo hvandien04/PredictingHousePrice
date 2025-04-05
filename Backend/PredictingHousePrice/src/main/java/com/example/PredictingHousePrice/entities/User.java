@@ -38,7 +38,7 @@ public class User {
         this.userID = userID;
     }
 
-    public String getName(String name) {
+    public String getName() {
         return this.name;
     }
 
@@ -62,7 +62,7 @@ public class User {
         this.password = password;
     }
 
-    public String getPhone(String phone) {
+    public String getPhone() {
         return this.phone;
     }
 

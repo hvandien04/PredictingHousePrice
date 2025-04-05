@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { authService } from '../utils/authAPI';
+import { toast } from 'react-toastify';
 import '../styles/Login.css';
 
 const Register = () => {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -69,27 +72,34 @@ const Register = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =  async (e) => {
     e.preventDefault();
     setIsSubmitted(true);
     
-    // Validate all fields
-    const newErrors = {};
-    
-    // Validate password
-    newErrors.password = validatePassword(formData.password);
-    
-    // Validate confirm password
-    if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Mật khẩu xác nhận không khớp';
-    }
-
-    setErrors(newErrors);
-
-    // If there are no errors, proceed with registration
-    if (!newErrors.password && !newErrors.confirmPassword) {
-      // TODO: Xử lý đăng ký
-      console.log('Register data:', formData);
+    try {
+      const registerData = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        password: formData.password,
+      };
+      const success = await authService.register(registerData);
+      if (success) {
+        toast.success('Đăng ký thành công!', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        navigate('/login');
+      } else {
+        setError('Đã có lỗi xảy ra khi đăng ký');
+      }
+    } catch {
+      setError('Đã có lỗi xảy ra khi đăng ký');
     }
   };
 
