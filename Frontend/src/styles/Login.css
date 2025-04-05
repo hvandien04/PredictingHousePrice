@@ -1,9 +1,9 @@
 .login {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   align-items: center;
+  padding: 2rem;
   justify-content: center;
-  padding: 6rem 2rem 2rem;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
