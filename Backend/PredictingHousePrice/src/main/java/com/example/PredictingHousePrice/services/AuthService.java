@@ -19,6 +19,10 @@ public class AuthService {
     public final UserRepository userRepository;
     public final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
+    public static final String ROLE_ADMIN = "1";
+    public static final String ROLE_USER = "0";
+
+
     public AuthService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
@@ -76,5 +80,40 @@ public class AuthService {
             session.invalidate();
         }
         return "Logged out successfully!";
+    }
+
+    // Kiểm tra role hiện tại
+    public boolean hasRole(HttpServletRequest request, String requiredRole) {
+        User user = getCurrentUser(request);
+        return user != null && user.getRole().equals(requiredRole);
+    }
+
+    // Kiểm tra nhiều role
+    public boolean hasAnyRole(HttpServletRequest request, String... roles) {
+        User user = getCurrentUser(request);
+        if (user == null) return false;
+
+        for (String role : roles) {
+            if (user.getRole().equals(role)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Lấy user hiện tại
+    public User getCurrentUser(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        return session != null ? (User) session.getAttribute("user") : null;
+    }
+
+    // Kiểm tra admin
+    public boolean isAdmin(HttpServletRequest request) {
+        return hasRole(request, ROLE_ADMIN);
+    }
+
+    // Kiểm tra user thường
+    public boolean isRegularUser(HttpServletRequest request) {
+        return hasRole(request, ROLE_USER);
     }
 }
