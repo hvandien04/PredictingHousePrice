@@ -2,6 +2,8 @@ package com.example.PredictingHousePrice.controllers;
 
 import com.example.PredictingHousePrice.dtos.LoginRequest;
 import com.example.PredictingHousePrice.dtos.RegisterRequest;
+import com.example.PredictingHousePrice.dtos.UpdatePasswordRequest;
+import com.example.PredictingHousePrice.dtos.UpdateProfileRequest;
 import com.example.PredictingHousePrice.entities.User;
 import com.example.PredictingHousePrice.services.AuthService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -36,6 +38,11 @@ public class AuthController {
         return ResponseEntity.ok(authService.logout(request));
     }
 
+    @PutMapping("/update-password")
+    public ResponseEntity<String> updatePassword(@RequestBody UpdatePasswordRequest request, HttpServletRequest httpRequest) {
+        return ResponseEntity.ok(authService.updatePassword(request, httpRequest));
+    }
+
     @GetMapping("/session")
     public ResponseEntity<Map<String, Object>> getSession(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
@@ -55,4 +62,10 @@ public class AuthController {
 
         return ResponseEntity.ok(response);
     }
+
+    @PutMapping("/update-profile")
+    public ResponseEntity<String> updateProfile(@RequestBody UpdateProfileRequest request, HttpServletRequest httpRequest) {
+        return ResponseEntity.ok(authService.updateProfile(request, httpRequest));
+    }
+
 }

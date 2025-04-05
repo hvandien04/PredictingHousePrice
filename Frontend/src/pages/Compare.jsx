@@ -105,7 +105,6 @@ const Compare = () => {
     setOpenModal(false);
     setSelectedHouse(null);
   };
-
   const handleAddSelectedHouse = () => {
     if (selectedHouse && houses.length < 3) {
       setHouses([...houses, selectedHouse]);
