@@ -14,7 +14,7 @@ const InputForm = () => {
   const [houseTypes, setHouseTypes] = useState([]);
   const [districts, setDistricts] = useState([]);
   const [predictedPrice, setPredictedPrice] = useState(null);
-  const [confidenceInterval, setConfidenceInterval] = useState(null);
+  const [confidenceScore, setConfidenceScore] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
@@ -52,9 +52,35 @@ const InputForm = () => {
       const data = await response.json();
       console.log("Kết quả API:", data);
 
-      setPredictedPrice(data.gia_du_doan || `Lỗi: ${data.error}`);
-      setConfidenceInterval(data.confidence_interval || null);
+      const giaDuDoan = data.gia_du_doan || `Lỗi: ${data.error}`;
+      const doChinhXac = data.confidence_score || null;
+
+      setPredictedPrice(giaDuDoan);
+      setConfidenceScore(doChinhXac);
       setIsSubmitted(true);
+
+      const predictionPayload = {
+        location: requestData.vi_tri,         // Vị trí
+        area: requestData.dien_tich,          // Diện tích
+        rooms: requestData.so_phong,          // Số phòng
+        floors: requestData.so_tang,          // Số tầng
+        predictedPrice: giaDuDoan,            // Giá dự đoán
+        confidenceScore: doChinhXac,          // Độ chính xác
+        date: new Date().toISOString().split('T')[0], // Ngày (Y-m-d)
+        time: new Date().toISOString()        // Thời gian (ISO format)
+      };
+
+      console.log("📦 Payload gửi đến Spring Boot:", predictionPayload);  // ✅ Xem rõ nội dung
+
+      await fetch("http://localhost:8080/api/prediction/save-prediction", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(predictionPayload),
+        credentials: 'include'
+      });
+
     } catch (error) {
       console.error("Lỗi khi gửi dữ liệu:", error);
     }
@@ -97,82 +123,6 @@ const InputForm = () => {
                     <label htmlFor="floors">Số tầng</label>
                     <input type="number" id="floors" name="floors" value={formData.floors} onChange={handleChange} required />
                   </div>
-                  {/*<div className="input-field-group fade-in-up delay-2">
-                    <label htmlFor="yearBuilt">Năm xây dựng</label>
-                    <input
-                      type="number"
-                      id="yearBuilt"
-                      name="yearBuilt"
-                      value={formData.yearBuilt}
-                      onChange={handleChange}
-                      placeholder=" "
-                      required
-                    />
-                  </div>
-
-                   <div className="input-field-group fade-in-up delay-2">
-                    <label htmlFor="direction">Hướng nhà</label>
-                    <select
-                      id="direction"
-                      name="direction"
-                      value={formData.direction}
-                      onChange={handleChange}
-                      required
-                    >
-                      <option value="">Chọn hướng</option>
-                      <option value="dong">Đông</option>
-                      <option value="tay">Tây</option>
-                      <option value="nam">Nam</option>
-                      <option value="bac">Bắc</option>
-                      <option value="dong-bac">Đông Bắc</option>
-                      <option value="dong-nam">Đông Nam</option>
-                      <option value="tay-bac">Tây Bắc</option>
-                      <option value="tay-nam">Tây Nam</option>
-                    </select>
-                  </div>
-
-                  <div className="input-field-group fade-in-up delay-2">
-                    <label htmlFor="streetWidth">Độ rộng đường (m)</label>
-                    <input
-                      type="number"
-                      id="streetWidth"
-                      name="streetWidth"
-                      value={formData.streetWidth}
-                      onChange={handleChange}
-                      placeholder=" "
-                      required
-                    />
-                  </div>*/}
-
-                  {/*<div className="input-field-group input-checkbox-group fade-in-up delay-3">
-                    <label>
-                      <input
-                        type="checkbox"
-                        name="hasElevator"
-                        checked={formData.hasElevator}
-                        onChange={handleChange}
-                      />
-                      Có thang máy
-                    </label>
-                    <label>
-                      <input
-                        type="checkbox"
-                        name="hasParking"
-                        checked={formData.hasParking}
-                        onChange={handleChange}
-                      />
-                      Có bãi đỗ xe
-                    </label>
-                    <label>
-                      <input
-                        type="checkbox"
-                        name="hasSecurity"
-                        checked={formData.hasSecurity}
-                        onChange={handleChange}
-                      />
-                      Có bảo vệ
-                    </label>
-                  </div>*/}
                   <button type="submit" className="input-submit-btn">Dự Đoán Giá</button>
                 </form>
               </>
@@ -180,8 +130,8 @@ const InputForm = () => {
               <div className="prediction-result fade-in">
                 <h2>Kết quả dự đoán</h2>
                 <p>Giá dự đoán: {predictedPrice} tỷ</p>
-                {confidenceInterval && (
-                    <p>Khoảng tin cậy 95%: {confidenceInterval[0]} - {confidenceInterval[1]} tỷ</p>
+                {confidenceScore !== null && (
+                    <p>Tỉ lệ chính xác: {confidenceScore}%</p>
                 )}
                 <button type="button" className="input-submit-btn" onClick={() => setIsSubmitted(false)}>Thử lại</button>
               </div>

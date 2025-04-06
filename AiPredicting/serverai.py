@@ -59,21 +59,21 @@ def predict():
         # Dự đoán giá
         gia_du_doan = model.predict(input_scaled)[0]
 
-        # Tính khoảng tin cậy 95% bằng phương sai giữa các cây trong Random Forest
+        # Dự đoán từ tất cả cây trong random forest
         y_preds_all = np.array([tree.predict(input_scaled)[0] for tree in model.estimators_])
         std_dev = np.std(y_preds_all)
-        confidence_95 = 1.96 * std_dev
 
-        lower_bound = max(0, gia_du_doan - confidence_95)
-        upper_bound = gia_du_doan + confidence_95
+        # Tính độ tin cậy (confidence score): càng thấp lệch chuẩn, càng tin tưởng
+        confidence_score = max(0, 1 - (std_dev / gia_du_doan))  # Clamp về [0,1] nếu muốn
 
         return jsonify({
             "gia_du_doan": round(gia_du_doan, 2),
-            "confidence_interval": [round(lower_bound, 2), round(upper_bound, 2)]
+            "confidence_score": round(confidence_score * 100, 2)  # phần trăm
         })
 
     except Exception as e:
         return jsonify({"error": str(e)})
+
 
 # API lấy danh sách loại nhà
 @app.route('/house-types', methods=['GET'])
