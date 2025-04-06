@@ -3,7 +3,8 @@ import { useAuth } from '../context/AuthContext';
 import '../styles/Profile.css';
 
 const Profile = () => {
-  const { user } = useAuth();
+  const { user,updateProfile, changePassword } = useAuth();
+  const [message, setMessage] = useState({ type: '', text: '' });
   const [activeTab, setActiveTab] = useState('profile');
   const [profileData, setProfileData] = useState({
     name: user?.name || '',
@@ -38,24 +39,17 @@ const Profile = () => {
   const handleProfileSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://127.0.0.1:5000/profile/${user.id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(profileData)
-      });
-
-      if (response.ok) {
-        setSuccessMessage('Cập nhật thông tin thành công');
+      const result = await updateProfile(profileData);
+      if (result.success) {
+        setSuccessMessage('Đổi thông tin thành công');
         setIsEditing(false);
         setTimeout(() => setSuccessMessage(''), 3000);
       } else {
-        setErrorMessage('Cập nhật thông tin thất bại');
+        setErrorMessage('Đổi thông tin thất bại');
       }
     } catch (error) {
-      console.error('Lỗi khi cập nhật profile:', error);
-      setErrorMessage('Có lỗi xảy ra khi cập nhật thông tin');
+      console.error('Lỗi khi đổi thông tin:', error);
+      setErrorMessage('Có lỗi xảy ra khi đổi thông tin');
     }
   };
 
@@ -67,18 +61,12 @@ const Profile = () => {
     }
 
     try {
-      const response = await fetch(`http://127.0.0.1:5000/profile/${user.id}/password`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          currentPassword: passwordData.currentPassword,
-          newPassword: passwordData.newPassword
-        })
+      const result = await changePassword({
+        oldPassword: passwordData.currentPassword,
+        newPassword: passwordData.newPassword
       });
 
-      if (response.ok) {
+      if (result.success) {
         setSuccessMessage('Đổi mật khẩu thành công');
         setPasswordData({
           currentPassword: '',
@@ -94,6 +82,10 @@ const Profile = () => {
       setErrorMessage('Có lỗi xảy ra khi đổi mật khẩu');
     }
   };
+
+  if (!user) {
+    return <div className="profile-container">Vui lòng đăng nhập để xem thông tin tài khoản.</div>;
+  }
 
   return (
     <div className="profile-container">
@@ -135,7 +127,20 @@ const Profile = () => {
 
         <div className="profile-form">
           {activeTab === 'profile' ? (
-            <form onSubmit={handleProfileSubmit}>
+            <div>
+              <div className="form-group-profile">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  value={profileData.email}
+                  onChange={handleProfileChange}
+                  disabled
+                  required
+                  placeholder="Nhập Email"
+                />
+              </div>
               <div className="form-group-profile">
                 <label htmlFor="name">Họ và tên</label>
                 <input
@@ -147,20 +152,6 @@ const Profile = () => {
                   disabled={!isEditing}
                   required
                   placeholder="Nhập họ và tên"
-                />
-              </div>
-
-              <div className="form-group-profile">
-                <label htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={profileData.email}
-                  onChange={handleProfileChange}
-                  disabled={!isEditing}
-                  required
-                  placeholder="Nhập email"
                 />
               </div>
 
@@ -182,13 +173,17 @@ const Profile = () => {
                   <button
                     type="button"
                     className="edit-button"
-                    onClick={() => setIsEditing(true)}
+                    onClick={() => {
+                      setIsEditing(true)
+                      
+                      }
+                    }
                   >
                     <i className="fas fa-edit"></i> Chỉnh sửa
                   </button>
                 ) : (
                   <>
-                    <button type="submit" className="save-button">
+                    <button type="submit" className="save-button" onClick={handleProfileSubmit}> 
                       <i className="fas fa-save"></i> Lưu thay đổi
                     </button>
                     <button
@@ -204,7 +199,7 @@ const Profile = () => {
                   </>
                 )}
               </div>
-            </form>
+            </div>
           ) : (
             <form onSubmit={handlePasswordSubmit}>
               <div className="form-group-profile">

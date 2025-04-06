@@ -61,9 +61,7 @@ export const AuthProvider = ({ children }) => {
 
   const changePassword = async (passwordData) => {
     try {
-      console.log('Sending password change request:', passwordData);
       const response = await authService.changePassword(passwordData);
-      console.log('Password change response:', response);
       
       if (response === 'Password updated successfully!') {
         return { success: true };

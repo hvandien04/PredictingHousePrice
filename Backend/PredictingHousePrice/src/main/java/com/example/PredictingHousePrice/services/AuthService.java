@@ -2,6 +2,8 @@ package com.example.PredictingHousePrice.services;
 
 import com.example.PredictingHousePrice.dtos.LoginRequest;
 import com.example.PredictingHousePrice.dtos.RegisterRequest;
+import com.example.PredictingHousePrice.dtos.UpdatePasswordRequest;
+import com.example.PredictingHousePrice.dtos.UpdateProfileRequest;
 import com.example.PredictingHousePrice.entities.User;
 import com.example.PredictingHousePrice.repositories.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
@@ -116,4 +118,45 @@ public class AuthService {
     public boolean isRegularUser(HttpServletRequest request) {
         return hasRole(request, ROLE_USER);
     }
+
+    public String updatePassword(UpdatePasswordRequest request, HttpServletRequest httpRequest) {
+        HttpSession session = httpRequest.getSession(false);
+        if (session == null || session.getAttribute("user") == null) {
+            return "User is not logged in!";
+        }
+
+        User user = (User) session.getAttribute("user");
+
+        if (!passwordEncoder.matches(request.getOldPassword(), user.getPassword())) {
+            return "Incorrect old password!";
+        }
+
+        user.setPassword(passwordEncoder.encode(request.getNewPassword()));
+        userRepository.save(user);
+
+        return "Password updated successfully!";
+    }
+
+    public String updateProfile(UpdateProfileRequest request, HttpServletRequest httpRequest) {
+        HttpSession session = httpRequest.getSession(false);
+        if (session == null || session.getAttribute("user") == null) {
+            return "User is not logged in!";
+        }
+
+        User user = (User) session.getAttribute("user");
+
+        if (request.getPhone() != null && !request.getPhone().isEmpty()) {
+            user.setPhone(request.getPhone());
+        }
+
+        if (request.getName() != null && !request.getName().isEmpty()) {
+            user.setName(request.getName());
+        }
+
+        userRepository.save(user);
+        session.setAttribute("user", user);
+
+        return "Profile updated successfully!";
+    }
+
 }
