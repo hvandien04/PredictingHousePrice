@@ -72,7 +72,7 @@
 			<version>6.2.0.Final</version>
 		</dependency>
 
-		<!-- Thêm dependency cho Bean Validation để hỗ trợ (nếu chưa có) -->
+		<!-- Thêm dependency cho Bean Validation để hỗ trợ -->
 		<dependency>
 			<groupId>org.glassfish</groupId>
 			<artifactId>javax.el</artifactId>

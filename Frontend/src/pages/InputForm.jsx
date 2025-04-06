@@ -70,7 +70,7 @@ const InputForm = () => {
         time: new Date().toISOString()        // Thời gian (ISO format)
       };
 
-      console.log("📦 Payload gửi đến Spring Boot:", predictionPayload);  // ✅ Xem rõ nội dung
+      console.log("Payload gửi đến Spring Boot:", predictionPayload);  // Xem rõ dữ liệu gửi đi
 
       await fetch("http://localhost:8080/api/prediction/save-prediction", {
         method: "POST",

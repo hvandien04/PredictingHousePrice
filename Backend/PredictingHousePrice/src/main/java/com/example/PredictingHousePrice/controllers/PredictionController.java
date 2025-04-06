@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 
-import jakarta.validation.Valid;  // Đảm bảo dùng Jakarta Validation
+import jakarta.validation.Valid;
 import java.util.Collections;
 
 @RestController
@@ -23,7 +23,7 @@ public class PredictionController {
     @PostMapping("/save-prediction")
     public ResponseEntity<?> savePrediction(@Valid @RequestBody Prediction predictionRequest,
                                             BindingResult bindingResult, HttpServletRequest request) {
-        System.out.println("✅ Nhận predictionRequest:");
+        System.out.println("Nhận dữ liệu:");
         System.out.println("Location: " + predictionRequest.getLocation());
         System.out.println("Area: " + predictionRequest.getArea());
         System.out.println("Rooms: " + predictionRequest.getRooms());
