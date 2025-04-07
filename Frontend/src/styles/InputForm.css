@@ -22,7 +22,7 @@
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(45deg, #6c757d, #495057);
+  background: rgb(0, 123, 255);
 }
 
 .input-form-page h1 {
@@ -97,7 +97,7 @@
   grid-column: 1 / -1;
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(45deg, #6c757d, #495057);
+  background: rgb(0, 123, 255);
   color: white;
   border: none;
   border-radius: 8px;

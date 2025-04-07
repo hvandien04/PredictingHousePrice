@@ -1,53 +1,32 @@
 package com.example.PredictingHousePrice.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotEmpty;
-import java.util.Date;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "prediction")
 public class Prediction {
-
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "PredictionID")
+    @Column(name = "PredictionID", nullable = false, length = 50)
     private String predictionID;
 
-    @Column(name = "UserID")
-    private String userID;
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "UserID")
+    private com.example.PredictingHousePrice.entities.User userID;
 
     @Column(name = "Date")
-    private Date date;
+    private LocalDate date;
 
-    @Column(name = "Time")
-    private Date time;
-
-    @Column(name = "Location")
-    @NotEmpty(message = "Location cannot be empty")
-    private String location;
-
-    @Column(name = "Area")
-    @Min(value = 0, message = "Area must be a positive number")
-    private double area;
-
-    @Column(name = "Rooms")
-    @Min(value = 1, message = "Number of rooms must be greater than or equal to 1")
-    private int rooms;
-
-    @Column(name = "Floors")
-    @Min(value = 1, message = "Number of floors must be greater than or equal to 1")
-    private int floors;
-
-    @Column(name = "PredictedPrice")
-    @Min(value = 0, message = "Predicted price must be a positive number")
-    private double predictedPrice;
+    @Column(name = "PredictedPrice", precision = 15, scale = 2)
+    private BigDecimal predictedPrice;
 
     @Column(name = "ConfidenceScore")
-    @Min(value = 0, message = "Accuracy must be a positive number")
-    private double confidenceScore;
+    private Float confidenceScore;
 
-    // Getter and Setter methods
     public String getPredictionID() {
         return predictionID;
     }
@@ -56,75 +35,36 @@ public class Prediction {
         this.predictionID = predictionID;
     }
 
-    public String getUserID() {
+    public com.example.PredictingHousePrice.entities.User getUserID() {
         return userID;
     }
 
-    public void setUserID(String userID) {
+    public void setUserID(com.example.PredictingHousePrice.entities.User userID) {
         this.userID = userID;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
-    public Date getTime() {
-        return time;
-    }
-
-    public void setTime(Date time) {
-        this.time = time;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
-    }
-
-    public int getRooms() {
-        return rooms;
-    }
-
-    public void setRooms(int rooms) {
-        this.rooms = rooms;
-    }
-
-    public int getFloors() {
-        return floors;
-    }
-
-    public void setFloors(int floors) {
-        this.floors = floors;
-    }
-
-    public double getPredictedPrice() {
+    public BigDecimal getPredictedPrice() {
         return predictedPrice;
     }
 
-    public void setPredictedPrice(double predictedPrice) {
+    public void setPredictedPrice(BigDecimal predictedPrice) {
         this.predictedPrice = predictedPrice;
     }
 
-    public double getConfidenceScore() {
+    public Float getConfidenceScore() {
         return confidenceScore;
     }
 
-    public void setConfidenceScore(double confidenceScore) {
+    public void setConfidenceScore(Float confidenceScore) {
         this.confidenceScore = confidenceScore;
     }
+
 }

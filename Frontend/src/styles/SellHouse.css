@@ -70,7 +70,7 @@
 }
 
 .add-sell-btn {
-  background: #28a745;
+  background: rgb(0, 123, 255);
   color: white;
   border: none;
   padding: 12px 24px;
@@ -84,7 +84,6 @@
 }
 
 .add-sell-btn:hover {
-  background: #218838;
   transform: translateY(-2px);
 }
 

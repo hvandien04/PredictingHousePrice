@@ -26,7 +26,7 @@ const Feedback = () => {
         className="feedback-button"
         onClick={() => setIsOpen(true)}
       >
-        Feedback
+        Phản Hồi
       </button>
 
       {isOpen && (
