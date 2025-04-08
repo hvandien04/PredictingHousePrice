@@ -311,13 +311,13 @@
 }
 
 .sell-btn-submit {
-  background: #28a745;
+  background: rgb(0, 123, 255);
   border: none;
   color: white;
 }
 
 .sell-btn-submit:hover {
-  background: #218838;
+  background: rgba(0, 123, 255, 0.8);
 }
 
 /* Responsive */

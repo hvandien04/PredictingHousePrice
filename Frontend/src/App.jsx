@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate, Outlet } from 'react-router-dom';
+import { useAuth } from './context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Feedback from './components/Feedback';
@@ -29,6 +30,19 @@ import './App.css';
 function AppContent() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
+  const RequireAdmin = () => {
+    const {user} = useAuth();
+  
+    if (!user) {
+      return <Navigate to="/login" replace />;
+    }
+  
+    if (user.role !== '1') {
+      return <Navigate to="/" replace />;
+    }
+  
+    return <AdminLayout />;
+  };
 
   return (
     <div className="app">
@@ -48,7 +62,7 @@ function AppContent() {
           <Route path="/profile" element={<Profile />} />
           
           {/* Admin routes */}
-          <Route path="/admin" element={<AdminLayout />}>
+          <Route path="/admin" element={<RequireAdmin/>}>
             <Route index element={<Dashboard />} />
             <Route path="users" element={<Users />} />
             <Route path="house-posts" element={<HousePosts />} />

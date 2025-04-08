@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/InputForm.css';
 import '../styles/animations.css';
+import { useNavigate } from 'react-router-dom';
 import { useHPredicted } from '../context/HPredictedContext';
+import { useAuth } from '../context/AuthContext';
+import { toast } from 'react-toastify';
 
 const InputForm = () => {
+  const navigate = useNavigate();
+  const { user } = useAuth();
   const { predictHouse } = useHPredicted();
+  const [houseTypes, setHouseTypes] = useState([]);
+  const [districts, setDistricts] = useState([]);
+  const [predictedPrice, setPredictedPrice] = useState(null);
+  const [confidenceScore, setConfidenceScore] = useState(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     HouseType: '',
     district: '',
@@ -14,11 +24,6 @@ const InputForm = () => {
     address: ''
   });
 
-  const [houseTypes, setHouseTypes] = useState([]);
-  const [districts, setDistricts] = useState([]);
-  const [predictedPrice, setPredictedPrice] = useState(null);
-  const [confidenceScore, setConfidenceScore] = useState(null);
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
     fetch("http://127.0.0.1:5000/house-types")
@@ -38,6 +43,22 @@ const InputForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!user) {
+      toast.warning('Vui lòng đăng nhập để tiếp tục', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+
+      navigate("/login");
+      return;
+    }
+
     const requestData = {
       loai_nha: formData.houseType,
       vi_tri: formData.district,
