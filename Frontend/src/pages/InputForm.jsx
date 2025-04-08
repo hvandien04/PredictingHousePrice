@@ -84,7 +84,7 @@ const InputForm = () => {
       setIsSubmitted(true);
 
       const predictionPayload = {
-        address: requestData.vi_tri, 
+        address: requestData.vi_tri,
         area: requestData.dien_tich,          // Diện tích
         bedrooms: requestData.so_phong,          // Số phòng
         floors: requestData.so_tang,          // Số tầng
@@ -94,6 +94,7 @@ const InputForm = () => {
 
       };
       const result = await predictHouse(predictionPayload);
+      console.log("Kết quả lưu DB:", result);
 
     } catch (error) {
       console.error("Lỗi khi gửi dữ liệu:", error);
