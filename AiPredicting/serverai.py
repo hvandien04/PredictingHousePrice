@@ -63,8 +63,8 @@ def predict():
         y_preds_all = np.array([tree.predict(input_scaled)[0] for tree in model.estimators_])
         std_dev = np.std(y_preds_all)
 
-        # Tính độ tin cậy (confidence score): càng thấp lệch chuẩn, càng tin tưởng
-        confidence_score = max(0, 1 - (std_dev / gia_du_doan))  # Clamp về [0,1] nếu muốn
+        # Tính độ tin cậy (confidence score)
+        confidence_score = max(0, 1 - (std_dev / gia_du_doan))  
 
         return jsonify({
             "gia_du_doan": round(gia_du_doan, 2),

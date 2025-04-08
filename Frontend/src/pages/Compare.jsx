@@ -30,72 +30,39 @@ const Compare = () => {
     "Huyện Cần Giờ": "Gần biển, không khí trong lành, có khu dự trữ sinh quyển, phù hợp để nghỉ dưỡng hoặc đầu tư du lịch sinh thái."
   };
 
-  const availableHouses = [
-    {
-      id: 1,
-      image: '/img/house1.jpg',
-      price: 6700000000,
-      features: [
-        'Diện tích: 100m²',
-        'Số phòng ngủ: 3',
-        'Số phòng tắm: 2',
-        'Kết nối giao thông'
-      ],
-      location: 'Quận Bình Tân',
-      type: 'Nhà mặt tiền',
-      area: 64,
-      rooms: 4,
-      floors: 5
-    },
-    {
-      id: 2,
-      image: '/img/house2.jpg',
-      price: 4300000000,
-      features: [
-        'Diện tích: 120m²',
-        'Số phòng ngủ: 4',
-        'Số phòng tắm: 3',
-        'Gần trung tâm'
-      ],
-      location: 'Quận 12',
-      type: 'Nhà hẻm',
-      area: 60,
-      rooms: 4,
-      floors: 4
-    },
-    {
-      id: 3,
-      image: '/img/house3.jpg',
-      price: 2800000000,
-      features: [
-        'Diện tích: 110m²',
-        'Số phòng ngủ: 3',
-        'Số phòng tắm: 2',
-        'Có gara'
-      ],
-      location: 'Quận 3',
-      type: 'Nhà phố',
-      area: 110,
-      rooms: 3,
-      floors: 2
-    },
-    {
-      id: 4,
-      image: '/img/house4.jpg',
-      price: 3500000000,
-      features: [
-        'Diện tích: 150m²',
-        'Số phòng ngủ: 5',
-        'Số phòng tắm: 4',
-        'Có hồ bơi'
-      ],
-      location: 'Quận 9 (TP. Thủ Đức)',
-      type: 'Biệt thự',
-      area: 150,
-      rooms: 5,
-      floors: 2
-    }
-  ];
+  const [availableHouses, setAvailableHouses] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:8080/api/housescompare")
+        .then(res => {
+          if (!res.ok) throw new Error("Fetch error");
+          return res.json();
+        })
+        .then(data => {
+          const formatted = data.map((item) => ({
+            id: item.pHouseID,
+            title: item.title || "Chưa có tiêu đề",
+            houseType: item.houseType || "Không xác định",
+            area: item.area ?? 0,
+            address: item.address || "Không xác định",
+            floors: item.floors ?? 0,
+            bedrooms: item.bedrooms ?? 0,
+            legalStatus: item.legalstatus || "Không rõ",
+            price: (item.price || 0) * 1e9,
+            image: item.image ? `/img/${item.image}` : "/img/default.jpg",
+            features: [
+              `Diện tích: ${item.area ?? 0}m²`,
+              `Số phòng ngủ: ${item.bedrooms ?? 0}`,
+              `Tình trạng pháp lý: ${item.legalstatus || "Không rõ"}`,
+              `Số tầng: ${item.floors ?? 0}`
+            ],
+            location: item.address || "Không xác định",
+            type: item.title || "Chưa có tiêu đề"
+          }));
+          setAvailableHouses(formatted);
+        })
+        .catch(err => console.error("Lỗi khi fetch houses:", err));
+  }, []);
 
   const handleAddHouse = () => {
     setOpenModal(true);
@@ -143,16 +110,21 @@ const Compare = () => {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            loai_nha: house.type,
+            loai_nha: house.houseType,
             vi_tri: house.location,
             dien_tich: house.area,
-            so_phong: house.rooms,
+            so_phong: house.bedrooms,
             so_tang: house.floors,
           }),
         });
 
         const data = await response.json();
         const predictedPrice = data.gia_du_doan;
+
+        //  Log giá thực tế và dự đoán
+        console.log(` ${houseLabel} (${house.location})`);
+        console.log(`Giá thực tế: ${house.price.toLocaleString()} đ`);
+        console.log(`Giá dự đoán: ${(predictedPrice * 1e9).toLocaleString()} đ`);
 
         if (house.price < predictedPrice * 0.9 * 1e9) {
           results.push(`${houseLabel} (${house.location}): Có thể là một món hời, nhưng hãy kiểm tra kỹ tình trạng nhà và pháp lý.`);
@@ -162,9 +134,10 @@ const Compare = () => {
           results.push(`${houseLabel} (${house.location}): Mức giá hợp lý theo thị trường.`);
         }
       } catch (error) {
-        console.error("Lỗi khi gọi API dự đoán giá:", error);
+        console.error(" Lỗi khi gọi API dự đoán giá:", error);
       }
     }
+
 
     if (houses.length === 0) {
       console.error("Danh sách nhà trống!");
@@ -175,19 +148,19 @@ const Compare = () => {
       let largest = houses[houses.length - 1]; // Nhà lớn nhất
 
       // So sánh diện tích & số phòng
-      if (largest.rooms < smallest.rooms) {
-        results.push(`Nhà ${houses.indexOf(largest) + 1} (${largest.location}) có không gian rộng nhưng ít phòng (${largest.rooms} phòng), phù hợp cho gia đình thích thiết kế mở.`);
+      if (largest.bedrooms < smallest.bedrooms) {
+        results.push(`Nhà ${houses.indexOf(largest) + 1} (${largest.location}) có không gian rộng nhưng ít phòng (${largest.bedrooms} phòng), phù hợp cho gia đình thích thiết kế mở.`);
       }
-      if (smallest.rooms < largest.rooms) {
-        results.push(`Nhà ${houses.indexOf(smallest) + 1} (${smallest.location}) có nhiều phòng hơn (${smallest.rooms} phòng), thích hợp cho gia đình đông người.`);
+      if (smallest.bedrooms < largest.bedrooms) {
+        results.push(`Nhà ${houses.indexOf(smallest) + 1} (${smallest.location}) có nhiều phòng hơn (${smallest.bedrooms} phòng), thích hợp cho gia đình đông người.`);
       }
 
       // Nhà có nhiều phòng nhất
-      let maxRooms = Math.max(...houses.map(h => h.rooms));
-      let minRooms = Math.min(...houses.map(h => h.rooms));
+      let maxRooms = Math.max(...houses.map(h => h.bedrooms));
+      let minRooms = Math.min(...houses.map(h => h.bedrooms));
 
-      let mostRoomsHouses = houses.filter(h => h.rooms === maxRooms);
-      let leastRoomsHouses = houses.filter(h => h.rooms === minRooms);
+      let mostRoomsHouses = houses.filter(h => h.bedrooms === maxRooms);
+      let leastRoomsHouses = houses.filter(h => h.bedrooms === minRooms);
 
       if (mostRoomsHouses.length > 0) {
         let locations = mostRoomsHouses.map(h => `${houses.indexOf(h) + 1} (${h.location})`).join(", Nhà ");
@@ -265,19 +238,20 @@ const Compare = () => {
               <h2>Chọn nhà để so sánh</h2>
             </div>
             <div className="modal-body">
-              <select 
-                className="modal-select"
-                value={selectedHouse?.id || ''}
-                onChange={(e) => {
-                  const house = availableHouses.find(h => h.id === Number(e.target.value));
-                  setSelectedHouse(house);
-                }}
+              <select
+                  className="modal-select"
+                  value={selectedHouse?.id?.toString() || ''}
+                  onChange={(e) => {
+                    const selectedId = e.target.value;
+                    const house = availableHouses.find(h => h.id.toString() === selectedId);
+                    setSelectedHouse(house);
+                  }}
               >
                 <option value="">Chọn nhà</option>
                 {availableHouses.map(house => (
-                  <option key={house.id} value={house.id}>
-                    {house.type} - {house.location} - {house.price.toLocaleString()}đ
-                  </option>
+                    <option key={house.id} value={house.id.toString()}>
+                      {house.type} - {house.location} - {house.price.toLocaleString()}đ
+                    </option>
                 ))}
               </select>
 
@@ -305,7 +279,7 @@ const Compare = () => {
                     </div>
                     <div className="detail-row">
                       <span className="detail-label">Số phòng:</span>
-                      <span className="detail-value">{selectedHouse.rooms}</span>
+                      <span className="detail-value">{selectedHouse.bedrooms}</span>
                     </div>
                     <div className="detail-row">
                       <span className="detail-label">Số tầng:</span>

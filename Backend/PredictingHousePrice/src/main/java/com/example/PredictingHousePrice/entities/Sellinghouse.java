@@ -14,6 +14,9 @@ public class Sellinghouse {
     @Column(name = "Title", length = 200)
     private String title;
 
+    @Column(name = "HouseType")
+    private String houseType;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "UserID")
     private com.example.PredictingHousePrice.entities.User userID;
@@ -63,6 +66,14 @@ public class Sellinghouse {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String gethouseType() {
+        return houseType;
+    }
+
+    public void sethouseType(String houseType) {
+        this.houseType = houseType;
     }
 
     public com.example.PredictingHousePrice.entities.User getUserID() {
