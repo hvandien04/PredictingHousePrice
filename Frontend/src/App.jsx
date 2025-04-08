@@ -21,6 +21,7 @@ import Settings from './pages/admin/Settings';
 import HousePosts from './pages/admin/HousePosts';
 import FeedbackPage from './pages/admin/Feedback';
 import { AuthProvider } from './context/AuthContext';
+import { HPredictedProvider } from './context/HPredictedContext';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
@@ -65,11 +66,13 @@ function AppContent() {
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <AppContent />
-      </Router>
-    </AuthProvider>
+    <HPredictedProvider>
+      <AuthProvider>
+        <Router>
+          <AppContent />
+        </Router>
+      </AuthProvider>
+    </HPredictedProvider> 
   );
 }
 

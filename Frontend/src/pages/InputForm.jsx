@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/InputForm.css';
 import '../styles/animations.css';
+import { useHPredicted } from '../context/HPredictedContext';
 
 const InputForm = () => {
+  const { predictHouse } = useHPredicted();
   const [formData, setFormData] = useState({
-    houseType: '',
+    HouseType: '',
     district: '',
     area: '',
     rooms: '',
-    floors: ''
+    floors: '',
+    address: ''
   });
 
   const [houseTypes, setHouseTypes] = useState([]);
@@ -60,26 +63,16 @@ const InputForm = () => {
       setIsSubmitted(true);
 
       const predictionPayload = {
-        location: requestData.vi_tri,         // Vị trí
+        address: requestData.vi_tri, 
         area: requestData.dien_tich,          // Diện tích
-        rooms: requestData.so_phong,          // Số phòng
+        bedrooms: requestData.so_phong,          // Số phòng
         floors: requestData.so_tang,          // Số tầng
         predictedPrice: giaDuDoan,            // Giá dự đoán
         confidenceScore: doChinhXac,          // Độ chính xác
-        date: new Date().toISOString().split('T')[0], // Ngày (Y-m-d)
-        time: new Date().toISOString()        // Thời gian (ISO format)
+        houseType: requestData.loai_nha,      // Loại nhà
+
       };
-
-      console.log("Payload gửi đến Spring Boot:", predictionPayload);  // Xem rõ dữ liệu gửi đi
-
-      await fetch("http://localhost:8080/api/prediction/save-prediction", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(predictionPayload),
-        credentials: 'include'
-      });
+      const result = await predictHouse(predictionPayload);
 
     } catch (error) {
       console.error("Lỗi khi gửi dữ liệu:", error);

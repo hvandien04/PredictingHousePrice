@@ -5,14 +5,8 @@ import axios from 'axios';
 export const API_URL = 'http://localhost:8080';
 
 export const API_ENDPOINTS = {
-    // Auth endpoints
-    LOGIN: '/api/auth/login',
-    REGISTER: '/api/auth/register',
-    LOGOUT: '/api/auth/logout',
-    SESSION: '/api/auth/session',
-    UPDATE_PROFILE: '/api/auth/update-profile',
-    UPDATE_PASSWORD: '/api/auth/update-password',
-    
+    // Predict endpoints
+    PREDICT: '/api/prediction/create',
 };
 
 // ===================== AXIOS INSTANCE =====================
@@ -60,42 +54,11 @@ api.interceptors.response.use(
 );
 
 // ===================== AUTH SERVICE =====================
-export const authService = {
-    login: async (email, password) => {
-        const loginData = { email, password };
-        const response = await api.post(API_ENDPOINTS.LOGIN, loginData);
-        return response.data === "login success";
-    },
-
-    register: async (userData) => {
-        const response = await api.post(API_ENDPOINTS.REGISTER, userData);
+export const houseService = {
+    predict: async (data) => {
+        const response = await api.post(API_ENDPOINTS.PREDICT, data);
         return response.data;
     },
-
-    logout: async () => {
-        const response = await api.post(API_ENDPOINTS.LOGOUT, {});
-        return response.data;
-    },
-
-    checkSession: async () => {
-        const response = await api.get(API_ENDPOINTS.SESSION);
-        return response.data.message === "User is logged in!";
-    },
-
-    getCurrentUser: async () => {
-        const response = await api.get(API_ENDPOINTS.SESSION);
-        return response.data.user;
-    },
-
-    updateProfile: async (userData) => {
-        const response = await api.put(API_ENDPOINTS.UPDATE_PROFILE, userData);
-        return response.data;
-    },
-
-    changePassword: async (passwordData) => {
-        const response = await api.put(API_ENDPOINTS.UPDATE_PASSWORD, passwordData);
-        return response.data;
-    }
 };
 
 // Export the configured axios instance if needed elsewhere
