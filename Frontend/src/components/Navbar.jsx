@@ -82,11 +82,15 @@ const Navbar = () => {
                   <Link to="/profile" className="dropdown-item">
                     Thông Tin Cá Nhân
                   </Link>
+                  
                   <Link to="/history" className="dropdown-item">
                     Lịch Sử Dự Đoán
                   </Link>
                   <Link to="/sell-history" className="dropdown-item">
                     Lịch Sử Đăng Bán
+                  </Link>
+                  <Link to="/statistics" className="dropdown-item">
+                    Thống Kê
                   </Link>
                   <button onClick={handleLogout} className="dropdown-item logout-btn">
                     Đăng Xuất

@@ -166,7 +166,7 @@ function AdminLayout() {
           flexGrow: 1,
           p: 3,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
-          mt: 8,
+          // mt: 8,
         }}
       >
         <MDBox>

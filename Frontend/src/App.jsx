@@ -14,6 +14,7 @@ import History from './pages/History';
 import SellHouse from './pages/SellHouse';
 import SellHistory from './pages/SellHistory';
 import Profile from './pages/Profile';
+import Statistics from './pages/Statistics';
 import AdminLayout from './layouts/AdminLayout';
 import Dashboard from './pages/admin/Dashboard';
 import Users from './pages/admin/Users';
@@ -60,6 +61,7 @@ function AppContent() {
           <Route path="/sell-house" element={<SellHouse />} />
           <Route path="/sell-history" element={<SellHistory />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/statistics" element={<Statistics />} />
           
           {/* Admin routes */}
           <Route path="/admin" element={<RequireAdmin/>}>
