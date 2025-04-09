@@ -34,9 +34,9 @@ export const HPredictedProvider = ({ children }) => {
     const response = await houseService.predict(data);
     return response;
   };
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+//  if (isLoading) {
+//    return <div>Loading...</div>;
+//  }
 
   return (
     <HPredictedContext.Provider value={{ predictHouse, message }}>
