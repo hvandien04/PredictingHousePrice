@@ -6,6 +6,7 @@ const Compare = () => {
   const [openModal, setOpenModal] = useState(false);
   const [selectedHouse, setSelectedHouse] = useState(null);
   const [comparisonResults, setComparisonResults] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
   const districtAdvantages = {
     "Quận 1": "Vị trí trung tâm, thuận tiện di chuyển, gần nhiều tiện ích như chợ Bến Thành, phố đi bộ Nguyễn Huệ, các tòa nhà văn phòng và trung tâm thương mại lớn.",
@@ -197,6 +198,14 @@ const Compare = () => {
     setComparisonResults(results);
   };
 
+  // Lọc danh sách theo tên, loại nhà hoặc vị trí
+  const filteredHouses = availableHouses.filter(house =>
+      house.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      house.type.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      house.location.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+
   return (
     <div className="compare-container">
       <h1>So sánh bất động sản</h1>
@@ -238,6 +247,16 @@ const Compare = () => {
               <h2>Chọn nhà để so sánh</h2>
             </div>
             <div className="modal-body">
+              {/* Tìm kiếm nhà */}
+              <input
+                  type="text"
+                  placeholder="Tìm kiếm theo tên, loại nhà, vị trí..."
+                  className="modal-search-input"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+              />
+
+              {/* Danh sách nhà đã lọc */}
               <select
                   className="modal-select"
                   value={selectedHouse?.id?.toString() || ''}
@@ -248,55 +267,57 @@ const Compare = () => {
                   }}
               >
                 <option value="">Chọn nhà</option>
-                {availableHouses.map(house => (
+                {filteredHouses.map(house => (
                     <option key={house.id} value={house.id.toString()}>
                       {house.type} - {house.location} - {house.price.toLocaleString()}đ
                     </option>
                 ))}
               </select>
 
+              {/* Hiển thị chi tiết nhà được chọn */}
               {selectedHouse && (
-                <div className="house-details-modal">
-                  <div className="house-image">
-                    <img src={selectedHouse.image} alt="Selected House" />
+                  <div className="house-details-modal">
+                    <div className="house-image">
+                      <img src={selectedHouse.image} alt="Selected House" />
+                    </div>
+                    <div className="house-details">
+                      <div className="detail-row">
+                        <span className="detail-label">Giá:</span>
+                        <span className="detail-value">{selectedHouse.price.toLocaleString()}đ</span>
+                      </div>
+                      <div className="detail-row">
+                        <span className="detail-label">Diện tích:</span>
+                        <span className="detail-value">{selectedHouse.area}m²</span>
+                      </div>
+                      <div className="detail-row">
+                        <span className="detail-label">Vị trí:</span>
+                        <span className="detail-value">{selectedHouse.location}</span>
+                      </div>
+                      <div className="detail-row">
+                        <span className="detail-label">Loại nhà:</span>
+                        <span className="detail-value">{selectedHouse.type}</span>
+                      </div>
+                      <div className="detail-row">
+                        <span className="detail-label">Số phòng:</span>
+                        <span className="detail-value">{selectedHouse.bedrooms}</span>
+                      </div>
+                      <div className="detail-row">
+                        <span className="detail-label">Số tầng:</span>
+                        <span className="detail-value">{selectedHouse.floors}</span>
+                      </div>
+                    </div>
+                    <div className="house-features">
+                      <h3>Tiện nghi:</h3>
+                      <ul>
+                        {selectedHouse.features.map((feature, index) => (
+                            <li key={index}>{feature}</li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
-                  <div className="house-details">
-                    <div className="detail-row">
-                      <span className="detail-label">Giá:</span>
-                      <span className="detail-value">{selectedHouse.price.toLocaleString()}đ</span>
-                    </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Diện tích:</span>
-                      <span className="detail-value">{selectedHouse.area}m²</span>
-                    </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Vị trí:</span>
-                      <span className="detail-value">{selectedHouse.location}</span>
-                    </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Loại nhà:</span>
-                      <span className="detail-value">{selectedHouse.type}</span>
-                    </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Số phòng:</span>
-                      <span className="detail-value">{selectedHouse.bedrooms}</span>
-                    </div>
-                    <div className="detail-row">
-                      <span className="detail-label">Số tầng:</span>
-                      <span className="detail-value">{selectedHouse.floors}</span>
-                    </div>
-                  </div>
-                  <div className="house-features">
-                    <h3>Tiện nghi:</h3>
-                    <ul>
-                      {selectedHouse.features.map((feature, index) => (
-                        <li key={index}>{feature}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
               )}
             </div>
+
             <div className="modal-footer">
               <button 
                 className="modal-button modal-button-cancel"
