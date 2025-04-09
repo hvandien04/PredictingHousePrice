@@ -73,9 +73,9 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+//  if (isLoading) {
+//    return <div>Loading...</div>;
+//  }
 
   return (
     <AuthContext.Provider value={{ user, login, logout, updateProfile, changePassword, message }}>
