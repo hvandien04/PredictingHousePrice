@@ -15,6 +15,15 @@
   overflow: hidden;
 }
 
+.message-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  /* background: white; */
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
 .input-form-wrapper::before {
   content: '';
   position: absolute;

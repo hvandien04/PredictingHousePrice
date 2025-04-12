@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Compare.css';
+import ChatMessage from '../components/ChatMessage'
 
 const Compare = () => {
   const [houses, setHouses] = useState([]);
@@ -338,14 +339,12 @@ const Compare = () => {
       )}
 
       {comparisonResults.length > 0 && (
-        <div className="comparison-results">
-          <h3>Kết quả so sánh:</h3>
-          <ul>
-            {comparisonResults.map((result, index) => (
-              <li key={index}>{result}</li>
-            ))}
-          </ul>
-        </div>
+        <ChatMessage 
+          hasPrediction={false}
+          comparisonResults={comparisonResults}
+          bubbleWidth = "700px" // Thêm prop mới để điều chỉnh width
+
+        />
       )}
     </div>
   );
