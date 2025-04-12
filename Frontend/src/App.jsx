@@ -24,6 +24,7 @@ import HousePosts from './pages/admin/HousePosts';
 import FeedbackPage from './pages/admin/Feedback';
 import { AuthProvider } from './context/AuthContext';
 import { HPredictedProvider } from './context/HPredictedContext';
+import ScrollToTop from "./hooks/ScrollToTop";  
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
@@ -49,6 +50,7 @@ function AppContent() {
     <div className="app">
       {!isAdminRoute && <Navbar />}
       <main className="main-content">
+      <ScrollToTop />
       <ToastContainer />
         <Routes>
           <Route path="/" element={<Home />} />

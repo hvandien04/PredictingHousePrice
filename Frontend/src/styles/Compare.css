@@ -361,3 +361,19 @@
 .house-details-modal li:last-child {
   border-bottom: none;
 } 
+
+.comparison-results {
+  text-align: left; /* Căn giữa tiêu đề và nội dung */
+  padding: 20px;
+}
+
+.comparison-results h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+/* Đảm bảo chat-message-container trong comparison-results không vượt quá giới hạn */
+.comparison-results .chat-message-container {
+  max-width: 100%; /* Đảm bảo không vượt quá container */
+}

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useHPredicted } from '../context/HPredictedContext';
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-toastify';
+import ChatMessage from '../components/ChatMessage'; // Import component ChatMessage
 
 const InputForm = () => {
   const navigate = useNavigate();
@@ -14,9 +15,9 @@ const InputForm = () => {
   const [districts, setDistricts] = useState([]);
   const [predictedPrice, setPredictedPrice] = useState(null);
   const [confidenceScore, setConfidenceScore] = useState(null);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [hasPrediction, setHasPrediction] = useState(false); // Thêm trạng thái để kiểm soát việc đã có kết quả hay chưa
   const [formData, setFormData] = useState({
-    HouseType: '',
+    houseType: '',
     district: '',
     area: '',
     rooms: '',
@@ -24,17 +25,16 @@ const InputForm = () => {
     address: ''
   });
 
-
   useEffect(() => {
     fetch("http://127.0.0.1:5000/house-types")
-        .then(res => res.json())
-        .then(data => setHouseTypes(data))
-        .catch(err => console.error("Lỗi lấy loại nhà:", err));
+      .then(res => res.json())
+      .then(data => setHouseTypes(data))
+      .catch(err => console.error("Lỗi lấy loại nhà:", err));
 
     fetch("http://127.0.0.1:5000/districts")
-        .then(res => res.json())
-        .then(data => setDistricts(data))
-        .catch(err => console.error("Lỗi lấy quận/huyện:", err));
+      .then(res => res.json())
+      .then(data => setDistricts(data))
+      .catch(err => console.error("Lỗi lấy quận/huyện:", err));
   }, []);
 
   const handleChange = (e) => {
@@ -81,17 +81,16 @@ const InputForm = () => {
 
       setPredictedPrice(giaDuDoan);
       setConfidenceScore(doChinhXac);
-      setIsSubmitted(true);
+      setHasPrediction(true); // Cập nhật trạng thái để hiển thị kết quả
 
       const predictionPayload = {
         address: requestData.vi_tri,
-        area: requestData.dien_tich,          // Diện tích
-        bedrooms: requestData.so_phong,          // Số phòng
-        floors: requestData.so_tang,          // Số tầng
-        predictedPrice: giaDuDoan,            // Giá dự đoán
-        confidenceScore: doChinhXac,          // Độ chính xác
-        houseType: requestData.loai_nha,      // Loại nhà
-
+        area: requestData.dien_tich,
+        bedrooms: requestData.so_phong,
+        floors: requestData.so_tang,
+        predictedPrice: giaDuDoan,
+        confidenceScore: doChinhXac,
+        houseType: requestData.loai_nha,
       };
       const result = await predictHouse(predictionPayload);
       console.log("Kết quả lưu DB:", result);
@@ -101,58 +100,70 @@ const InputForm = () => {
     }
   };
 
+  const handleReset = () => {
+    setFormData({
+      houseType: '',
+      district: '',
+      area: '',
+      rooms: '',
+      floors: '',
+      address: ''
+    });
+    setPredictedPrice(null);
+    setConfidenceScore(null);
+    setHasPrediction(false); // Reset trạng thái để hiển thị thông điệp mặc định
+  };
+
   return (
-      <div className="input-form-page">
-        <div className="input-form-wrapper">
-          {!isSubmitted ? (
-              <>
-                <h1>Dự đoán giá nhà</h1>
-                <form onSubmit={handleSubmit} className="input-form-grid">
-                  <div className="input-field-group">
-                    <label htmlFor="houseType">Loại nhà</label>
-                    <select id="houseType" name="houseType" value={formData.houseType} onChange={handleChange} required>
-                      <option value="">Chọn loại nhà</option>
-                      {houseTypes.map((type) => (
-                          <option key={type.id} value={type.value}>{type.label}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="input-field-group">
-                    <label htmlFor="district">Quận/Huyện</label>
-                    <select id="district" name="district" value={formData.district} onChange={handleChange} required>
-                      <option value="">Chọn quận/huyện</option>
-                      {districts.map((district) => (
-                          <option key={district.id} value={district.value}>{district.label}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="input-field-group">
-                    <label htmlFor="area">Diện tích (m²)</label>
-                    <input type="number" id="area" name="area" value={formData.area} onChange={handleChange} required />
-                  </div>
-                  <div className="input-field-group">
-                    <label htmlFor="rooms">Số phòng ngủ</label>
-                    <input type="number" id="rooms" name="rooms" value={formData.rooms} onChange={handleChange} required />
-                  </div>
-                  <div className="input-field-group">
-                    <label htmlFor="floors">Số tầng</label>
-                    <input type="number" id="floors" name="floors" value={formData.floors} onChange={handleChange} required />
-                  </div>
-                  <button type="submit" className="input-submit-btn">Dự Đoán Giá</button>
-                </form>
-              </>
-          ) : (
-              <div className="prediction-result fade-in">
-                <h2>Kết quả dự đoán</h2>
-                <p>Giá dự đoán: {predictedPrice} tỷ</p>
-                {confidenceScore !== null && (
-                    <p>Tỉ lệ chính xác: {confidenceScore}%</p>
-                )}
-                <button type="button" className="input-submit-btn" onClick={() => setIsSubmitted(false)}>Thử lại</button>
-              </div>
-          )}
+    <div className="input-form-page">
+      <div className="input-form-wrapper">
+        {/* Luôn hiển thị form nhập liệu */}
+        <h1>Dự đoán giá nhà</h1>
+        <form onSubmit={handleSubmit} className="input-form-grid">
+          <div className="input-field-group">
+            <label htmlFor="houseType">Loại nhà</label>
+            <select id="houseType" name="houseType" value={formData.houseType} onChange={handleChange} required>
+              <option value="">Chọn loại nhà</option>
+              {houseTypes.map((type) => (
+                <option key={type.id} value={type.value}>{type.label}</option>
+              ))}
+            </select>
+          </div>
+          <div className="input-field-group">
+            <label htmlFor="district">Quận/Huyện</label>
+            <select id="district" name="district" value={formData.district} onChange={handleChange} required>
+              <option value="">Chọn quận/huyện</option>
+              {districts.map((district) => (
+                <option key={district.id} value={district.value}>{district.label}</option>
+              ))}
+            </select>
+          </div>
+          <div className="input-field-group">
+            <label htmlFor="area">Diện tích (m²)</label>
+            <input type="number" id="area" name="area" value={formData.area} onChange={handleChange} required />
+          </div>
+          <div className="input-field-group">
+            <label htmlFor="rooms">Số phòng ngủ</label>
+            <input type="number" id="rooms" name="rooms" value={formData.rooms} onChange={handleChange} required />
+          </div>
+          <div className="input-field-group">
+            <label htmlFor="floors">Số tầng</label>
+            <input type="number" id="floors" name="floors" value={formData.floors} onChange={handleChange} required />
+          </div>
+          <button type="submit" className="input-submit-btn">Dự Đoán Giá</button>
+        </form>
+      </div>
+      <div className="message-wrapper">
+        <div className="prediction-result fade-in">
+          <ChatMessage
+            predictedPrice={predictedPrice}
+            confidenceScore={confidenceScore}
+            hasPrediction={hasPrediction}
+            typeDefault="Bạn muốn dự đoán không?"
+          />
         </div>
       </div>
+    </div>
   );
 };
 
