@@ -1,65 +1,23 @@
-package com.example.PredictingHousePrice.entities;
-
-import jakarta.persistence.*;
+package com.example.PredictingHousePrice.dtos;
 
 import java.math.BigDecimal;
 
-@Entity
-@Table(name = "sellinghouse")
-public class Sellinghouse {
-    @Id
-    @Column(name = "PHouseID", nullable = false, length = 30)
-    private String pHouseID;
+public class SellinghouseRequest {
 
-    @Column(name = "Title", length = 200)
     private String title;
-
-    @Column(name = "HouseType")
     private String houseType;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserID")
-    private com.example.PredictingHousePrice.entities.User userID;
-
-    @Column(name = "Area", precision = 10, scale = 2)
     private BigDecimal area;
-
-    @Column(name = "Address", length = 200)
     private String address;
-
-    @Column(name = "Floors")
     private Integer floors;
-
-    @Column(name = "Bedrooms")
     private Integer bedrooms;
-
-    @Column(name = "Bathrooms")
     private Integer bathrooms;
-
-    @Column(name = "LegalStatus", length = 50)
     private String legalStatus;
-
-    @Column(name = "Price", precision = 15, scale = 2)
     private BigDecimal price;
-
-    @Lob
-    @Column(name = "Description")
     private String description;
-
-    @Column(name = "Image", length = 200)
     private String image;
-
-    @Column(name = "State", length = 50)
     private String state;
 
-    public String getPHouseID() {
-        return pHouseID;
-    }
-
-    public void setPHouseID(String pHouseID) {
-        this.pHouseID = pHouseID;
-    }
-
+    // Getters and setters
     public String getTitle() {
         return title;
     }
@@ -68,20 +26,12 @@ public class Sellinghouse {
         this.title = title;
     }
 
-    public String gethouseType() {
+    public String getHouseType() {
         return houseType;
     }
 
-    public void sethouseType(String houseType) {
+    public void setHouseType(String houseType) {
         this.houseType = houseType;
-    }
-
-    public com.example.PredictingHousePrice.entities.User getUserID() {
-        return userID;
-    }
-
-    public void setUserID(com.example.PredictingHousePrice.entities.User userID) {
-        this.userID = userID;
     }
 
     public BigDecimal getArea() {
@@ -162,9 +112,5 @@ public class Sellinghouse {
 
     public void setState(String state) {
         this.state = state;
-    }
-
-    public void setHouseType(String houseType) {
-        this.houseType = houseType;
     }
 }
