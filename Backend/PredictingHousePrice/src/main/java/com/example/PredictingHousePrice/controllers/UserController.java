@@ -2,10 +2,8 @@ package com.example.PredictingHousePrice.controllers;
 
 import com.example.PredictingHousePrice.entities.Prediction;
 import com.example.PredictingHousePrice.entities.Predictedhouse;
-import com.example.PredictingHousePrice.entities.User;
 import com.example.PredictingHousePrice.repositories.PredictionRepository;
 import com.example.PredictingHousePrice.repositories.PredictedhouseRepository;
-import com.example.PredictingHousePrice.repositories.UserRepository;
 import com.example.PredictingHousePrice.services.AuthService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
@@ -14,44 +12,38 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/admin")
-public class AdminController {
+@RequestMapping("/api/user")
+public class UserController {
 
     private final AuthService authService;
     private final PredictionRepository predictionRepository;
     private final PredictedhouseRepository predictedhouseRepository;
-    private final UserRepository userRepository;
 
-    public AdminController(AuthService authService, PredictionRepository predictionRepository,
-                           PredictedhouseRepository predictedhouseRepository, UserRepository userRepository) {
+    public UserController(AuthService authService, PredictionRepository predictionRepository, PredictedhouseRepository predictedhouseRepository) {
         this.authService = authService;
         this.predictionRepository = predictionRepository;
         this.predictedhouseRepository = predictedhouseRepository;
-        this.userRepository = userRepository;
-        System.out.println("UserRepository injected: " + (userRepository != null));
     }
 
     @GetMapping("/dashboard")
-    public ResponseEntity<?> adminDashboard(HttpServletRequest request) {
-        if (!authService.isAdmin(request)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
+    public ResponseEntity<?> userDashboard(HttpServletRequest request) {
+        com.example.PredictingHousePrice.entities.User currentUser = authService.getCurrentUser(request);
+        if (currentUser == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated");
         }
 
-        // Lấy tất cả dự đoán
-        List<Prediction> userPredictions = predictionRepository.findAll();
+        String userId = currentUser.getUserID();
+        // Lấy dự đoán của user hiện tại
+        List<Prediction> userPredictions = predictionRepository.findAll().stream()
+                .filter(prediction -> prediction.getUserID() != null && prediction.getUserID().getUserID().equals(userId))
+                .collect(Collectors.toList());
 
         // Tổng số dự đoán
         int totalPredictions = userPredictions.size();
-
-        // Tổng số user
-        long totalUsers = userRepository.count();
-        System.out.println("Total users: " + totalUsers);
 
         // Độ chính xác trung bình
         double averageAccuracy = userPredictions.stream()
@@ -91,20 +83,15 @@ public class AdminController {
         // Xu hướng giá trung bình theo tháng
         List<Map<String, Object>> timelineData = getTimelineData(userPredictions);
 
-        // Thống kê hiệu suất user theo ngày (7 ngày gần nhất)
-        List<Map<String, Object>> userPerformance = getUserPerformanceStats(userPredictions);
-
         // Response JSON
         Map<String, Object> dashboardData = new HashMap<>();
         dashboardData.put("totalPredictions", totalPredictions);
-        dashboardData.put("totalUsers", totalUsers);
         dashboardData.put("accuracy", String.format("%.2f%%", averageAccuracy * 100));
         dashboardData.put("averagePrice", String.format("%.2fB", averagePrice / 1_000_000_000));
         dashboardData.put("monthlyPredictions", monthlyPredictions);
         dashboardData.put("recentPredictions", recentPredictions);
         dashboardData.put("priceDistribution", priceDistribution);
         dashboardData.put("timelineData", timelineData);
-        dashboardData.put("userPerformance", userPerformance);
 
         return ResponseEntity.ok(dashboardData);
     }
@@ -174,49 +161,4 @@ public class AdminController {
                 .sorted(Comparator.comparing(m -> m.get("date").toString()))
                 .collect(Collectors.toList());
     }
-
-    private List<Map<String, Object>> getUserPerformanceStats(List<Prediction> predictions) {
-        // Lấy 7 ngày gần nhất
-        LocalDate today = LocalDate.now();
-        LocalDate startDate = today.minusDays(6);
-        List<String> dateLabels = new ArrayList<>();
-        for (int i = 0; i < 7; i++) {
-            dateLabels.add(startDate.plusDays(i).format(DateTimeFormatter.ISO_LOCAL_DATE));
-        }
-
-        // Lấy tất cả user
-        List<User> users = userRepository.findAll();
-
-        // Thống kê dự đoán theo user và ngày
-        Map<String, Map<String, Long>> userPredictionCounts = predictions.stream()
-                .filter(p -> p.getDate() != null && !p.getDate().isBefore(startDate))
-                .collect(Collectors.groupingBy(
-                        p -> p.getUserID().getUserID(),
-                        Collectors.groupingBy(
-                                p -> p.getDate().format(DateTimeFormatter.ISO_LOCAL_DATE),
-                                Collectors.counting()
-                        )
-                ));
-
-        // Chuẩn bị dữ liệu cho mỗi user
-        List<Map<String, Object>> userPerformance = new ArrayList<>();
-        for (User user : users) {
-            Map<String, Object> userData = new HashMap<>();
-            userData.put("userID", user.getUserID());
-            userData.put("name", user.getName());
-
-            List<Map<String, Object>> predictionsByDate = new ArrayList<>();
-            for (String date : dateLabels) {
-                Map<String, Object> dateData = new HashMap<>();
-                dateData.put("date", date);
-                dateData.put("count", userPredictionCounts.getOrDefault(user.getUserID(), new HashMap<>()).getOrDefault(date, 0L));
-                predictionsByDate.add(dateData);
-            }
-
-            userData.put("predictionsByDate", predictionsByDate);
-            userPerformance.add(userData);
-        }
-
-        return userPerformance;
-    }
-}   
+}
