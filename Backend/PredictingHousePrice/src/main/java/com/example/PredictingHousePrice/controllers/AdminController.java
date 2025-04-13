@@ -3,12 +3,14 @@ package com.example.PredictingHousePrice.controllers;
 import com.example.PredictingHousePrice.entities.Prediction;
 import com.example.PredictingHousePrice.entities.Predictedhouse;
 import com.example.PredictingHousePrice.entities.User;
+import com.example.PredictingHousePrice.entities.Feedback;
 import com.example.PredictingHousePrice.repositories.PredictionRepository;
 import com.example.PredictingHousePrice.repositories.PredictedhouseRepository;
 import com.example.PredictingHousePrice.repositories.UserRepository;
 import com.example.PredictingHousePrice.services.AuthService;
 import com.example.PredictingHousePrice.services.UserService;
 import com.example.PredictingHousePrice.services.SellinghouseService;
+import com.example.PredictingHousePrice.services.FeedbackService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,16 +38,18 @@ public class AdminController {
     private final UserRepository userRepository;
     private final UserService userService;
     private final SellinghouseService sellinghouseService;
+    private final FeedbackService feedbackService;
 
     public AdminController(AuthService authService, PredictionRepository predictionRepository,
                            PredictedhouseRepository predictedhouseRepository, UserRepository userRepository,
-                           UserService userService, SellinghouseService sellinghouseService) {
+                           UserService userService, SellinghouseService sellinghouseService, FeedbackService feedbackService) {
         this.authService = authService;
         this.userService = userService;
         this.sellinghouseService = sellinghouseService;
         this.predictionRepository = predictionRepository;
         this.predictedhouseRepository = predictedhouseRepository;
         this.userRepository = userRepository;
+        this.feedbackService = feedbackService;
         System.out.println("UserRepository injected: " + (userRepository != null));
     }
 
@@ -306,7 +310,6 @@ public class AdminController {
                 : ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
     }
 
-
     @DeleteMapping("/sellinghouses/{id}")
     public ResponseEntity<String> deleteHouse(@PathVariable String id, HttpServletRequest httpServletRequest) {
         if (!authService.isAdmin(httpServletRequest)) {
@@ -318,4 +321,23 @@ public class AdminController {
                 : ResponseEntity.status(HttpStatus.NOT_FOUND).body("House not found");
     }
 
+    // --- Feedback Management ---
+    // Lấy danh sách tất cả phản hồi
+    @GetMapping
+    public ResponseEntity<List<Feedback>> getAllFeedbacks() {
+        return ResponseEntity.ok(feedbackService.getAllFeedbacks());
+    }
+
+    // Xem chi tiết 1 phản hồi theo ID
+    @GetMapping("/{id}")
+    public ResponseEntity<Feedback> getFeedbackById(@PathVariable String id) {
+        return ResponseEntity.ok(feedbackService.getFeedbackById(id));
+    }
+
+    // Xóa phản hồi
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteFeedback(@PathVariable String id) {
+        feedbackService.deleteFeedbackById(id);
+        return ResponseEntity.noContent().build();
+    }
 }
