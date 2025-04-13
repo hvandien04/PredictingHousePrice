@@ -39,8 +39,8 @@ public class AuthController {
     }
 
     @PutMapping("/update-password")
-    public ResponseEntity<String> updatePassword(@RequestBody UpdatePasswordRequest request, HttpServletRequest httpRequest) {
-        return ResponseEntity.ok(authService.updatePassword(request, httpRequest));
+    public ResponseEntity<Map<String, Object>> updatePassword(@RequestBody UpdatePasswordRequest request, HttpServletRequest httpRequest) {
+        return authService.updatePassword(request, httpRequest);
     }
 
     @GetMapping("/session")
