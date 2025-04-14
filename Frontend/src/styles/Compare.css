@@ -378,8 +378,6 @@
 .comparison-results .chat-message-container {
   max-width: 100%; /* Đảm bảo không vượt quá container */
 }
-=======
-}
 
 .modal-search-input {
   width: 100%;
@@ -430,4 +428,3 @@
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
->>>>>>> c0fc73ec3318b0cf298685e92d97b86f33f0d30c

@@ -16,5 +16,8 @@ public class CorsConfig implements WebMvcConfigurer {
                 .allowedHeaders("*")
                 .exposedHeaders("Set-Cookie")
                 .allowCredentials(true);
+
+        // Đảm bảo phép truy cập vào tài nguyên ảnh
+        registry.addMapping("/uploads/**").allowedOrigins("http://localhost:5173").allowedMethods("GET");
     }
 }
