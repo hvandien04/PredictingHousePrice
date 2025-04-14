@@ -19,3 +19,10 @@ spring:
     store-type: jdbc
     jdbc:
       initialize-schema: always
+
+  resources:
+    static-locations: file:./uploads/
+
+  servlet:
+    multipart:
+      enabled: true
