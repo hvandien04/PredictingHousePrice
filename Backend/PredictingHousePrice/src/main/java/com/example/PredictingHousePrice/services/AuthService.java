@@ -157,15 +157,18 @@ public class AuthService {
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
-    public String updateProfile(UpdateProfileRequest request, HttpServletRequest httpRequest) {
+    public ResponseEntity<String> updateProfile(UpdateProfileRequest request, HttpServletRequest httpRequest) {
         HttpSession session = httpRequest.getSession(false);
         if (session == null || session.getAttribute("user") == null) {
-            return "User is not logged in!";
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Unauthorized");
         }
 
         User user = (User) session.getAttribute("user");
 
         if (request.getPhone() != null && !request.getPhone().isEmpty()) {
+            if (!request.getPhone().matches("^\\d{10,11}$")) {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid phone number format");
+            }
             user.setPhone(request.getPhone());
         }
 
@@ -176,7 +179,7 @@ public class AuthService {
         userRepository.save(user);
         session.setAttribute("user", user);
 
-        return "Profile updated successfully!";
+        return ResponseEntity.status(HttpStatus.OK).body("Profile updated successfully")    ;
     }
 
 }

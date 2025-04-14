@@ -65,7 +65,7 @@ public class AuthController {
 
     @PutMapping("/update-profile")
     public ResponseEntity<String> updateProfile(@RequestBody UpdateProfileRequest request, HttpServletRequest httpRequest) {
-        return ResponseEntity.ok(authService.updateProfile(request, httpRequest));
+        return authService.updateProfile(request, httpRequest);
     }
 
 }

@@ -47,15 +47,19 @@ export const AuthProvider = ({ children }) => {
       console.log('Sending profile update request:', userData);
       const response = await authService.updateProfile(userData);
       console.log('Profile update response:', response);
-      
-      if (response === 'Profile updated successfully!') {
+  
+      // Nếu dùng axios thì response.data mới là phần nội dung body
+      if (response === 'Profile updated successfully') {
         setUser(userData);
         return { success: true };
       }
-      return { success: false, error: response };
+      return { success: false, error: response.data };
     } catch (error) {
       console.error('Update profile error:', error.response || error);
-      return { success: false, error: error.response?.data || 'Có lỗi xảy ra khi cập nhật thông tin!' };
+      return {
+        success: false,
+        error: error.response?.data || 'Có lỗi xảy ra khi cập nhật thông tin!',
+      };
     }
   };
 
