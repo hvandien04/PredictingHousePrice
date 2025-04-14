@@ -6,6 +6,7 @@ import '../styles/Login.css';
 
 const Register = () => {
   const navigate = useNavigate()
+  const [error, setError] = useState(''); 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -72,10 +73,8 @@ const Register = () => {
     }));
   };
 
-  const handleSubmit =  async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    
     try {
       const registerData = {
         name: formData.name,
@@ -83,23 +82,27 @@ const Register = () => {
         phone: formData.phone,
         password: formData.password,
       };
-      const success = await authService.register(registerData);
-      if (success) {
-        toast.success('Đăng ký thành công!', {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-        });
-        navigate('/login');
+  
+      const res = await authService.register(registerData);
+  
+      toast.success('Đăng ký thành công!', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+  
+      navigate('/login');
+  
+    } catch (err) {
+      if (err.response && err.response.status === 400) {
+        setError(err.response.data);
       } else {
         setError('Đã có lỗi xảy ra khi đăng ký');
       }
-    } catch {
-      setError('Đã có lỗi xảy ra khi đăng ký');
     }
   };
 
@@ -111,6 +114,7 @@ const Register = () => {
     <div className="login">
       <div className="login-container">
         <h1>Đăng ký</h1>
+
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input
@@ -177,6 +181,7 @@ const Register = () => {
             />
             <label htmlFor="confirmPassword">Xác nhận mật khẩu</label>
             {shouldShowError('confirmPassword') && <span className="error-message">{errors.confirmPassword}</span>}
+            {error && <div className="error-message">{error}</div>}
           </div>
           <button type="submit" className="btn-login">
             Đăng ký

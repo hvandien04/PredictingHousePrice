@@ -8,13 +8,19 @@ import com.example.PredictingHousePrice.entities.User;
 import com.example.PredictingHousePrice.repositories.UserRepository;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.regex.Pattern;
+
+import static org.springframework.security.config.http.MatcherType.regex;
 
 @Service
 public class AuthService {
@@ -52,15 +58,19 @@ public class AuthService {
         return "login failed";
     }
 
-    public String register(RegisterRequest request) {
+    public ResponseEntity<?> register(RegisterRequest request) {
         if (userRepository.findByEmail(request.getEmail()).isPresent()) {
-            return "Email already exists";
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body("Email đã tồn tại");
         }
 
         String password = request.getPassword();
-        String regex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";  // Kiểm tra mật khẩu có ít nhất 8 ký tự, có chữ và số
+        String regex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
         if (!Pattern.matches(regex, password)) {
-            return "Mật khẩu phải có ít nhất 8 ký tự và bao gồm cả chữ và số.";
+            return ResponseEntity
+                    .status(HttpStatus.BAD_REQUEST)
+                    .body("Mật khẩu phải có ít nhất 8 ký tự và bao gồm cả chữ và số.");
         }
 
         User user = new User();
@@ -72,8 +82,10 @@ public class AuthService {
         user.setRole("0");
         user.setState("Active");
 
-        user = userRepository.save(user);
-        return "User registered successfully!";
+        userRepository.save(user);
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body("Đăng ký thành công!");
     }
 
     public String logout(HttpServletRequest request) {
@@ -119,22 +131,30 @@ public class AuthService {
         return hasRole(request, ROLE_USER);
     }
 
-    public String updatePassword(UpdatePasswordRequest request, HttpServletRequest httpRequest) {
+    public ResponseEntity<Map<String, Object>> updatePassword(UpdatePasswordRequest request, HttpServletRequest httpRequest) {
+        Map<String, Object> response = new HashMap<>();
         HttpSession session = httpRequest.getSession(false);
+
         if (session == null || session.getAttribute("user") == null) {
-            return "User is not logged in!";
+            response.put("success", false);
+            response.put("message", "Unauthorized");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
 
         User user = (User) session.getAttribute("user");
 
         if (!passwordEncoder.matches(request.getOldPassword(), user.getPassword())) {
-            return "Incorrect old password!";
+            response.put("success", false);
+            response.put("message", "Incorrect old password");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);
         }
 
         user.setPassword(passwordEncoder.encode(request.getNewPassword()));
         userRepository.save(user);
 
-        return "Password updated successfully!";
+        response.put("success", true);
+        response.put("message", "Password changed successfully");
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 
     public String updateProfile(UpdateProfileRequest request, HttpServletRequest httpRequest) {

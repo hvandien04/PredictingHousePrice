@@ -40,6 +40,7 @@ const Profile = () => {
     e.preventDefault();
     try {
       const result = await updateProfile(profileData);
+      console.log(result);
       if (result.success) {
         setSuccessMessage('Đổi thông tin thành công');
         setIsEditing(false);
@@ -55,19 +56,21 @@ const Profile = () => {
 
   const handlePasswordSubmit = async (e) => {
     e.preventDefault();
+  
     if (passwordData.newPassword !== passwordData.confirmPassword) {
       setErrorMessage('Mật khẩu mới không khớp');
       return;
     }
-
+  
     try {
-      const result = await changePassword({
+      const response = await changePassword({
         oldPassword: passwordData.currentPassword,
         newPassword: passwordData.newPassword
       });
-
-      if (result.success) {
-        setSuccessMessage('Đổi mật khẩu thành công');
+  
+      // Tùy vào phản hồi từ API (backend), xử lý thông điệp
+      if (response.success) {
+        setSuccessMessage(response.message || 'Đổi mật khẩu thành công');
         setPasswordData({
           currentPassword: '',
           newPassword: '',
@@ -75,11 +78,13 @@ const Profile = () => {
         });
         setTimeout(() => setSuccessMessage(''), 3000);
       } else {
-        setErrorMessage('Đổi mật khẩu thất bại');
+        setErrorMessage(response.message || 'Đổi mật khẩu thất bại');
       }
     } catch (error) {
       console.error('Lỗi khi đổi mật khẩu:', error);
-      setErrorMessage('Có lỗi xảy ra khi đổi mật khẩu');
+      const errorMessage =
+        error?.response?.data?.message || 'Có lỗi xảy ra khi kết nối đến máy chủ';
+      setErrorMessage(errorMessage);
     }
   };
 

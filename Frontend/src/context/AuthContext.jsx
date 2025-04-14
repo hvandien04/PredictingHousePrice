@@ -60,17 +60,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   const changePassword = async (passwordData) => {
-    try {
-      const response = await authService.changePassword(passwordData);
-      
-      if (response === 'Password updated successfully!') {
-        return { success: true };
-      }
-      return { success: false, error: response };
-    } catch (error) {
-      console.error('Password change error:', error.response || error);
-      return { success: false, error: error.response?.data || 'Có lỗi xảy ra khi đổi mật khẩu!' };
-    }
+    return await authService.changePassword(passwordData)
   };
 
 //  if (isLoading) {
