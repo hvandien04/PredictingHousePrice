@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
+import { useAuth } from '../context/AuthContext';
 import '../styles/Feedback.css';
 
 const Feedback = () => {
+  const { feedback } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState('');
   const [comment, setComment] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // TODO: Implement API call to send feedback
-    console.log('Feedback submitted:', { title, comment });
+    
+    const feedbackData = {
+      title: title,
+      message: comment,
+    };
+    const result = await feedback(feedbackData);
     setIsSubmitted(true);
     setTimeout(() => {
       setIsOpen(false);

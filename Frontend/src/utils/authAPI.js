@@ -12,6 +12,7 @@ export const API_ENDPOINTS = {
     SESSION: '/api/auth/session',
     UPDATE_PROFILE: '/api/auth/update-profile',
     UPDATE_PASSWORD: '/api/auth/update-password',
+    FEEDBACK: '/api/user/feedback',
     
 };
 
@@ -94,6 +95,11 @@ export const authService = {
 
     changePassword: async (passwordData) => {
         const response = await api.put(API_ENDPOINTS.UPDATE_PASSWORD, passwordData);
+        return response.data;
+    },
+
+    feedback: async (feedbackData) => {
+        const response = await api.post(API_ENDPOINTS.FEEDBACK, feedbackData);
         return response.data;
     }
 };

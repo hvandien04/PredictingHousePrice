@@ -51,7 +51,7 @@ public class FeedbackService {
                 .orElseThrow(() -> new RuntimeException("Không tìm thấy người dùng với ID: " + userId));
 
         Feedback feedback = new Feedback();
-        feedback.setFeedbackID(UUID.randomUUID().toString());
+        feedback.setFeedbackID(generateFeedbackId());
         feedback.setUserID(user);
         feedback.setTitle(title);
         feedback.setMessage(message);
@@ -66,5 +66,13 @@ public class FeedbackService {
             throw new RuntimeException("Không tìm thấy phản hồi với ID: " + id);
         }
         feedbackRepository.deleteById(id);
+    }
+
+    private String generateFeedbackId() {
+        String feedbackId;
+        do {
+            feedbackId = "F" + UUID.randomUUID().toString().replace("-", "").substring(0, 5).toUpperCase();
+        } while (feedbackRepository.existsById(feedbackId));
+        return feedbackId;
     }
 }
