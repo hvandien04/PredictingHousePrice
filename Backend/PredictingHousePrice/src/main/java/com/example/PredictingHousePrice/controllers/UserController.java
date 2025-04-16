@@ -1,16 +1,19 @@
 package com.example.PredictingHousePrice.controllers;
 
+import com.example.PredictingHousePrice.dtos.FeedbackRequest;
+import com.example.PredictingHousePrice.entities.Feedback;
 import com.example.PredictingHousePrice.entities.Prediction;
 import com.example.PredictingHousePrice.entities.Predictedhouse;
+import com.example.PredictingHousePrice.entities.User;
 import com.example.PredictingHousePrice.repositories.PredictionRepository;
 import com.example.PredictingHousePrice.repositories.PredictedhouseRepository;
 import com.example.PredictingHousePrice.services.AuthService;
+import com.example.PredictingHousePrice.services.FeedbackService;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -22,47 +25,45 @@ public class UserController {
     private final AuthService authService;
     private final PredictionRepository predictionRepository;
     private final PredictedhouseRepository predictedhouseRepository;
+    private final FeedbackService feedbackService;
 
-    public UserController(AuthService authService, PredictionRepository predictionRepository, PredictedhouseRepository predictedhouseRepository) {
+    @Autowired
+    public UserController(AuthService authService, PredictionRepository predictionRepository,
+                          PredictedhouseRepository predictedhouseRepository, FeedbackService feedbackService) {
         this.authService = authService;
         this.predictionRepository = predictionRepository;
         this.predictedhouseRepository = predictedhouseRepository;
+        this.feedbackService = feedbackService;
     }
 
     @GetMapping("/dashboard")
     public ResponseEntity<?> userDashboard(HttpServletRequest request) {
-        com.example.PredictingHousePrice.entities.User currentUser = authService.getCurrentUser(request);
+        User currentUser = authService.getCurrentUser(request);
         if (currentUser == null) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not authenticated");
         }
 
         String userId = currentUser.getUserID();
-        // Lấy dự đoán của user hiện tại
         List<Prediction> userPredictions = predictionRepository.findAll().stream()
                 .filter(prediction -> prediction.getUserID() != null && prediction.getUserID().getUserID().equals(userId))
                 .collect(Collectors.toList());
 
-        // Tổng số dự đoán
         int totalPredictions = userPredictions.size();
 
-        // Độ chính xác trung bình
         double averageAccuracy = userPredictions.stream()
                 .filter(p -> p.getConfidenceScore() != null)
                 .mapToDouble(Prediction::getConfidenceScore)
                 .average()
                 .orElse(0.0);
 
-        // Giá trung bình
         double averagePrice = userPredictions.stream()
                 .filter(p -> p.getPredictedPrice() != null)
                 .mapToDouble(p -> p.getPredictedPrice().doubleValue())
                 .average()
                 .orElse(0.0);
 
-        // Thống kê theo tháng
         List<Map<String, Object>> monthlyPredictions = getMonthlyPredictionStats(userPredictions);
 
-        // Dự đoán gần đây (6 bản ghi mới nhất)
         List<Map<String, Object>> recentPredictions = userPredictions.stream()
                 .sorted(Comparator.comparing(Prediction::getDate, Comparator.nullsLast(Comparator.reverseOrder())))
                 .limit(6)
@@ -77,13 +78,10 @@ public class UserController {
                 })
                 .collect(Collectors.toList());
 
-        // Phân bố giá nhà
         List<Map<String, Object>> priceDistribution = getPriceDistribution(userPredictions);
 
-        // Xu hướng giá trung bình theo tháng
         List<Map<String, Object>> timelineData = getTimelineData(userPredictions);
 
-        // Response JSON
         Map<String, Object> dashboardData = new HashMap<>();
         dashboardData.put("totalPredictions", totalPredictions);
         dashboardData.put("accuracy", String.format("%.2f%%", averageAccuracy * 100));
@@ -94,6 +92,17 @@ public class UserController {
         dashboardData.put("timelineData", timelineData);
 
         return ResponseEntity.ok(dashboardData);
+    }
+
+    @PostMapping("/feedback")
+    public ResponseEntity<Feedback> receiveFeedback(@RequestBody FeedbackRequest FeedbackRequest, HttpServletRequest request) {
+        User currentUser = authService.getCurrentUser(request);
+        if (currentUser == null) {
+            throw new RuntimeException("User not authenticated");
+        }
+        String userId = currentUser.getUserID();
+        Feedback feedback = feedbackService.createFeedback(userId, FeedbackRequest.getTitle(), FeedbackRequest.getMessage());
+        return new ResponseEntity<>(feedback, HttpStatus.CREATED);
     }
 
     private List<Map<String, Object>> getMonthlyPredictionStats(List<Prediction> predictions) {

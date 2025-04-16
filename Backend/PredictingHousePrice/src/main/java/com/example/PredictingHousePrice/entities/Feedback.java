@@ -1,32 +1,33 @@
 package com.example.PredictingHousePrice.entities;
 
 import jakarta.persistence.*;
-
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "feedback")
+@Table(name = "Feedback")
 public class Feedback {
+
     @Id
-    @Column(name = "FeedbackID", nullable = false, length = 50)
+    @Column(name = "feedbackID", length = 6)
     private String feedbackID;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "UserID")
-    private com.example.PredictingHousePrice.entities.User userID;
+    @ManyToOne
+    @JoinColumn(name = "userID", nullable = false)
+    private User userID;
 
-    @Column(name = "Date")
-    private LocalDate date;
+    @Column(name = "title", nullable = false, length = 200)
+    private String title;
 
-    @Column(name = "Message", length = 200)
+    @Column(name = "message", nullable = false, length = 200)
     private String message;
 
-    @Column(name = "Title", length = 200)
-    private String title;
+    @Column(name = "date")
+    private LocalDate date;
 
     @Column(name = "status")
     private String status;
 
+    // Getters and Setters
     public String getFeedbackID() {
         return feedbackID;
     }
@@ -35,28 +36,12 @@ public class Feedback {
         this.feedbackID = feedbackID;
     }
 
-    public com.example.PredictingHousePrice.entities.User getUserID() {
+    public User getUserID() {
         return userID;
     }
 
-    public void setUserID(com.example.PredictingHousePrice.entities.User userID) {
+    public void setUserID(User userID) {
         this.userID = userID;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
     }
 
     public String getTitle() {
@@ -67,6 +52,22 @@ public class Feedback {
         this.title = title;
     }
 
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
     public String getStatus() {
         return status;
     }
@@ -74,7 +75,4 @@ public class Feedback {
     public void setStatus(String status) {
         this.status = status;
     }
-
-
-
 }
