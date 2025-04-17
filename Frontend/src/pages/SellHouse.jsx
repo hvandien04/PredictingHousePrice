@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/SellHouse.css';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { toast } from 'react-toastify';
 
 const SellHouse = () => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
+  const [filteredHouses, setFilteredHouses] = useState([]); // Dữ liệu sau khi lọc
   const [formData, setFormData] = useState({
     title: '',
     price: '',
@@ -25,36 +31,74 @@ const SellHouse = () => {
     bedrooms: '',
   });
 
-  // Mock data for house listings
-  const [houses] = useState([
-    {
-      id: 1,
-      title: 'Nhà phố cao cấp Quận 7',
-      price: '5.2 tỷ',
-      address: 'Quận 7',
-      houseType: 'Nhà phố',
-      area: '120m²',
-      bedrooms: 4,
-      bathrooms: 3,
-      legalstatus: 'Chính chủ',
-      description: 'Nhà phố cao cấp, full nội thất, vị trí đẹp...',
-      image: 'https://file4.batdongsan.com.vn/crop/393x222/2024/02/27/20240227160332-a465_wm.jpg'
-    },
-    {
-      id: 2,
-      title: 'Căn hộ view sông Quận 2',
-      price: '3.8 tỷ',
-      address: 'Quận 2',
-      houseType: 'Chung cư',
-      area: '85m²',
-      bedrooms: 3,
-      bathrooms: 2,
-      legalstatus: 'Chính chủ',
-      description: 'Căn hộ view sông thoáng mát...',
-      image: 'https://file4.batdongsan.com.vn/crop/393x222/2024/02/27/20240227160440-3724_wm.jpg'
-    },
-    // Add more mock data if needed
-  ]);
+  // State to store house listings fetched from API
+  const [houses, setHouses] = useState([]);
+
+  // Fetch house listings from API
+  useEffect(() => {
+    const fetchHouses = async () => {
+      try {
+        const response = await fetch('http://localhost:8080/api/sellinghouses');  // Thay URL API của bạn ở đây
+        if (!response.ok) {
+          throw new Error('Không thể lấy dữ liệu từ API');
+        }
+        const data = await response.json();
+
+        console.log(data);  // In dữ liệu ở đây
+
+        setHouses(data);
+      } catch (error) {
+        console.error('Lỗi khi lấy dữ liệu nhà:', error);
+        alert('Không thể lấy dữ liệu nhà');
+      }
+    };
+
+    fetchHouses();
+  }, []);
+
+  // Hàm xử lý thay đổi bộ lọc
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      [name]: value
+    }));
+  };
+
+  // Hàm lọc nhà theo các bộ lọc
+  useEffect(() => {
+    let filtered = houses;
+
+    // Lọc theo khoảng giá
+    if (filters.priceRange) {
+      const [minPrice, maxPrice] = filters.priceRange.split('-').map(Number);
+      filtered = filtered.filter((house) => {
+        return house.price >= minPrice && house.price <= maxPrice;
+      });
+    }
+
+
+    // Lọc theo khu vực
+    if (filters.address) {
+      filtered = filtered.filter((house) => house.address === filters.address);
+    }
+
+    // Lọc theo loại nhà
+    if (filters.houseType) {
+      filtered = filtered.filter((house) => house.houseType === filters.houseType);
+    }
+
+    if (filters.bedrooms) {
+      if (filters.bedrooms === '4+') {
+        filtered = filtered.filter((house) => house.bedrooms >= 4);
+      } else {
+        filtered = filtered.filter((house) => house.bedrooms === parseInt(filters.bedrooms));
+      }
+    }
+
+    // Cập nhật kết quả lọc
+    setFilteredHouses(filtered);
+  }, [filters, houses]); // Chạy lại khi filters hoặc houses thay đổi
 
   // Handle form field changes
   const handleFormChange = (e) => {
@@ -65,19 +109,26 @@ const SellHouse = () => {
     });
   };
 
-  const handleFilterChange = (e) => {
-    const { name, value } = e.target;
-    setFilters((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!formData.title || !formData.price || !formData.area) {
       alert('Vui lòng điền đầy đủ thông tin!');
+      return;
+    }
+
+    if (!user) {
+      console.log('User chưa đăng nhập:', user);  // Kiểm tra giá trị của user
+      toast.warning('Vui lòng đăng nhập để tiếp tục', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      navigate("/login");
       return;
     }
 
@@ -90,11 +141,12 @@ const SellHouse = () => {
     console.log('Dữ liệu chuẩn bị gửi:', formPayload);
 
     try {
-      const response = await fetch(`http://localhost:8080/api/uploadhouse/create?userId=UBADA4`, {
+      const response = await fetch(`http://localhost:8080/api/uploadhouse/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials: 'include', // Ensures the session cookie is sent
         body: JSON.stringify(formPayload),
       });
 
@@ -107,6 +159,7 @@ const SellHouse = () => {
 
       alert('Đã thêm nhà thành công!');
 
+      // Reset form after successful submission
       setFormData({
         title: '',
         price: '',
@@ -119,7 +172,7 @@ const SellHouse = () => {
         legalStatus: '',
         state: '',
         description: '',
-        image: '' // Reset lại trường ảnh sau khi gửi thành công
+        image: ''
       });
 
     } catch (error) {
@@ -127,6 +180,7 @@ const SellHouse = () => {
       alert('Có lỗi xảy ra khi gửi yêu cầu. Vui lòng thử lại.');
     }
   };
+
 
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
@@ -184,17 +238,17 @@ const SellHouse = () => {
           <div className="filter-group">
             <label>Khoảng giá</label>
             <select name="priceRange" value={filters.priceRange} onChange={handleFilterChange}>
-              <option value="">Tất cả mức giá</option>
+              <option value="">Tất cả</option>
               <option value="0-2">Dưới 2 tỷ</option>
               <option value="2-5">2 - 5 tỷ</option>
               <option value="5-10">5 - 10 tỷ</option>
-              <option value="10+">Trên 10 tỷ</option>
+              <option value="10-1000">Trên 10 tỷ</option>
             </select>
           </div>
 
           <div className="filter-group">
             <label>Khu vực</label>
-            <select name="location" value={filters.location} onChange={handleFilterChange}>
+            <select name="address" value={filters.address} onChange={handleFilterChange}>
               <option value="">Tất cả khu vực</option>
               <option value="Quận 1">Quận 1</option>
               <option value="Quận 2">Quận 2</option>
@@ -205,7 +259,7 @@ const SellHouse = () => {
 
           <div className="filter-group">
             <label>Loại nhà</label>
-            <select name="type" value={filters.type} onChange={handleFilterChange}>
+            <select name="houseType" value={filters.houseType} onChange={handleFilterChange}>
               <option value="">Tất cả loại nhà</option>
               <option value="Nhà phố">Nhà phố</option>
               <option value="Biệt thự">Biệt thự</option>
@@ -235,20 +289,20 @@ const SellHouse = () => {
           </div>
 
           <div className="houses-grid">
-            {houses.map((house) => (
-                <div key={house.id} className="sell-house-card">
+            {filteredHouses.map((house) => (
+                <div key={house.pHouseID} className="sell-house-card">
                   <div className="sell-house-image">
                     <img src={house.image} alt={house.title} />
                   </div>
                   <div className="sell-house-content">
                     <h3>{house.title}</h3>
-                    <p className="sell-house-price">{house.price}</p>
+                    <p className="sell-house-price">{house.price} tỷ</p>
                     <div className="sell-house-details">
-                      <span>{house.location}</span>
-                      <span>{house.area}</span>
+                      <span>{house.address}</span>
+                      <span>{house.area} m2</span>
                       <span>{house.bedrooms} PN</span>
                       <span>{house.bathrooms} WC</span>
-                      <span>{house.legalstatus}</span>
+                      <span>{house.legalStatus}</span>
                     </div>
                     <p className="sell-house-description">{house.description}</p>
                   </div>
