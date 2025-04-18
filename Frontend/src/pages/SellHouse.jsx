@@ -8,6 +8,8 @@ const SellHouse = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
+  const [houseType, setHouseTypes] = useState([]);
+  const [address, setAddress] = useState([]);
   const [filteredHouses, setFilteredHouses] = useState([]); // Dữ liệu sau khi lọc
   const [formData, setFormData] = useState({
     title: '',
@@ -19,10 +21,22 @@ const SellHouse = () => {
     bathrooms: '',
     floors: '',
     legalStatus: '',
-    state: '',
+    state: 'Chờ duyệt',
     description: '',
     image: ''
   });
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:5000/house-types")
+        .then(res => res.json())
+        .then(data => setHouseTypes(data))
+        .catch(err => console.error("Lỗi lấy loại nhà:", err));
+
+    fetch("http://127.0.0.1:5000/districts")
+        .then(res => res.json())
+        .then(data => setAddress(data))
+        .catch(err => console.error("Lỗi lấy quận/huyện:", err));
+  }, []);
 
   const [filters, setFilters] = useState({
     priceRange: '',
@@ -49,7 +63,6 @@ const SellHouse = () => {
         setHouses(data);
       } catch (error) {
         console.error('Lỗi khi lấy dữ liệu nhà:', error);
-        alert('Không thể lấy dữ liệu nhà');
       }
     };
 
@@ -69,12 +82,15 @@ const SellHouse = () => {
   useEffect(() => {
     let filtered = houses;
 
-    // Lọc theo khoảng giá
     if (filters.priceRange) {
-      const [minPrice, maxPrice] = filters.priceRange.split('-').map(Number);
-      filtered = filtered.filter((house) => {
-        return house.price >= minPrice && house.price <= maxPrice;
-      });
+      if (filters.priceRange === '10+') {
+        filtered = filtered.filter((house) => house.price >= 10);
+      } else {
+        const [minPrice, maxPrice] = filters.priceRange.split('-').map(Number);
+        filtered = filtered.filter((house) => {
+          return house.price >= minPrice && house.price <= maxPrice;
+        });
+      }
     }
 
 
@@ -157,7 +173,7 @@ const SellHouse = () => {
       const data = await response.json();
       console.log('Dữ liệu đã được lưu:', data);
 
-      alert('Đã thêm nhà thành công!');
+      window.location.reload();
 
       // Reset form after successful submission
       setFormData({
@@ -170,7 +186,7 @@ const SellHouse = () => {
         bathrooms: '',
         floors: '',
         legalStatus: '',
-        state: '',
+        state: 'Chờ duyệt',
         description: '',
         image: ''
       });
@@ -206,7 +222,6 @@ const SellHouse = () => {
         .then((response) => response.text()) // server trả về plain text, không phải JSON
         .then((data) => {
           console.log('Ảnh đã được tải lên:', data);
-          alert('Tải ảnh lên thành công!');
 
           // Gán lại ảnh bằng đường dẫn chính thức từ server
           if (imagePreview) {
@@ -221,11 +236,8 @@ const SellHouse = () => {
         })
         .catch((error) => {
           console.error('Lỗi khi tải ảnh lên:', error);
-          alert('Có lỗi xảy ra khi tải ảnh lên. Vui lòng thử lại.');
         });
   };
-
-
 
   return (
       <div className="sell-house-container">
@@ -242,28 +254,27 @@ const SellHouse = () => {
               <option value="0-2">Dưới 2 tỷ</option>
               <option value="2-5">2 - 5 tỷ</option>
               <option value="5-10">5 - 10 tỷ</option>
-              <option value="10-1000">Trên 10 tỷ</option>
+              <option value="10+">Trên 10 tỷ</option>
             </select>
           </div>
 
           <div className="filter-group">
             <label>Khu vực</label>
-            <select name="address" value={filters.address} onChange={handleFilterChange}>
+            <select id="filter-address" name="address" value={filters.address} onChange={handleFilterChange}>
               <option value="">Tất cả khu vực</option>
-              <option value="Quận 1">Quận 1</option>
-              <option value="Quận 2">Quận 2</option>
-              <option value="Quận 7">Quận 7</option>
-              <option value="Quận 9">Quận 9</option>
+              {address.map((address) => (
+                  <option key={address.id} value={address.value}>{address.label}</option>
+              ))}
             </select>
           </div>
 
           <div className="filter-group">
             <label>Loại nhà</label>
-            <select name="houseType" value={filters.houseType} onChange={handleFilterChange}>
+            <select id="filter-houseType" name="houseType" value={filters.houseType} onChange={handleFilterChange}>
               <option value="">Tất cả loại nhà</option>
-              <option value="Nhà phố">Nhà phố</option>
-              <option value="Biệt thự">Biệt thự</option>
-              <option value="Chung cư">Chung cư</option>
+              {houseType.map((type) => (
+                  <option key={type.id} value={type.value}>{type.label}</option>
+              ))}
             </select>
           </div>
 
@@ -303,6 +314,7 @@ const SellHouse = () => {
                       <span>{house.bedrooms} PN</span>
                       <span>{house.bathrooms} WC</span>
                       <span>{house.legalStatus}</span>
+                      <span>{house.floors} tầng</span>
                     </div>
                     <p className="sell-house-description">{house.description}</p>
                   </div>
@@ -343,31 +355,32 @@ const SellHouse = () => {
                     <div className="sell-form-group">
                       <label>Khu vực</label>
                       <select
+                          id="form-address"
                           name="address"
                           value={formData.address}
                           onChange={handleFormChange}
                           required
                       >
                         <option value="">Chọn khu vực</option>
-                        <option value="Quận 1">Quận 1</option>
-                        <option value="Quận 2">Quận 2</option>
-                        <option value="Quận 7">Quận 7</option>
-                        <option value="Quận 9">Quận 9</option>
+                        {address.map((address) => (
+                            <option key={address.id} value={address.value}>{address.label}</option>
+                        ))}
                       </select>
                     </div>
 
                     <div className="sell-form-group">
                       <label>Loại nhà</label>
                       <select
+                          id="form-houseType"
                           name="houseType"
                           value={formData.houseType}
                           onChange={handleFormChange}
                           required
                       >
                         <option value="">Chọn loại nhà</option>
-                        <option value="Nhà phố">Nhà phố</option>
-                        <option value="Biệt thự">Biệt thự</option>
-                        <option value="Chung cư">Chung cư</option>
+                        {houseType.map((type) => (
+                            <option key={type.id} value={type.value}>{type.label}</option>
+                        ))}
                       </select>
                     </div>
 
@@ -434,22 +447,6 @@ const SellHouse = () => {
                     </div>
 
                     <div className="sell-form-group">
-                      <label>Trạng thái</label>
-                      <select
-                          name="state"
-                          value={formData.state}
-                          onChange={handleFormChange}
-                          required
-                      >
-                        <option value="">Chọn trạng thái</option>
-                        <option value="Đang bán">Đang bán</option>
-                        <option value="Đã bán">Đã bán</option>
-                        <option value="Đang đặt cọc">Đang đặt cọc</option>
-                      </select>
-                    </div>
-
-
-                    <div className="sell-form-group">
                       <label>Mô tả</label>
                       <textarea
                           name="description"
@@ -480,9 +477,13 @@ const SellHouse = () => {
 
                   </div>
 
-                  <div className="form-buttons">
-                    <button type="submit">Đăng tin</button>
-                    <button type="button" onClick={() => setShowForm(false)}>Hủy</button>
+                  <div className="sell-form-actions">
+                    <button type="button" className="sell-btn-cancel" onClick={() => setShowForm(false)}>
+                      Hủy
+                    </button>
+                    <button type="submit" className="sell-btn-submit">
+                      Đăng tin
+                    </button>
                   </div>
                 </form>
               </div>

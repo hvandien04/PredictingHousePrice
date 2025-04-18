@@ -27,10 +27,6 @@ def recreate_label_encoder(file_path):
         with open(file_path, "wb") as file:
             pickle.dump(label_encoder, file)
 
-        print(f"✅ Đã tạo lại {file_path} đúng định dạng!")
-    else:
-        print(f"⚠️ Dữ liệu trong {file_path} không hợp lệ!")
-
 recreate_label_encoder("label_encoder_vi_tri_goc.pkl")
 recreate_label_encoder("label_encoder_loai_goc.pkl")
 
