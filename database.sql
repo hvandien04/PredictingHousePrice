@@ -123,6 +123,7 @@ CREATE TABLE `sellinghouse` (
   `Description` text,
   `Image` varchar(200) DEFAULT NULL,
   `State` varchar(50) DEFAULT NULL,
+  `Housetype` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`PHouseID`),
   KEY `UserID` (`UserID`),
   CONSTRAINT `sellinghouse_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`)
@@ -152,8 +153,7 @@ CREATE TABLE `users` (
   `Password` varchar(100) NOT NULL,
   `Phone` varchar(20) DEFAULT NULL,
   `Role` varchar(50) NOT NULL,
-  `State` varchar(50) DEFAULT NULL,
-  `Status` varchar(50) DEFAULT NULL,
+  `State` varchar(50) DEFAULT NULL
   PRIMARY KEY (`UserID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
