@@ -42,6 +42,15 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const feedback = async (feedbackData) => {
+    try {
+      const response = await authService.feedback(feedbackData);
+      return response;
+    } catch (error) {
+      return { success: false, error: error.response?.data || 'Có lỗi xảy ra khi gửi phản hồi.' };
+    }
+  };
+
   const updateProfile = async (userData) => {
     try {
       console.log('Sending profile update request:', userData);
@@ -72,7 +81,7 @@ export const AuthProvider = ({ children }) => {
 //  }
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, updateProfile, changePassword, message }}>
+    <AuthContext.Provider value={{ user, login, logout, updateProfile, changePassword, message, feedback }}>
       {children}
     </AuthContext.Provider>
   );

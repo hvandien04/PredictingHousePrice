@@ -1,23 +1,48 @@
 package com.example.PredictingHousePrice.dtos;
 
+import com.example.PredictingHousePrice.entities.Sellinghouse;
 import java.math.BigDecimal;
 
 public class SellinghouseRequest {
-
+    private String pHouseID;
     private String title;
     private String houseType;
-    private BigDecimal area;
+    private String image;
     private String address;
-    private Integer floors;
-    private Integer bedrooms;
-    private Integer bathrooms;
+    private int bedrooms;
+    private int floors;
+    private int bathrooms;
     private String legalStatus;
     private BigDecimal price;
+    private BigDecimal area;
     private String description;
-    private String image;
     private String state;
 
-    // Getters and setters
+    public SellinghouseRequest(Sellinghouse entity) {
+        this.pHouseID = entity.getPHouseID();
+        this.title = entity.getTitle();
+        this.houseType = entity.gethouseType();
+        this.image = entity.getImage();
+        this.address = entity.getAddress();
+        this.bedrooms = entity.getBedrooms() != null ? entity.getBedrooms() : 0;
+        this.floors = entity.getFloors() != null ? entity.getFloors() : 0;
+        this.bathrooms = entity.getBathrooms() != null ? entity.getBathrooms() : 0;
+        this.price = entity.getPrice() != null ? entity.getPrice() : BigDecimal.ZERO;
+        this.area = entity.getArea() != null ? entity.getArea() : BigDecimal.ZERO;
+        this.legalStatus = entity.getLegalStatus();
+        this.description = entity.getDescription();
+        this.state = entity.getState();
+    }
+
+    // Getters và Setters
+    public String getpHouseID() {
+        return pHouseID;
+    }
+
+    public void setpHouseID(String pHouseID) {
+        this.pHouseID = pHouseID;
+    }
+
     public String getTitle() {
         return title;
     }
@@ -34,12 +59,12 @@ public class SellinghouseRequest {
         this.houseType = houseType;
     }
 
-    public BigDecimal getArea() {
-        return area;
+    public String getImage() {
+        return image;
     }
 
-    public void setArea(BigDecimal area) {
-        this.area = area;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getAddress() {
@@ -50,27 +75,27 @@ public class SellinghouseRequest {
         this.address = address;
     }
 
-    public Integer getFloors() {
-        return floors;
-    }
-
-    public void setFloors(Integer floors) {
-        this.floors = floors;
-    }
-
-    public Integer getBedrooms() {
+    public int getBedrooms() {
         return bedrooms;
     }
 
-    public void setBedrooms(Integer bedrooms) {
+    public void setBedrooms(int bedrooms) {
         this.bedrooms = bedrooms;
     }
 
-    public Integer getBathrooms() {
+    public int getFloors() {
+        return floors;
+    }
+
+    public void setFloors(int floors) {
+        this.floors = floors;
+    }
+
+    public int getBathrooms() {
         return bathrooms;
     }
 
-    public void setBathrooms(Integer bathrooms) {
+    public void setBathrooms(int bathrooms) {
         this.bathrooms = bathrooms;
     }
 
@@ -90,20 +115,20 @@ public class SellinghouseRequest {
         this.price = price;
     }
 
+    public BigDecimal getArea() {
+        return area;
+    }
+
+    public void setArea(BigDecimal area) {
+        this.area = area;
+    }
+
     public String getDescription() {
         return description;
     }
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 
     public String getState() {

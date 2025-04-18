@@ -4,7 +4,6 @@ import com.example.PredictingHousePrice.dtos.HousePredictionRequest;
 import com.example.PredictingHousePrice.entities.Predictedhouse;
 import com.example.PredictingHousePrice.services.PredictionService;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

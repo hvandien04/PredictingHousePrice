@@ -1,5 +1,6 @@
 package com.example.PredictingHousePrice.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -17,6 +18,7 @@ public class Sellinghouse {
     @Column(name = "HouseType")
     private String houseType;
 
+    @JsonBackReference
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "UserID")
     private com.example.PredictingHousePrice.entities.User userID;
