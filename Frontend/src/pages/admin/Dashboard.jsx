@@ -343,7 +343,7 @@ function Dashboard() {
 
   return (
     <MDBox>
-      <Grid container spacing={3}>
+      <Grid container spacing={4} justifyContent="center">
         <Grid item xs={12} sm={6} md={3}>
           <Card>
             <CardContent>
@@ -374,16 +374,7 @@ function Dashboard() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={12} sm={6} md={3}>
-          <Card>
-            <CardContent>
-              <Typography color="textSecondary" gutterBottom>
-                Giá trung bình
-              </Typography>
-              <Typography variant="h4">{stats.averagePrice}</Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+
         <Grid item xs={12}>
           <Card>
             <CardContent>
@@ -404,6 +395,7 @@ function Dashboard() {
         </Grid>
       </Grid>
     </MDBox>
+
   );
 }
 

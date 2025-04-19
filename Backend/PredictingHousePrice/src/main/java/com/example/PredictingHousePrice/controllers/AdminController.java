@@ -115,7 +115,7 @@ public class AdminController {
         dashboardData.put("totalPredictions", totalPredictions);
         dashboardData.put("totalUsers", totalUsers);
         dashboardData.put("accuracy", String.format("%.2f%%", averageAccuracy * 100));
-        dashboardData.put("averagePrice", String.format("%.2fB", averagePrice / 1_000_000_000));
+        dashboardData.put("averagePrice", String.format("%.2f tỷ", averagePrice / 1_000_000_000));
         dashboardData.put("monthlyPredictions", monthlyPredictions);
         dashboardData.put("recentPredictions", recentPredictions);
         dashboardData.put("priceDistribution", priceDistribution);

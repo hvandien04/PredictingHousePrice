@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useAuth } from '../context/AuthContext';
 import {
   BarChart,
   Bar,
@@ -9,40 +10,38 @@ import {
   Legend,
   LineChart,
   Line,
-  ResponsiveContainer
+  ResponsiveContainer,
 } from 'recharts';
 import '../styles/Statistics.css';
 
 const Statistics = () => {
+  const { user } = useAuth();
   const [stats, setStats] = useState({
     totalPredictions: 0,
     recentPredictions: [],
     priceDistribution: [
-      { range: "Dưới 2 tỷ", count: 0 },
-      { range: "2-4 tỷ", count: 0 },
-      { range: "4-6 tỷ", count: 0 },
-      { range: "6-8 tỷ", count: 0 },
-      { range: "8-10 tỷ", count: 0 },
-      { range: "Trên 10 tỷ", count: 0 },
+      { range: 'Dưới 2 tỷ', count: 0 },
+      { range: '2-4 tỷ', count: 0 },
+      { range: '4-6 tỷ', count: 0 },
+      { range: '6-8 tỷ', count: 0 },
+      { range: '8-10 tỷ', count: 0 },
+      { range: 'Trên 10 tỷ', count: 0 },
     ],
-    timelineData: []
+    timelineData: [],
   });
+
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
   const fetchStatistics = async () => {
     setIsLoading(true);
     try {
-      console.log("Fetching statistics...");
       const response = await fetch('http://localhost:8080/api/user/dashboard', {
         method: 'GET',
         credentials: 'include',
       });
 
       const text = await response.text();
-      console.log('Statistics - Status:', response.status);
-      console.log('Statistics - Raw response:', text);
-
       if (!response.ok) {
         throw new Error(`Failed to fetch statistics: ${response.status} ${response.statusText}`);
       }
@@ -52,45 +51,26 @@ const Statistics = () => {
         totalPredictions: data.totalPredictions,
         recentPredictions: data.recentPredictions,
         priceDistribution: data.priceDistribution,
-        timelineData: data.timelineData
+        timelineData: data.timelineData,
       });
-      setIsLoading(false);
     } catch (error) {
       console.error('Lỗi khi lấy thống kê:', error);
       setError('Không thể lấy dữ liệu thống kê');
-      setIsLoading(false);
-    }
-  };
-
-  const loginAndFetch = async () => {
-    try {
-      console.log("Logging in...");
-      const loginResponse = await fetch('http://localhost:8080/api/auth/login', {
-        method: 'POST',
-        credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: 'nguyenvanb@gmail.com', password: '123456ABC' }),
-      });
-
-      const loginText = await loginResponse.text();
-      console.log('Login - Status:', loginResponse.status);
-      console.log('Login - Response:', loginText);
-
-      if (!loginResponse.ok) {
-        throw new Error('Login failed');
-      }
-
-      await fetchStatistics();
-    } catch (error) {
-      console.error('Login error:', error);
-      setError('Không thể đăng nhập');
+    } finally {
       setIsLoading(false);
     }
   };
 
   useEffect(() => {
-    loginAndFetch();
-  }, []);
+    if (user) {
+      fetchStatistics();
+    } else {
+      setError('Vui lòng đăng nhập để xem thống kê');
+      setIsLoading(false);
+    }
+  }, [user]);
+
+  const formatYAxis = (tick) => `${tick}`;
 
   if (isLoading) {
     return (
@@ -128,36 +108,81 @@ const Statistics = () => {
       <div className="statistics-grid">
         <div className="chart-container">
           <h2>Phân Bố Giá Nhà</h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={stats.priceDistribution}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="range" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Bar dataKey="count" fill="#3498db" name="Số lượng" />
-            </BarChart>
-          </ResponsiveContainer>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <ResponsiveContainer width="100%" height={300}>
+                <BarChart
+                  data={stats.priceDistribution}
+                  margin={{ top: 10, right: 20, left: 5, bottom: 20 }} // tăng left để chừa chỗ cho nhãn Y
+                >
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis
+                    dataKey="range"
+                    label={{
+                      value: 'Khoảng giá',
+                      position: 'bottom',
+                      offset: 27,
+                      style: { fontSize: '0.9rem' }
+                    }}
+                  />
+                  <YAxis
+                    label={{
+                      value: 'Số lượng dự đoán',
+                      angle: -90,
+                      position: 'insideLeft', // hoặc outsideLeft nếu muốn ra ngoài
+                      dy: 40,
+                      style: { fontSize: '0.9rem' }
+                    }}
+                  />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="count" fill="#3498db" name="Số lượng" />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+
         </div>
 
         <div className="chart-container">
           <h2>Xu Hướng Giá Trung Bình</h2>
-          <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={stats.timelineData}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="date" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line
-                type="monotone"
-                dataKey="averagePrice"
-                stroke="#2ecc71"
-                name="Giá trung bình (tỷ)"
-              />
-            </LineChart>
-          </ResponsiveContainer>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <ResponsiveContainer width="100%" height={300}>
+              <LineChart
+                data={stats.timelineData}
+                margin={{ top: 10, right: 20, left: 5, bottom: 30 }} // giống với chart trên
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis
+                  dataKey="date"
+                  label={{
+                    value: 'Thời gian',
+                    position: 'bottom',
+                    offset: 27,
+                    style: { fontSize: '0.9rem' }
+                  }}
+                />
+                <YAxis
+                  label={{
+                    value: 'Giá trung bình (tỷ)',
+                    angle: -90,
+                    position: 'insideLeft',
+                    dy: 40,
+                    style: { fontSize: '0.9rem' }
+                  }}
+                  tickFormatter={formatYAxis}
+                />
+                <Tooltip />
+                <Legend />
+                <Line
+                  type="monotone"
+                  dataKey="averagePrice"
+                  stroke="#2ecc71"
+                  name="Giá trung bình (tỷ)"
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         </div>
+
 
         <div className="recent-predictions">
           <h2>Dự Đoán Gần Đây</h2>
