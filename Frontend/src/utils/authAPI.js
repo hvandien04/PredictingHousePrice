@@ -102,7 +102,7 @@ export const authService = {
         const response = await api.post(API_ENDPOINTS.FEEDBACK, feedbackData);
         return response.data;
     }
+
 };
 
-// Export the configured axios instance if needed elsewhere
 export default api;

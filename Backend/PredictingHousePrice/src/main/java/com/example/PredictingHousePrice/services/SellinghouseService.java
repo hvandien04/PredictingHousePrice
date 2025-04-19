@@ -35,6 +35,7 @@ public class SellinghouseService {
         house.setDescription(request.getDescription());
         house.setImage(request.getImage());
         house.setState(request.getState());
+        house.setState(request.getUserID());
 
         return sellinghouseRepository.save(house);
     }
@@ -55,6 +56,7 @@ public class SellinghouseService {
             house.setDescription(request.getDescription());
             house.setImage(request.getImage());
             house.setState(request.getState());
+            house.setState(request.getUserID());
             return sellinghouseRepository.save(house);
         }
         return null;
