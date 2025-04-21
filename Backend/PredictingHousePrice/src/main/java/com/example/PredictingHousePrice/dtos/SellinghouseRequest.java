@@ -151,4 +151,5 @@ public class SellinghouseRequest {
     public void setUserID(String userID) {
         this.userID = userID;
     }
+
 }

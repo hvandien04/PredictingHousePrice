@@ -1,5 +1,6 @@
 package com.example.PredictingHousePrice.controllers;
 
+import com.example.PredictingHousePrice.services.SellinghouseService;
 import com.example.PredictingHousePrice.dtos.SellinghouseRequest;
 import com.example.PredictingHousePrice.repositories.SellinghouseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +14,15 @@ import java.util.stream.Collectors;
 public class SellinghouseController {
 
     @Autowired
-    private SellinghouseRepository repository;
-
+    private SellinghouseService sellinghouseService;
+    
+    // Trong SellinghouseController
     @GetMapping
     public List<SellinghouseRequest> getAllSellinghouses() {
-        return repository.findAll().stream()
+        return sellinghouseService.getAllHouses().stream()
                 .map(SellinghouseRequest::new)
                 .collect(Collectors.toList());
     }
+
+
 }

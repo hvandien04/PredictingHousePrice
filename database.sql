@@ -14,7 +14,8 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
+CREATE DATABASE IF NOT EXISTS housepredict;
+use housepredict;
 --
 -- Table structure for table `feedback`
 --
@@ -32,7 +33,7 @@ CREATE TABLE `feedback` (
   PRIMARY KEY (`FeedbackID`),
   KEY `UserID` (`UserID`),
   CONSTRAINT `feedback_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +63,7 @@ CREATE TABLE `predictedhouse` (
   PRIMARY KEY (`PHouseID`),
   KEY `PredictionID` (`PredictionID`),
   CONSTRAINT `predictedhouse_ibfk_1` FOREIGN KEY (`PredictionID`) REFERENCES `prediction` (`PredictionID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -90,7 +91,7 @@ CREATE TABLE `prediction` (
   PRIMARY KEY (`PredictionID`),
   KEY `UserID` (`UserID`),
   CONSTRAINT `prediction_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -127,7 +128,7 @@ CREATE TABLE `sellinghouse` (
   PRIMARY KEY (`PHouseID`),
   KEY `UserID` (`UserID`),
   CONSTRAINT `sellinghouse_ibfk_1` FOREIGN KEY (`UserID`) REFERENCES `users` (`UserID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,9 +154,9 @@ CREATE TABLE `users` (
   `Password` varchar(100) NOT NULL,
   `Phone` varchar(20) DEFAULT NULL,
   `Role` varchar(50) NOT NULL,
-  `State` varchar(50) DEFAULT NULL
+  `State` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`UserID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --

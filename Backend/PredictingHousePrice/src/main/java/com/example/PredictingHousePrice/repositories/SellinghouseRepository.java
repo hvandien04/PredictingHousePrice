@@ -14,7 +14,7 @@ public interface SellinghouseRepository extends JpaRepository<Sellinghouse, Stri
     Optional<Sellinghouse> findById(String id);
 
     // Tìm tất cả các bài đăng bán nhà
-    List<Sellinghouse> findAll();
+    List<Sellinghouse> findByStateContainingIgnoreCase(String state);
 
     // Xóa bài đăng bán nhà (được tự động hỗ trợ bởi JpaRepository)
     void deleteById(String id);
