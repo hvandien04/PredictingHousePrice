@@ -199,6 +199,15 @@ public class AuthService {
         return code.toString();
     }
 
+    public void resetPassword(String email, String newPassword) {
+        Optional<User> optionalUser = userRepository.findByEmail(email);
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            user.setPassword(passwordEncoder.encode(newPassword)); // Có thể mã hoá bằng BCrypt nếu cần
+            userRepository.save(user);
+        }
+    }
+
     public boolean verifyCode(String email, String inputCode) {
         String storedCode = verificationCodes.get(email);
         return storedCode != null && storedCode.equals(inputCode);

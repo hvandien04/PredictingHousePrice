@@ -81,4 +81,28 @@ public class AuthController {
             return ResponseEntity.status(500).body("Gửi email thất bại: " + e.getMessage());
         }
     }
+
+    @PostMapping("/verify-reset-code")
+    public ResponseEntity<?> verifyResetCode(@RequestBody VerifyCodeRequest request) {
+        boolean isValid = authService.verifyCode(request.getEmail(), request.getCode());
+
+        if (isValid) {
+            return ResponseEntity.ok("Mã xác nhận chính xác.");
+        } else {
+            return ResponseEntity.status(400).body("Mã xác nhận không hợp lệ hoặc đã hết hạn.");
+        }
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<?> resetPassword(@RequestBody ResetPasswordRequest request) {
+        boolean isValid = authService.verifyCode(request.getEmail(), request.getCode());
+
+        if (isValid) {
+            authService.resetPassword(request.getEmail(), request.getNewPassword());
+            authService.clearCode(request.getEmail());
+            return ResponseEntity.ok("Mật khẩu đã được thay đổi thành công.");
+        } else {
+            return ResponseEntity.status(400).body("Mã xác nhận không hợp lệ hoặc đã hết hạn.");
+        }
+    }
 }
