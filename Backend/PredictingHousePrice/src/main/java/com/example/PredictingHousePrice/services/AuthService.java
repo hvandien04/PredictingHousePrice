@@ -14,25 +14,27 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
+import java.io.IOException;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.regex.Pattern;
 
-import static org.springframework.security.config.http.MatcherType.regex;
 
 @Service
 public class AuthService {
     public final UserRepository userRepository;
+    private final EmailService emailService;
+    private final ConcurrentHashMap<String, String> verificationCodes = new ConcurrentHashMap<>();
+
     public final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     public static final String ROLE_ADMIN = "1";
     public static final String ROLE_USER = "0";
 
 
-    public AuthService(UserRepository userRepository) {
+    public AuthService(UserRepository userRepository, EmailService emailService) {
         this.userRepository = userRepository;
+        this.emailService = emailService;
     }
 
     private String generateRandomUserId() {
@@ -51,7 +53,6 @@ public class AuthService {
             if (passwordEncoder.matches(loginRequest.getPassword(), user.getPassword())) {
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user);
-                System.out.println(user);
                 return "login success";
             }
         }
@@ -121,12 +122,10 @@ public class AuthService {
         return session != null ? (User) session.getAttribute("user") : null;
     }
 
-    // Kiểm tra admin
     public boolean isAdmin(HttpServletRequest request) {
         return hasRole(request, ROLE_ADMIN);
     }
 
-    // Kiểm tra user thường
     public boolean isRegularUser(HttpServletRequest request) {
         return hasRole(request, ROLE_USER);
     }
@@ -181,5 +180,31 @@ public class AuthService {
 
         return ResponseEntity.status(HttpStatus.OK).body("Profile updated successfully")    ;
     }
+    public void sendResetCode(String email) throws IOException {
+        String code = generateVerificationCode();
+        verificationCodes.put(email, code);
+        emailService.sendResetCode(email, code);
+    }
 
+    private String generateVerificationCode() {
+        int length = 6;
+        String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        Random random = new Random();
+        StringBuilder code = new StringBuilder();
+
+        for (int i = 0; i < length; i++) {
+            code.append(characters.charAt(random.nextInt(characters.length())));
+        }
+
+        return code.toString();
+    }
+
+    public boolean verifyCode(String email, String inputCode) {
+        String storedCode = verificationCodes.get(email);
+        return storedCode != null && storedCode.equals(inputCode);
+    }
+
+    public void clearCode(String email) {
+        verificationCodes.remove(email);
+    }
 }

@@ -57,7 +57,7 @@
 
 .chart-container {
   background: #fff;
-  padding: 1.5rem;
+  padding: 3rem;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   grid-column: span 1;
@@ -183,4 +183,4 @@
   .predictions-list {
     grid-template-columns: 1fr;
   }
-} 
+}

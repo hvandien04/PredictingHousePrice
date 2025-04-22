@@ -41,6 +41,7 @@ const Compare = () => {
           return res.json();
         })
         .then(data => {
+          console.log('Dữ liệu trả về:', data);
           const formatted = data.map((item) => ({
             id: item.pHouseID,
             title: item.title || "Chưa có tiêu đề",
@@ -51,7 +52,7 @@ const Compare = () => {
             bedrooms: item.bedrooms ?? 0,
             legalStatus: item.legalstatus || "Không rõ",
             price: (item.price || 0) * 1e9,
-            image: item.image ? `/img/${item.image}` : "/img/default.jpg",
+            image: item.image || "/img/default.jpg",
             features: [
               `Diện tích: ${item.area ?? 0}m²`,
               `Số phòng ngủ: ${item.bedrooms ?? 0}`,
@@ -74,12 +75,22 @@ const Compare = () => {
     setOpenModal(false);
     setSelectedHouse(null);
   };
+
   const handleAddSelectedHouse = () => {
     if (selectedHouse && houses.length < 3) {
-      setHouses([...houses, selectedHouse]);
-      handleCloseModal();
+      // Kiểm tra nếu nhà đã được chọn có trong danh sách so sánh chưa
+      const isHouseExist = houses.some(house => house.id === selectedHouse.id);
+
+      if (!isHouseExist) {
+        // Nếu nhà chưa có trong danh sách, thêm vào
+        setHouses([...houses, selectedHouse]);
+        handleCloseModal();
+      } else {
+        alert("Nhà này đã được thêm vào danh sách so sánh.");
+      }
     }
   };
+
 
   const handleRemoveHouse = (index) => {
     const newHouses = houses.filter((_, i) => i !== index);

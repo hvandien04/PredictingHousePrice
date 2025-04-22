@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/SellHouse.css';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 const SellHouse = () => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
   const [showForm, setShowForm] = useState(false);
+  const [houseType, setHouseTypes] = useState([]);
+  const [address, setAddress] = useState([]);
+  const [filteredHouses, setFilteredHouses] = useState([]); // Dữ liệu sau khi lọc
   const [formData, setFormData] = useState({
     title: '',
     price: '',
@@ -13,10 +22,23 @@ const SellHouse = () => {
     bathrooms: '',
     floors: '',
     legalStatus: '',
-    state: '',
+    state: 'Chờ duyệt',
     description: '',
-    image: ''
+    image: '',
+    userID: ''
   });
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:5000/house-types")
+        .then(res => res.json())
+        .then(data => setHouseTypes(data))
+        .catch(err => console.error("Lỗi lấy loại nhà:", err));
+
+    fetch("http://127.0.0.1:5000/districts")
+        .then(res => res.json())
+        .then(data => setAddress(data))
+        .catch(err => console.error("Lỗi lấy quận/huyện:", err));
+  }, []);
 
   const [filters, setFilters] = useState({
     priceRange: '',
@@ -25,36 +47,76 @@ const SellHouse = () => {
     bedrooms: '',
   });
 
-  // Mock data for house listings
-  const [houses] = useState([
-    {
-      id: 1,
-      title: 'Nhà phố cao cấp Quận 7',
-      price: '5.2 tỷ',
-      address: 'Quận 7',
-      houseType: 'Nhà phố',
-      area: '120m²',
-      bedrooms: 4,
-      bathrooms: 3,
-      legalstatus: 'Chính chủ',
-      description: 'Nhà phố cao cấp, full nội thất, vị trí đẹp...',
-      image: 'https://file4.batdongsan.com.vn/crop/393x222/2024/02/27/20240227160332-a465_wm.jpg'
-    },
-    {
-      id: 2,
-      title: 'Căn hộ view sông Quận 2',
-      price: '3.8 tỷ',
-      address: 'Quận 2',
-      houseType: 'Chung cư',
-      area: '85m²',
-      bedrooms: 3,
-      bathrooms: 2,
-      legalstatus: 'Chính chủ',
-      description: 'Căn hộ view sông thoáng mát...',
-      image: 'https://file4.batdongsan.com.vn/crop/393x222/2024/02/27/20240227160440-3724_wm.jpg'
-    },
-    // Add more mock data if needed
-  ]);
+  // State to store house listings fetched from API
+  const [houses, setHouses] = useState([]);
+
+  // Fetch house listings from API
+  useEffect(() => {
+    const fetchHouses = async () => {
+      try {
+        const response = await fetch('http://localhost:8080/api/sellinghouses');
+        if (!response.ok) {
+          throw new Error('Không thể lấy dữ liệu từ API');
+        }
+        const data = await response.json();
+
+        console.log(data);
+
+        setHouses(data);
+      } catch (error) {
+        console.error('Lỗi khi lấy dữ liệu nhà:', error);
+      }
+    };
+
+    fetchHouses();
+  }, []);
+
+  // Hàm xử lý thay đổi bộ lọc
+  const handleFilterChange = (e) => {
+    const { name, value } = e.target;
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      [name]: value
+    }));
+  };
+
+  // Hàm lọc nhà theo các bộ lọc
+  useEffect(() => {
+    let filtered = houses;
+
+    if (filters.priceRange) {
+      if (filters.priceRange === '10+') {
+        filtered = filtered.filter((house) => house.price >= 10);
+      } else {
+        const [minPrice, maxPrice] = filters.priceRange.split('-').map(Number);
+        filtered = filtered.filter((house) => {
+          return house.price >= minPrice && house.price <= maxPrice;
+        });
+      }
+    }
+
+
+    // Lọc theo khu vực
+    if (filters.address) {
+      filtered = filtered.filter((house) => house.address === filters.address);
+    }
+
+    // Lọc theo loại nhà
+    if (filters.houseType) {
+      filtered = filtered.filter((house) => house.houseType === filters.houseType);
+    }
+
+    if (filters.bedrooms) {
+      if (filters.bedrooms === '4+') {
+        filtered = filtered.filter((house) => house.bedrooms >= 4);
+      } else {
+        filtered = filtered.filter((house) => house.bedrooms === parseInt(filters.bedrooms));
+      }
+    }
+
+    // Cập nhật kết quả lọc
+    setFilteredHouses(filtered);
+  }, [filters, houses]); // Chạy lại khi filters hoặc houses thay đổi
 
   // Handle form field changes
   const handleFormChange = (e) => {
@@ -65,36 +127,50 @@ const SellHouse = () => {
     });
   };
 
-  const handleFilterChange = (e) => {
-    const { name, value } = e.target;
-    setFilters((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.title || !formData.price || !formData.area) {
-      alert('Vui lòng điền đầy đủ thông tin!');
+    // Kiểm tra nếu các trường dữ liệu bắt buộc chưa được nhập đầy đủ
+    if (!formData.title || !formData.price || !formData.area || !formData.image) {
+      alert('Vui lòng điền đầy đủ thông tin và tải ảnh lên!');
       return;
     }
 
+    // Kiểm tra nếu người dùng chưa đăng nhập
+    if (!user) {
+      console.log('User chưa đăng nhập:', user);
+      toast.warning('Vui lòng đăng nhập để tiếp tục', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
+      navigate("/login");
+      return;
+    }
+
+    // Chuẩn bị payload gửi lên server
     const formPayload = {
       ...formData,
       price: parseFloat(formData.price.replace(' tỷ', '').replace(',', '')),
       area: parseFloat(formData.area.replace('m²', '').replace(',', '')),
     };
 
-    console.log('Dữ liệu chuẩn bị gửi:', formPayload);
-
     try {
-      const response = await fetch(`http://localhost:8080/api/uploadhouse/create?userId=UBADA4`, {
+      // Bước 1: Tải ảnh lên server và nhận URL ảnh
+      const imageData = await uploadImage(formData.image);
+      formPayload.image = imageData; // Gán URL ảnh vào dữ liệu formPayload
+
+      // Bước 2: Gửi dữ liệu bài đăng lên server
+      const response = await fetch('http://localhost:8080/api/uploadhouse/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify(formPayload),
       });
 
@@ -105,8 +181,9 @@ const SellHouse = () => {
       const data = await response.json();
       console.log('Dữ liệu đã được lưu:', data);
 
-      alert('Đã thêm nhà thành công!');
+      window.location.reload();
 
+      // Reset form sau khi gửi thành công
       setFormData({
         title: '',
         price: '',
@@ -117,9 +194,10 @@ const SellHouse = () => {
         bathrooms: '',
         floors: '',
         legalStatus: '',
-        state: '',
+        state: 'Chờ duyệt',
         description: '',
-        image: '' // Reset lại trường ảnh sau khi gửi thành công
+        image: '',
+        userID: '',
       });
 
     } catch (error) {
@@ -128,49 +206,24 @@ const SellHouse = () => {
     }
   };
 
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
+ // Hàm tải ảnh lên server
+  const uploadImage = async (image) => {
+    const fileData = new FormData();
+    fileData.append('file', image); // Giả sử formData.image là file ảnh
 
-    const imagePreview = document.getElementById('imagePreview');
-    if (imagePreview) {
-      // Hiển thị trước ảnh khi người dùng chọn file
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        imagePreview.src = reader.result;
-      };
-      reader.readAsDataURL(file);
+    const response = await fetch('http://localhost:8080/api/uploadimage/image', {
+      method: 'POST',
+      body: fileData,
+    });
+
+    if (!response.ok) {
+      throw new Error('Lỗi khi tải ảnh lên');
     }
 
-    const formData = new FormData();
-    formData.append('file', file);
-
-    fetch('http://localhost:8080/api/uploadimage/image', {
-      method: 'POST',
-      body: formData,
-    })
-        .then((response) => response.text()) // server trả về plain text, không phải JSON
-        .then((data) => {
-          console.log('Ảnh đã được tải lên:', data);
-          alert('Tải ảnh lên thành công!');
-
-          // Gán lại ảnh bằng đường dẫn chính thức từ server
-          if (imagePreview) {
-            imagePreview.src = data;
-          }
-
-          // Cập nhật lại formData với URL ảnh
-          setFormData(prevData => ({
-            ...prevData,
-            image: data // Lưu URL ảnh trả về từ server
-          }));
-        })
-        .catch((error) => {
-          console.error('Lỗi khi tải ảnh lên:', error);
-          alert('Có lỗi xảy ra khi tải ảnh lên. Vui lòng thử lại.');
-        });
+    const data = await response.text(); // Server trả về URL ảnh
+    console.log('Ảnh đã được tải lên:', data);
+    return data; // Trả về URL ảnh
   };
-
 
 
   return (
@@ -184,7 +237,7 @@ const SellHouse = () => {
           <div className="filter-group">
             <label>Khoảng giá</label>
             <select name="priceRange" value={filters.priceRange} onChange={handleFilterChange}>
-              <option value="">Tất cả mức giá</option>
+              <option value="">Tất cả</option>
               <option value="0-2">Dưới 2 tỷ</option>
               <option value="2-5">2 - 5 tỷ</option>
               <option value="5-10">5 - 10 tỷ</option>
@@ -194,22 +247,21 @@ const SellHouse = () => {
 
           <div className="filter-group">
             <label>Khu vực</label>
-            <select name="location" value={filters.location} onChange={handleFilterChange}>
+            <select id="filter-address" name="address" value={filters.address} onChange={handleFilterChange}>
               <option value="">Tất cả khu vực</option>
-              <option value="Quận 1">Quận 1</option>
-              <option value="Quận 2">Quận 2</option>
-              <option value="Quận 7">Quận 7</option>
-              <option value="Quận 9">Quận 9</option>
+              {address.map((address) => (
+                  <option key={address.id} value={address.value}>{address.label}</option>
+              ))}
             </select>
           </div>
 
           <div className="filter-group">
             <label>Loại nhà</label>
-            <select name="type" value={filters.type} onChange={handleFilterChange}>
+            <select id="filter-houseType" name="houseType" value={filters.houseType} onChange={handleFilterChange}>
               <option value="">Tất cả loại nhà</option>
-              <option value="Nhà phố">Nhà phố</option>
-              <option value="Biệt thự">Biệt thự</option>
-              <option value="Chung cư">Chung cư</option>
+              {houseType.map((type) => (
+                  <option key={type.id} value={type.value}>{type.label}</option>
+              ))}
             </select>
           </div>
 
@@ -235,22 +287,28 @@ const SellHouse = () => {
           </div>
 
           <div className="houses-grid">
-            {houses.map((house) => (
-                <div key={house.id} className="sell-house-card">
+            {filteredHouses.map((house) => (
+                <div key={house.pHouseID} className="sell-house-card">
                   <div className="sell-house-image">
                     <img src={house.image} alt={house.title} />
                   </div>
                   <div className="sell-house-content">
                     <h3>{house.title}</h3>
-                    <p className="sell-house-price">{house.price}</p>
+                    <p className="sell-house-price">{house.price} tỷ</p>
                     <div className="sell-house-details">
-                      <span>{house.location}</span>
-                      <span>{house.area}</span>
+                      <span>{house.address}</span>
+                      <span>{house.area} m²</span>
                       <span>{house.bedrooms} PN</span>
                       <span>{house.bathrooms} WC</span>
-                      <span>{house.legalstatus}</span>
+                      <span>{house.legalStatus}</span>
+                      <span>{house.floors} tầng</span>
                     </div>
                     <p className="sell-house-description">{house.description}</p>
+                    <div className="sell-house-description">
+                      <Link to={`/profile/${house.userID}`} className="sell-house-profile-link">
+                        Liên hệ
+                      </Link>
+                    </div>
                   </div>
                 </div>
             ))}
@@ -289,31 +347,32 @@ const SellHouse = () => {
                     <div className="sell-form-group">
                       <label>Khu vực</label>
                       <select
+                          id="form-address"
                           name="address"
                           value={formData.address}
                           onChange={handleFormChange}
                           required
                       >
                         <option value="">Chọn khu vực</option>
-                        <option value="Quận 1">Quận 1</option>
-                        <option value="Quận 2">Quận 2</option>
-                        <option value="Quận 7">Quận 7</option>
-                        <option value="Quận 9">Quận 9</option>
+                        {address.map((address) => (
+                            <option key={address.id} value={address.value}>{address.label}</option>
+                        ))}
                       </select>
                     </div>
 
                     <div className="sell-form-group">
                       <label>Loại nhà</label>
                       <select
+                          id="form-houseType"
                           name="houseType"
                           value={formData.houseType}
                           onChange={handleFormChange}
                           required
                       >
                         <option value="">Chọn loại nhà</option>
-                        <option value="Nhà phố">Nhà phố</option>
-                        <option value="Biệt thự">Biệt thự</option>
-                        <option value="Chung cư">Chung cư</option>
+                        {houseType.map((type) => (
+                            <option key={type.id} value={type.value}>{type.label}</option>
+                        ))}
                       </select>
                     </div>
 
@@ -380,22 +439,6 @@ const SellHouse = () => {
                     </div>
 
                     <div className="sell-form-group">
-                      <label>Trạng thái</label>
-                      <select
-                          name="state"
-                          value={formData.state}
-                          onChange={handleFormChange}
-                          required
-                      >
-                        <option value="">Chọn trạng thái</option>
-                        <option value="Đang bán">Đang bán</option>
-                        <option value="Đã bán">Đã bán</option>
-                        <option value="Đang đặt cọc">Đang đặt cọc</option>
-                      </select>
-                    </div>
-
-
-                    <div className="sell-form-group">
                       <label>Mô tả</label>
                       <textarea
                           name="description"
@@ -409,14 +452,13 @@ const SellHouse = () => {
                       <label>Ảnh</label>
                       <input
                           type="file"
-                          multiple
                           accept="image/*"
-                          onChange={handleImageUpload}
+                          onChange={(e) => setFormData({ ...formData, image: e.target.files[0] })}
                       />
                       <div className="preview-images">
                         {formData.image && (
                             <img
-                                src={formData.image}
+                                src={URL.createObjectURL(formData.image)} // Hiển thị ảnh
                                 alt="Preview"
                                 className="preview-image"
                             />
@@ -426,9 +468,13 @@ const SellHouse = () => {
 
                   </div>
 
-                  <div className="form-buttons">
-                    <button type="submit">Đăng tin</button>
-                    <button type="button" onClick={() => setShowForm(false)}>Hủy</button>
+                  <div className="sell-form-actions">
+                    <button type="button" className="sell-btn-cancel" onClick={() => setShowForm(false)}>
+                      Hủy
+                    </button>
+                    <button type="submit" className="sell-btn-submit">
+                      Đăng tin
+                    </button>
                   </div>
                 </form>
               </div>

@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
+import { useParams } from 'react-router-dom'; // Import useParams
 import '../styles/Profile.css';
+import axios from 'axios';
 
 const Profile = () => {
   const { user,updateProfile, changePassword } = useAuth();
+  const { userID } = useParams(); // Lấy userID từ URL
   const [message, setMessage] = useState({ type: '', text: '' });
   const [activeTab, setActiveTab] = useState('profile');
   const [profileData, setProfileData] = useState({
@@ -19,6 +22,33 @@ const Profile = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      if (userID) {
+        try {
+          const response = await axios.get(`http://localhost:8080/api/seller/${userID}`);
+
+          setProfileData({
+            name: response.data.name,
+            email: response.data.email,
+            phone: response.data.phone,
+          });
+        } catch (error) {
+          console.error('Không lấy được thông tin người dùng khác:', error);
+        }
+      } else {
+        // Nếu không có userID, lấy thông tin người dùng hiện tại từ context
+        setProfileData({
+          name: user?.name || '',
+          email: user?.email || '',
+          phone: user?.phone || '',
+        });
+      }
+    };
+
+    fetchData();
+  }, [userID, user]); // Chạy lại khi userID hoặc user thay đổi
 
   const handleProfileChange = (e) => {
     const { name, value } = e.target;
@@ -115,18 +145,20 @@ const Profile = () => {
                 <i className="fas fa-user"></i> Thông tin cá nhân
               </a>
             </li>
-            <li>
-              <a 
-                href="#password" 
-                className={activeTab === 'password' ? 'active' : ''}
-                onClick={(e) => {
-                  e.preventDefault();
-                  setActiveTab('password');
-                }}
-              >
-                <i className="fas fa-lock"></i> Đổi mật khẩu
-              </a>
-            </li>
+            {!userID && (
+                <li>
+                  <a
+                      href="#password"
+                      className={activeTab === 'password' ? 'active' : ''}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActiveTab('password');
+                      }}
+                  >
+                    <i className="fas fa-lock"></i> Đổi mật khẩu
+                  </a>
+                </li>
+            )}
           </ul>
         </div>
 
@@ -174,34 +206,32 @@ const Profile = () => {
               </div>
 
               <div className="form-actions">
-                {!isEditing ? (
-                  <button
-                    type="button"
-                    className="edit-button"
-                    onClick={() => {
-                      setIsEditing(true)
-                      
-                      }
-                    }
-                  >
-                    <i className="fas fa-edit"></i> Chỉnh sửa
-                  </button>
-                ) : (
-                  <>
-                    <button type="submit" className="save-button" onClick={handleProfileSubmit}> 
-                      <i className="fas fa-save"></i> Lưu thay đổi
-                    </button>
+                {!userID && !isEditing ? (
                     <button
-                      type="button"
-                      className="cancel-button"
-                      onClick={() => {
-                        setIsEditing(false);
-                        setProfileData(profileData);
-                      }}
+                        type="button"
+                        className="edit-button"
+                        onClick={() => setIsEditing(true)}
                     >
-                      <i className="fas fa-times"></i> Hủy
+                      <i className="fas fa-edit"></i> Chỉnh sửa
                     </button>
-                  </>
+                ) : null}
+
+                {isEditing && !userID && (
+                    <>
+                      <button type="submit" className="save-button" onClick={handleProfileSubmit}>
+                        <i className="fas fa-save"></i> Lưu thay đổi
+                      </button>
+                      <button
+                          type="button"
+                          className="cancel-button"
+                          onClick={() => {
+                            setIsEditing(false);
+                            setProfileData({ name: user?.name || '', email: user?.email || '', phone: user?.phone || '' });
+                          }}
+                      >
+                        <i className="fas fa-times"></i> Hủy
+                      </button>
+                    </>
                 )}
               </div>
             </div>
@@ -247,9 +277,11 @@ const Profile = () => {
               </div>
 
               <div className="form-actions">
-                <button type="submit" className="save-button">
-                  <i className="fas fa-save"></i> Đổi mật khẩu
-                </button>
+                {!userID && (
+                    <button type="submit" className="save-button">
+                      <i className="fas fa-save"></i> Đổi mật khẩu
+                    </button>
+                )}
               </div>
             </form>
           )}

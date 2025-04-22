@@ -6,6 +6,8 @@ import com.example.PredictingHousePrice.services.PredictionService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/prediction")
 public class PredictionController {
@@ -24,5 +26,10 @@ public class PredictionController {
         }
         // Truyền ServletRequest vào phương thức HousePredictionFull
         return predictionService.createHousePrediction(request, ServletRequest);
+    }
+
+    @GetMapping("/history")
+    public List<HousePredictionRequest> getPredictionsByUser(HttpServletRequest request) {
+        return predictionService.getHouseByUserID(request);
     }
 }

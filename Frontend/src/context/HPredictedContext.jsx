@@ -34,12 +34,30 @@ export const HPredictedProvider = ({ children }) => {
     const response = await houseService.predict(data);
     return response;
   };
+  const historyPredict = async () => {
+    const response = await houseService.history();
+    console.log(response);
+    return response;
+  };
+  const historySell = async () => {
+    const response = await houseService.historySell();
+    return response;
+  };
+  const cancelPost = async (id) => {
+    try {
+      const response = await houseService.cancelPost(id);
+      return response;
+    } catch (error) {
+      console.error('Error canceling post:', error.response?.data || error.message);
+      throw error;
+    }
+  };
 //  if (isLoading) {
 //    return <div>Loading...</div>;
 //  }
 
   return (
-    <HPredictedContext.Provider value={{ predictHouse, message }}>
+    <HPredictedContext.Provider value={{ predictHouse, historyPredict, historySell, message }}>
       {children}
     </HPredictedContext.Provider>
   );

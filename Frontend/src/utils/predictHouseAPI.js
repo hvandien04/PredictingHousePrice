@@ -7,6 +7,9 @@ export const API_URL = 'http://localhost:8080';
 export const API_ENDPOINTS = {
     // Predict endpoints
     PREDICT: '/api/prediction/create',
+    HISTORY_PREDICT: '/api/prediction/history',
+    HISTORY_SELL: '/api/sellinghouses/user',
+    CANCEL_POST: '/api/sellinghouses/cancel',
 };
 
 // ===================== AXIOS INSTANCE =====================
@@ -57,6 +60,18 @@ api.interceptors.response.use(
 export const houseService = {
     predict: async (data) => {
         const response = await api.post(API_ENDPOINTS.PREDICT, data);
+        return response.data;
+    },
+    history: async () => {
+        const response = await api.get(API_ENDPOINTS.HISTORY_PREDICT);
+        return response.data;
+    },
+    historySell: async () => {
+        const response = await api.get(API_ENDPOINTS.HISTORY_SELL);
+        return response.data;
+    },
+    cancelPost: async (id) => {
+        const response = await api.put(API_ENDPOINTS.CANCEL_POST, { id });
         return response.data;
     },
 };

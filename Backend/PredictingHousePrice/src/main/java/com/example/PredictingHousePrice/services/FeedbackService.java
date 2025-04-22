@@ -29,7 +29,6 @@ public class FeedbackService {
         return feedbackRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Không tìm thấy phản hồi với ID: " + id));
     }
-
     public Feedback createFeedback(String userId, String title, String message) {
         if (userId == null || userId.trim().isEmpty()) {
             throw new RuntimeException("User ID is required");
@@ -60,6 +59,7 @@ public class FeedbackService {
 
         return feedbackRepository.save(feedback);
     }
+
 
     public void deleteFeedbackById(String id) {
         if (!feedbackRepository.existsById(id)) {

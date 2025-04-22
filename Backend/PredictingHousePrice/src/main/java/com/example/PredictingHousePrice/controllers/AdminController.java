@@ -8,7 +8,7 @@ import com.example.PredictingHousePrice.repositories.PredictionRepository;
 import com.example.PredictingHousePrice.repositories.PredictedhouseRepository;
 import com.example.PredictingHousePrice.repositories.UserRepository;
 import com.example.PredictingHousePrice.services.AuthService;
-import com.example.PredictingHousePrice.services.UserService;
+import com.example.PredictingHousePrice.services.AdminUserService;
 import com.example.PredictingHousePrice.services.SellinghouseService;
 import com.example.PredictingHousePrice.services.FeedbackService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -36,21 +36,20 @@ public class AdminController {
     private final PredictionRepository predictionRepository;
     private final PredictedhouseRepository predictedhouseRepository;
     private final UserRepository userRepository;
-    private final UserService userService;
+    private final AdminUserService adminUserService;
     private final SellinghouseService sellinghouseService;
     private final FeedbackService feedbackService;
 
     public AdminController(AuthService authService, PredictionRepository predictionRepository,
                            PredictedhouseRepository predictedhouseRepository, UserRepository userRepository,
-                           UserService userService, SellinghouseService sellinghouseService, FeedbackService feedbackService) {
+                           AdminUserService adminUserService, SellinghouseService sellinghouseService, FeedbackService feedbackService) {
         this.authService = authService;
-        this.userService = userService;
+        this.adminUserService = adminUserService;
         this.sellinghouseService = sellinghouseService;
         this.predictionRepository = predictionRepository;
         this.predictedhouseRepository = predictedhouseRepository;
         this.userRepository = userRepository;
         this.feedbackService = feedbackService;
-        System.out.println("UserRepository injected: " + (userRepository != null));
     }
 
     @GetMapping("/dashboard")
@@ -67,7 +66,6 @@ public class AdminController {
 
         // Tổng số user
         long totalUsers = userRepository.count();
-        System.out.println("Total users: " + totalUsers);
 
         // Độ chính xác trung bình
         double averageAccuracy = userPredictions.stream()
@@ -115,7 +113,7 @@ public class AdminController {
         dashboardData.put("totalPredictions", totalPredictions);
         dashboardData.put("totalUsers", totalUsers);
         dashboardData.put("accuracy", String.format("%.2f%%", averageAccuracy * 100));
-        dashboardData.put("averagePrice", String.format("%.2fB", averagePrice / 1_000_000_000));
+        dashboardData.put("averagePrice", String.format("%.2f tỷ", averagePrice / 1_000_000_000));
         dashboardData.put("monthlyPredictions", monthlyPredictions);
         dashboardData.put("recentPredictions", recentPredictions);
         dashboardData.put("priceDistribution", priceDistribution);
@@ -242,7 +240,7 @@ public class AdminController {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
         }
-        return ResponseEntity.ok(userService.getAllUsers());
+        return ResponseEntity.ok(adminUserService.getAllUsers());
     }
 
     // 2. Thêm người dùng
@@ -251,7 +249,7 @@ public class AdminController {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
         }
-        return ResponseEntity.status(HttpStatus.CREATED).body(userService.createUser(user));
+        return ResponseEntity.status(HttpStatus.CREATED).body(adminUserService.createUser(user));
     }
 
 
@@ -261,7 +259,7 @@ public class AdminController {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
         }
-        var updated = userService.updateUser(id, user);
+        var updated = adminUserService.updateUser(id, user);
         return (updated != null)
                 ? ResponseEntity.ok(updated)
                 : ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
@@ -274,7 +272,7 @@ public class AdminController {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
         }
-        boolean deleted = userService.deleteUser(id);
+        boolean deleted = adminUserService.deleteUser(id);
         return (deleted)
                 ? ResponseEntity.ok("User deleted")
                 : ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
