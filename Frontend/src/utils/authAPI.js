@@ -1,4 +1,4 @@
-import { Email } from '@mui/icons-material';
+import { Email, Send } from '@mui/icons-material';
 import axios from 'axios';
 
 // ===================== API CONFIG =====================
@@ -10,6 +10,9 @@ export const API_ENDPOINTS = {
     REGISTER: '/api/auth/register',
     LOGOUT: '/api/auth/logout',
     SESSION: '/api/auth/session',
+    RESET_PASSWORD: '/api/auth/reset-password',
+    VERIFY_RESET_CODE: '/api/auth/verify-reset-code',
+    SEND_RESET_CODE: '/api/auth/send-reset-code',
     UPDATE_PROFILE: '/api/auth/update-profile',
     UPDATE_PASSWORD: '/api/auth/update-password',
     FEEDBACK: '/api/user/feedback',
@@ -101,7 +104,24 @@ export const authService = {
     feedback: async (feedbackData) => {
         const response = await api.post(API_ENDPOINTS.FEEDBACK, feedbackData);
         return response.data;
-    }
+    },
+
+    sendResetCode: async (email) => {
+        const response = await api.post(API_ENDPOINTS.SEND_RESET_CODE, { email });
+        return response.data;
+    },
+    resetPassword: async (email,newPassword, code) => {
+        const response = await api.post(API_ENDPOINTS.RESET_PASSWORD, {email, newPassword, code });
+        return response.data;
+    },
+    verifyResetCode: async (email, code) => {
+        const requestData = {
+            email,
+            code
+        };
+        const response = await api.post(API_ENDPOINTS.VERIFY_RESET_CODE, requestData);
+        return response.data;
+    },
 
 };
 

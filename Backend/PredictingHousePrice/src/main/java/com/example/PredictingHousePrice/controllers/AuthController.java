@@ -85,9 +85,12 @@ public class AuthController {
     @PostMapping("/verify-reset-code")
     public ResponseEntity<?> verifyResetCode(@RequestBody VerifyCodeRequest request) {
         boolean isValid = authService.verifyCode(request.getEmail(), request.getCode());
+        Map<String, Object> response = new HashMap<>();
 
         if (isValid) {
-            return ResponseEntity.ok("Mã xác nhận chính xác.");
+            response.put("status", "success");
+            response.put("message","Mã xác nhận hợp lệ");
+            return ResponseEntity.ok(response);
         } else {
             return ResponseEntity.status(400).body("Mã xác nhận không hợp lệ hoặc đã hết hạn.");
         }
@@ -96,11 +99,14 @@ public class AuthController {
     @PostMapping("/reset-password")
     public ResponseEntity<?> resetPassword(@RequestBody ResetPasswordRequest request) {
         boolean isValid = authService.verifyCode(request.getEmail(), request.getCode());
+        Map<String, Object> response = new HashMap<>();
 
         if (isValid) {
             authService.resetPassword(request.getEmail(), request.getNewPassword());
             authService.clearCode(request.getEmail());
-            return ResponseEntity.ok("Mật khẩu đã được thay đổi thành công.");
+            response.put("status", "success");
+            response.put("message","Đổi mật khẩu thành công");
+            return ResponseEntity.ok(response);
         } else {
             return ResponseEntity.status(400).body("Mã xác nhận không hợp lệ hoặc đã hết hạn.");
         }
