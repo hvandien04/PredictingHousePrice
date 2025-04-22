@@ -57,7 +57,10 @@ function AppContent() {
             <Route path="/" element={<Home />} />
             <Route path="/input" element={<InputForm />} />
             <Route path="/login" element={<Login />} />
+<<<<<<< HEAD
             <Route path="/forgot-password" element={<ForgetPassword />} />
+=======
+>>>>>>> acb3bf42bb65ecea7fdc2ada12522ac8b4fbc9a4
             <Route path="/register" element={<Register />} />
             <Route path="/about" element={<About />} />
             <Route path="/compare" element={<Compare />} />
