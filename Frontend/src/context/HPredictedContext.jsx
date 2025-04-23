@@ -43,9 +43,9 @@ export const HPredictedProvider = ({ children }) => {
     const response = await houseService.historySell();
     return response;
   };
-  const cancelPost = async (id) => {
+  const updateState = async (id,state) => {
     try {
-      const response = await houseService.cancelPost(id);
+      const response = await houseService.updateState(id,state);
       return response;
     } catch (error) {
       console.error('Error canceling post:', error.response?.data || error.message);
@@ -57,7 +57,7 @@ export const HPredictedProvider = ({ children }) => {
 //  }
 
   return (
-    <HPredictedContext.Provider value={{ predictHouse, historyPredict, historySell, message }}>
+    <HPredictedContext.Provider value={{ predictHouse, historyPredict, historySell, updateState, message }}>
       {children}
     </HPredictedContext.Provider>
   );

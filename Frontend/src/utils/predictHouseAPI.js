@@ -9,7 +9,7 @@ export const API_ENDPOINTS = {
     PREDICT: '/api/prediction/create',
     HISTORY_PREDICT: '/api/prediction/history',
     HISTORY_SELL: '/api/sellinghouses/user',
-    CANCEL_POST: '/api/sellinghouses/cancel',
+    UPDATE_STATE: '/api/sellinghouses/update-state',
 };
 
 // ===================== AXIOS INSTANCE =====================
@@ -70,8 +70,8 @@ export const houseService = {
         const response = await api.get(API_ENDPOINTS.HISTORY_SELL);
         return response.data;
     },
-    cancelPost: async (id) => {
-        const response = await api.put(API_ENDPOINTS.CANCEL_POST, { id });
+    updateState: async (id,state) => {
+        const response = await api.put(API_ENDPOINTS.UPDATE_STATE+"/" + id, state);
         return response.data;
     },
 };

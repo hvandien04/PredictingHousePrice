@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/SellHistory.css';
 import { useHPredicted } from '../context/HPredictedContext';
+import { toast } from 'react-toastify';
 
-const SellHistorylist = ({ sellHistory, onCancelPost }) => {
+const SellHistorylist = ({ sellHistory, handleCancelPost }) => {
   const [dropdownOpen, setDropdownOpen] = useState(null); 
 
   const toggleDropdown = (id) => {
@@ -10,7 +11,7 @@ const SellHistorylist = ({ sellHistory, onCancelPost }) => {
   };
 
   const handleCancel = (id) => {
-    onCancelPost(id);
+    handleCancelPost(id);
     setDropdownOpen(null);
   };
 
@@ -31,7 +32,7 @@ const SellHistorylist = ({ sellHistory, onCancelPost }) => {
             </div>
             <div className="sell-history-status">
               
-              <span className={`status-badge ${item.state === 'Đã duyệt' ? 'approved' : item.state === 'Chờ duyệt' ? 'pending' : 'canceled'}`}>
+              <span className={`status-badge ${item.state === 'Đã duyệt' ? 'approved' : item.state === 'Chờ duyệt' ? 'pending'  : item.state === 'Hủy đăng' ? 'canceled' : ''}`}>
                 {item.state}
               </span>
               {/* Nút 3 chấm và dropdown menu */}
@@ -60,7 +61,7 @@ const SellHistorylist = ({ sellHistory, onCancelPost }) => {
 
 
 const SellHistory = () => {
-  const { historySell, cancelPost  } = useHPredicted();
+  const { historySell, updateState  } = useHPredicted();
   const [sellHistory, setSellHistory] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -79,10 +80,24 @@ const SellHistory = () => {
       fetchData();
     }, []);
   
-    const handleCancelPost = async (id) => {
+    const handleCancelPost = async (phouseID) => {
       try {
-        await cancelPost(id);
-        setSellHistory(prev => prev.filter(item => item.id !== id)); // Cập nhật UI
+        const data = { state: 'Hủy đăng' };
+        await updateState(phouseID, data);
+        toast.success('Hủy đăng bài thành công!', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setSellHistory((prev) =>
+          prev.map((item) =>
+            item.phouseID === phouseID ? { ...item, state: 'Hủy đăng' } : item
+          )
+        );
       } catch (err) {
         setError('Có lỗi khi hủy đăng bài');
       }
@@ -106,7 +121,7 @@ const SellHistory = () => {
           </div>
         </div>
       </div>
-      <SellHistorylist sellHistory={sellHistory} />
+      <SellHistorylist sellHistory={sellHistory} handleCancelPost={handleCancelPost} />
     </div>
   );
 };
