@@ -32,7 +32,7 @@ const SellHistorylist = ({ sellHistory, handleCancelPost }) => {
             </div>
             <div className="sell-history-status">
               
-              <span className={`status-badge ${item.state === 'Đã duyệt' ? 'approved' : item.state === 'Chờ duyệt' ? 'pending'  : item.state === 'Hủy đăng' ? 'canceled' : ''}`}>
+              <span className={`status-badge ${item.state === 'Đang bán' ? 'approved' : item.state === 'Chờ duyệt' ? 'pending'  : item.state === 'Tạm ngưng' ? 'canceled' : ''}`}>
                 {item.state}
               </span>
               {/* Nút 3 chấm và dropdown menu */}
@@ -82,7 +82,7 @@ const SellHistory = () => {
   
     const handleCancelPost = async (phouseID) => {
       try {
-        const data = { state: 'Hủy đăng' };
+        const data = { state: 'Tạm ngưng' };
         await updateState(phouseID, data);
         toast.success('Hủy đăng bài thành công!', {
           position: "top-right",
@@ -95,7 +95,7 @@ const SellHistory = () => {
         });
         setSellHistory((prev) =>
           prev.map((item) =>
-            item.phouseID === phouseID ? { ...item, state: 'Hủy đăng' } : item
+            item.phouseID === phouseID ? { ...item, state: 'Tạm ngưng' } : item
           )
         );
       } catch (err) {
@@ -112,8 +112,8 @@ const SellHistory = () => {
             <p>{sellHistory.length}</p>
           </div>
           <div className="stat-card">
-            <h3>Đã duyệt</h3>
-            <p>{sellHistory.filter(item => item.state === 'Đã duyệt').length}</p>
+            <h3>Đang bán</h3>
+            <p>{sellHistory.filter(item => item.state === 'Đang bán').length}</p>
           </div>
           <div className="stat-card">
             <h3>Chờ duyệt</h3>

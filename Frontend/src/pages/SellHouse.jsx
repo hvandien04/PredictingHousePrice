@@ -445,6 +445,7 @@ const SellHouse = () => {
                           value={formData.description}
                           onChange={handleFormChange}
                           required
+                          style={{ margin: '0' }}
                       />
                     </div>
 
