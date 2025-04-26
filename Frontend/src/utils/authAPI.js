@@ -1,8 +1,9 @@
-import { Email } from '@mui/icons-material';
+import { Email, Send } from '@mui/icons-material';
 import axios from 'axios';
 
 // ===================== API CONFIG =====================
 export const API_URL = 'http://localhost:8080';
+// export const API_URL= "http://192.168.1.11:8080";
 
 export const API_ENDPOINTS = {
     // Auth endpoints
@@ -10,6 +11,9 @@ export const API_ENDPOINTS = {
     REGISTER: '/api/auth/register',
     LOGOUT: '/api/auth/logout',
     SESSION: '/api/auth/session',
+    RESET_PASSWORD: '/api/auth/reset-password',
+    VERIFY_RESET_CODE: '/api/auth/verify-reset-code',
+    SEND_RESET_CODE: '/api/auth/send-reset-code',
     UPDATE_PROFILE: '/api/auth/update-profile',
     UPDATE_PASSWORD: '/api/auth/update-password',
     FEEDBACK: '/api/user/feedback',
@@ -67,7 +71,6 @@ export const authService = {
         const response = await api.post(API_ENDPOINTS.LOGIN, loginData);
         return response.data === "login success";
     },
-
     register: async (userData) => {
         const response = await api.post(API_ENDPOINTS.REGISTER, userData);
         return response.data;
@@ -101,7 +104,28 @@ export const authService = {
     feedback: async (feedbackData) => {
         const response = await api.post(API_ENDPOINTS.FEEDBACK, feedbackData);
         return response.data;
+<<<<<<< HEAD
     }
+=======
+    },
+
+    sendResetCode: async (email) => {
+        const response = await api.post(API_ENDPOINTS.SEND_RESET_CODE, { email });
+        return response.data;
+    },
+    resetPassword: async (email,newPassword, code) => {
+        const response = await api.post(API_ENDPOINTS.RESET_PASSWORD, {email, newPassword, code });
+        return response.data;
+    },
+    verifyResetCode: async (email, code) => {
+        const requestData = {
+            email,
+            code
+        };
+        const response = await api.post(API_ENDPOINTS.VERIFY_RESET_CODE, requestData);
+        return response.data;
+    },
+>>>>>>> 1cdb1b2ef064751c120b5236c1cb00a0428c34c3
 
 };
 

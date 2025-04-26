@@ -60,6 +60,7 @@
   padding: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .sell-history-item:hover {
@@ -96,13 +97,17 @@
   gap: 20px;
   color: #666;
   font-size: 0.95rem;
+  justify-content: center;
 }
 
 .sell-history-status {
+  position: absolute;
+  right: 0;
   text-align: right;
+  padding: 5px 10px;
 }
 
-.status-badge {
+.status-badge  {
   display: inline-block;
   padding: 6px 12px;
   border-radius: 20px;
@@ -111,14 +116,19 @@
   margin-bottom: 8px;
 }
 
-.status-badge.active {
+.status-badge.approved {
   background: rgba(40, 167, 69, 0.1);
   color: #28a745;
 }
 
-.status-badge.sold {
-  background: rgba(108, 117, 125, 0.1);
-  color: #6c757d;
+.status-badge.pending {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+
+.status-badge.canceled {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
 }
 
 .posted-date {
@@ -146,6 +156,76 @@
   color: #007bff;
 }
 
+/* Icon ba dấu chấm */
+.ellipsis-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.ellipsis-icon:hover {
+  color: #007bff;
+}
+
+/* Menu Tùy chọn */
+
+.dropdown-container-sell-history{
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  min-height: 20px; /* Đảm bảo có chiều cao */
+  min-width: 20px; /* Đảm bảo có chiều rộng */
+}
+
+.dropdown-toggle-sell-history {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  padding: 0 5px;
+  line-height: 1; /* Căn chỉnh nút */
+}
+
+.dropdown-menu-sell-history {
+  position: absolute;
+  right: 0;
+  top: 100%; /* Đặt menu ngay dưới nút */
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  min-width: 120px;
+  padding: 5px 0;
+  display: block; 
+}
+
+.dropdown-item-sell-history  {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  border-radius: 12px;
+}
+
+.dropdown-item-sell-history:hover {
+  background: #f5f5f5;
+}
+
+.dropdown-item-sell-history:disabled {
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Ngăn overflow hidden từ phần tử cha */
+/* .sell-history-item, .sell-history-main, .sell-history-status {
+  overflow: visible !important;
+} */
 @media (max-width: 768px) {
   .sell-history-stats {
     grid-template-columns: 1fr;

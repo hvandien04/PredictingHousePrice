@@ -53,9 +53,7 @@ export const AuthProvider = ({ children }) => {
 
   const updateProfile = async (userData) => {
     try {
-      console.log('Sending profile update request:', userData);
       const response = await authService.updateProfile(userData);
-      console.log('Profile update response:', response);
   
       // Nếu dùng axios thì response.data mới là phần nội dung body
       if (response === 'Profile updated successfully') {
@@ -76,12 +74,39 @@ export const AuthProvider = ({ children }) => {
     return await authService.changePassword(passwordData)
   };
 
+  const sendResetCode = async (email) => {
+    try {
+      const response = await authService.sendResetCode(email);
+      return response;
+    } catch (error) {
+      return { success: false, error: error.response?.data || 'Có lỗi xảy ra khi gửi mã xác nhận.' };
+    }
+  };
+
+  const resetPassword = async (email, newPassword, resetCode) => {
+    try {
+      const response = await authService.resetPassword(email, newPassword, resetCode);
+      return response;
+    } catch (error) {
+      return { success: false, error: error.response?.data || 'Có lỗi xảy ra khi đặt lại mật khẩu.' };
+    }
+  };
+  const verifyResetCode = async (email, resetCode) => {
+    try {
+      const response = await authService.verifyResetCode(email, resetCode);
+      return response;
+    } catch (error) {
+      return { success: false, error: error.response?.data || 'Có lỗi xảy ra khi xác thực mã xác nhận.' };
+    }
+  };
+
+
 //  if (isLoading) {
 //    return <div>Loading...</div>;
 //  }
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, updateProfile, changePassword, message, feedback }}>
+    <AuthContext.Provider value={{ user, login, logout, updateProfile, changePassword, sendResetCode, resetPassword, verifyResetCode, message, feedback }}>
       {children}
     </AuthContext.Provider>
   );

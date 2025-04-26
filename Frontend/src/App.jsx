@@ -13,6 +13,7 @@ import Compare from './pages/Compare';
 import History from './pages/History';
 import SellHouse from './pages/SellHouse';
 import SellHistory from './pages/SellHistory';
+import ForgetPassword from './pages/ForgetPassword';
 import Profile from './pages/Profile';
 import Statistics from './pages/Statistics';
 import AdminLayout from './layouts/AdminLayout';
@@ -56,6 +57,10 @@ function AppContent() {
             <Route path="/" element={<Home />} />
             <Route path="/input" element={<InputForm />} />
             <Route path="/login" element={<Login />} />
+<<<<<<< HEAD
+=======
+            <Route path="/forgot-password" element={<ForgetPassword />} />
+>>>>>>> 1cdb1b2ef064751c120b5236c1cb00a0428c34c3
             <Route path="/register" element={<Register />} />
             <Route path="/about" element={<About />} />
             <Route path="/compare" element={<Compare />} />
@@ -88,7 +93,11 @@ function App() {
       <HPredictedProvider>
         <AuthProvider>
           <Router>
+<<<<<<< HEAD
             <AppContent />
+=======
+            <AppContent/>
+>>>>>>> 1cdb1b2ef064751c120b5236c1cb00a0428c34c3
           </Router>
         </AuthProvider>
       </HPredictedProvider>

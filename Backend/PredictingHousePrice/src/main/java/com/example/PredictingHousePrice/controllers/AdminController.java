@@ -50,7 +50,6 @@ public class AdminController {
         this.predictedhouseRepository = predictedhouseRepository;
         this.userRepository = userRepository;
         this.feedbackService = feedbackService;
-        System.out.println("UserRepository injected: " + (userRepository != null));
     }
 
     @GetMapping("/dashboard")
@@ -67,7 +66,6 @@ public class AdminController {
 
         // Tổng số user
         long totalUsers = userRepository.count();
-        System.out.println("Total users: " + totalUsers);
 
         // Độ chính xác trung bình
         double averageAccuracy = userPredictions.stream()

@@ -31,6 +31,7 @@ const Login = () => {
       const success = await authService.login(formData.email, formData.password);
       if (success) {
         const userData = await authService.getCurrentUser();
+        console.log('User data:', userData);
         login(userData);
         if (userData.role === '1') {
           navigate('/admin');

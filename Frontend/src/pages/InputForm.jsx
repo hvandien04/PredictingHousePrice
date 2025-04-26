@@ -74,7 +74,6 @@ const InputForm = () => {
         body: JSON.stringify(requestData)
       });
       const data = await response.json();
-      console.log("Kết quả API:", data);
 
       const giaDuDoan = data.gia_du_doan || `Lỗi: ${data.error}`;
       const doChinhXac = data.confidence_score || null;
@@ -93,7 +92,6 @@ const InputForm = () => {
         houseType: requestData.loai_nha,
       };
       const result = await predictHouse(predictionPayload);
-      console.log("Kết quả lưu DB:", result);
 
     } catch (error) {
       console.error("Lỗi khi gửi dữ liệu:", error);

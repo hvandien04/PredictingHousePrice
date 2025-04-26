@@ -3,10 +3,14 @@ import axios from 'axios';
 
 // ===================== API CONFIG =====================
 export const API_URL = 'http://localhost:8080';
+// export const API_URL= "http://192.168.1.11:8080";
 
 export const API_ENDPOINTS = {
     // Predict endpoints
     PREDICT: '/api/prediction/create',
+    HISTORY_PREDICT: '/api/prediction/history',
+    HISTORY_SELL: '/api/sellinghouses/user',
+    UPDATE_STATE: '/api/sellinghouses/update-state',
 };
 
 // ===================== AXIOS INSTANCE =====================
@@ -57,6 +61,18 @@ api.interceptors.response.use(
 export const houseService = {
     predict: async (data) => {
         const response = await api.post(API_ENDPOINTS.PREDICT, data);
+        return response.data;
+    },
+    history: async () => {
+        const response = await api.get(API_ENDPOINTS.HISTORY_PREDICT);
+        return response.data;
+    },
+    historySell: async () => {
+        const response = await api.get(API_ENDPOINTS.HISTORY_SELL);
+        return response.data;
+    },
+    updateState: async (id,state) => {
+        const response = await api.put(API_ENDPOINTS.UPDATE_STATE+"/" + id, state);
         return response.data;
     },
 };
