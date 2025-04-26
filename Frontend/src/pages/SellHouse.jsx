@@ -3,6 +3,7 @@ import '../styles/SellHouse.css';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-toastify';
+import { Link } from 'react-router-dom';
 
 const SellHouse = () => {
   const { user } = useAuth();
@@ -23,7 +24,8 @@ const SellHouse = () => {
     legalStatus: '',
     state: 'Chờ duyệt',
     description: '',
-    image: ''
+    image: '',
+    userID: ''
   });
 
   useEffect(() => {
@@ -52,13 +54,13 @@ const SellHouse = () => {
   useEffect(() => {
     const fetchHouses = async () => {
       try {
-        const response = await fetch('http://localhost:8080/api/sellinghouses');  // Thay URL API của bạn ở đây
+        const response = await fetch('http://localhost:8080/api/sellinghouses');
         if (!response.ok) {
           throw new Error('Không thể lấy dữ liệu từ API');
         }
         const data = await response.json();
 
-        console.log(data);  // In dữ liệu ở đây
+        console.log(data);
 
         setHouses(data);
       } catch (error) {
@@ -128,13 +130,15 @@ const SellHouse = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.title || !formData.price || !formData.area) {
-      alert('Vui lòng điền đầy đủ thông tin!');
+    // Kiểm tra nếu các trường dữ liệu bắt buộc chưa được nhập đầy đủ
+    if (!formData.title || !formData.price || !formData.area || !formData.image) {
+      alert('Vui lòng điền đầy đủ thông tin và tải ảnh lên!');
       return;
     }
 
+    // Kiểm tra nếu người dùng chưa đăng nhập
     if (!user) {
-      console.log('User chưa đăng nhập:', user);  // Kiểm tra giá trị của user
+      console.log('User chưa đăng nhập:', user);
       toast.warning('Vui lòng đăng nhập để tiếp tục', {
         position: "top-right",
         autoClose: 3000,
@@ -148,21 +152,25 @@ const SellHouse = () => {
       return;
     }
 
+    // Chuẩn bị payload gửi lên server
     const formPayload = {
       ...formData,
       price: parseFloat(formData.price.replace(' tỷ', '').replace(',', '')),
       area: parseFloat(formData.area.replace('m²', '').replace(',', '')),
     };
 
-    console.log('Dữ liệu chuẩn bị gửi:', formPayload);
-
     try {
-      const response = await fetch(`http://localhost:8080/api/uploadhouse/create`, {
+      // Bước 1: Tải ảnh lên server và nhận URL ảnh
+      const imageData = await uploadImage(formData.image);
+      formPayload.image = imageData; // Gán URL ảnh vào dữ liệu formPayload
+
+      // Bước 2: Gửi dữ liệu bài đăng lên server
+      const response = await fetch('http://localhost:8080/api/uploadhouse/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        credentials: 'include', // Ensures the session cookie is sent
+        credentials: 'include',
         body: JSON.stringify(formPayload),
       });
 
@@ -175,7 +183,7 @@ const SellHouse = () => {
 
       window.location.reload();
 
-      // Reset form after successful submission
+      // Reset form sau khi gửi thành công
       setFormData({
         title: '',
         price: '',
@@ -188,7 +196,8 @@ const SellHouse = () => {
         legalStatus: '',
         state: 'Chờ duyệt',
         description: '',
-        image: ''
+        image: '',
+        userID: '',
       });
 
     } catch (error) {
@@ -197,47 +206,25 @@ const SellHouse = () => {
     }
   };
 
+ // Hàm tải ảnh lên server
+  const uploadImage = async (image) => {
+    const fileData = new FormData();
+    fileData.append('file', image); // Giả sử formData.image là file ảnh
 
-  const handleImageUpload = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
+    const response = await fetch('http://localhost:8080/api/uploadimage/image', {
+      method: 'POST',
+      body: fileData,
+    });
 
-    const imagePreview = document.getElementById('imagePreview');
-    if (imagePreview) {
-      // Hiển thị trước ảnh khi người dùng chọn file
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        imagePreview.src = reader.result;
-      };
-      reader.readAsDataURL(file);
+    if (!response.ok) {
+      throw new Error('Lỗi khi tải ảnh lên');
     }
 
-    const formData = new FormData();
-    formData.append('file', file);
-
-    fetch('http://localhost:8080/api/uploadimage/image', {
-      method: 'POST',
-      body: formData,
-    })
-        .then((response) => response.text()) // server trả về plain text, không phải JSON
-        .then((data) => {
-          console.log('Ảnh đã được tải lên:', data);
-
-          // Gán lại ảnh bằng đường dẫn chính thức từ server
-          if (imagePreview) {
-            imagePreview.src = data;
-          }
-
-          // Cập nhật lại formData với URL ảnh
-          setFormData(prevData => ({
-            ...prevData,
-            image: data // Lưu URL ảnh trả về từ server
-          }));
-        })
-        .catch((error) => {
-          console.error('Lỗi khi tải ảnh lên:', error);
-        });
+    const data = await response.text(); // Server trả về URL ảnh
+    console.log('Ảnh đã được tải lên:', data);
+    return data; // Trả về URL ảnh
   };
+
 
   return (
       <div className="sell-house-container">
@@ -310,13 +297,18 @@ const SellHouse = () => {
                     <p className="sell-house-price">{house.price} tỷ</p>
                     <div className="sell-house-details">
                       <span>{house.address}</span>
-                      <span>{house.area} m2</span>
+                      <span>{house.area} m²</span>
                       <span>{house.bedrooms} PN</span>
                       <span>{house.bathrooms} WC</span>
                       <span>{house.legalStatus}</span>
                       <span>{house.floors} tầng</span>
                     </div>
                     <p className="sell-house-description">{house.description}</p>
+                    <div className="sell-house-description">
+                      <Link to={`/profile/${house.userID}`} className="sell-house-profile-link">
+                        Liên hệ
+                      </Link>
+                    </div>
                   </div>
                 </div>
             ))}
@@ -460,14 +452,13 @@ const SellHouse = () => {
                       <label>Ảnh</label>
                       <input
                           type="file"
-                          multiple
                           accept="image/*"
-                          onChange={handleImageUpload}
+                          onChange={(e) => setFormData({ ...formData, image: e.target.files[0] })}
                       />
                       <div className="preview-images">
                         {formData.image && (
                             <img
-                                src={formData.image}
+                                src={URL.createObjectURL(formData.image)} // Hiển thị ảnh
                                 alt="Preview"
                                 className="preview-image"
                             />

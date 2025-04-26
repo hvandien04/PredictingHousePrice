@@ -1,6 +1,8 @@
 package com.example.PredictingHousePrice.dtos;
 
 import com.example.PredictingHousePrice.entities.Sellinghouse;
+import com.example.PredictingHousePrice.entities.User;
+
 import java.math.BigDecimal;
 
 public class SellinghouseRequest {
@@ -17,6 +19,7 @@ public class SellinghouseRequest {
     private BigDecimal area;
     private String description;
     private String state;
+    private String userID;
 
     public SellinghouseRequest(Sellinghouse entity) {
         this.pHouseID = entity.getPHouseID();
@@ -32,6 +35,8 @@ public class SellinghouseRequest {
         this.legalStatus = entity.getLegalStatus();
         this.description = entity.getDescription();
         this.state = entity.getState();
+        this.userID = entity.getUserID() != null ? entity.getUserID().getUserID() : null;
+
     }
 
     // Getters và Setters
@@ -138,4 +143,13 @@ public class SellinghouseRequest {
     public void setState(String state) {
         this.state = state;
     }
+
+    public String getUserID() {
+        return userID;
+    }
+
+    public void setUserID(String userID) {
+        this.userID = userID;
+    }
+
 }

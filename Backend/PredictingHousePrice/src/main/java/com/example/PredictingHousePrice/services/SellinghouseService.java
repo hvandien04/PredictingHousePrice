@@ -2,7 +2,9 @@ package com.example.PredictingHousePrice.services;
 
 import com.example.PredictingHousePrice.dtos.SellinghouseRequest;
 import com.example.PredictingHousePrice.entities.Sellinghouse;
+import com.example.PredictingHousePrice.entities.User;
 import com.example.PredictingHousePrice.repositories.SellinghouseRepository;
+import com.example.PredictingHousePrice.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,13 +14,16 @@ import java.util.Optional;
 public class SellinghouseService {
 
     private final SellinghouseRepository sellinghouseRepository;
+    private final UserRepository userRepository;
 
-    public SellinghouseService(SellinghouseRepository sellinghouseRepository) {
+    public SellinghouseService(SellinghouseRepository sellinghouseRepository, UserRepository userRepository) {
         this.sellinghouseRepository = sellinghouseRepository;
+        this.userRepository = userRepository;
     }
 
     public List<Sellinghouse> getAllHouses() {
-        return sellinghouseRepository.findAll();
+        List<Sellinghouse> houses = sellinghouseRepository.findByStateContainingIgnoreCase("Đang bán");
+        return houses;
     }
 
     public Sellinghouse createHouse(SellinghouseRequest request) {
@@ -35,6 +40,11 @@ public class SellinghouseService {
         house.setDescription(request.getDescription());
         house.setImage(request.getImage());
         house.setState(request.getState());
+
+        if (request.getUserID() != null) {
+            Optional<User> user = userRepository.findById(request.getUserID());
+            user.ifPresent(house::setUserID);
+        }
 
         return sellinghouseRepository.save(house);
     }
@@ -55,6 +65,12 @@ public class SellinghouseService {
             house.setDescription(request.getDescription());
             house.setImage(request.getImage());
             house.setState(request.getState());
+
+            if (request.getUserID() != null) {
+                Optional<User> user = userRepository.findById(request.getUserID());
+                user.ifPresent(house::setUserID);
+            }
+
             return sellinghouseRepository.save(house);
         }
         return null;
