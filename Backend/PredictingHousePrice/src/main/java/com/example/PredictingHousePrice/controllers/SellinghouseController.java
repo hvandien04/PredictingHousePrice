@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/api/sellinghouses")
 public class SellinghouseController {
 
+    @Autowired
     private SellinghouseRepository repository;
     @Autowired
     private SellinghouseService sellinghouseService;

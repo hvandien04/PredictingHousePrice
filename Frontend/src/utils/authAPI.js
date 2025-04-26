@@ -104,9 +104,7 @@ export const authService = {
     feedback: async (feedbackData) => {
         const response = await api.post(API_ENDPOINTS.FEEDBACK, feedbackData);
         return response.data;
-<<<<<<< HEAD
-    }
-=======
+
     },
 
     sendResetCode: async (email) => {
@@ -125,8 +123,6 @@ export const authService = {
         const response = await api.post(API_ENDPOINTS.VERIFY_RESET_CODE, requestData);
         return response.data;
     },
->>>>>>> 1cdb1b2ef064751c120b5236c1cb00a0428c34c3
-
 };
 
 export default api;
