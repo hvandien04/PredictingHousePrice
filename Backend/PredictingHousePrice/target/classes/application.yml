@@ -19,13 +19,16 @@ spring:
     store-type: jdbc
     jdbc:
       initialize-schema: always
+    cookie:
+      http-only: true
+      same-site: strict
 
   resources:
     static-locations: file:./uploads/
 
-  servlet:
-    multipart:
-      enabled: true
+    servlet:
+      multipart:
+        enabled: true
 
 server:
   address: 0.0.0.0

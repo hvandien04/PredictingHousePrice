@@ -149,6 +149,7 @@ const Register = () => {
               onChange={handleChange}
               placeholder=" "
               required
+              pattern="[0-9]{10,11}"
             />
             <label htmlFor="phone">Số điện thoại</label>
           </div>

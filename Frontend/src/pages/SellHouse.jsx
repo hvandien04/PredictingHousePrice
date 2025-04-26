@@ -59,9 +59,6 @@ const SellHouse = () => {
           throw new Error('Không thể lấy dữ liệu từ API');
         }
         const data = await response.json();
-
-        console.log(data);
-
         setHouses(data);
       } catch (error) {
         console.error('Lỗi khi lấy dữ liệu nhà:', error);
@@ -138,7 +135,6 @@ const SellHouse = () => {
 
     // Kiểm tra nếu người dùng chưa đăng nhập
     if (!user) {
-      console.log('User chưa đăng nhập:', user);
       toast.warning('Vui lòng đăng nhập để tiếp tục', {
         position: "top-right",
         autoClose: 3000,
@@ -179,7 +175,6 @@ const SellHouse = () => {
       }
 
       const data = await response.json();
-      console.log('Dữ liệu đã được lưu:', data);
 
       window.location.reload();
 
@@ -220,8 +215,7 @@ const SellHouse = () => {
       throw new Error('Lỗi khi tải ảnh lên');
     }
 
-    const data = await response.text(); // Server trả về URL ảnh
-    console.log('Ảnh đã được tải lên:', data);
+    const data = await response.text();
     return data; // Trả về URL ảnh
   };
 
@@ -303,8 +297,9 @@ const SellHouse = () => {
                       <span>{house.legalStatus}</span>
                       <span>{house.floors} tầng</span>
                     </div>
-                    <p className="sell-house-description">{house.description}</p>
+                    <p className="sell-house-text" >{house.description}</p>
                     <div className="sell-house-description">
+
                       <Link to={`/profile/${house.userID}`} className="sell-house-profile-link">
                         Liên hệ
                       </Link>
@@ -341,6 +336,7 @@ const SellHouse = () => {
                           value={formData.price}
                           onChange={handleFormChange}
                           required
+                          placeholder='tỷ'
                       />
                     </div>
 

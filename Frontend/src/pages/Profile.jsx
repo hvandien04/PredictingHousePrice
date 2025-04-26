@@ -70,7 +70,6 @@ const Profile = () => {
     e.preventDefault();
     try {
       const result = await updateProfile(profileData);
-      console.log(result);
       if (result.success) {
         setSuccessMessage('Đổi thông tin thành công');
         setIsEditing(false);

@@ -3,7 +3,7 @@ import '../styles/SellHistory.css';
 import { useHPredicted } from '../context/HPredictedContext';
 import { toast } from 'react-toastify';
 
-const SellHistorylist = ({ sellHistory, handleCancelPost }) => {
+const SellHistorylist = ({ sellHistory, handleCancelPost, handleRPost }) => {
   const [dropdownOpen, setDropdownOpen] = useState(null); 
 
   const toggleDropdown = (id) => {
@@ -12,6 +12,10 @@ const SellHistorylist = ({ sellHistory, handleCancelPost }) => {
 
   const handleCancel = (id) => {
     handleCancelPost(id);
+    setDropdownOpen(null);
+  };
+  const handleRepost = (id) => {
+    handleRPost(id);
     setDropdownOpen(null);
   };
 
@@ -44,10 +48,23 @@ const SellHistorylist = ({ sellHistory, handleCancelPost }) => {
                   ⋮
                 </button>
                 {dropdownOpen === item.phouseID && (
-                  <div className="dropdown-menu-sell-history ">
-                    <button className="dropdown-item-sell-history " onClick={() => handleCancel(item.phouseID)} >
-                      Hủy đăng bài
-                    </button>
+                    <div className="dropdown-menu-sell-history">
+                    {item.state === 'Tạm ngưng' && (
+                      <button
+                        className="dropdown-item-sell-history"
+                        onClick={() => handleRepost(item.phouseID)}
+                      >
+                        Đăng lại
+                      </button>
+                    )}
+                    {item.state === 'Đang bán' && (
+                      <button
+                        className="dropdown-item-sell-history"
+                        onClick={() => handleCancel(item.phouseID)}
+                      >
+                        Hủy đăng bài
+                      </button>
+                    )}
                   </div>
                 )}
               </div>
@@ -102,6 +119,28 @@ const SellHistory = () => {
         setError('Có lỗi khi hủy đăng bài');
       }
     };
+    const handleRPost = async (phouseID) => {
+      try {
+        const data = { state: 'Đang bán' };
+        await updateState(phouseID, data);
+        toast.success('Đăng lại bài thành công!', {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setSellHistory((prev) =>
+          prev.map((item) =>
+            item.phouseID === phouseID ? { ...item, state: 'Đang bán' } : item
+          )
+        );
+      } catch (err) {
+        setError('Có lỗi khi đăng bài');
+      }
+    };
   return (
     <div className="sell-history-container">
       <div className="sell-history-header">
@@ -121,7 +160,8 @@ const SellHistory = () => {
           </div>
         </div>
       </div>
-      <SellHistorylist sellHistory={sellHistory} handleCancelPost={handleCancelPost} />
+      <SellHistorylist sellHistory={sellHistory} handleRPost={handleRPost} handleCancelPost={handleCancelPost} />
+      
     </div>
   );
 };

@@ -41,7 +41,6 @@ const Compare = () => {
           return res.json();
         })
         .then(data => {
-          console.log('Dữ liệu trả về:', data);
           const formatted = data.map((item) => ({
             id: item.pHouseID,
             title: item.title || "Chưa có tiêu đề",
@@ -133,11 +132,6 @@ const Compare = () => {
 
         const data = await response.json();
         const predictedPrice = data.gia_du_doan;
-
-        //  Log giá thực tế và dự đoán
-        console.log(` ${houseLabel} (${house.location})`);
-        console.log(`Giá thực tế: ${house.price.toLocaleString()} đ`);
-        console.log(`Giá dự đoán: ${(predictedPrice * 1e9).toLocaleString()} đ`);
 
         if (house.price < predictedPrice * 0.9 * 1e9) {
           results.push(`${houseLabel} (${house.location}): Có thể là một món hời, nhưng hãy kiểm tra kỹ tình trạng nhà và pháp lý.`);

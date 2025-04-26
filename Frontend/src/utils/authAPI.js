@@ -3,6 +3,7 @@ import axios from 'axios';
 
 // ===================== API CONFIG =====================
 export const API_URL = 'http://localhost:8080';
+// export const API_URL= "http://192.168.1.11:8080";
 
 export const API_ENDPOINTS = {
     // Auth endpoints
@@ -70,7 +71,6 @@ export const authService = {
         const response = await api.post(API_ENDPOINTS.LOGIN, loginData);
         return response.data === "login success";
     },
-
     register: async (userData) => {
         const response = await api.post(API_ENDPOINTS.REGISTER, userData);
         return response.data;

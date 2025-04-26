@@ -90,7 +90,7 @@ function App() {
       <HPredictedProvider>
         <AuthProvider>
           <Router>
-            <AppContent />
+            <AppContent/>
           </Router>
         </AuthProvider>
       </HPredictedProvider>
