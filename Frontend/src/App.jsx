@@ -34,8 +34,11 @@ function AppContent() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
   const RequireAdmin = () => {
-    const {user} = useAuth();
-
+    const { user, isLoading } = useAuth();
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+    console.log("User role:", user  );
     if (!user) {
       return <Navigate to="/login" replace />;
     }

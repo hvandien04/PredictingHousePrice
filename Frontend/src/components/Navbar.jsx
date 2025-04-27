@@ -113,7 +113,7 @@ const Navbar = () => {
                   <Link to="/statistics" className="dropdown-item" onClick={closeAllMenus}>
                     Thống Kê
                   </Link>
-                  <button onClick={handleLogout} className="dropdown-item logout-btn">
+                  <button onClick={() => {handleLogout();closeAllMenus(); }} className="dropdown-item logout-btn">
                     Đăng Xuất
                   </button>
                 </div>

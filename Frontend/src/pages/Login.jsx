@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useEffect,useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { authService } from '../utils/authAPI';
 import '../styles/Login.css';
+import { use } from 'react';
 
 
 const Login = () => {
   const navigate = useNavigate();
-  const { login } = useAuth();
+  const { login,user } = useAuth();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -49,6 +50,11 @@ const Login = () => {
     }
   };
 
+  useEffect(() => {
+    if (user) {
+      navigate('/');
+    }
+  }, [navigate, user]);
 
   return (
     <div className="login">

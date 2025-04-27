@@ -32,4 +32,9 @@ public class PredictionController {
     public List<HousePredictionRequest> getPredictionsByUser(HttpServletRequest request) {
         return predictionService.getHouseByUserID(request);
     }
+
+    @GetMapping("/recent-history")
+    public List<HousePredictionRequest> getTop4Predictions() {
+        return predictionService.getTop4Houses();
+    }
 }

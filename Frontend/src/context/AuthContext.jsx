@@ -10,21 +10,28 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     checkAuth();
+    
   }, []);
 
   const checkAuth = async () => {
     try {
+      console.log("Checking authentication...");
       const isLoggedIn = await authService.checkSession();
+      console.log("Is logged in:", isLoggedIn);
+      
       if (isLoggedIn) {
         const userData = await authService.getCurrentUser();
+        console.log("User data:", userData);
         setUser(userData);
       } else {
+        console.log("User not logged in.");
         setUser(null);
       }
     } catch (error) {
       console.error('Auth check failed:', error.response?.data || error.message);
       setUser(null);
     } finally {
+      console.log("Finished checking authentication.");
       setIsLoading(false);
     }
   };
@@ -106,7 +113,7 @@ export const AuthProvider = ({ children }) => {
 //  }
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, updateProfile, changePassword, sendResetCode, resetPassword, verifyResetCode, message, feedback }}>
+    <AuthContext.Provider value={{ user, login, logout, updateProfile, changePassword, sendResetCode, resetPassword, verifyResetCode, message, feedback, isLoading }}>
       {children}
     </AuthContext.Provider>
   );

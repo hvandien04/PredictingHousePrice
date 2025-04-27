@@ -238,4 +238,18 @@
   .profile-sidebar {
     margin-bottom: 2rem;
   }
+
+  .form-actions{
+    display: block;
+  }
+  .edit-button {
+    width: 100%;
+  }
+  .save-button {
+    width: 100%;
+  }
+  .cancel-button {
+    width: 100%;
+    margin-top: 5px;
+  }
 } 

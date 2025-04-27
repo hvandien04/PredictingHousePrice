@@ -111,4 +111,30 @@
 
             return results;
         }
+        public List<HousePredictionRequest> getTop4Houses() {
+            List<Prediction> predictions = predictionRepository.findTop4ByOrderByDateDesc();
+            List<HousePredictionRequest> results = new ArrayList<>();
+
+            for (Prediction prediction : predictions) {
+                Predictedhouse house = predictedhouseRepository.findByPredictionID(prediction);
+
+                if (house != null) {
+                    HousePredictionRequest dto = new HousePredictionRequest();
+                    dto.setPredictionID(prediction.getPredictionID());
+                    dto.setpHouseID(house.getPHouseID());
+                    dto.setHouseType(house.getHouseType());
+                    dto.setArea(house.getArea());
+                    dto.setAddress(house.getAddress());
+                    dto.setFloors(house.getFloors());
+                    dto.setBedrooms(house.getBedrooms());
+                    dto.setPredictedPrice(prediction.getPredictedPrice());
+                    dto.setConfidenceScore(prediction.getConfidenceScore());
+                    dto.setDate(prediction.getDate());
+
+                    results.add(dto);
+                }
+            }
+
+            return results;
+        }
     }
