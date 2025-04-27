@@ -8,6 +8,7 @@ const Compare = () => {
   const [selectedHouse, setSelectedHouse] = useState(null);
   const [comparisonResults, setComparisonResults] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
 
   const districtAdvantages = {
     "Quận 1": "Vị trí trung tâm, thuận tiện di chuyển, gần nhiều tiện ích như chợ Bến Thành, phố đi bộ Nguyễn Huệ, các tòa nhà văn phòng và trung tâm thương mại lớn.",
@@ -211,6 +212,17 @@ const Compare = () => {
       house.location.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
 
   return (
     <div className="compare-container">
@@ -235,7 +247,7 @@ const Compare = () => {
             </div>
           ))}
 
-          {houses.length < 3 && (
+          {(!isMobile || houses.length < 2) && houses.length < 3 && (
             <div className="add-house-column">
               <button className="add-house-btn" onClick={handleAddHouse}>
                 <span>+</span>
@@ -342,7 +354,7 @@ const Compare = () => {
           </div>
         </div>
       )}
-
+{/* 
       {comparisonResults.length > 0 && (
         <ChatMessage 
           hasPrediction={false}
@@ -350,7 +362,7 @@ const Compare = () => {
           bubbleWidth = "700px" // Thêm prop mới để điều chỉnh width
 
         />
-      )}
+      )} */}
     </div>
   );
 };

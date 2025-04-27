@@ -1,5 +1,6 @@
 package com.example.PredictingHousePrice.services;
 
+import com.example.PredictingHousePrice.dtos.UserCreateRequest;
 import com.example.PredictingHousePrice.dtos.UserRequest;
 import com.example.PredictingHousePrice.entities.User;
 import com.example.PredictingHousePrice.repositories.UserRepository;
@@ -26,7 +27,7 @@ public class AdminUserService {
 
     private UserRequest mapToRequest(User user) {
         UserRequest res = new UserRequest();
-        user.setUserID(generateRandomUserId());
+        res.setUserID(user.getUserID());
         res.setName(user.getName());
         res.setEmail(user.getEmail());
         res.setPhone(user.getPhone());
@@ -41,6 +42,7 @@ public class AdminUserService {
                 .map(this::mapToRequest)
                 .collect(Collectors.toList());
     }
+
     private String generateRandomUserId() {
         String userId;
         do {
@@ -48,7 +50,7 @@ public class AdminUserService {
         } while (userRepository.existsByUserID(userId));
         return userId;
     }
-    public ResponseEntity<?> createUser(UserRequest req) {
+    public ResponseEntity<?> createUser(UserCreateRequest req) {
         // Kiểm tra email đã tồn tại
         if (userRepository.findByEmail(req.getEmail()).isPresent()) {
             return ResponseEntity
@@ -86,53 +88,48 @@ public class AdminUserService {
 
 
 
-    public ResponseEntity<?> updateUser(String id, UserRequest req) {
-        Optional<User> existing = userRepository.findById(id);
-        if (existing.isEmpty()) {
-            return ResponseEntity
-                    .status(HttpStatus.NOT_FOUND)
-                    .body("User không tồn tại");
+    public ResponseEntity<String> updateUserByAdmin(String userId, UserCreateRequest request) {
+        Optional<User> optionalUser = userRepository.findById(userId);
+        if (optionalUser.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
         }
 
-        // Kiểm tra email đã tồn tại (trong trường hợp người dùng thay đổi email)
-        if (userRepository.findByEmail(req.getEmail()).isPresent() &&
-                !existing.get().getEmail().equals(req.getEmail())) {
-            return ResponseEntity
-                    .status(HttpStatus.BAD_REQUEST)
-                    .body("Email đã tồn tại");
+        User user = optionalUser.get();
+
+        if (request.getName() != null && !request.getName().isEmpty()) {
+            user.setName(request.getName());
         }
 
-        // Kiểm tra mật khẩu hợp lệ (ít nhất 8 ký tự, bao gồm chữ và số)
-        String password = req.getPassword();
-        String regex = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$";
-        if (!Pattern.matches(regex, password)) {
-            return ResponseEntity
-                    .status(HttpStatus.BAD_REQUEST)
-                    .body("Mật khẩu phải có ít nhất 8 ký tự và bao gồm cả chữ và số.");
+        if (request.getEmail() != null && !request.getEmail().isEmpty() && !request.getEmail().equals(user.getEmail())) {
+            if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+                return ResponseEntity
+                        .status(HttpStatus.BAD_REQUEST)
+                        .body("Email đã tồn tại");
+            }
+            user.setEmail(request.getEmail());
         }
 
-        // Cập nhật thông tin user
-        User user = existing.get();
-        user.setName(req.getName());
-        user.setEmail(req.getEmail());
-        user.setPassword(passwordEncoder.encode(req.getPassword()));
-        user.setPhone(req.getPhone());
-        user.setRole(req.getRole());
-        user.setState(req.getState());
+        if (request.getPassword() != null && !request.getPassword().isEmpty()) {
+            user.setPassword(request.getPassword()); // Nếu cần mã hóa password thì mã hóa ở đây nhé
+        }
 
-        // Lưu thay đổi vào database
+        if (request.getPhone() != null && !request.getPhone().isEmpty()) {
+            if (!request.getPhone().matches("^\\d{10,11}$")) {
+                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid phone number format");
+            }
+            user.setPhone(request.getPhone());
+        }
+
+        if (request.getRole() != null && !request.getRole().isEmpty()) {
+            user.setRole(request.getRole());
+        }
+
+        if (request.getState() != null && !request.getState().isEmpty()) {
+            user.setState(request.getState());
+        }
+
         userRepository.save(user);
 
-        // Trả về ResponseEntity với status OK và thông báo thành công
-        return ResponseEntity
-                .status(HttpStatus.OK)
-                .body("Cập nhật người dùng thành công");
-    }
-
-
-    public boolean deleteUser(String id) {
-        if (!userRepository.existsById(id)) return false;
-        userRepository.deleteById(id);
-        return true;
+        return ResponseEntity.status(HttpStatus.OK).body("User updated successfully by admin");
     }
 }

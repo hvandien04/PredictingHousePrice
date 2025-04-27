@@ -26,7 +26,7 @@ import {
   Delete as DeleteIcon,
 } from "@mui/icons-material";
 import MDBox from "../../components/MDBox";
-import axios from "axios";
+import axios from "axios"; 
 import { adminService } from "../../utils/adminAPI";
 
 function HousePosts() {
@@ -44,8 +44,8 @@ function HousePosts() {
   const fetchHouses = async () => {
     setLoading(true);
     try {
-      const response = await axios.get("/api/admin/get-all-sellinghouses");
-      setHouses(response.data);
+      const response = await adminService.getAllHouses();
+      setHouses(response);
       console.log(response);
     } catch (err) {
       setError("Không thể tải dữ liệu nhà bán.");
@@ -118,9 +118,9 @@ function HousePosts() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {houses.map((house) => (
-                <TableRow key={house.id}>
-                  <TableCell>{house.id}</TableCell>
+              {houses.map((house,index) => (
+                <TableRow key={house.id||index}>
+                  <TableCell>{house.phouseID}</TableCell>
                   <TableCell>{house.title}</TableCell>
                   <TableCell>{house.price}</TableCell>
                   <TableCell>{house.address}</TableCell>

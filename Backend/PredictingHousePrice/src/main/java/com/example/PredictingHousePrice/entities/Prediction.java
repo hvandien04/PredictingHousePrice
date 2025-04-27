@@ -14,7 +14,7 @@ public class Prediction {
     private String predictionID;
 
     @JsonBackReference
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "UserID")
     private com.example.PredictingHousePrice.entities.User userID;
 

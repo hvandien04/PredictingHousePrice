@@ -1,5 +1,6 @@
 package com.example.PredictingHousePrice.controllers;
 
+import com.example.PredictingHousePrice.dtos.UserCreateRequest;
 import com.example.PredictingHousePrice.entities.Prediction;
 import com.example.PredictingHousePrice.entities.Predictedhouse;
 import com.example.PredictingHousePrice.entities.User;
@@ -18,7 +19,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
-import com.example.PredictingHousePrice.dtos.UserRequest;
 import com.example.PredictingHousePrice.entities.Sellinghouse;
 import java.util.List;
 import com.example.PredictingHousePrice.dtos.SellinghouseRequest;
@@ -245,7 +245,7 @@ public class AdminController {
 
     // 2. Thêm người dùng
     @PostMapping("/add-users")
-    public ResponseEntity<?> createUser(@RequestBody UserRequest user, HttpServletRequest request) {
+    public ResponseEntity<?> createUser(@RequestBody UserCreateRequest user, HttpServletRequest request) {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
         }
@@ -254,39 +254,27 @@ public class AdminController {
 
 
     // 3. Cập nhật người dùng
-    @PutMapping("/update-users/{id}")
-    public ResponseEntity<?> updateUser(@PathVariable String id, @RequestBody UserRequest user, HttpServletRequest request) {
-        if (!authService.isAdmin(request)) {
+    @PutMapping("/update-users/{userId}")
+    public ResponseEntity<?> updateUserByAdmin(@PathVariable("userId") String userId,
+                                               @RequestBody UserCreateRequest request,
+                                               HttpServletRequest httpRequest) {
+        if (!authService.isAdmin(httpRequest)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
         }
-        var updated = adminUserService.updateUser(id, user);
-        return (updated != null)
-                ? ResponseEntity.ok(updated)
-                : ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+        return adminUserService.updateUserByAdmin(userId, request);
     }
 
-
-    // 4. Xóa người dùng
-    @DeleteMapping("/delete-users/{id}")
-    public ResponseEntity<?> deleteUser(@PathVariable String id, HttpServletRequest request) {
-        if (!authService.isAdmin(request)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
-        }
-        boolean deleted = adminUserService.deleteUser(id);
-        return (deleted)
-                ? ResponseEntity.ok("User deleted")
-                : ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
-    }
-    // --- Sellinghouse Management ---
     @GetMapping("/get-all-sellinghouses")
-    public ResponseEntity<List<Sellinghouse>> getAllHouses(HttpServletRequest request) {
+    public ResponseEntity<List<SellinghouseRequest>> getAllSellinghouses(HttpServletRequest request) {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
         }
-        List<Sellinghouse> houses = sellinghouseService.getAllHouses();
-        return ResponseEntity.ok(houses);  // Đảm bảo trả về List<Sellinghouse> đúng kiểu
+        List<Sellinghouse> houses = sellinghouseService.getAll();
+        List<SellinghouseRequest> response = houses.stream()
+                .map(SellinghouseRequest::new) // Convert từ Entity sang DTO
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(response);
     }
-
 
     @PostMapping("/create-sellinghouses")
     public ResponseEntity<Sellinghouse> createHouse(@RequestBody SellinghouseRequest request, HttpServletRequest httpServletRequest) {

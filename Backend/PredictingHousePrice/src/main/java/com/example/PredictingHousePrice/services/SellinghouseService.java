@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class SellinghouseService {
@@ -26,6 +27,9 @@ public class SellinghouseService {
     public SellinghouseService(SellinghouseRepository sellinghouseRepository, UserRepository userRepository) {
         this.sellinghouseRepository = sellinghouseRepository;
         this.userRepository = userRepository;
+    }
+    public List<Sellinghouse> getAll() {
+        return sellinghouseRepository.findAll(); // Lấy tất cả, không lọc theo state
     }
 
     public List<Sellinghouse> getAllHouses() {

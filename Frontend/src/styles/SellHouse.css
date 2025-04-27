@@ -330,8 +330,7 @@
   background: rgba(0, 123, 255, 0.8);
 }
 
-/* Responsive */
-@media (max-width: 1400px) {
+/* @media (max-width: 1400px) {
   .houses-grid {
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   }
@@ -344,24 +343,30 @@
 }
 
 @media (max-width: 1024px) {
-  .sell-house-container {
+   .sell-house-container {
     flex-direction: column;
-  }
+  } 
 
   .sell-house-filters {
     position: static;
     width: 100%;
-  }
+  } 
 
   .houses-grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  }
-}
+  } 
+} */
 
 @media (max-width: 768px) {
   .sell-house-container {
-    margin: 80px auto 30px;
+    margin: 80px 0;
     gap: 30px;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .sell-house-filters {
+    position: static;
+    width: 100%;
   }
 
   .sell-house-header {

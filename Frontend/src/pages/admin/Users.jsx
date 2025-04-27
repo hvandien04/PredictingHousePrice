@@ -28,7 +28,7 @@ function Users() {
   };
 
   const handleOpenAddUser = () => {
-    setCurrentUser({ name: '', email: '', role: '0', status: 'Hoạt động', password: '', phone: '' });
+    setCurrentUser({ name: '', email: '', role: '0', state: 'Active', password: '', phone: '' });
     setIsEditMode(false);
     setOpenDialog(true);
   };
@@ -100,8 +100,8 @@ function Users() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {users.map((user) => (
-              <TableRow key={user.id}>
+            {users.map((user, index) => (
+              <TableRow key={user.id||index}>
                 <TableCell>{user.userID}</TableCell>
                 <TableCell>{user.name}</TableCell>
                 <TableCell>{user.email}</TableCell>
@@ -110,9 +110,6 @@ function Users() {
                 <TableCell>
                   <IconButton color="primary" onClick={() => handleOpenEditUser(user)}>
                     <EditIcon />
-                  </IconButton>
-                  <IconButton color="error" onClick={() => handleDeleteUser(user.id)}>
-                    <DeleteIcon />
                   </IconButton>
                 </TableCell>
               </TableRow>
@@ -147,6 +144,13 @@ function Users() {
             margin="normal"
           />
           <TextField
+            label="Số điện thoại"
+            value={currentUser?.phone || ''}
+            onChange={(e) => setCurrentUser({ ...currentUser, phone: e.target.value })}
+            fullWidth
+            margin="normal"
+          />
+          <TextField
             label="Mật khẩu"
             value={currentUser?.password || ''}
             onChange={(e) => setCurrentUser({ ...currentUser, password: e.target.value })}
@@ -155,8 +159,8 @@ function Users() {
           />
           <TextField
             label="Trạng thái"
-            value={currentUser?.status || ''}
-            onChange={(e) => setCurrentUser({ ...currentUser, status: e.target.value })}
+            value={currentUser?.state || ''}
+            onChange={(e) => setCurrentUser({ ...currentUser, state: e.target.value })}
             fullWidth
             margin="normal"
           />

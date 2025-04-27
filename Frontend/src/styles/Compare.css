@@ -442,3 +442,50 @@
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@media (max-width: 768px) {
+  .compare-container{
+    margin: 0;
+    padding: 10px;
+  }
+  .compare-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 5px;
+  }
+  .house-column {
+    min-width: unset; /* Bỏ min-width cố định */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của cột */
+    padding: 10px; /* Giảm padding */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
+  }
+
+  .add-house-column {
+    min-width: unset;
+  }
+
+  .house-price .current-price {
+    font-size: 1.1rem; /* Giảm kích thước font */
+  }
+
+  .feature-item, 
+  .detail-label, 
+  .detail-value {
+    font-size: 0.8rem; /* Giảm kích thước font chi tiết */
+  }
+
+  .detail-row {
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu cần */
+  }
+
+  .remove-house-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+  
+  /* Hiển thị lại nút thêm khi có ít hơn 2 nhà */
+  .compare-content:has(.house-column:only-child) .add-house-column,
+  .compare-content:has(.house-column:first-child:nth-last-child(1)) .add-house-column {
+    display: flex;
+  }
+}
