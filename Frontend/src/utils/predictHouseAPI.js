@@ -9,6 +9,7 @@ export const API_ENDPOINTS = {
     // Predict endpoints
     PREDICT: '/api/prediction/create',
     HISTORY_PREDICT: '/api/prediction/history',
+    HISTORY_PREDICT_HOME: '/api/prediction/recent-history',
     HISTORY_SELL: '/api/sellinghouses/user',
     UPDATE_STATE: '/api/sellinghouses/update-state',
 };
@@ -73,6 +74,10 @@ export const houseService = {
     },
     updateState: async (id,state) => {
         const response = await api.put(API_ENDPOINTS.UPDATE_STATE+"/" + id, state);
+        return response.data;
+    },
+    historyHome: async () => {
+        const response = await api.get(API_ENDPOINTS.HISTORY_PREDICT_HOME);
         return response.data;
     },
 };

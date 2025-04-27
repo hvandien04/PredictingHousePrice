@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -8,8 +8,11 @@ import banner from '../assets/banner.jpg';
 import featuresCenter from '../assets/features-center.png';
 import { FaCalculator, FaHistory, FaRobot, FaBalanceScale } from 'react-icons/fa';
 import NewsList from '../components/NewsList';
+import {houseService} from '../utils/predictHouseAPI';
+import { use } from 'react';
 
 const Home = () => {
+
   const testimonials = [
     {
       name: "TRẦN LAM",
@@ -57,34 +60,26 @@ const Home = () => {
     ],
   };
   
-
-  const recentPredictions = [
-    {
-      location: 'Quận 1, TP.HCM',
-      price: '2.5 tỷ',
-      date: '15/03/2024',
-      area: '100m²'
-    },
-    {
-      location: 'Quận 7, TP.HCM',
-      price: '1.8 tỷ',
-      date: '14/03/2024',
-      area: '80m²'
-    },
-    {
-      location: 'Quận 7, TP.HCM',
-      price: '1.8 tỷ',
-      date: '14/03/2024',
-      area: '80m²'
-    },
-    {
-      location: 'Quận 3, TP.HCM',
-      price: '3.2 tỷ',
-      date: '13/03/2024',
-      area: '120m²'
+  const [recentPredictions, setRecentPredictions] = useState([]);
+  const formatArrayDate = (dateArray) => {
+    if (!Array.isArray(dateArray) || dateArray.length < 3) return 'Không xác định';
+    const [year, month, day] = dateArray;
+    const formattedDay = day.toString().padStart(2, '0');
+    const formattedMonth = month.toString().padStart(2, '0');
+    return `${formattedDay}/${formattedMonth}/${year}`;
+  };
+  useEffect(() => {
+    const fetchRecentPredictions = async () => {
+      
+      try {
+        const response = await houseService.historyHome();
+        setRecentPredictions(response);
+      } catch (error) {
+        console.error("Error fetching recent predictions:", error);
+      }
     }
-  ];
-
+    fetchRecentPredictions();
+  }, []);
   return (
     <div className="home">
       <div className="home-content">
@@ -154,12 +149,12 @@ const Home = () => {
             <div key={index} className="prediction-card">
               <div className="prediction-header">
                 <i className="fa-solid fa-location-dot"></i>
-                <h3>{prediction.location}</h3>
+                <h3>{prediction.address}</h3>
               </div>
               <div className="prediction-details">
-                <p><i className="fa-solid fa-money-bill-wave"></i> {prediction.price}</p>
-                <p><i className="fa-solid fa-ruler-combined"></i> {prediction.area}</p>
-                <p><i className="fa-solid fa-calendar"></i> {prediction.date}</p>
+                <p><i className="fa-solid fa-money-bill-wave"></i> {prediction.predictedPrice} tỷ</p>
+                <p><i className="fa-solid fa-ruler-combined"></i> {prediction.area} m²</p>
+                <p><i className="fa-solid fa-calendar"></i>{formatArrayDate(prediction.date)}</p>
               </div>
             </div>
           ))}

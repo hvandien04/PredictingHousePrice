@@ -44,4 +44,31 @@ public class EmailService {
             throw ex;
         }
     }
+
+    public void sendWelcome(String toEmail) throws IOException {
+        // Lấy FROM_EMAIL từ môi trường
+        String fromEmail = System.getProperty("FROM_EMAIL");
+
+        if (fromEmail == null || fromEmail.isEmpty()) {
+            throw new IOException("FROM_EMAIL chưa được cấu hình.");
+        }
+
+        Email from = new Email(fromEmail);
+        String subject = "Mail chào mừng tới với House Predict";
+        Email to = new Email(toEmail);
+        Content content = new Content("text/plain", "Mày đã sử dụng email là " + toEmail +" để đăng ký tài khoản tại HousePredict");
+        Mail mail = new Mail(from, subject, to, content);
+
+        SendGrid sg = new SendGrid(this.sendgridApiKey);
+        Request request = new Request();
+
+        try {
+            request.setMethod(Method.POST);
+            request.setEndpoint("mail/send");
+            request.setBody(mail.build());
+            sg.api(request);
+        } catch (IOException ex) {
+            throw ex;
+        }
+    }
 }

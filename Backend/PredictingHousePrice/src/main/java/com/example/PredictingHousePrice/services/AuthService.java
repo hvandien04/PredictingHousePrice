@@ -84,6 +84,13 @@ public class AuthService {
         user.setState("Active");
 
         userRepository.save(user);
+        try {
+            emailService.sendWelcome(user.getEmail());  // Gửi email tới người dùng đã đăng ký
+        } catch (IOException e) {
+            return ResponseEntity
+                    .status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Không thể gửi email chào mừng: " + e.getMessage());
+        }
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body("Đăng ký thành công!");
