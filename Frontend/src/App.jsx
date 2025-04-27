@@ -34,8 +34,11 @@ function AppContent() {
   const location = useLocation();
   const isAdminRoute = location.pathname.startsWith('/admin');
   const RequireAdmin = () => {
-    const {user} = useAuth();
-
+    const { user, isLoading } = useAuth();
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+    console.log("User role:", user  );
     if (!user) {
       return <Navigate to="/login" replace />;
     }
@@ -57,6 +60,7 @@ function AppContent() {
             <Route path="/" element={<Home />} />
             <Route path="/input" element={<InputForm />} />
             <Route path="/login" element={<Login />} />
+
             <Route path="/forgot-password" element={<ForgetPassword />} />
             <Route path="/register" element={<Register />} />
             <Route path="/about" element={<About />} />
@@ -90,6 +94,7 @@ function App() {
       <HPredictedProvider>
         <AuthProvider>
           <Router>
+
             <AppContent/>
           </Router>
         </AuthProvider>

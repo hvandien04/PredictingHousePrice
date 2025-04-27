@@ -12,4 +12,6 @@ public interface PredictionRepository extends JpaRepository<Prediction, String> 
     boolean existsByPredictionID(String predictionID);
 
     List<Prediction> findByUserID(User user);
+
+    List<Prediction> findTop4ByOrderByDateDesc();
 }

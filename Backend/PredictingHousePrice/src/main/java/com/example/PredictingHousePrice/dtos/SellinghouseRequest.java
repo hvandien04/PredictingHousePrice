@@ -21,7 +21,6 @@ public class SellinghouseRequest {
     private String state;
     private String userID;
 
-
     public SellinghouseRequest(Sellinghouse entity) {
         this.pHouseID = entity.getPHouseID();
         this.title = entity.getTitle();

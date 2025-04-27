@@ -16,6 +16,15 @@
   margin-bottom: 40px;
 }
 
+.news-heading::after {
+  content: '';
+  display: block;
+  width: 10%;
+  height: 3px;
+  background: #007bff;
+  margin: 10px auto;
+}
+
 .news-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -131,6 +140,8 @@
   .news-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+    max-width: 45vh;
+    margin: auto ;
   }
 
   .news-title {

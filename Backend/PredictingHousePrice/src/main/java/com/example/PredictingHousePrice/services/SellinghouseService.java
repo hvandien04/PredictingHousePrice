@@ -5,6 +5,8 @@ import com.example.PredictingHousePrice.dtos.UpdateStateRequest;
 import com.example.PredictingHousePrice.entities.Sellinghouse;
 import com.example.PredictingHousePrice.entities.User;
 import com.example.PredictingHousePrice.repositories.SellinghouseRepository;
+
+
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import com.example.PredictingHousePrice.repositories.UserRepository;

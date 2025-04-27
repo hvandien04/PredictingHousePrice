@@ -72,7 +72,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .sell-history-info {
@@ -227,16 +227,24 @@
   overflow: visible !important;
 } */
 @media (max-width: 768px) {
+  .sell-history-container {
+    margin: 10px 0;
+  }
   .sell-history-stats {
     grid-template-columns: 1fr;
   }
 
   .sell-history-main {
     flex-direction: column;
+    position: relative;;
     gap: 15px;
   }
 
+  .sell-history-info {
+    width: 100%;
+  }
   .sell-history-status {
+    position: absolute;
     text-align: left;
   }
 

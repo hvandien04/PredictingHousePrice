@@ -1,5 +1,6 @@
 package com.example.PredictingHousePrice.controllers;
 
+import com.example.PredictingHousePrice.services.SellinghouseService;
 import com.example.PredictingHousePrice.dtos.SellinghouseRequest;
 import com.example.PredictingHousePrice.dtos.UpdateStateRequest;
 import com.example.PredictingHousePrice.entities.Sellinghouse;
@@ -30,6 +31,7 @@ public class SellinghouseController {
                 .map(SellinghouseRequest::new)
                 .collect(Collectors.toList());
     }
+
 
     @GetMapping("/user")
     public List<Sellinghouse> getHistoryByUserId(HttpServletRequest request) {

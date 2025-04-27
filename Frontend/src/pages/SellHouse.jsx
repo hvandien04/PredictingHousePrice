@@ -59,6 +59,7 @@ const SellHouse = () => {
           throw new Error('Không thể lấy dữ liệu từ API');
         }
         const data = await response.json();
+
         setHouses(data);
       } catch (error) {
         console.error('Lỗi khi lấy dữ liệu nhà:', error);
@@ -135,6 +136,7 @@ const SellHouse = () => {
 
     // Kiểm tra nếu người dùng chưa đăng nhập
     if (!user) {
+
       toast.warning('Vui lòng đăng nhập để tiếp tục', {
         position: "top-right",
         autoClose: 3000,
@@ -216,6 +218,7 @@ const SellHouse = () => {
     }
 
     const data = await response.text();
+
     return data; // Trả về URL ảnh
   };
 
@@ -297,6 +300,7 @@ const SellHouse = () => {
                       <span>{house.legalStatus}</span>
                       <span>{house.floors} tầng</span>
                     </div>
+
                     <p className="sell-house-text" >{house.description}</p>
                     <div className="sell-house-description">
 
