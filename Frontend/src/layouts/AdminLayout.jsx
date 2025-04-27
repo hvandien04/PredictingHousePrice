@@ -87,7 +87,7 @@ function AdminLayout() {
           <ListItemIcon>
             <ExitToAppIcon />
           </ListItemIcon>
-          <ListItemText primary="Thoát" />
+          <ListItemText primary="Về trang chủ" />
         </ListItem>
       </List>
     </div>

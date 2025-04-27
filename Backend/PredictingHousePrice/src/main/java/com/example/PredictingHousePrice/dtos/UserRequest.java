@@ -1,7 +1,6 @@
 package com.example.PredictingHousePrice.dtos;
 
 public class UserRequest {
-    private String userID;
     private String name;
     private String email;
     private String password;
@@ -10,10 +9,6 @@ public class UserRequest {
     private String state;
 
     // Getters & Setters
-
-    public String getUserID() {
-        return userID;
-    }
 
     public String getName() {
         return name;
@@ -38,11 +33,6 @@ public class UserRequest {
     public String getState() {
         return state;
     }
-
-    public void setUserID(String userID) {
-        this.userID = userID;
-    }
-
     public void setName(String name) {
         this.name = name;
     }

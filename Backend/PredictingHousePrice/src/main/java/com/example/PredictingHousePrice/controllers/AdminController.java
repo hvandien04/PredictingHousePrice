@@ -235,7 +235,7 @@ public class AdminController {
     }
 
     // 1. Lấy danh sách người dùng
-    @GetMapping("/users")
+    @GetMapping("/get-all-users")
     public ResponseEntity<?> getAllUsers(HttpServletRequest request) {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
@@ -244,7 +244,7 @@ public class AdminController {
     }
 
     // 2. Thêm người dùng
-    @PostMapping("/users")
+    @PostMapping("/add-users")
     public ResponseEntity<?> createUser(@RequestBody UserRequest user, HttpServletRequest request) {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
@@ -254,7 +254,7 @@ public class AdminController {
 
 
     // 3. Cập nhật người dùng
-    @PutMapping("/users/{id}")
+    @PutMapping("/update-users/{id}")
     public ResponseEntity<?> updateUser(@PathVariable String id, @RequestBody UserRequest user, HttpServletRequest request) {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
@@ -267,7 +267,7 @@ public class AdminController {
 
 
     // 4. Xóa người dùng
-    @DeleteMapping("/users/{id}")
+    @DeleteMapping("/delete-users/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable String id, HttpServletRequest request) {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
@@ -278,7 +278,7 @@ public class AdminController {
                 : ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
     }
     // --- Sellinghouse Management ---
-    @GetMapping("/sellinghouses")
+    @GetMapping("/get-all-sellinghouses")
     public ResponseEntity<List<Sellinghouse>> getAllHouses(HttpServletRequest request) {
         if (!authService.isAdmin(request)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
@@ -288,7 +288,7 @@ public class AdminController {
     }
 
 
-    @PostMapping("/sellinghouses")
+    @PostMapping("/create-sellinghouses")
     public ResponseEntity<Sellinghouse> createHouse(@RequestBody SellinghouseRequest request, HttpServletRequest httpServletRequest) {
         if (!authService.isAdmin(httpServletRequest)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
@@ -297,7 +297,7 @@ public class AdminController {
         return ResponseEntity.status(HttpStatus.CREATED).body(house);
     }
 
-    @PutMapping("/sellinghouses/{id}")
+    @PutMapping("/update-sellinghouses/{id}")
     public ResponseEntity<Sellinghouse> updateHouse(@PathVariable String id, @RequestBody SellinghouseRequest request, HttpServletRequest httpServletRequest) {
         if (!authService.isAdmin(httpServletRequest)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
@@ -308,7 +308,7 @@ public class AdminController {
                 : ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
     }
 
-    @DeleteMapping("/sellinghouses/{id}")
+    @DeleteMapping("/delete-sellinghouses/{id}")
     public ResponseEntity<String> deleteHouse(@PathVariable String id, HttpServletRequest httpServletRequest) {
         if (!authService.isAdmin(httpServletRequest)) {
             return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
@@ -321,19 +321,19 @@ public class AdminController {
 
     // --- Feedback Management ---
     // Lấy danh sách tất cả phản hồi
-    @GetMapping
+    @GetMapping("get-all-feedbacks")
     public ResponseEntity<List<Feedback>> getAllFeedbacks() {
         return ResponseEntity.ok(feedbackService.getAllFeedbacks());
     }
 
     // Xem chi tiết 1 phản hồi theo ID
-    @GetMapping("/{id}")
+    @GetMapping("get-feedback/{id}")
     public ResponseEntity<Feedback> getFeedbackById(@PathVariable String id) {
         return ResponseEntity.ok(feedbackService.getFeedbackById(id));
     }
 
     // Xóa phản hồi
-    @DeleteMapping("/{id}")
+    @DeleteMapping("delete-feedback/{id}")
     public ResponseEntity<Void> deleteFeedback(@PathVariable String id) {
         feedbackService.deleteFeedbackById(id);
         return ResponseEntity.noContent().build();

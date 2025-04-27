@@ -1,71 +1,79 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
+  Box,
+  Typography,
   Table,
-  TableBody,
-  TableCell,
   TableContainer,
   TableHead,
+  TableBody,
   TableRow,
+  TableCell,
   Paper,
-  Button,
   IconButton,
-  Typography,
-  Box,
   Chip,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogActions,
+  Button,
   TextField,
   MenuItem,
+  CircularProgress,
 } from "@mui/material";
 import {
+  Visibility as VisibilityIcon,
   Edit as EditIcon,
   Delete as DeleteIcon,
-  Visibility as VisibilityIcon,
 } from "@mui/icons-material";
 import MDBox from "../../components/MDBox";
+import axios from "axios";
+import { adminService } from "../../utils/adminAPI";
 
 function HousePosts() {
-  const [posts] = useState([
-    {
-      id: 1,
-      title: "Nhà phố 3 tầng Quận 7",
-      price: "5.5 tỷ",
-      address: "123 Nguyễn Văn Linh, Quận 7, TP.HCM",
-      seller: "Nguyễn Văn A",
-      status: "Đang bán",
-      createdAt: "2024-03-31",
-      views: 156,
-    },
-    {
-      id: 2,
-      title: "Biệt thự vườn Thủ Đức",
-      price: "12 tỷ",
-      address: "456 Võ Văn Ngân, TP Thủ Đức, TP.HCM",
-      seller: "Trần Thị B",
-      status: "Đã bán",
-      createdAt: "2024-03-30",
-      views: 234,
-    },
-    {
-      id: 3,
-      title: "Căn hộ cao cấp Quận 2",
-      price: "3.8 tỷ",
-      address: "789 Mai Chí Thọ, Quận 2, TP.HCM",
-      seller: "Lê Văn C",
-      status: "Đang xét duyệt",
-      createdAt: "2024-03-29",
-      views: 89,
-    },
-  ]);
+  const [houses, setHouses] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const [openDialog, setOpenDialog] = useState(false);
-  const [selectedPost, setSelectedPost] = useState(null);
+  const [selectedHouse, setSelectedHouse] = useState(null);
 
-  const handleViewDetails = (post) => {
-    setSelectedPost(post);
+  useEffect(() => {
+    fetchHouses();
+  }, []);
+
+  const fetchHouses = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.get("/api/admin/get-all-sellinghouses");
+      setHouses(response.data);
+      console.log(response);
+    } catch (err) {
+      setError("Không thể tải dữ liệu nhà bán.");
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleViewDetails = (house) => {
+    setSelectedHouse(house);
     setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+    setSelectedHouse(null);
+  };
+
+  const handleDeleteHouse = async (id) => {
+    if (window.confirm("Bạn có chắc chắn muốn xóa bài đăng này?")) {
+      try {
+        await axios.delete(`/api/admin/delete-sellinghouses/${id}`);
+        fetchHouses(); // reload lại danh sách sau khi xóa
+      } catch (err) {
+        console.error("Lỗi khi xóa nhà:", err);
+      }
+    }
   };
 
   const getStatusColor = (status) => {
@@ -87,61 +95,72 @@ function HousePosts() {
         <Typography variant="h4">Quản lý bài đăng bán nhà</Typography>
       </Box>
 
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>ID</TableCell>
-              <TableCell>Tiêu đề</TableCell>
-              <TableCell>Giá</TableCell>
-              <TableCell>Địa chỉ</TableCell>
-              <TableCell>Người bán</TableCell>
-              <TableCell>Trạng thái</TableCell>
-              <TableCell>Ngày đăng</TableCell>
-              <TableCell>Lượt xem</TableCell>
-              <TableCell>Thao tác</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {posts.map((post) => (
-              <TableRow key={post.id}>
-                <TableCell>{post.id}</TableCell>
-                <TableCell>{post.title}</TableCell>
-                <TableCell>{post.price}</TableCell>
-                <TableCell>{post.address}</TableCell>
-                <TableCell>{post.seller}</TableCell>
-                <TableCell>
-                  <Chip
-                    label={post.status}
-                    color={getStatusColor(post.status)}
-                    size="small"
-                  />
-                </TableCell>
-                <TableCell>{post.createdAt}</TableCell>
-                <TableCell>{post.views}</TableCell>
-                <TableCell>
-                  <IconButton
-                    color="primary"
-                    onClick={() => handleViewDetails(post)}
-                  >
-                    <VisibilityIcon />
-                  </IconButton>
-                  <IconButton color="primary">
-                    <EditIcon />
-                  </IconButton>
-                  <IconButton color="error">
-                    <DeleteIcon />
-                  </IconButton>
-                </TableCell>
+      {loading ? (
+        <Box display="flex" justifyContent="center" mt={5}>
+          <CircularProgress />
+        </Box>
+      ) : error ? (
+        <Typography color="error">{error}</Typography>
+      ) : (
+        <TableContainer component={Paper}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>ID</TableCell>
+                <TableCell>Tiêu đề</TableCell>
+                <TableCell>Giá</TableCell>
+                <TableCell>Địa chỉ</TableCell>
+                <TableCell>Người bán</TableCell>
+                <TableCell>Trạng thái</TableCell>
+                <TableCell>Ngày đăng</TableCell>
+                <TableCell>Lượt xem</TableCell>
+                <TableCell>Thao tác</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+            </TableHead>
+            <TableBody>
+              {houses.map((house) => (
+                <TableRow key={house.id}>
+                  <TableCell>{house.id}</TableCell>
+                  <TableCell>{house.title}</TableCell>
+                  <TableCell>{house.price}</TableCell>
+                  <TableCell>{house.address}</TableCell>
+                  <TableCell>{house.sellerName}</TableCell>
+                  <TableCell>
+                    <Chip
+                      label={house.status}
+                      color={getStatusColor(house.status)}
+                      size="small"
+                    />
+                  </TableCell>
+                  <TableCell>{house.createdAt}</TableCell>
+                  <TableCell>{house.views}</TableCell>
+                  <TableCell>
+                    <IconButton
+                      color="primary"
+                      onClick={() => handleViewDetails(house)}
+                    >
+                      <VisibilityIcon />
+                    </IconButton>
+                    <IconButton color="primary">
+                      <EditIcon />
+                    </IconButton>
+                    <IconButton
+                      color="error"
+                      onClick={() => handleDeleteHouse(house.id)}
+                    >
+                      <DeleteIcon />
+                    </IconButton>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      )}
 
-      {/* Dialog chi tiết bài đăng */}
-      <Dialog open={openDialog} onClose={() => setOpenDialog(false)} maxWidth="md" fullWidth>
-        {selectedPost && (
+      {/* Dialog Chi tiết nhà bán */}
+      <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="md" fullWidth>
+        {selectedHouse && (
           <>
             <DialogTitle>Chi tiết bài đăng</DialogTitle>
             <DialogContent>
@@ -149,28 +168,28 @@ function HousePosts() {
                 <TextField
                   fullWidth
                   label="Tiêu đề"
-                  value={selectedPost.title}
+                  value={selectedHouse.title || ""}
                   margin="normal"
                   InputProps={{ readOnly: true }}
                 />
                 <TextField
                   fullWidth
                   label="Giá"
-                  value={selectedPost.price}
+                  value={selectedHouse.price || ""}
                   margin="normal"
                   InputProps={{ readOnly: true }}
                 />
                 <TextField
                   fullWidth
                   label="Địa chỉ"
-                  value={selectedPost.address}
+                  value={selectedHouse.address || ""}
                   margin="normal"
                   InputProps={{ readOnly: true }}
                 />
                 <TextField
                   fullWidth
                   label="Người bán"
-                  value={selectedPost.seller}
+                  value={selectedHouse.sellerName || ""}
                   margin="normal"
                   InputProps={{ readOnly: true }}
                 />
@@ -178,8 +197,9 @@ function HousePosts() {
                   fullWidth
                   select
                   label="Trạng thái"
-                  value={selectedPost.status}
+                  value={selectedHouse.status || ""}
                   margin="normal"
+                  InputProps={{ readOnly: true }}
                 >
                   <MenuItem value="Đang bán">Đang bán</MenuItem>
                   <MenuItem value="Đã bán">Đã bán</MenuItem>
@@ -188,21 +208,21 @@ function HousePosts() {
                 <TextField
                   fullWidth
                   label="Ngày đăng"
-                  value={selectedPost.createdAt}
+                  value={selectedHouse.createdAt || ""}
                   margin="normal"
                   InputProps={{ readOnly: true }}
                 />
                 <TextField
                   fullWidth
                   label="Lượt xem"
-                  value={selectedPost.views}
+                  value={selectedHouse.views || ""}
                   margin="normal"
                   InputProps={{ readOnly: true }}
                 />
               </Box>
             </DialogContent>
             <DialogActions>
-              <Button onClick={() => setOpenDialog(false)}>Đóng</Button>
+              <Button onClick={handleCloseDialog}>Đóng</Button>
               <Button variant="contained" color="primary">
                 Cập nhật
               </Button>
@@ -214,4 +234,4 @@ function HousePosts() {
   );
 }
 
-export default HousePosts; 
+export default HousePosts;

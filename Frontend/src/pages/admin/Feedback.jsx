@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import {
   Box,
   Typography,
@@ -21,37 +22,40 @@ import {
   Visibility as VisibilityIcon,
   Delete as DeleteIcon,
 } from '@mui/icons-material';
+import { adminService } from "../../utils/adminAPI";
 
 const Feedback = () => {
-  const [feedbacks, setFeedbacks] = useState([
-    {
-      id: 1,
-      title: 'Góp ý về giao diện',
-      content: 'Giao diện rất đẹp và dễ sử dụng, tuy nhiên phần responsive trên điện thoại cần cải thiện thêm.',
-      sender: 'Nguyễn Văn A',
-      date: '2024-03-15',
-      status: 'Chưa đọc',
-    },
-    {
-      id: 2,
-      title: 'Báo lỗi dự đoán',
-      content: 'Khi nhập diện tích quá lớn, hệ thống bị lỗi không dự đoán được.',
-      sender: 'Trần Thị B',
-      date: '2024-03-14',
-      status: 'Đã đọc',
-    },
-  ]);
-
+  const [feedbacks, setFeedbacks] = useState([]);
   const [selectedFeedback, setSelectedFeedback] = useState(null);
   const [openDialog, setOpenDialog] = useState(false);
+
+  useEffect(() => {
+    fetchFeedbacks();
+  }, []);
+
+  const fetchFeedbacks = async () => {
+    try {
+      const response = await axios.get('/api/admin/get-all-feedbacks');
+      setFeedbacks(response.data);
+    } catch (error) {
+      console.error('Lỗi khi lấy danh sách phản hồi:', error);
+    }
+  };
 
   const handleViewFeedback = (feedback) => {
     setSelectedFeedback(feedback);
     setOpenDialog(true);
   };
 
-  const handleDeleteFeedback = (id) => {
-    setFeedbacks(feedbacks.filter(feedback => feedback.id !== id));
+  const handleDeleteFeedback = async (id) => {
+    if (window.confirm('Bạn có chắc chắn muốn xóa phản hồi này không?')) {
+      try {
+        await axios.delete(`/api/admin/delete-feedback/${id}`);
+        fetchFeedbacks();
+      } catch (error) {
+        console.error('Lỗi khi xóa phản hồi:', error);
+      }
+    }
   };
 
   const handleCloseDialog = () => {
@@ -86,7 +90,7 @@ const Feedback = () => {
                 <TableCell>{feedback.id}</TableCell>
                 <TableCell>{feedback.title}</TableCell>
                 <TableCell>{feedback.sender}</TableCell>
-                <TableCell>{feedback.date}</TableCell>
+                <TableCell>{new Date(feedback.date).toLocaleDateString()}</TableCell>
                 <TableCell>
                   <Chip
                     label={feedback.status}
@@ -114,10 +118,9 @@ const Feedback = () => {
         </Table>
       </TableContainer>
 
+      {/* Dialog Chi tiết Feedback */}
       <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="sm" fullWidth>
-        <DialogTitle>
-          Chi tiết phản hồi
-        </DialogTitle>
+        <DialogTitle>Chi tiết phản hồi</DialogTitle>
         <DialogContent dividers>
           {selectedFeedback && (
             <Box>
@@ -125,10 +128,10 @@ const Feedback = () => {
                 {selectedFeedback.title}
               </Typography>
               <Typography variant="body2" color="text.secondary" gutterBottom>
-                Gửi bởi: {selectedFeedback.sender}
+                Người gửi: {selectedFeedback.sender}
               </Typography>
               <Typography variant="body2" color="text.secondary" gutterBottom>
-                Ngày gửi: {selectedFeedback.date}
+                Ngày gửi: {new Date(selectedFeedback.date).toLocaleDateString()}
               </Typography>
               <Typography variant="body1" sx={{ mt: 2 }}>
                 {selectedFeedback.content}
@@ -144,4 +147,4 @@ const Feedback = () => {
   );
 };
 
-export default Feedback; 
+export default Feedback;

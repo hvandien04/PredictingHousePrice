@@ -75,7 +75,7 @@ const Home = () => {
     <div className="home">
       <div className="home-content">
         <h1 className="home-title">HousePredict</h1>
-        <p className="home-slogan">Dự đoán giá nhà với AI</p>
+        <p className="home-slogan">Dự đoán giá nhà chính xác với AI</p>
         <Link to="/input" className="predict-button">
           Dự đoán ngay!
         </Link>

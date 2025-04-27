@@ -43,9 +43,10 @@
   padding: 0.8rem 2.5rem;
   display: inline-block;
   width: fit-content;
-  min-width: 700px;
+  min-width: 500px;
   position: relative;
   animation: slideInLeft 1s ease;
+  border-radius: 70px 10px 70px 10px;
 }
 
 @keyframes slideInLeft {
@@ -60,7 +61,7 @@
 }
 
 .home-slogan {
-  font-size: 2.8rem;
+  font-size: 2rem;
   color: #FFFFFF;
   margin-bottom: 2.5rem;
   font-style: italic;
@@ -114,7 +115,7 @@
 
 .home-banner {
   position: absolute;
-  filter: brightness(0.7);
+  filter: brightness(1);
   top: 0;
   left: 0;
   width: 100%;
