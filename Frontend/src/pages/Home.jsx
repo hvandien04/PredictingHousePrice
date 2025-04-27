@@ -34,15 +34,29 @@ const Home = () => {
   ];
 
   const settings = {
-    dots: false,
+    dots: true,  // Hiển thị các chấm điều hướng
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, 
     slidesToScroll: 1,
-    arrows: true,
+    arrows: true,  
     autoplay: false,
-    className: "testimonials-slider"
+    className: "testimonials-slider",
+    responsive: [
+      {
+        breakpoint: 768, // Khi màn hình ≤ 768px
+        settings: {
+          slidesToShow: 1, // Chỉ hiển thị 1 slide
+          slidesToScroll: 1,
+          centerMode: false, // Tắt chế độ center
+          variableWidth: false, // Đảm bảo slide chiếm full width
+          adaptiveHeight: true, // Thêm dòng này
+          arrows: false // Tắt mũi tên trên mobile
+        }
+      }
+    ],
   };
+  
 
   const recentPredictions = [
     {

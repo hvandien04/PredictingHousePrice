@@ -10,6 +10,11 @@ const Navbar = () => {
   const isScrolled = useScrollPosition();
   const { user, logout } = useAuth();
   const [showUserDropdown, setShowUserDropdown] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const closeAllMenus = () => {
+    setIsMobileMenuOpen(false);
+    setShowUserDropdown(false);
+  };
 
   const handleLogout = () => {
     logout();
@@ -23,11 +28,22 @@ const Navbar = () => {
           <img src="/img/logo.png" alt="logo" />
           HousePredict
         </Link>
-        <ul className="nav-menu">
+
+        <button 
+          className="hamburger"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          <div className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></div>
+          <div className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></div>
+          <div className={`hamburger-line ${isMobileMenuOpen ? 'open' : ''}`}></div>
+        </button>
+
+        <ul className={`nav-menu ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
           <li>
             <Link 
               to="/input" 
               className={`nav-item ${location.pathname === '/input' ? 'active' : ''}`}
+              onClick={closeAllMenus}
             >
               Dự Đoán
             </Link>
@@ -36,6 +52,7 @@ const Navbar = () => {
             <Link 
               to="/compare" 
               className={`nav-item ${location.pathname === '/compare' ? 'active' : ''}`}
+              onClick={closeAllMenus}
             >
               So Sánh
             </Link>
@@ -44,6 +61,7 @@ const Navbar = () => {
             <Link 
               to="/sell-house" 
               className={`nav-item ${location.pathname === '/sell-house' ? 'active' : ''}`}
+              onClick={closeAllMenus}
             >
               Đăng Bán
             </Link>
@@ -52,6 +70,7 @@ const Navbar = () => {
             <Link 
               to="/about" 
               className={`nav-item ${location.pathname === '/about' ? 'active' : ''}`}
+              onClick={closeAllMenus}
             >
               Về Chúng Tôi
             </Link>
@@ -61,12 +80,13 @@ const Navbar = () => {
               <Link 
                 to="/login" 
                 className={`nav-item ${location.pathname === '/login' ? 'active' : ''}`}
+                onClick={closeAllMenus}
               >
                 Đăng Nhập
               </Link>
             </li>
           ) : (
-            <li className="user-menu">
+            <li className={`user-menu ${showUserDropdown ? 'active' : ''}`}>
               <div 
                 className="user-info"
                 onClick={() => setShowUserDropdown(!showUserDropdown)}
@@ -79,17 +99,18 @@ const Navbar = () => {
               </div>
               {showUserDropdown && (
                 <div className="dropdown-menu">
-                  <Link to="/profile" className="dropdown-item">
+                  <Link to="/profile" className="dropdown-item" onClick={closeAllMenus}>
                     Thông Tin Cá Nhân
+                    
                   </Link>
                   
-                  <Link to="/history" className="dropdown-item">
+                  <Link to="/history" className="dropdown-item" onClick={closeAllMenus}>
                     Lịch Sử Dự Đoán
                   </Link>
-                  <Link to="/sell-history" className="dropdown-item">
+                  <Link to="/sell-history" className="dropdown-item" onClick={closeAllMenus}>
                     Lịch Sử Đăng Bán
                   </Link>
-                  <Link to="/statistics" className="dropdown-item">
+                  <Link to="/statistics" className="dropdown-item" onClick={closeAllMenus}>
                     Thống Kê
                   </Link>
                   <button onClick={handleLogout} className="dropdown-item logout-btn">
@@ -100,6 +121,10 @@ const Navbar = () => {
             </li>
           )}
         </ul>
+        <div 
+          className={`mobile-menu-overlay ${isMobileMenuOpen ? 'active' : ''}`}
+          onClick={closeAllMenus}
+        />
       </div>
     </nav>
   );
