@@ -17,7 +17,7 @@ export const API_ENDPOINTS = {
     UPDATE_PROFILE: '/api/auth/update-profile',
     UPDATE_PASSWORD: '/api/auth/update-password',
     FEEDBACK: '/api/user/feedback',
-    
+    GET_USER_DASHBOARD: '/api/user/dashboard',
 };
 
 // ===================== AXIOS INSTANCE =====================
@@ -123,6 +123,10 @@ export const authService = {
         const response = await api.post(API_ENDPOINTS.VERIFY_RESET_CODE, requestData);
         return response.data;
     },
+    getUserDashboard: async () => {
+        const response = await api.get(API_ENDPOINTS.GET_USER_DASHBOARD);
+        return response.data;
+      },
 };
 
 export default api;

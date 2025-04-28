@@ -12,6 +12,7 @@ import {
   Line,
   ResponsiveContainer,
 } from 'recharts';
+import { authService } from '../utils/authAPI'; // Import authService
 import '../styles/Statistics.css';
 
 const Statistics = () => {
@@ -36,17 +37,7 @@ const Statistics = () => {
   const fetchStatistics = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:8080/api/user/dashboard', {
-        method: 'GET',
-        credentials: 'include',
-      });
-
-      const text = await response.text();
-      if (!response.ok) {
-        throw new Error(`Failed to fetch statistics: ${response.status} ${response.statusText}`);
-      }
-
-      const data = JSON.parse(text);
+      const data = await authService.getUserDashboard(); // Gọi API getUserDashboard
       setStats({
         totalPredictions: data.totalPredictions,
         recentPredictions: data.recentPredictions,
@@ -108,38 +99,37 @@ const Statistics = () => {
       <div className="statistics-grid">
         <div className="chart-container">
           <h2>Phân Bố Giá Nhà</h2>
-            <div style={{ display: 'flex', justifyContent: 'center' }}>
-              <ResponsiveContainer width="100%" height={300}>
-                <BarChart
-                  data={stats.priceDistribution}
-                  margin={{ top: 10, right: 20, left: 5, bottom: 20 }} // tăng left để chừa chỗ cho nhãn Y
-                >
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis
-                    dataKey="range"
-                    label={{
-                      value: 'Khoảng giá',
-                      position: 'bottom',
-                      offset: 27,
-                      style: { fontSize: '0.9rem' }
-                    }}
-                  />
-                  <YAxis
-                    label={{
-                      value: 'Số lượng dự đoán',
-                      angle: -90,
-                      position: 'insideLeft', // hoặc outsideLeft nếu muốn ra ngoài
-                      dy: 40,
-                      style: { fontSize: '0.9rem' }
-                    }}
-                  />
-                  <Tooltip />
-                  <Legend />
-                  <Bar dataKey="count" fill="#3498db" name="Số lượng" />
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart
+                data={stats.priceDistribution}
+                margin={{ top: 10, right: 20, left: 5, bottom: 20 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis
+                  dataKey="range"
+                  label={{
+                    value: 'Khoảng giá',
+                    position: 'bottom',
+                    offset: 27,
+                    style: { fontSize: '0.9rem' },
+                  }}
+                />
+                <YAxis
+                  label={{
+                    value: 'Số lượng dự đoán',
+                    angle: -90,
+                    position: 'insideLeft',
+                    dy: 40,
+                    style: { fontSize: '0.9rem' },
+                  }}
+                />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="count" fill="#3498db" name="Số lượng" />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
 
         <div className="chart-container">
@@ -148,7 +138,7 @@ const Statistics = () => {
             <ResponsiveContainer width="100%" height={300}>
               <LineChart
                 data={stats.timelineData}
-                margin={{ top: 10, right: 20, left: 5, bottom: 30 }} // giống với chart trên
+                margin={{ top: 10, right: 20, left: 5, bottom: 30 }}
               >
                 <CartesianGrid strokeDasharray="3 3" />
                 <XAxis
@@ -157,7 +147,7 @@ const Statistics = () => {
                     value: 'Thời gian',
                     position: 'bottom',
                     offset: 27,
-                    style: { fontSize: '0.9rem' }
+                    style: { fontSize: '0.9rem' },
                   }}
                 />
                 <YAxis
@@ -166,7 +156,7 @@ const Statistics = () => {
                     angle: -90,
                     position: 'insideLeft',
                     dy: 40,
-                    style: { fontSize: '0.9rem' }
+                    style: { fontSize: '0.9rem' },
                   }}
                   tickFormatter={formatYAxis}
                 />
@@ -182,7 +172,6 @@ const Statistics = () => {
             </ResponsiveContainer>
           </div>
         </div>
-
 
         <div className="recent-predictions">
           <h2>Dự Đoán Gần Đây</h2>

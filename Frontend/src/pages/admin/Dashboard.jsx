@@ -13,6 +13,7 @@ import {
   Legend,
 } from "chart.js";
 import { Chart } from "react-chartjs-2";
+import { adminService } from "../../utils/adminAPI"; // Import adminService
 
 ChartJS.register(
   CategoryScale,
@@ -218,21 +219,8 @@ function Dashboard() {
 
   const fetchDashboardData = async () => {
     try {
-      console.log("Fetching admin dashboard data...");
-      const response = await fetch("http://localhost:8080/api/admin/dashboard", {
-        method: "GET",
-        credentials: "include",
-      });
+      const data = await adminService.getDashboardData(); // Gọi API getDashboardData
 
-      const text = await response.text();
-      console.log("Dashboard - Status:", response.status);
-      console.log("Dashboard - Raw response:", text);
-
-      if (!response.ok) {
-        throw new Error(`Failed to fetch dashboard data: ${response.status}`);
-      }
-
-      const data = JSON.parse(text);
       console.log("Total users received:", data.totalUsers);
       console.log("User performance:", data.userPerformance);
 
@@ -295,37 +283,12 @@ function Dashboard() {
       }
     } catch (error) {
       console.error("Error fetching dashboard data:", error);
-      setError(error.message);
-    }
-  };
-
-  const loginAndFetch = async () => {
-    try {
-      console.log("Logging in...");
-      const loginResponse = await fetch("http://localhost:8080/api/auth/login", {
-        method: "POST",
-        credentials: "include",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: "admin@gmail.com", password: "123456ABC" }),
-      });
-
-      const loginText = await loginResponse.text();
-      console.log("Login - Status:", loginResponse.status);
-      console.log("Login - Response:", loginText);
-
-      if (!loginResponse.ok) {
-        throw new Error("Login failed");
-      }
-
-      await fetchDashboardData();
-    } catch (error) {
-      console.error("Login error:", error);
-      setError("Không thể đăng nhập");
+      setError(error.message || "Đã xảy ra lỗi khi lấy dữ liệu");
     }
   };
 
   useEffect(() => {
-    loginAndFetch();
+    fetchDashboardData();
   }, []);
 
   useEffect(() => {
@@ -395,7 +358,6 @@ function Dashboard() {
         </Grid>
       </Grid>
     </MDBox>
-
   );
 }
 

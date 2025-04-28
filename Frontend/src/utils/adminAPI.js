@@ -21,6 +21,7 @@ export const API_ENDPOINTS = {
     GET_ALL_FEEDBACKS: '/api/admin/get-all-feedbacks',
     GET_FEEDBACK_BY_ID: (id) => `/api/admin/get-feedback/${id}`,
     DELETE_FEEDBACK: (id) => `/api/admin/delete-feedback/${id}`,
+    GET_DASHBOARD_DATA: '/api/admin/dashboard',
 };
 
 // ===================== AXIOS INSTANCE =====================
@@ -112,6 +113,10 @@ export const adminService = {
         const response = await api.delete(API_ENDPOINTS.DELETE_FEEDBACK(id));
         return response.data;
     },
+    getDashboardData: async () => {
+        const response = await api.get(API_ENDPOINTS.GET_DASHBOARD_DATA);
+        return response.data;
+      },
 };
 
 export default api;
