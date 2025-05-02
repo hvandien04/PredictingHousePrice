@@ -24,7 +24,6 @@ com\example\PredictingHousePrice\controllers\AuthController.class
 com\example\PredictingHousePrice\dtos\CompareRequest.class
 com\example\PredictingHousePrice\entities\User.class
 com\example\PredictingHousePrice\repositories\PredictionRepository.class
-com\example\PredictingHousePrice\dtos\UserResponse.class
 com\example\PredictingHousePrice\config\EnvLoader.class
 com\example\PredictingHousePrice\dtos\VerifyCodeRequest.class
 com\example\PredictingHousePrice\controllers\UploadImageController.class
@@ -38,6 +37,7 @@ com\example\PredictingHousePrice\services\SellerProfileService.class
 com\example\PredictingHousePrice\repositories\FeedbackRepository.class
 com\example\PredictingHousePrice\services\PredictionService.class
 com\example\PredictingHousePrice\services\SellinghouseService.class
+com\example\PredictingHousePrice\dtos\UserCreateRequest.class
 com\example\PredictingHousePrice\services\AdminUserService.class
 com\example\PredictingHousePrice\dtos\SellerProfileRequest.class
 com\example\PredictingHousePrice\repositories\SellinghouseRepository.class

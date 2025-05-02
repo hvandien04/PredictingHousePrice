@@ -18,12 +18,10 @@ import java.util.concurrent.ConcurrentHashMap;
 @RequestMapping("/api/auth")
 public class AuthController {
     private final AuthService authService;
-    private final EmailService emailService;
 
 
-    public AuthController(AuthService authService, EmailService emailService) {
+    public AuthController(AuthService authService) {
         this.authService = authService;
-        this.emailService = emailService;
     }
 
     private final ConcurrentHashMap<String, String> verificationCodes = new ConcurrentHashMap<>();
