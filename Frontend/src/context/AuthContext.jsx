@@ -15,16 +15,12 @@ export const AuthProvider = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-      console.log("Checking authentication...");
       const isLoggedIn = await authService.checkSession();
-      console.log("Is logged in:", isLoggedIn);
       
       if (isLoggedIn) {
         const userData = await authService.getCurrentUser();
-        console.log("User data:", userData);
         setUser(userData);
       } else {
-        console.log("User not logged in.");
         setUser(null);
       }
     } catch (error) {

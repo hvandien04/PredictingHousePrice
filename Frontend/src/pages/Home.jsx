@@ -1,6 +1,8 @@
 import React,{useEffect,useState} from 'react';
 import { Link } from 'react-router-dom';
 import Slider from "react-slick";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/Home.css';
@@ -80,6 +82,12 @@ const Home = () => {
     }
     fetchRecentPredictions();
   }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1500, // Thời gian chạy animation (ms)
+      once: true,     // Chỉ chạy 1 lần
+    });
+  }, []);
   return (
     <div className="home">
       <div className="home-content">
@@ -100,7 +108,7 @@ const Home = () => {
         <div className="floating-circle"></div>
         <div className="floating-circle"></div>
         <div className="features-layout">
-          <div className="features-left">
+          <div className="features-left" data-aos="fade-right">
             <div className="feature-card">
               <div className="feature-icon">
                 <FaCalculator size={40} color="#007bff" />
@@ -117,13 +125,13 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="features-center">
+          <div className="features-center"  data-aos="zoom-in">
             <div className="center-logo">
               <img src={featuresCenter} alt="Features" />
             </div>
           </div>
 
-          <div className="features-right">
+          <div className="features-right" data-aos="fade-left">
             <div className="feature-card">
               <div className="feature-icon">
                 <FaRobot size={40} color="#007bff" />
@@ -146,7 +154,7 @@ const Home = () => {
         <h2>Dự đoán gần đây</h2>
         <div className="predictions-grid">
           {recentPredictions.map((prediction, index) => (
-            <div key={index} className="prediction-card">
+            <div key={index} className="prediction-card" data-aos="fade-up">
               <div className="prediction-header">
                 <i className="fa-solid fa-location-dot"></i>
                 <h3>{prediction.address}</h3>

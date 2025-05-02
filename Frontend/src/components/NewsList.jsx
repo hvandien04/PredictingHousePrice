@@ -1,9 +1,18 @@
 import React, { useEffect, useState } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "../styles/NewsList.css";
 
 const NewsList = () => {
   const [news, setNews] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1500,
+      once: true, 
+    });
+  }, []);
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -49,17 +58,17 @@ const NewsList = () => {
   return (
     <section className="news-section">
       <div className="news-container">
-        <h2 className="news-heading">Tin tức Bất động sản mới nhất</h2>
+        <h2 className="news-heading" data-aos="fade-up">Tin tức Bất động sản mới nhất</h2>
         <div className="news-grid">
           {news.slice(0, 6).map((item, index) => (
-            <div key={index} className="news-item">
+            <div key={index} className="news-item" data-aos="fade-up">
               <a href={item.link} target="_blank" rel="noopener noreferrer" className="news-link">
                 {item.image && (
                   <div className="news-image">
                     <img src={item.image} alt={item.title} />
                   </div>
                 )}
-                <div className="news-content">
+                <div className="news-content" >
                   <h3 className="news-title">{item.title}</h3>
                   <p className="news-date">
                     {new Date(item.pubDate).toLocaleDateString('vi-VN', {
@@ -74,7 +83,7 @@ const NewsList = () => {
             </div>
           ))}
         </div>
-        <div className="news-more">
+        <div className="news-more" data-aos="fade-up">
           <a 
             href="https://vnexpress.net/bat-dong-san" 
             target="_blank" 
