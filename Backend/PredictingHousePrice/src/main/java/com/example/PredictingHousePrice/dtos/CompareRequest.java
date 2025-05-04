@@ -18,7 +18,7 @@ public class CompareRequest {
     public CompareRequest(Sellinghouse entity) {
         this.pHouseID = entity.getPHouseID();
         this.title = entity.getTitle();
-        this.houseType = entity.gethouseType();
+        this.houseType = entity.getHouseType();
         this.image = entity.getImage();
         this.address = entity.getAddress();
         this.bedrooms = entity.getBedrooms() != null ? entity.getBedrooms() : 0;

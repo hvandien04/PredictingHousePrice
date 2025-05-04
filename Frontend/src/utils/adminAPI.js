@@ -94,7 +94,7 @@ export const adminService = {
     updateHouse: async (id, houseData) => {
         const response = await api.put(API_ENDPOINTS.UPDATE_HOUSE(id), houseData);
         return response.data;
-    },
+    },    
     deleteHouse: async (id) => {
         const response = await api.delete(API_ENDPOINTS.DELETE_HOUSE(id));
         return response.data;

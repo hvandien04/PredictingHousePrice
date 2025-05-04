@@ -66,13 +66,18 @@ function HousePosts() {
 
   const handleSaveChanges = async () => {
     try {
-      await adminService.updateHouse(updatedHouse); // Gọi API cập nhật
-      fetchHouses(); // Tải lại danh sách nhà sau khi cập nhật
-      handleCloseDialog(); // Đóng dialog
+      const response = await adminService.updateHouse(selectedHouse.pHouseID, updatedHouse); 
+      if (response.status === 200) {
+        fetchHouses(); // Gọi lại hàm fetchHouses() sau khi lưu thay đổi
+        window.location.reload();
+        handleCloseDialog(); // Đóng dialog
+      }
     } catch (err) {
       console.error("Lỗi khi cập nhật bài đăng", err);
     }
   };
+  
+  
 
   const handleFieldChange = (e) => {
     const { name, value } = e.target;

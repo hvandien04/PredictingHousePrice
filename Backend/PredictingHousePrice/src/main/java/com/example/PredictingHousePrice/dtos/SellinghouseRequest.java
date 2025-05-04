@@ -11,9 +11,9 @@ public class SellinghouseRequest {
     private String houseType;
     private String image;
     private String address;
-    private int bedrooms;
-    private int floors;
-    private int bathrooms;
+    private Integer bedrooms;
+    private Integer floors;
+    private Integer bathrooms;
     private String legalStatus;
     private BigDecimal price;
     private BigDecimal area;
@@ -24,7 +24,7 @@ public class SellinghouseRequest {
     public SellinghouseRequest(Sellinghouse entity) {
         this.pHouseID = entity.getPHouseID();
         this.title = entity.getTitle();
-        this.houseType = entity.gethouseType();
+        this.houseType = entity.getHouseType();
         this.image = entity.getImage();
         this.address = entity.getAddress();
         this.bedrooms = entity.getBedrooms() != null ? entity.getBedrooms() : 0;
@@ -37,6 +37,8 @@ public class SellinghouseRequest {
         this.state = entity.getState();
         this.userID = entity.getUserID() != null ? entity.getUserID().getUserID() : null;
 
+    }
+    public SellinghouseRequest() {
     }
 
     // Getters và Setters
@@ -80,27 +82,27 @@ public class SellinghouseRequest {
         this.address = address;
     }
 
-    public int getBedrooms() {
+    public Integer getBedrooms() {
         return bedrooms;
     }
 
-    public void setBedrooms(int bedrooms) {
+    public void setBedrooms(Integer bedrooms) {
         this.bedrooms = bedrooms;
     }
 
-    public int getFloors() {
+    public Integer getFloors() {
         return floors;
     }
 
-    public void setFloors(int floors) {
+    public void setFloors(Integer floors) {
         this.floors = floors;
     }
 
-    public int getBathrooms() {
+    public Integer getBathrooms() {
         return bathrooms;
     }
 
-    public void setBathrooms(int bathrooms) {
+    public void setBathrooms(Integer bathrooms) {
         this.bathrooms = bathrooms;
     }
 

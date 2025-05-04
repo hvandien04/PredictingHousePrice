@@ -286,15 +286,26 @@ public class AdminController {
     }
 
     @PutMapping("/update-sellinghouses/{id}")
-    public ResponseEntity<Sellinghouse> updateHouse(@PathVariable String id, @RequestBody SellinghouseRequest request, HttpServletRequest httpServletRequest) {
+    public ResponseEntity<?> updateHouse(@PathVariable String id, @RequestBody SellinghouseRequest request, HttpServletRequest httpServletRequest) {
+        // Kiểm tra quyền Admin
         if (!authService.isAdmin(httpServletRequest)) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).body(null);
+            return ResponseEntity.status(HttpStatus.FORBIDDEN)
+                    .body("You do not have permission to update this house listing.");
         }
+
+        // Cập nhật dữ liệu nhà ở
         Sellinghouse house = sellinghouseService.updateHouse(id, request);
-        return house != null
-                ? ResponseEntity.ok(house)
-                : ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+
+        if (house != null) {
+            // Trả về response với mã OK nếu cập nhật thành công
+            return ResponseEntity.ok(house);
+        } else {
+            // Trả về response với mã NOT_FOUND và thông báo lỗi chi tiết nếu không tìm thấy house
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("House with ID " + id + " not found.");
+        }
     }
+
 
     @DeleteMapping("/delete-sellinghouses/{id}")
     public ResponseEntity<String> deleteHouse(@PathVariable String id, HttpServletRequest httpServletRequest) {

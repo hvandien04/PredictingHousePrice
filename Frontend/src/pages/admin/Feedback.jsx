@@ -17,14 +17,17 @@ import {
   DialogActions,
   Button,
   Chip,
+  TextField,
 } from '@mui/material';
 import { Visibility as VisibilityIcon } from '@mui/icons-material';
 import MDBox from "../../components/MDBox";
+import { adminService } from "../../utils/adminAPI";
 
 const Feedback = () => {
   const [feedbacks, setFeedbacks] = useState([]);
   const [selectedFeedback, setSelectedFeedback] = useState(null);
   const [openDialog, setOpenDialog] = useState(false);
+  const [editedFeedback, setEditedFeedback] = useState(null);
 
   useEffect(() => {
     fetchFeedbacks();
@@ -41,6 +44,7 @@ const Feedback = () => {
 
   const handleViewFeedback = (feedback) => {
     setSelectedFeedback(feedback);
+    setEditedFeedback(feedback); // Cập nhật để chỉnh sửa
     setOpenDialog(true);
   };
 
@@ -48,8 +52,29 @@ const Feedback = () => {
     setOpenDialog(false);
   };
 
+  const handleSaveChanges = async () => {
+    try {
+      const response = await axios.put(`http://localhost:8080/api/admin/update-feedback/${editedFeedback.feedbackID}`, editedFeedback);
+      if (response.status === 200) {
+        // Cập nhật lại danh sách phản hồi
+        fetchFeedbacks();
+        handleCloseDialog();
+      }
+    } catch (error) {
+      console.error('Lỗi khi lưu thay đổi:', error);
+    }
+  };
+
   const getStatusColor = (status) => {
     return status === 'pending' ? 'warning' : 'success';
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setEditedFeedback((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   return (
@@ -100,26 +125,40 @@ const Feedback = () => {
       <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="sm" fullWidth>
         <DialogTitle>Chi tiết phản hồi</DialogTitle>
         <DialogContent dividers>
-          {selectedFeedback && (
+          {editedFeedback && (
             <Box>
-              <Typography variant="h6" gutterBottom>
-                {selectedFeedback.title}
-              </Typography>
-              {/* Hiển thị chỉ userID trong Dialog */}
-              <Typography variant="body2" color="text.secondary" gutterBottom>
-                ID Người gửi: {selectedFeedback.userID.userID || 'N/A'}
-              </Typography>
-              <Typography variant="body2" color="text.secondary" gutterBottom>
-                Ngày gửi: {new Date(selectedFeedback.date[0], selectedFeedback.date[1] - 1, selectedFeedback.date[2]).toLocaleDateString()}
-              </Typography>
-              <Typography variant="body1" sx={{ mt: 2 }}>
-                {selectedFeedback.message}
-              </Typography>
+              <TextField
+                label="Tiêu đề"
+                name="title"
+                value={editedFeedback.title || ''}
+                onChange={handleChange}
+                fullWidth
+                margin="normal"
+              />
+              <TextField
+                label="Trạng thái"
+                name="status"
+                value={editedFeedback.status || ''}
+                onChange={handleChange}
+                fullWidth
+                margin="normal"
+              />
+              <TextField
+                label="Nội dung"
+                name="message"
+                value={editedFeedback.message || ''}
+                onChange={handleChange}
+                fullWidth
+                multiline
+                rows={4}
+                margin="normal"
+              />
             </Box>
           )}
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDialog}>Đóng</Button>
+          <Button onClick={handleSaveChanges} color="primary">Lưu thay đổi</Button>
         </DialogActions>
       </Dialog>
     </MDBox>

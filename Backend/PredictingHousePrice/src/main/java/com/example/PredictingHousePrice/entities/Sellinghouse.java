@@ -1,9 +1,7 @@
 package com.example.PredictingHousePrice.entities;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-
 import java.math.BigDecimal;
 
 @Entity
@@ -71,12 +69,12 @@ public class Sellinghouse {
         this.title = title;
     }
 
-    public String gethouseType() {
+    public String getHouseType() {
         return houseType;
     }
 
-    public void sethouseType(String houseType) {
-        this.houseType = houseType;
+    public void setHouseType(String houseType) {
+        this.houseType = houseType; // Đảm bảo dùng houseType đúng
     }
 
     public com.example.PredictingHousePrice.entities.User getUserID() {
@@ -165,9 +163,5 @@ public class Sellinghouse {
 
     public void setState(String state) {
         this.state = state;
-    }
-
-    public void setHouseType(String houseType) {
-        this.houseType = houseType;
     }
 }
