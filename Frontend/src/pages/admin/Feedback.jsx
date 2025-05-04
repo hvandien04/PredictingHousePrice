@@ -18,11 +18,8 @@ import {
   Button,
   Chip,
 } from '@mui/material';
-import {
-  Visibility as VisibilityIcon,
-  Delete as DeleteIcon,
-} from '@mui/icons-material';
-import { adminService } from "../../utils/adminAPI";
+import { Visibility as VisibilityIcon } from '@mui/icons-material';
+import MDBox from "../../components/MDBox";
 
 const Feedback = () => {
   const [feedbacks, setFeedbacks] = useState([]);
@@ -35,7 +32,7 @@ const Feedback = () => {
 
   const fetchFeedbacks = async () => {
     try {
-      const response = await axios.get('/api/admin/get-all-feedbacks');
+      const response = await axios.get('http://localhost:8080/api/admin/get-all-feedbacks');
       setFeedbacks(response.data);
     } catch (error) {
       console.error('Lỗi khi lấy danh sách phản hồi:', error);
@@ -47,38 +44,27 @@ const Feedback = () => {
     setOpenDialog(true);
   };
 
-  const handleDeleteFeedback = async (id) => {
-    if (window.confirm('Bạn có chắc chắn muốn xóa phản hồi này không?')) {
-      try {
-        await axios.delete(`/api/admin/delete-feedback/${id}`);
-        fetchFeedbacks();
-      } catch (error) {
-        console.error('Lỗi khi xóa phản hồi:', error);
-      }
-    }
-  };
-
   const handleCloseDialog = () => {
     setOpenDialog(false);
   };
 
   const getStatusColor = (status) => {
-    return status === 'Chưa đọc' ? 'error' : 'success';
+    return status === 'pending' ? 'warning' : 'success';
   };
 
   return (
-    <Box p={3}>
-      <Typography variant="h4" gutterBottom fontWeight="bold" color="primary">
-        Quản lý phản hồi
-      </Typography>
+    <MDBox>
+      <Box sx={{ display: "flex", justifyContent: "space-between", mb: 3 }}>
+        <Typography variant="h4">Quản lý phản hồi</Typography>
+      </Box>
 
-      <TableContainer component={Paper} sx={{ mt: 3 }}>
+      <TableContainer component={Paper}>
         <Table>
           <TableHead>
             <TableRow>
               <TableCell>ID</TableCell>
               <TableCell>Tiêu đề</TableCell>
-              <TableCell>Người gửi</TableCell>
+              <TableCell>ID Người gửi</TableCell>
               <TableCell>Ngày gửi</TableCell>
               <TableCell>Trạng thái</TableCell>
               <TableCell align="center">Thao tác</TableCell>
@@ -86,11 +72,12 @@ const Feedback = () => {
           </TableHead>
           <TableBody>
             {feedbacks.map((feedback) => (
-              <TableRow key={feedback.id}>
-                <TableCell>{feedback.id}</TableCell>
+              <TableRow key={feedback.feedbackID}>
+                <TableCell>{feedback.feedbackID}</TableCell>
                 <TableCell>{feedback.title}</TableCell>
-                <TableCell>{feedback.sender}</TableCell>
-                <TableCell>{new Date(feedback.date).toLocaleDateString()}</TableCell>
+                {/* Hiển thị chỉ userID */}
+                <TableCell>{feedback.userID.userID}</TableCell>
+                <TableCell>{new Date(feedback.date[0], feedback.date[1] - 1, feedback.date[2]).toLocaleDateString()}</TableCell>
                 <TableCell>
                   <Chip
                     label={feedback.status}
@@ -99,17 +86,8 @@ const Feedback = () => {
                   />
                 </TableCell>
                 <TableCell align="center">
-                  <IconButton
-                    color="primary"
-                    onClick={() => handleViewFeedback(feedback)}
-                  >
+                  <IconButton color="primary" onClick={() => handleViewFeedback(feedback)}>
                     <VisibilityIcon />
-                  </IconButton>
-                  <IconButton
-                    color="error"
-                    onClick={() => handleDeleteFeedback(feedback.id)}
-                  >
-                    <DeleteIcon />
                   </IconButton>
                 </TableCell>
               </TableRow>
@@ -127,14 +105,15 @@ const Feedback = () => {
               <Typography variant="h6" gutterBottom>
                 {selectedFeedback.title}
               </Typography>
+              {/* Hiển thị chỉ userID trong Dialog */}
               <Typography variant="body2" color="text.secondary" gutterBottom>
-                Người gửi: {selectedFeedback.sender}
+                ID Người gửi: {selectedFeedback.userID.userID || 'N/A'}
               </Typography>
               <Typography variant="body2" color="text.secondary" gutterBottom>
-                Ngày gửi: {new Date(selectedFeedback.date).toLocaleDateString()}
+                Ngày gửi: {new Date(selectedFeedback.date[0], selectedFeedback.date[1] - 1, selectedFeedback.date[2]).toLocaleDateString()}
               </Typography>
               <Typography variant="body1" sx={{ mt: 2 }}>
-                {selectedFeedback.content}
+                {selectedFeedback.message}
               </Typography>
             </Box>
           )}
@@ -143,7 +122,7 @@ const Feedback = () => {
           <Button onClick={handleCloseDialog}>Đóng</Button>
         </DialogActions>
       </Dialog>
-    </Box>
+    </MDBox>
   );
 };
 
