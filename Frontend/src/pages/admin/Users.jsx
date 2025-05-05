@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import {
   Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
   Paper, Button, IconButton, Typography, Box, Dialog, DialogActions,
-  DialogContent, DialogTitle, TextField, TablePagination, InputAdornment
+  DialogContent, DialogTitle, TextField, TablePagination, InputAdornment,MenuItem, Select, FormControl, InputLabel
 } from "@mui/material";
 import { Edit as EditIcon, Delete as DeleteIcon, Add as AddIcon, Search as SearchIcon } from "@mui/icons-material";
 import MDBox from "../../components/MDBox";
@@ -10,27 +10,29 @@ import { adminService } from "../../utils/adminAPI";
 
 function Users() {
   const [users, setUsers] = useState([]);
-  const [filteredUsers, setFilteredUsers] = useState([]);
   const [openDialog, setOpenDialog] = useState(false);
   const [currentUser, setCurrentUser] = useState(null);
   const [isEditMode, setIsEditMode] = useState(false);
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(10);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [rowsPerPage, setRowsPerPage] = useState(15);
+  const [searchEmail, setSearchEmail] = useState('');
+  const [filteredUsers, setFilteredUsers] = useState([]);
 
   useEffect(() => {
     loadUsers();
   }, []);
 
   useEffect(() => {
-    const filtered = users.filter(user => 
-      user.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-      user.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      user.phone?.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredUsers(filtered);
-    setPage(0); // Reset về trang đầu tiên khi tìm kiếm
-  }, [searchTerm, users]);
+    // Filter users based on search email
+    if (searchEmail.trim() === '') {
+      setFilteredUsers(users);
+    } else {
+      const filtered = users.filter(user => 
+        user.email.toLowerCase().includes(searchEmail.toLowerCase())
+      );
+      setFilteredUsers(filtered);
+    }
+  }, [searchEmail, users]);
 
   const loadUsers = async () => {
     try {
@@ -62,12 +64,16 @@ function Users() {
   const handleSaveUser = async () => {
     try {
       if (isEditMode) {
+        // Sử dụng PUT để cập nhật người dùng
+        console.log('Updating user:', currentUser);
         await adminService.updateUser(currentUser.userID, currentUser);
       } else {
+        // Sử dụng POST để thêm người dùng mới
         await adminService.createUser(currentUser);
       }
+  
       handleCloseDialog();
-      loadUsers();
+      loadUsers(); // Tải lại danh sách người dùng
     } catch (error) {
       console.error('Error saving user:', error);
     }
@@ -96,14 +102,13 @@ function Users() {
         </Button>
       </Box>
 
-      {/* Search Bar */}
       <TextField
-        fullWidth
-        placeholder="Tìm kiếm người dùng..."
+        label="Tìm kiếm theo email"
         variant="outlined"
+        fullWidth
         margin="normal"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        value={searchEmail}
+        onChange={(e) => setSearchEmail(e.target.value)}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -111,7 +116,7 @@ function Users() {
             </InputAdornment>
           ),
         }}
-        sx={{ mb: 3 }}
+        sx={{ mb: 2 }}
       />
 
       <TableContainer component={Paper}>
@@ -134,7 +139,7 @@ function Users() {
                   <TableCell>{user.userID}</TableCell>
                   <TableCell>{user.name}</TableCell>
                   <TableCell>{user.email}</TableCell>
-                  <TableCell>{user.role === '0' ? 'User' : user.role === '1' ? 'Admin' : user.role}</TableCell>
+                  <TableCell>{user.role === '1' ? 'Admin' : 'User'}</TableCell>
                   <TableCell>{user.state}</TableCell>
                   <TableCell>
                     <IconButton color="primary" onClick={() => handleOpenEditUser(user)}>
@@ -145,10 +150,8 @@ function Users() {
               ))}
           </TableBody>
         </Table>
-        
-        {/* Pagination */}
         <TablePagination
-          rowsPerPageOptions={[5, 10, 25]}
+          rowsPerPageOptions={[15, 20, 25,50]}
           component="div"
           count={filteredUsers.length}
           rowsPerPage={rowsPerPage}
@@ -156,14 +159,12 @@ function Users() {
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
           labelRowsPerPage="Số hàng mỗi trang:"
-          labelDisplayedRows={({ from, to, count }) => 
-            `${from}-${to} trong ${count !== -1 ? count : `nhiều hơn ${to}`}`
-          }
+          labelDisplayedRows={({ from, to, count }) => `${from}-${to} trong ${count}`}
         />
       </TableContainer>
 
       {/* Dialog Thêm/Sửa User */}
-      <Dialog open={openDialog} onClose={handleCloseDialog} fullWidth maxWidth="sm">
+      <Dialog open={openDialog} onClose={handleCloseDialog}>
         <DialogTitle>{isEditMode ? 'Chỉnh sửa người dùng' : 'Thêm người dùng'}</DialogTitle>
         <DialogContent>
           <TextField
@@ -180,20 +181,17 @@ function Users() {
             fullWidth
             margin="normal"
           />
-          <TextField
-            label="Vai trò"
-            select
-            value={currentUser?.role || '0'}
-            onChange={(e) => setCurrentUser({ ...currentUser, role: e.target.value })}
-            fullWidth
-            margin="normal"
-            SelectProps={{
-              native: true,
-            }}
-          >
-            <option value="0">User</option>
-            <option value="1">Admin</option>
-          </TextField>
+          <FormControl fullWidth margin="normal">
+            <InputLabel>Vai trò</InputLabel>
+            <Select
+              value={currentUser?.role || '0'}
+              label="Vai trò"
+              onChange={(e) => setCurrentUser({ ...currentUser, role: e.target.value })}
+            >
+              <MenuItem value="0">User</MenuItem>
+              <MenuItem value="1">Admin</MenuItem>
+            </Select>
+          </FormControl>
           <TextField
             label="Số điện thoại"
             value={currentUser?.phone || ''}
@@ -201,31 +199,20 @@ function Users() {
             fullWidth
             margin="normal"
           />
-          {!isEditMode && (
-            <TextField
-              label="Mật khẩu"
-              type="password"
-              value={currentUser?.password || ''}
-              onChange={(e) => setCurrentUser({ ...currentUser, password: e.target.value })}
-              fullWidth
-              margin="normal"
-            />
-          )}
+          <TextField
+            label="Mật khẩu"
+            value={currentUser?.password || ''}
+            onChange={(e) => setCurrentUser({ ...currentUser, password: e.target.value })}
+            fullWidth
+            margin="normal"
+          />
           <TextField
             label="Trạng thái"
-            select
-            value={currentUser?.state || 'Active'}
+            value={currentUser?.state || ''}
             onChange={(e) => setCurrentUser({ ...currentUser, state: e.target.value })}
             fullWidth
             margin="normal"
-            SelectProps={{
-              native: true,
-            }}
-          >
-            <option value="Active">Active</option>
-            <option value="Inactive">Inactive</option>
-            <option value="Banned">Banned</option>
-          </TextField>
+          />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDialog}>Hủy</Button>
