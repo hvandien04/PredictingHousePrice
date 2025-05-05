@@ -110,7 +110,7 @@ public class AdminUserService {
         }
 
         if (request.getPassword() != null && !request.getPassword().isEmpty()) {
-            user.setPassword(request.getPassword()); // Nếu cần mã hóa password thì mã hóa ở đây nhé
+            user.setPassword(passwordEncoder.encode(request.getPassword())); // Nếu cần mã hóa password thì mã hóa ở đây nhé
         }
 
         if (request.getPhone() != null && !request.getPhone().isEmpty()) {

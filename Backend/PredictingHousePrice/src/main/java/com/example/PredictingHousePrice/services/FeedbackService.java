@@ -60,6 +60,18 @@ public class FeedbackService {
         return feedbackRepository.save(feedback);
     }
 
+    public Feedback updateFeedbackStatusToSuccess(String feedbackId) {
+        // Kiểm tra xem phản hồi có tồn tại hay không
+        Feedback feedback = feedbackRepository.findById(feedbackId)
+                .orElseThrow(() -> new RuntimeException("Không tìm thấy phản hồi với ID: " + feedbackId));
+
+        // Cập nhật trạng thái của phản hồi thành "success"
+        feedback.setStatus("success");
+
+        // Lưu lại thay đổi vào cơ sở dữ liệu
+        return feedbackRepository.save(feedback);
+    }
+
 
     public void deleteFeedbackById(String id) {
         if (!feedbackRepository.existsById(id)) {

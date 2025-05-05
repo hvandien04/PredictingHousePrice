@@ -20,7 +20,8 @@ export const API_ENDPOINTS = {
     // Feedback Management
     GET_ALL_FEEDBACKS: '/api/admin/get-all-feedbacks',
     GET_FEEDBACK_BY_ID: (id) => `/api/admin/get-feedback/${id}`,
-    DELETE_FEEDBACK: (id) => `/api/admin/delete-feedback/${id}`,
+    UPDATE_FEEDBACK_STATUS: (id) => `/api/admin/update-feedback-status/${id}`,
+
     GET_DASHBOARD_DATA: '/api/admin/dashboard',
 };
 
@@ -107,6 +108,10 @@ export const adminService = {
     },
     getFeedbackById: async (id) => {
         const response = await api.get(API_ENDPOINTS.GET_FEEDBACK_BY_ID(id));
+        return response.data;
+    },
+    updateFeedbackStatus: async (id) => {
+        const response = await api.put(API_ENDPOINTS.UPDATE_FEEDBACK_STATUS(id));
         return response.data;
     },
     deleteFeedback: async (id) => {

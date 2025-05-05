@@ -19,10 +19,10 @@ import {
   TextField,
   MenuItem,
   CircularProgress,
+  TablePagination,
 } from "@mui/material";
 import { Edit as EditIcon } from "@mui/icons-material";
 import MDBox from "../../components/MDBox";
-import axios from "axios";
 import { adminService } from "../../utils/adminAPI";
 
 function HousePosts() {
@@ -33,6 +33,9 @@ function HousePosts() {
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedHouse, setSelectedHouse] = useState(null);
   const [updatedHouse, setUpdatedHouse] = useState(null);
+
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(15);
 
   useEffect(() => {
     fetchHouses();
@@ -57,6 +60,13 @@ function HousePosts() {
     setSelectedHouse(house);
     setOpenDialog(true);
   };
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
 
   const handleCloseDialog = () => {
     setOpenDialog(false);
@@ -67,11 +77,9 @@ function HousePosts() {
   const handleSaveChanges = async () => {
     try {
       const response = await adminService.updateHouse(selectedHouse.pHouseID, updatedHouse); 
-      if (response.status === 200) {
-        fetchHouses(); // Gọi lại hàm fetchHouses() sau khi lưu thay đổi
-        window.location.reload();
-        handleCloseDialog(); // Đóng dialog
-      }
+      fetchHouses(); // Gọi lại hàm fetchHouses() sau khi lưu thay đổi
+      console.log("Cập nhật thành công:", response.data);
+      handleCloseDialog(); // Đóng dialog
     } catch (err) {
       console.error("Lỗi khi cập nhật bài đăng", err);
     }
@@ -129,34 +137,50 @@ function HousePosts() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {houses.map((house, index) => (
-                <TableRow key={house.id || index}>
-                  <TableCell>{house.pHouseID}</TableCell>
-                  <TableCell>{house.title}</TableCell>
-                  <TableCell>{house.price}</TableCell>
-                  <TableCell>{house.address}</TableCell>
-                  <TableCell>{house.area}</TableCell>
-                  <TableCell>{house.houseType}</TableCell>
-                  <TableCell>{house.userID}</TableCell>
-                  <TableCell>
-                    <Chip
-                      label={house.state}
-                      color={getStatusColor(house.state)}
-                      size="small"
-                    />
-                  </TableCell>
-                  <TableCell>
-                    <IconButton
-                      color="primary"
-                      onClick={() => handleEditPost(house)}
-                    >
-                      <EditIcon />
-                    </IconButton>
-                  </TableCell>
-                </TableRow>
-              ))}
+              {houses
+                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                .map((house, index) => (
+                  <TableRow key={house.id || index}>
+                    <TableCell>{house.pHouseID}</TableCell>
+                    <TableCell>{house.title}</TableCell>
+                    <TableCell>{house.price}</TableCell>
+                    <TableCell>{house.address}</TableCell>
+                    <TableCell>{house.area}</TableCell>
+                    <TableCell>{house.houseType}</TableCell>
+                    <TableCell>{house.userID}</TableCell>
+                    <TableCell>
+                      <Chip
+                        label={house.state}
+                        color={getStatusColor(house.state)}
+                        size="small"
+                      />
+                    </TableCell>
+                    <TableCell>
+                      <IconButton
+                        color="primary"
+                        onClick={() => handleEditPost(house)}
+                      >
+                        <EditIcon />
+                      </IconButton>
+                    </TableCell>
+                  </TableRow>
+                ))}
             </TableBody>
           </Table>
+          <TablePagination
+            rowsPerPageOptions={[10, 15, 25, 50]}
+            component="div"
+            count={houses.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onPageChange={handleChangePage}
+            onRowsPerPageChange={handleChangeRowsPerPage}
+            labelRowsPerPage="Số hàng mỗi trang:"
+            labelDisplayedRows={({ from, to, count }) => 
+              `${from}-${to} trong ${count !== -1 ? count : `nhiều hơn ${to}`}`
+            }
+          />
+
         </TableContainer>
       )}
 

@@ -325,16 +325,19 @@ public class AdminController {
         return ResponseEntity.ok(feedbackService.getAllFeedbacks());
     }
 
+    @PutMapping("/update-feedback-status/{feedbackId}")
+    public ResponseEntity<?> updateFeedbackStatus(@PathVariable String feedbackId) {
+        try {
+            Feedback updatedFeedback = feedbackService.updateFeedbackStatusToSuccess(feedbackId);
+            return ResponseEntity.ok(updatedFeedback);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
+    }
+
     // Xem chi tiết 1 phản hồi theo ID
     @GetMapping("get-feedback/{id}")
     public ResponseEntity<Feedback> getFeedbackById(@PathVariable String id) {
         return ResponseEntity.ok(feedbackService.getFeedbackById(id));
-    }
-
-    // Xóa phản hồi
-    @DeleteMapping("delete-feedback/{id}")
-    public ResponseEntity<Void> deleteFeedback(@PathVariable String id) {
-        feedbackService.deleteFeedbackById(id);
-        return ResponseEntity.noContent().build();
     }
 }

@@ -38,7 +38,6 @@ function AppContent() {
     if (isLoading) {
       return <div>Loading...</div>;
     }
-    console.log("User role:", user  );
     if (!user) {
       return <Navigate to="/login" replace />;
     }
