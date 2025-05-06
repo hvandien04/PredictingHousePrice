@@ -3,9 +3,9 @@ spring:
     name: PredictingHousePrice
 
   datasource:
-    url: jdbc:mysql://localhost:3306/housepredict
-    username: root
-    password:
+    url: ${URL_DB}
+    username: ${USERNAMEE}
+    password: ${PASSWORD}
 
   jpa:
     hibernate:

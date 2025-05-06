@@ -31,4 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
-Backend/PredictingHousePrice/sendgrid.env
+Backend/PredictingHousePrice/.env
